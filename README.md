@@ -1,4 +1,4 @@
-# test-dcusaurusd-001
+# test-docusaurusd-001
 
 Reactベースの  
 「Markdownからドキュメントサイトを自動生成する静的サイトジェネレーター」の  
