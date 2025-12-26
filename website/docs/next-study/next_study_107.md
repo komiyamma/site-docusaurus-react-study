@@ -127,7 +127,7 @@ export async function GET() {
   **app/api/hello/route.ts** になってる？（route.ts が超大事！）📌
 
 * **JSONを return したのに怒られる**😢
-  → `return { ... }` じゃなくて、**Response.json({ ... })** にする必要があるよ📦
+  → `return { ... }` じゃなくて、**Response.json(\{ ... \})** にする必要があるよ📦
 
 * **GET の関数名が違う**🙈
   → **export async function GET(...)** になってるか確認しよ〜！

@@ -77,7 +77,7 @@ export default function ArticlesPage() {
 ポイント💡
 
 * `<a>` じゃなくて **`Link`** を使うのがNext流🔗✨
-* `href={`/articles/${a.id}`}` で、動的なURLを作ってるよ〜😊
+* ``href={`/articles/${a.id}`}`` で、動的なURLを作ってるよ〜😊
 
 ---
 

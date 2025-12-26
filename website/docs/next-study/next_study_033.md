@@ -77,7 +77,7 @@ export default function StudentsPage() {
 
 ポイント🥰
 
-* `<Link href={`/students/${s.id}`}>` で **動的なURL**を作ってるよ！
+* ``<Link href={`/students/${s.id}`}>`` で **動的なURL**を作ってるよ！
 
 ---
 
