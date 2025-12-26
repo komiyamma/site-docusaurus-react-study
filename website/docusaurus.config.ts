@@ -86,9 +86,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'react-study.komiyamma.net',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'eact-study.komiyamma.net Logo',
         src: 'img/logo.svg',
       },
       items: [
