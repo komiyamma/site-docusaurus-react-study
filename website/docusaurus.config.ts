@@ -94,12 +94,6 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {
-          type: 'docSidebar',
           sidebarId: 'reactStudySidebar',
           position: 'left',
           label: 'React Study',
@@ -108,11 +102,17 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'nextStudySidebar',
           position: 'left',
-          label: 'Next Study',
+          label: 'Next Study Blog',
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'left',
+          label: 'Tutorial',
+        },
+        // { to: '/blog', label: 'Blog', position: 'left' },
+        {
+          href: 'https://github.com/komiyamma/site-docusaurus-react-study',
           label: 'GitHub',
           position: 'right',
         },
