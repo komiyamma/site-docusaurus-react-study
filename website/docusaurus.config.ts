@@ -56,7 +56,7 @@ const config: Config = {
 
       // .memo ファイルが存在すれば description として読み込む
       if (fs.existsSync(memoPath)) {
-        const memoContent = fs.readFileSync(memoPath, 'utf-8').trim();
+        const memoContent = fs.readFileSync(memoPath, 'utf-8').trim().replace(/[\r\n]+/g, ' ');
         if (memoContent) {
           result.frontMatter.description = memoContent;
         }
