@@ -63,7 +63,7 @@ export const ArticleJsonLd = ({
     },
     datePublished: date,
     dateModified: lastUpdated || date, // Fallback to published date
-    description: description,
+    description: description?.replace(/[\r\n]+/g, ' '),
   };
 
   // Remove undefined fields
