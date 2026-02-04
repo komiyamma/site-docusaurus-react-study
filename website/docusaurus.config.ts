@@ -113,13 +113,16 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'light',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
+
     navbar: {
       title: '',
       logo: {
         alt: 'Home',
-        src: 'img/home_light.svg',
+        src: 'img/home_dark.svg',
         srcDark: 'img/home_dark.svg',
       },
       items: [

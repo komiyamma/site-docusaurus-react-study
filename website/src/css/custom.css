@@ -41,3 +41,86 @@
   --ifm-color-primary-lightest: #b0cce1;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* ========================================
+   Navbar - Custom Blue Background
+   ======================================== */
+.navbar {
+  background: #2563a7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar__link {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar__link:hover {
+  color: white;
+}
+
+.navbar__link--active {
+  color: white;
+  font-weight: 600;
+}
+
+/* Navbar search box */
+.navbar .DocSearch-Button {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.navbar .DocSearch-Button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ========================================
+   Navbar Horizontal Scroll (Simple)
+   ======================================== */
+
+/* Navbar inner is the positioning context */
+.navbar__inner {
+  position: relative;
+}
+
+/* Left navbar items (menu links) scroll horizontally */
+.navbar__items:not(.navbar__items--right) {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  /* Add left margin to make room for the fixed home icon */
+  margin-left: 48px;
+  
+  /* Subtle vertical lines on left and right edges */
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  
+  /* Visible thin scrollbar to indicate scrollability */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+}
+
+.navbar__items:not(.navbar__items--right)::-webkit-scrollbar {
+  height: 6px;
+}
+
+.navbar__items:not(.navbar__items--right)::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.navbar__items:not(.navbar__items--right)::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+}
+
+.navbar__items:not(.navbar__items--right)::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Home icon is positioned outside the scroll container */
+.navbar__brand {
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
