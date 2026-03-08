@@ -125,6 +125,20 @@
   z-index: 10;
 }
 
+/* Mobile: reset absolute positioning so hamburger menu comes first (default Docusaurus order) */
+@media (max-width: 996px) {
+  .navbar__brand {
+    position: static;
+    transform: none;
+  }
+
+  .navbar__items:not(.navbar__items--right) {
+    margin-left: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+
 /* Keep the right-side external links visually grouped on desktop */
 .navbar__items--right .navbar-link-site-home {
   position: relative;
