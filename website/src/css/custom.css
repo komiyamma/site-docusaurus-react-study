@@ -139,6 +139,11 @@
   }
 }
 
+/* Hamburger menu icon: white on blue navbar background */
+.navbar__toggle {
+  color: white;
+}
+
 /* Keep the right-side external links visually grouped on desktop */
 .navbar__items--right .navbar-link-site-home {
   position: relative;
