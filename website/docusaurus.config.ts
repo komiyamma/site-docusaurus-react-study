@@ -7,7 +7,7 @@ import * as path from 'path';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'react-study.komiyamma.net',
+  title: 'React/Next入門者用の学習',
   tagline: 'React/Next入門者用の学習教材',
   favicon: 'img/react_logo.svg',
 
