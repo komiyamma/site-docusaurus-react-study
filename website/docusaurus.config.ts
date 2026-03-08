@@ -143,7 +143,7 @@ const config: Config = {
         {
           href: 'https://komiyamma.net',
           label: 'komiyamma.net',
-          position: 'left',
+          position: 'right',
           className: 'navbar-link-site-home',
           target: '_self',
         },
