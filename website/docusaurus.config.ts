@@ -7,8 +7,8 @@ import * as path from 'path';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'React/Next入門者用の学習',
-  tagline: 'React/Next入門者用の学習教材',
+  title: 'React/Nextの学習',
+  tagline: 'React/Nextの学習教材',
   favicon: 'img/react_logo.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
