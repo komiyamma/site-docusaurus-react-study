@@ -10,6 +10,9 @@
 
 ## 1) 二重送信って何が困るの？😵‍💫
 
+![next_study_145_double_charge](./picture/next_study_145_double_charge.png)
+
+
 * TODOが2個追加される📌📌
 * お問い合わせが2通届く📮📮
 * （怖い例）決済・注文が2回走る💳💥
@@ -19,6 +22,9 @@
 ---
 
 ## 2) まずは王道：`useFormStatus` で送信中はボタンを無効化🧸⏳
+
+![next_study_145_use_form_status](./picture/next_study_145_use_form_status.png)
+
 
 `useFormStatus()` は、フォーム送信の状態（`pending` など）を取れるReactのHookだよ🧠
 `pending === true` の間、**送信中**ってこと！ ([react.dev][1])
@@ -57,6 +63,9 @@ export async function addTodo(formData: FormData) {
 ```
 
 #### ② フォーム（クライアント側）🎮
+
+![next_study_145_disabled_ui](./picture/next_study_145_disabled_ui.png)
+
 
 ```tsx
 // app/todo/TodoForm.tsx
@@ -109,6 +118,9 @@ export default function TodoForm() {
 ---
 
 ## 3) もう一段かためる：フォーム全体も「送信中は触れない」🧤🔒
+
+![next_study_145_fieldset_lock](./picture/next_study_145_fieldset_lock.png)
+
 
 ボタンだけ無効化でも十分なことが多いけど、
 体験としては「送信中は入力もいじれない」方が親切だったりするよ☺️🫶

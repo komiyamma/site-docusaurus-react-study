@@ -34,6 +34,11 @@ flowchart LR
 
 ## 1) フォルダを作る📁✨（動的ルート）
 
+
+
+![next_study_083_folder_visual.png](./picture/next_study_083_folder_visual.png)
+
+
 次の構成になるように作ってね👇
 
 ```mermaid
@@ -47,6 +52,9 @@ flowchart TB
 ---
 
 ## 2) 詳細ページを作る🧾🔎（`app/posts/[id]/page.tsx`）
+
+![next_study_083_params_promise.png](./picture/next_study_083_params_promise.png)
+
 
 > ✅ Next.js 15以降は `params` が Promise なので、`await` で取り出すよ！ ([Next.js][1])
 > ✅ `PageProps` は、型生成（dev/build/typegen）後にグローバルで使えるよ！ ([Next.js][1])
@@ -75,9 +83,11 @@ export default async function Page(props: PageProps<"/posts/[id]">) {
   const { id } = await props.params;
 
   const idNum = Number(id);
+
   if (!Number.isInteger(idNum) || idNum <= 0) notFound();
 
   const post = await getPost(idNum);
+
   if (!post) notFound();
 
   return (
@@ -98,6 +108,10 @@ export default async function Page(props: PageProps<"/posts/[id]">) {
 }
 ```
 
+![next_study_083_not_found_check.png](./picture/next_study_083_not_found_check.png)
+![next_study_083_fetch_id.png](./picture/next_study_083_fetch_id.png)
+
+
 ### 🌟もし `PageProps` がまだ使えなかったら（すぐ直る版）
 
 `npm run dev` を一度動かすと型生成されて直ることが多いよ〜🛠️✨ ([Next.js][1])
@@ -117,6 +131,11 @@ export default async function Page({
 ---
 
 ## 3) 一覧から詳細へリンクする🔗✨（一覧ページ側）
+
+
+
+![next_study_083_link_template.png](./picture/next_study_083_link_template.png)
+
 
 `/posts` の一覧で、タイトルを `Link` にするだけ〜😊
 

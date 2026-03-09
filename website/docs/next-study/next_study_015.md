@@ -10,6 +10,8 @@
 
 ## 1) `tsconfig.json` ってなに？🤔📘
 
+![next_study_015_tsconfig_role](./picture/next_study_015_tsconfig_role.png)
+
 `tsconfig.json` は、TypeScriptに対して「このプロジェクト、こういうルールで型チェックしてね！」って伝える設定ファイルだよ🧠✨
 
 Next.js は TypeScript を最初からよしなに扱ってくれて、プロジェクト作成時や、既存プロジェクトで `.ts/.tsx` を使い始めたときに **推奨設定の `tsconfig.json` を自動で用意**してくれるよ🙌
@@ -38,6 +40,8 @@ flowchart TB
 
 ## 3) まず “3つの場所” だけ見よう 👀🧩
 
+![next_study_015_three_sections](./picture/next_study_015_three_sections.png)
+
 `tsconfig.json` はだいたいこの3ブロックに分かれてるよ👇
 
 * `compilerOptions`：ルール本体（型チェックの性格）🧠
@@ -56,6 +60,8 @@ Next.js的に特に大事なのが `include` で、`next-env.d.ts` や `.next/ty
 最初はこのへんだけ見て「なるほど〜」ってなれば勝ち💪✨
 
 ### ① `strict`（厳しさレベル）🎚️
+
+![next_study_015_strict_mode](./picture/next_study_015_strict_mode.png)
 
 * `true` だと型チェックが厳しくなる（強いけど、最初は大変になりがち）😵‍💫
 * `false` だとやさしめ（学習中は助かることも多い）🫶
@@ -99,6 +105,8 @@ Next.js的に特に大事なのが `include` で、`next-env.d.ts` や `.next/ty
 
 ## 5) VS Code側の設定：これだけやると気持ちいい 💙🛠️
 
+![next_study_015_vscode_workspace](./picture/next_study_015_vscode_workspace.png)
+
 Next.jsのTypeScriptプラグインを効かせるために、VS Codeで **WorkspaceのTypeScript** を使う設定がオススメだよ✅
 
 手順👇
@@ -112,6 +120,8 @@ Next.jsのTypeScriptプラグインを効かせるために、VS Codeで **Works
 ---
 
 ## 6) ちょい練習：型エラーを “わざと” 出してみる 🧪😆
+
+![next_study_015_error_vs_success](./picture/next_study_015_error_vs_success.png)
 
 1. 例えば `app/type-test.ts` を作って、これを書いてみて👇
 

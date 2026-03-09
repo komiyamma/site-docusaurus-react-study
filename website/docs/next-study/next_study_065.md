@@ -7,6 +7,8 @@ Parallel Routes（パラレルルート）は、その複数エリアを **“�
 
 ## 1) Parallel Routes ってなに？🧠💡
 
+![next_study_065_parallel_concept](./picture/next_study_065_parallel_concept.png)
+
 * ふつうのルーティング：`/dashboard` は 1つのページ（ツリー）で構成される
 * Parallel Routes：`/dashboard` の中で **複数のページ（ツリー）を同時に表示**できる
 
@@ -18,6 +20,8 @@ Parallel Routes（パラレルルート）は、その複数エリアを **“�
 ---
 
 ## 2) イメージ図（スロットが layout に刺さる）🧩➡️🧱
+
+![next_study_065_slot_syntax](./picture/next_study_065_slot_syntax.png)
 
 ```mermaid
 flowchart TB
@@ -83,6 +87,8 @@ app/
 import styles from './dashboard.module.css'
 
 export default function DashboardLayout({
+
+![next_study_065_layout_props](./picture/next_study_065_layout_props.png)
   children,
   team,
   analytics,
@@ -122,6 +128,8 @@ export default function DashboardLayout({
 ---
 
 ### 4-2) `app/dashboard/dashboard.module.css`（見た目かる〜く）💅✨
+
+![next_study_065_grid_layout](./picture/next_study_065_grid_layout.png)
 
 ```css
 .wrap {
@@ -224,6 +232,8 @@ export default function TeamDefault() {
 
 ### 4-5) `@analytics` スロット（わざと “遅い” パネル）📊⏳
 
+![next_study_065_independent_loading](./picture/next_study_065_independent_loading.png)
+
 `app/dashboard/@analytics/page.tsx`
 
 ```tsx
@@ -258,6 +268,8 @@ export default function AnalyticsLoading() {
 
 `app/dashboard/@analytics/error.tsx`（このスロットだけエラーUI）🧯
 
+![next_study_065_slot_error](./picture/next_study_065_slot_error.png)
+
 ```tsx
 'use client'
 
@@ -279,6 +291,8 @@ export default function AnalyticsError({
 ```
 
 `app/dashboard/@analytics/default.tsx`（保険🛟）
+
+![next_study_065_default_fallback](./picture/next_study_065_default_fallback.png)
 ※ `default` は「初回ロードやリロード時に、合わないスロットをどうする？」のための fallback だよ〜！ ([Next.js][1])
 
 ```tsx

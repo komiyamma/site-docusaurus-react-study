@@ -12,6 +12,8 @@
 
 ## 1) 検索パラメータってどこ？👀
 
+![next_study_063_url_structure](./picture/next_study_063_url_structure.png)
+
 URLはざっくりこう👇
 
 ```mermaid
@@ -26,6 +28,8 @@ flowchart LR
 ---
 
 ## 2) Next.js（App Router）で読む方法は2つあるよ✌️💡
+
+![next_study_063_server_vs_client](./picture/next_study_063_server_vs_client.png)
 
 ### A. ページ（Server Component）で読む：searchParams を受け取る🍵
 
@@ -44,6 +48,8 @@ flowchart LR
 ---
 
 ## 3) ミニ実装：検索ページを作ろう🌷🔎
+
+![next_study_063_search_flow](./picture/next_study_063_search_flow.png)
 
 ### ✅ ゴール（完成イメージ）
 
@@ -90,6 +96,8 @@ function normalizeParam(value: string | string[] | undefined): string {
 }
 
 export default async function Page({ searchParams }: { searchParams: SearchParams }) {
+
+![next_study_063_server_filtering](./picture/next_study_063_server_filtering.png)
   const { q: rawQ } = await searchParams;
   const q = normalizeParam(rawQ).trim();
 
@@ -145,6 +153,8 @@ export default function SearchBox() {
   const [q, setQ] = useState(qFromUrl);
 
   // URLが変わった時、入力欄も追従させる（戻る/進むでもズレない✨）
+
+![next_study_063_client_update](./picture/next_study_063_client_update.png)
   useEffect(() => {
     setQ(qFromUrl);
   }, [qFromUrl]);
@@ -153,6 +163,8 @@ export default function SearchBox() {
     e.preventDefault();
 
     const params = new URLSearchParams(searchParams.toString());
+
+![next_study_063_url_search_params](./picture/next_study_063_url_search_params.png)
 
     const nextQ = q.trim();
     if (nextQ) {
@@ -204,6 +216,8 @@ export default function SearchBox() {
 ---
 
 ## 6) 動きの流れ（図でイメージ）🧠✨
+
+![next_study_063_data_cycle](./picture/next_study_063_data_cycle.png)
 
 ```mermaid
 flowchart TD

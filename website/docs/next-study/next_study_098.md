@@ -42,6 +42,8 @@ sequenceDiagram
 
 ## 作るもの（フォルダ構成）📁✨
 
+![next_study_098_folder_structure.png](./picture/next_study_098_folder_structure.png)
+
 こんな感じで追加します👇
 
 ```text
@@ -92,6 +94,8 @@ export function sleep(ms: number) {
 
 ## 手順②：詳細コンポーネント（遅れて出す本体）を作る 🐢➡️✨
 
+![next_study_098_artificial_delay.png](./picture/next_study_098_artificial_delay.png)
+
 `app/streaming-practice/PostDetail.tsx` を作ります。
 ここで **わざと1.5秒遅らせる**よ〜⏳（体験のため！）
 
@@ -118,6 +122,8 @@ export default async function PostDetail({ id }: Props) {
 
 ## 手順③：詳細が遅れてる間に出すUI（fallback）を作る ⛑️🫧
 
+![next_study_098_skeleton_ui.png](./picture/next_study_098_skeleton_ui.png)
+
 `app/streaming-practice/DetailSkeleton.tsx` を作ります✨
 
 ```tsx
@@ -138,6 +144,8 @@ export default function DetailSkeleton() {
 ---
 
 ## 手順④：ページ本体（一覧はすぐ、詳細はSuspenseで遅れて）📰🫧
+
+![next_study_098_suspense_key.png](./picture/next_study_098_suspense_key.png)
 
 `app/streaming-practice/page.tsx` を作ります。
 ポイントはここ👇
@@ -300,6 +308,8 @@ export default async function Page({ searchParams }: PageProps) {
 ---
 
 ## 動作確認 ✅🎉
+
+![next_study_098_final_output.png](./picture/next_study_098_final_output.png)
 
 ターミナルで👇
 

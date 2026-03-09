@@ -33,6 +33,9 @@ flowchart LR
 
 ## 1) フォルダ構成を作る📁✨
 
+![next_study_118_folder_structure](./picture/next_study_118_folder_structure.png)
+
+
 プロジェクト直下で、次を用意するよ👇（なければ作成）
 
 * `app/api/todos/route.ts`
@@ -81,6 +84,11 @@ type ApiNg = {
 };
 
 // ✅ DBの代わり：メモリ上のデータ（※サーバ再起動や更新で消えることがあるよ）
+```
+
+![next_study_118_memory_db](./picture/next_study_118_memory_db.png)
+
+```ts
 let todos: Todo[] = [
   { id: "t1", title: "Next.jsのRoute Handlerを触る", done: false, createdAt: new Date().toISOString() },
 ];
@@ -98,6 +106,11 @@ export async function POST(request: Request) {
     const body = (await request.json()) as { title?: unknown };
 
     // ✅ 超最低限バリデーション
+    ```
+
+![next_study_118_validation_gate](./picture/next_study_118_validation_gate.png)
+
+    ```ts
     if (typeof body.title !== "string") {
       return json(
         { ok: false, error: { code: "VALIDATION", message: "title は文字列で送ってね🥺", fields: { title: "string required" } } },
@@ -166,6 +179,11 @@ type ApiNg = {
 };
 
 export default function TodosPage() {
+```
+
+![next_study_118_ui_states](./picture/next_study_118_ui_states.png)
+
+```tsx
   const [todos, setTodos] = useState<Todo[]>([]);
   const [title, setTitle] = useState("");
   const [loading, setLoading] = useState(true);
@@ -338,6 +356,9 @@ npm run dev
 ---
 
 ## デバッグのコツ🔎✨（詰まったらここ）
+
+![next_study_118_network_tab](./picture/next_study_118_network_tab.png)
+
 
 * **DevTools（F12）→ Network** で `/api/todos` の通信を見る📡
 * **Console** にエラーが出てたら、その文言を最優先で読む👀

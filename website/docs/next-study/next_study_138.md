@@ -15,6 +15,10 @@
 
 ## `useActionState` って何？🤔🧩
 
+![next_study_138_useactionstate_role.png](./picture/next_study_138_useactionstate_role.png)
+
+
+
 ざっくり言うと、
 
 * **フォーム送信（＝アクション）を実行する**
@@ -33,6 +37,10 @@
 
 ## 図でイメージ📮➡️🧠➡️🖥️（Mermaid）
 
+![next_study_138_state_cycle_visual.png](./picture/next_study_138_state_cycle_visual.png)
+
+
+
 ![イメージ図](./picture/next_study_138_state_cycle.png)
 
 ```mermaid
@@ -48,6 +56,10 @@ flowchart TD
 ---
 
 ## いちばん大事ポイント⚠️🧷
+
+![next_study_138_arguments_shift.png](./picture/next_study_138_arguments_shift.png)
+
+
 
 Next.jsのServer Actionsで `useActionState` を使うとき、**Server Actionの引数がちょっと特殊**になるよ！
 
@@ -112,6 +124,10 @@ export async function sendContact(prevState: ContactState, formData: FormData): 
 ---
 
 ### 2) フォーム側（Client Component）を作る（`app/contact/ContactForm.tsx`）🎮✨
+
+![next_study_138_no_more_setstate.png](./picture/next_study_138_no_more_setstate.png)
+
+
 
 ```tsx
 'use client';
@@ -180,6 +196,10 @@ export default function Page() {
 ---
 
 ## ありがちなつまずきポイント🥺🧯
+
+![next_study_138_client_only_hook.png](./picture/next_study_138_client_only_hook.png)
+
+
 
 ### ✅ 1) 「Server Actionなのに `'use server'` 書いてない！」
 

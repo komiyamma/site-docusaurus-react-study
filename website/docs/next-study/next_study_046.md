@@ -16,6 +16,10 @@
 
 ## 2) 命名が崩れると起きる事故あるある💥
 
+![next_study_046_naming_chaos.png](./picture/next_study_046_naming_chaos.png)
+
+
+
 * `Card.tsx` が10個ある（どれ！？😇）
 * `usercard.tsx` と `UserCard.tsx` が混ざる（Windowsだと見えにくい事故🪤）
 * `modal.tsx` が実はボタンだった（嘘つき名前🙅‍♀️）
@@ -24,6 +28,10 @@
 ---
 
 ## 3) まず決めるのはこの3つだけ🧩✨
+
+![next_study_046_decision_axes.png](./picture/next_study_046_decision_axes.png)
+
+
 
 命名は悩むほど詰むので、判断軸を固定します👍
 
@@ -36,6 +44,10 @@
 ## 4) 迷子ゼロ命名ルール（これを採用でOK）✅📛✨
 
 ### ルールA：コンポーネントは PascalCase 統一👑
+
+![next_study_046_pascal_case.png](./picture/next_study_046_pascal_case.png)
+
+
 
 * ✅ `UserCard`, `LoginForm`, `ArticleList`
 * ❌ `usercard`, `user_card`, `Usercard`
@@ -57,6 +69,10 @@ export function UserCard({ name }: UserCardProps) {
 ```
 
 ### ルールC：Client Component は名前で分かるようにする🎮
+
+![next_study_046_client_tag.png](./picture/next_study_046_client_tag.png)
+
+
 
 「use client」入りは、**ファイル名に印を付ける**のが最強です💡
 おすすめはどっちかに統一👇
@@ -95,6 +111,10 @@ export function UserCardClient() {
 
 ### ルールF：UIの“種類”があるなら接尾辞で揃える🧩
 
+![next_study_046_role_suffixes.png](./picture/next_study_046_role_suffixes.png)
+
+
+
 * ローディング用：`Skeleton`
 
   * ✅ `UserCardSkeleton`
@@ -127,6 +147,10 @@ export function UserCardClient() {
 * ✅ `NavigationMenu` / ❌ `Nav`
 
 ### ルールJ：置き場所ルールもセットで固定🗂️
+
+![next_study_046_folder_drawers.png](./picture/next_study_046_folder_drawers.png)
+
+
 
 命名だけ頑張っても、置き場がカオスだと負けます😭
 おすすめの分け方👇（すごく現実的✨）

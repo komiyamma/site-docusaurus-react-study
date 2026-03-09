@@ -7,6 +7,9 @@ Next.js の **Middleware（最新版だと “Proxy”）** は、ざっくり�
 
 ## 1) いちばん多い使い道：ログイン判定（保護ルート）🔐➡️🚪
 
+![next_study_120_login_check](./picture/next_study_120_login_check.png)
+
+
 ![ログイン判定](./picture/next_study_120_middleware_redirect.png)
 
 「/dashboard はログインした人だけね！」みたいなやつ🫶
@@ -25,6 +28,9 @@ flowchart TD
 ---
 
 ## 2) もう1つの王道：リダイレクト（URLお引っ越し）🏠➡️🏠✨
+
+![next_study_120_migration_redirect](./picture/next_study_120_migration_redirect.png)
+
 
 たとえば昔のURLが `/old` で、新しいURLが `/new` になったときに
 アクセスしてきた人を **自動で /new に案内**できるよ〜📮🚶‍♀️
@@ -65,6 +71,8 @@ flowchart LR
 
 ### ⭐ 4-2. `proxy.ts` を作る（プロジェクト直下）📁
 
+![next_study_120_proxy_file](./picture/next_study_120_proxy_file.png)
+
 `app/` と同じ階層に `proxy.ts` を作ってね（`src/` 構成なら `src/proxy.ts`） ([Next.js][1])
 
 ```ts
@@ -100,6 +108,9 @@ export const config = {
 ---
 
 ### ⭐ 4-3. デモ用：ログイン/ログアウト API（Route Handler）を作る🧪🍪
+
+![next_study_120_cookie_interaction](./picture/next_study_120_cookie_interaction.png)
+
 
 #### `app/api/mock-login/route.ts`
 

@@ -15,6 +15,10 @@
 
 ## まず、エラーは3種類に分けると迷子にならないよ🧠🧩
 
+![next_study_137_three_error_types.png](./picture/next_study_137_three_error_types.png)
+
+
+
 ![Error Sorting Bins](./picture/next_study_137_error_bins.png)
 
 
@@ -25,6 +29,10 @@
 ---
 
 ## 図解：送信 → エラー表示の流れ🧾➡️🧯
+
+![next_study_137_error_flow.png](./picture/next_study_137_error_flow.png)
+
+
 
 ![イメージ図](./picture/next_study_137_action_state.png)
 
@@ -63,6 +71,10 @@ app/
 ---
 
 ## 1) Server Action を作る（エラー内容を“返す”）🧑‍🍳🧯
+
+![next_study_137_return_state.png](./picture/next_study_137_return_state.png)
+
+
 
 `app/contact/actions.ts`
 
@@ -153,6 +165,10 @@ export async function submitContact(
 ---
 
 ## 2) フォーム（Client Component）でエラーを表示する🧸🧯
+
+![next_study_137_field_error_ui.png](./picture/next_study_137_field_error_ui.png)
+
+
 
 `app/contact/ContactForm.tsx`
 
@@ -290,6 +306,10 @@ export default function Page() {
 ---
 
 ## 4) ちょいCSS（エラーが“見てすぐ分かる”）💅🧯
+
+![next_study_137_accessible_error.png](./picture/next_study_137_accessible_error.png)
+
+
 
 `app/contact/ContactForm.module.css`
 

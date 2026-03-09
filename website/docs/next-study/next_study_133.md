@@ -7,6 +7,8 @@
 
 ## 1) まず「昔のフォーム」ってどんな感じ？🧁
 
+![Developer juggling state balls](./picture/next_study_133_juggling_state.png)
+
 昔のReactフォームはだいたいこの型👇
 
 * 入力欄の値を **useState** で持つ（＝状態として管理）🧠
@@ -36,6 +38,8 @@ flowchart TD
 ---
 
 ## 3) 最小サンプル：超シンプルなフォーム（昔のやつ）🧪✨
+
+![Baton pass Submit to Fetch](./picture/next_study_133_relay_race_submit.png)
 
 ここでは「ニックネーム」を送るだけのミニフォームを作ります😊
 ※ 実際の通信はまだやらず、**送信したフリ**をします（次章以降で本物にしていけるよ）🧡
@@ -122,6 +126,8 @@ export default function Page() {
       <p style={{ marginTop: 16, opacity: 0.75 }}>
         ポイント：入力欄の value が state につながってるから、これを <b>Controlled Component</b> って呼ぶよ〜🎛️
       </p>
+
+![Marionette string controlling input](./picture/next_study_133_marionette_controlled.png)
     </main>
   );
 }
@@ -130,6 +136,8 @@ export default function Page() {
 ---
 
 ## 4) ここが「昔のフォーム」のしんどい所あるある😵‍💫（でも大事！）
+
+![Tangled wires representing complexity](./picture/next_study_133_tangled_wires_complexity.png)
 
 * 状態が増える（入力が3つ→useStateも3つ…💦）
 * 送信中/成功/失敗のUIを自分で作る必要がある⏳🧯
@@ -141,6 +149,8 @@ export default function Page() {
 ---
 
 ## 5) ミニ練習（3分）⏱️🎀
+
+![UI showing 3 faces](./picture/next_study_133_form_ui_states.png)
 
 上のコードに、これを足してみてね👇
 

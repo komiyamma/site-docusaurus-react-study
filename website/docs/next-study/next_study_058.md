@@ -45,6 +45,10 @@ export function GoodButtons() {
 
 ### ❌ よくあるNG（やりがち🥺）
 
+![Button vs Div](./picture/next_study_058_button_vs_div.png)
+
+
+
 * `div` や `span` をボタンっぽくしてクリックさせる
   → キーボード操作や読み上げで詰みやすい💥
 
@@ -68,6 +72,10 @@ export function BadButton() {
 
 入力フォームは、**見た目の文字**だけじゃなくて、機械にも「これは何の入力？」って伝えたいの💡
 そこで **`label` + `htmlFor` + `id`** のセットが王道だよ✨
+
+![Label and Input Connection](./picture/next_study_058_label_connection.png)
+
+
 
 ```tsx
 export function GoodLabelForm() {
@@ -110,6 +118,10 @@ export function PasswordField() {
 ## 3) フォーカス：今どこ操作してるか“光らせる”✨🟦
 
 キーボード操作の人は **Tab** を押して移動するよ⌨️
+
+![Keyboard Navigation](./picture/next_study_058_keyboard_nav.png)
+
+
 だから「今どこにいるか」が見えないと、迷子になる😵‍💫
 
 ### フォーカス移動のイメージ図🧭

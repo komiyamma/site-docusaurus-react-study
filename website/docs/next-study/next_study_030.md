@@ -41,9 +41,13 @@ flowchart TD
 
 ### 📁 置き場所
 
+![next_study_030_not_found_placement](./picture/next_study_030_not_found_placement.png)
+
 * `app/not-found.tsx`
 
 ### ✅ 最小の404ページ（おすすめの基本形）
+
+![next_study_030_404_screen](./picture/next_study_030_404_screen.png)
 
 ```tsx
 // app/not-found.tsx
@@ -87,6 +91,8 @@ export default function NotFound() {
 
 ## 2) 「データが無い」時に404へ：`notFound()` を使おう🔍🚪
 
+![next_study_030_not_found_func](./picture/next_study_030_not_found_func.png)
+
 たとえば「記事IDで詳細を見る」ページで、IDが存在しないなら
 **“それっぽいエラー”じゃなくて、ちゃんと404**にしてあげたほうが親切だよね🫶✨
 
@@ -127,11 +133,15 @@ export default async function PostPage({ params }: Props) {
 * `http://localhost:3000/posts/999` → 404（not-found）が表示される🚪😢
 
 > ポイント💡：`notFound()` は **主にサーバー側（Server Component/Route Handlerなど）**で使うよ！
+
+![next_study_030_server_vs_client_not_found](./picture/next_study_030_server_vs_client_not_found.png)
 > Client Component（`"use client"`）の中で使うのは避けよ〜🙅‍♀️💦
 
 ---
 
 ## 3) 404ページに「戻る」ボタンも付けたい！🔙✨（やりたい人向け）
+
+![next_study_030_back_button_island](./picture/next_study_030_back_button_island.png)
 
 `not-found.tsx` は基本サーバー側だから、**ブラウザの履歴で戻る**みたいなことをするなら
 “戻るボタンだけ”をClient Componentにして混ぜるのがかわいい🫶🎀
@@ -210,6 +220,8 @@ export default function NotFound() {
 ---
 
 ## ミニ練習🎯✨（10分）
+
+![next_study_030_lighthouse](./picture/next_study_030_lighthouse.png)
 
 1. `app/not-found.tsx` に **「人気ページリンク」**を2つ追加する🔗✨（例：`/about` と `/posts/1`）
 2. `posts/[id]` で `3` を開いたら404になるようにして、表示を確認👀🚪

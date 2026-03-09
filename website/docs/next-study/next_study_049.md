@@ -27,6 +27,10 @@ Next.jsって、実は「CSSの選び方」がけっこう自由なんだよね�
 
 ## 図解：ざっくり選び方チャート🗺️✨（Mermaid）
 
+![next_study_049_css_trio.png](./picture/next_study_049_css_trio.png)
+
+
+
 ![CSS選択チャート](./picture/next_study_049_css_selection.png)
 
 ```mermaid
@@ -43,6 +47,10 @@ flowchart TD
 ---
 
 ## ① CSS Modules：いちばん「安心して始めやすい」やつ🧵😊
+
+![next_study_049_modules_scope.png](./picture/next_study_049_modules_scope.png)
+
+
 
 ### どんな感じ？
 
@@ -77,6 +85,10 @@ export function Card() {
 
 ## ② Tailwind：爆速で“それっぽい”を作れる🌪️⚡
 
+![next_study_049_tailwind_speed.png](./picture/next_study_049_tailwind_speed.png)
+
+
+
 ### どんな感じ？
 
 * CSSを書かずに、`className` にユーティリティクラスを並べて作る感じ✨
@@ -107,6 +119,10 @@ export function Card() {
 ---
 
 ## ③ CSS-in-JS：JSの中でスタイルを握る💅🧠
+
+![next_study_049_css_in_js_magic.png](./picture/next_study_049_css_in_js_magic.png)
+
+
 
 ### どんな感じ？
 

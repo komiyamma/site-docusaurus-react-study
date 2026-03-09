@@ -7,6 +7,8 @@ Route Handlers は `app` ディレクトリ内で `route.ts`（または `route.
 
 ## ゴール🎯
 
+![next study 113 json box](./picture/next_study_113_json_box.png)
+
 `http://localhost:3000/api/todos` にアクセスすると、こんなJSONが返る✅
 
 ```json
@@ -36,6 +38,8 @@ flowchart LR
 ---
 
 ## 手順①：ファイルを作る📁✨
+
+![next study 113 folder structure](./picture/next_study_113_folder_structure.png)
 
 プロジェクトに `src` があるかで置き場所が変わるよ👇
 （どっちか “自分の構成” に合わせてOK😊）
@@ -94,6 +98,8 @@ export async function GET() {
 ---
 
 ## 手順③：動作チェックする✅🌈
+
+![next study 113 browser view](./picture/next_study_113_browser_view.png)
 
 開発サーバー起動（もう起動中ならスキップでOK）🏃‍♀️💨
 

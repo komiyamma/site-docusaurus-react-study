@@ -15,6 +15,10 @@
 
 ## 2) `useFormStatus` ってなに？🤔🧠
 
+![next_study_139_child_awareness.png](./picture/next_study_139_child_awareness.png)
+
+
+
 `useFormStatus` は、**直近のフォーム送信の状態**を教えてくれるフックです📨✨
 特に使うのはこのへん👇
 
@@ -28,6 +32,10 @@
 ---
 
 ## 3) 図でつかむ：どこで動くの？🗺️✨
+
+![next_study_139_component_tree.png](./picture/next_study_139_component_tree.png)
+
+
 
 ![イメージ図](./picture/next_study_139_status_child.png)
 
@@ -46,6 +54,10 @@ flowchart TB
 ---
 
 ## 4) 実装してみよう！📮✨（最小サンプル）
+
+![next_study_139_separate_file.png](./picture/next_study_139_separate_file.png)
+
+
 
 ### フォルダ構成（今回使うところだけ）🗂️
 
@@ -169,6 +181,10 @@ sequenceDiagram
 ---
 
 ## 6) よくあるハマり🔥（ここだけ覚えればOK！）
+
+![next_study_139_hook_parent_mistake.png](./picture/next_study_139_hook_parent_mistake.png)
+
+
 
 * **`useFormStatus` をフォームの外で使ってる** → `pending` が反映されない😭
   👉「`<form>` の子」で使う、が鉄則です🧸 ([React][1])

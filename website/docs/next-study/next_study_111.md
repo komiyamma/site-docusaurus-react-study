@@ -7,6 +7,8 @@
 
 ## 1) まずは超ざっくり図解🧠✨
 
+![next study 111 headers vs cookie](./picture/next_study_111_headers_vs_cookie.png)
+
 ![まずは超ざっくり図解](./picture/next_study_111_cookie_headers.png)
 
 * **Headers**：リクエスト/レスポンスに付く「追加情報メモ」📎（例：`user-agent`、`authorization`、`content-type`）
@@ -29,9 +31,13 @@ sequenceDiagram
 
 ### ✅ (1) `cookies()` / `headers()` は **await が要る**（最近のNext.js）
 
+![next study 111 async cookie](./picture/next_study_111_async_cookie.png)
+
 `cookies()` と `headers()` は **async** になってて、`await` で取るのが基本だよ〜⏳ ([Next.js][1])
 
 ### ✅ (2) Cookieの `.set()` / `.delete()` は **Route Handler か Server Action で**
+
+![next study 111 set cookie action](./picture/next_study_111_set_cookie_action.png)
 
 Cookieを“変更”する操作は、レスポンスヘッダーを作れる場所じゃないと無理！って感じ💪 ([Next.js][1])
 
@@ -106,6 +112,8 @@ Chromeなら：DevTools → Application → Cookies 🍪
 ---
 
 ## 5) Cookieの属性、ふわっと理解🧷🍪
+
+![next study 111 httponly shield](./picture/next_study_111_httponly_shield.png)
 
 * `httpOnly: true`：JSから読めなくする（セッション系でよく使う）🛡️
 * `secure: true`：HTTPSでだけ送る🔒（※ローカルは例外っぽい挙動もあるよ）

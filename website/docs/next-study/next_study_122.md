@@ -7,6 +7,9 @@ Next.js の **Middleware（最新版だと “Proxy”）** は、ざっくり�
 
 ## 1) いちばん多い使い道：ログイン判定（保護ルート）🔐➡️🚪
 
+![next_study_122_fast_lane](./picture/next_study_122_fast_lane.png)
+
+
 「/dashboard はログインした人だけね！」みたいなやつ🫶
 未ログインなら **/login にリダイレクト**して、ちゃんと案内してあげるのが親切〜☺️✨
 
@@ -62,6 +65,8 @@ flowchart LR
 ---
 
 ### ⭐ 4-2. `proxy.ts` を作る（プロジェクト直下）📁
+
+![next_study_122_proxy_guard](./picture/next_study_122_proxy_guard.png)
 
 `app/` と同じ階層に `proxy.ts` を作ってね（`src/` 構成なら `src/proxy.ts`） ([Next.js][1])
 

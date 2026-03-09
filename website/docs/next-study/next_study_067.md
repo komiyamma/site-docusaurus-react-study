@@ -86,6 +86,8 @@ export default function Home() {
 ```
 
 > `prefetch={false}` は「先読みしないでね」の指定だよ🫶
+
+![next_study_067_prefetch_vs_loading](./picture/next_study_067_prefetch_vs_loading.png)
 > 先読みがあると速すぎて、ローディングが一瞬で終わって見えないことがあるの🥹 ([Next.js][3])
 
 ---
@@ -93,6 +95,8 @@ export default function Home() {
 ### 手順B：`/dashboard` 区間を作る📁
 
 #### ② `app/dashboard/layout.tsx`（枠）
+
+![next_study_067_layout_frame](./picture/next_study_067_layout_frame.png)
 
 ```tsx
 export default function DashboardLayout({
@@ -113,6 +117,8 @@ export default function DashboardLayout({
 
 #### ③ `app/dashboard/page.tsx`（わざと遅くする🐢）
 
+![next_study_067_artificial_delay](./picture/next_study_067_artificial_delay.png)
+
 ```tsx
 const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -129,6 +135,8 @@ export default async function DashboardPage() {
 ```
 
 #### ④ `app/dashboard/loading.tsx`（dashboard区間の待ちUI⏳）
+
+![next_study_067_loading_ui_design](./picture/next_study_067_loading_ui_design.png)
 
 ```tsx
 export default function LoadingDashboard() {
@@ -179,11 +187,15 @@ export default function LoadingSettings() {
 
 ## 5) 「区間ごと」だと何がうれしいの？🥰
 
+![next_study_067_nested_loading_view](./picture/next_study_067_nested_loading_view.png)
+
 たとえば `/dashboard/settings` に移動するとき👇
 **Dashboard の枠（layout）は残しつつ、settings 部分だけ loading にできる**から、体感がめちゃ良くなるよ〜✨ ([Next.js][1])
 
 ```mermaid
 sequenceDiagram
+
+![next_study_067_loading_sequence](./picture/next_study_067_loading_sequence.png)
   participant U as User
   participant C as Client
   participant S as Server

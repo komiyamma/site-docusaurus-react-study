@@ -18,6 +18,8 @@ APIって、成功のときはだいたい良いんだけど…
 だから最初にこう決めちゃう👇
 
 ✅ **「成功でも失敗でも、必ず同じ“外側”の形で返す」**
+
+![next study 115 unified box](./picture/next_study_115_unified_box.png)
 ✅ **TypeScriptで型も固定する**
 
 ---
@@ -114,6 +116,8 @@ export type ApiResponse<T> = ApiSuccess<T> | ApiFailure;
 
 ## 6. 返す処理を楽にする「ヘルパー」🍱✨
 
+![next study 115 helper function](./picture/next_study_115_helper_function.png)
+
 Route Handlerで毎回 `NextResponse.json(...)` を書くのしんどいので、便利関数を作ります😊
 
 📁 `lib/apiResponse.ts`
@@ -198,6 +202,8 @@ flowchart TD
 ---
 
 ## 9. 画面側（クライアント）での受け取り方🎮📥
+
+![next study 115 client sorting](./picture/next_study_115_client_sorting.png)
 
 「HTTPの成功/失敗（status）」と「JSONの `ok`」は別物なので、両方ちゃんと使うと安定します✅
 

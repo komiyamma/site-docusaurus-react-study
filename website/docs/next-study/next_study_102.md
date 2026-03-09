@@ -17,6 +17,10 @@
 
 ## まず結論：優しい文言の4点セット🧁✨
 
+![Friendly Error Messages 4-point set](./picture/next_study_102_four_points.png)
+
+
+
 エラー文言は、だいたいこれで勝てます🏆
 
 1. **何が起きたか**（短く）📝
@@ -49,6 +53,10 @@ flowchart TD
 
 ## ダメな例→良い例（言い換え集）💬➡️💗
 
+![Bad vs Good Examples](./picture/next_study_102_bad_vs_good.png)
+
+
+
 ### 1) よくある冷たい文言🥶
 
 * 「エラーが発生しました。」
@@ -71,6 +79,10 @@ flowchart TD
 ---
 
 ## 場面別テンプレ集📦💗（コピペして育ててOK）
+
+![Error Template Collection](./picture/next_study_102_template_collection.png)
+
+
 
 ### ✅ 通信エラー（ネット・API）
 
@@ -100,6 +112,10 @@ flowchart TD
 
 ## Next.jsで“優しい文言”を入れる場所🏠🧩
 
+![Placement in Next.js](./picture/next_study_102_placement_map.png)
+
+
+
 * `app/error.tsx`：そのルート配下で起きたエラーを受ける（復旧ボタンも置ける）🧯
 * `app/not-found.tsx`：存在しないページ（404）用🚪
 * `app/loading.tsx`：待ってる間の不安を減らす⏳
@@ -108,6 +124,10 @@ flowchart TD
 ---
 
 ## 実装①：`app/error.tsx` を“優しい＋行動できる”にする🧯💗
+
+![error.tsx Implementation](./picture/next_study_102_error_implementation.png)
+
+
 
 ポイント：`error.tsx` は **Client Component** なので `"use client"` が必要だよ〜！
 
@@ -165,6 +185,10 @@ export default function ErrorPage({
 
 ## 実装②：`app/not-found.tsx` を“迷子にしない”にする🧭🚪
 
+![not-found.tsx Implementation](./picture/next_study_102_not_found_implementation.png)
+
+
+
 ```tsx
 // app/not-found.tsx
 import Link from "next/link";
@@ -195,6 +219,10 @@ export default function NotFound() {
 ---
 
 ## 実装③：`loading.tsx` は“待ってる不安”を減らす⏳💕
+
+![loading.tsx Implementation](./picture/next_study_102_loading_implementation.png)
+
+
 
 ローディングは、ただクルクルより
 **「いま何してるか」**をひとこと添えると安心感が上がるよ🌷

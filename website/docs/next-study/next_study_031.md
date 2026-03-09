@@ -8,6 +8,8 @@ Next.js（App Router）では、**ページ描画中に起きた“想定外の�
 
 ## 1) まず結論：`error.tsx` って何？🤔🧯
 
+![next_study_031_error_shield](./picture/next_study_031_error_shield.png)
+
 * `app/xxx/error.tsx` を置くと、その **`xxx` セグメント内で起きたクラッシュ**をキャッチして
   **代わりの画面（フォールバックUI）**を表示できるよ〜！😌([Next.js][1])
 * `error.tsx` は **Client Component 必須**なので、先頭に `"use client"` が必要だよ⚠️([Next.js][1])
@@ -48,6 +50,8 @@ export default function DemoPage() {
 ```
 
 ### 手順②：同じフォルダに `app/demo/error.tsx` を作る🧯✨
+
+![next_study_031_code_snippet_visual](./picture/next_study_031_code_snippet_visual.png)
 
 ポイントは3つだけ👇
 
@@ -96,6 +100,8 @@ export default function Error({
 ```
 
 `reset()` は **そのセグメントを再レンダリング**して復帰を試みます([Next.js][1])
+
+![next_study_031_reset_cycle](./picture/next_study_031_reset_cycle.png)
 あと `error.message` は **開発中と本番で扱いが違う**ことがあります（本番は情報漏えい防止でメッセージが一般化されることがある）([Next.js][1])
 
 ### 手順③：動かす（Windows / VSCodeターミナル）🖥️💨
@@ -119,6 +125,8 @@ npm run dev
 
 ## 4) “どこまで守れるの？”（範囲の感覚）🛡️📦
 
+![next_study_031_error_bubble](./picture/next_study_031_error_bubble.png)
+
 `app/demo/error.tsx` は、だいたいこんな感じで **`demo` 配下をまとめて守る**よ〜！✨
 （エラーは近い `error.tsx` に吸い込まれて、なければ上にバブルするイメージ）([Next.js][2])
 
@@ -141,9 +149,13 @@ flowchart TD
 
 ### ✅ クリックイベントの中のエラーは、基本 `error.tsx` では捕まらない
 
+![next_study_031_event_handler_ignore](./picture/next_study_031_event_handler_ignore.png)
+
 Error Boundary は「描画中のエラー」を守る仕組みなので、イベントハンドラ内は `try/catch` で扱うのが基本だよ🧤([Next.js][2])
 
 ### ✅ 同じセグメントの `layout.tsx` で落ちると、`error.tsx` だけじゃ拾えないことがある
+
+![next_study_031_global_error_diff](./picture/next_study_031_global_error_diff.png)
 
 この場合は `app/global-error.tsx`（全体の保険）を使う場面があります🧯
 グローバル側は `<html><body>` を自分で書く必要があるのもポイント！([Next.js][3])

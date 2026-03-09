@@ -21,6 +21,9 @@ Next.js公式も、ブラウザ言語（`Accept-Language`）を使ってロケ�
 
 ## 2) ざっくり図解🧠🗺️（Mermaid）
 
+![next_study_125_decision_priority](./picture/next_study_125_decision_priority.png)
+
+
 ![イメージ図](./picture/next_study_125_locale_redirect.png)
 
 ```mermaid
@@ -187,6 +190,11 @@ export function middleware(request: NextRequest) {
   }
 
   // 3) 国で判定🇯🇵（本番でVercel等なら request.geo が入ることがある）
+```
+
+![next_study_125_geo_ip](./picture/next_study_125_geo_ip.png)
+
+```ts
   // ローカルは undefined になりがちなので、?__country=JP で疑似テストできるようにしてるよ🧪
   const debugCountry = url.searchParams.get(DEBUG_COUNTRY_PARAM) ?? undefined;
   const country = debugCountry ?? request.geo?.country;
@@ -197,6 +205,11 @@ export function middleware(request: NextRequest) {
   }
 
   // 4) ブラウザ言語（Accept-Language）で推測🌐
+```
+
+![next_study_125_accept_language](./picture/next_study_125_accept_language.png)
+
+```ts
   const localeFromHeader = getLocaleFromAcceptLanguage(
     request.headers.get("accept-language")
   );
@@ -233,6 +246,9 @@ npm run dev
 ```
 
 ### ② 国判定の疑似テスト🧪（ローカルで超便利！）
+
+![next_study_125_debug_trick](./picture/next_study_125_debug_trick.png)
+
 
 * ブラウザでこれ開いてみて👇
 

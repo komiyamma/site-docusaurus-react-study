@@ -9,6 +9,10 @@
 
 ## まず大前提：App Routerは「Server Component がデフォルト」🧊
 
+![next study 038 default server](./picture/next_study_038_default_server.png)
+
+
+
 App Routerでは、何も書かないと **Server Component（サーバー側）** として動きます🍵
 つまり、**ブラウザにJSを送らなくても描画できる** のが基本なんだよね✨
 
@@ -50,6 +54,10 @@ flowchart TB
 
 ## `"use client"` が必要なとき ✅（だいたいこれ）🎮
 
+![next study 038 when to use client](./picture/next_study_038_when_to_use_client.png)
+
+
+
 次のどれかが出たら「クライアントだ！」って思ってOK🙆‍♀️✨
 
 * `useState` を使いたい（状態を持つ）🔢
@@ -62,6 +70,10 @@ flowchart TB
 
 ## `"use client"` がいらないとき ✅（付けないのが正解）🧊
 
+![next study 038 server safe zone](./picture/next_study_038_server_safe_zone.png)
+
+
+
 * ただ表示するだけの見た目コンポーネント🖼️
 * サーバーで `fetch` して結果を表示するだけ🍵
 * 重い処理や秘密情報（DB接続など）を扱う🔐
@@ -72,6 +84,10 @@ flowchart TB
 ## 実例：カウンターボタンを作ろう➕➖🎮
 
 ### 1) `components/Counter.tsx` を作る（クライアント部品）✨
+
+![next study 038 counter example](./picture/next_study_038_counter_example.png)
+
+
 
 ```tsx
 "use client";
@@ -114,6 +130,10 @@ export default function Page() {
 
 ## もう1つ例：`localStorage` を読みたいとき📦
 
+![next study 038 local storage access](./picture/next_study_038_local_storage_access.png)
+
+
+
 `localStorage` はブラウザにしかないので、クライアント部品が必要だよ🌐
 
 ```tsx
@@ -143,6 +163,10 @@ export function NameFromStorage() {
 ---
 
 ## よくあるミス集（ここで詰まりやすい）🪤😵
+
+![next study 038 placement mistake](./picture/next_study_038_placement_mistake.png)
+
+
 
 * `"use client"` を **途中に書いちゃう**
   👉 **先頭に置く！**（importより上に！）⬆️

@@ -14,6 +14,8 @@
 
 ## まず結論：Clientで取るのが得意な場面🏆🎮
 
+![next_study_087_client_strengths](./picture/next_study_087_client_strengths.png)
+
 「ユーザーが操作するたびに結果が変わる」なら、Clientが向きやすいよ👇
 
 * 🔎 **検索**（入力するたびに結果が変わる）
@@ -27,6 +29,8 @@
 ---
 
 ## 逆に…Clientで取るのが苦手な場面😵‍💫💦
+
+![next_study_087_server_strengths](./picture/next_study_087_server_strengths.png)
 
 * 🗝️ **秘密情報（APIキー等）を使う**必要がある
   → Server側で取るのが基本！（秘密がブラウザに漏れちゃう） ([Next.js][1])
@@ -67,6 +71,8 @@ Next.jsでは **Client Componentを `async function` にしない**のが基本�
 
 ## ハンズオン：検索UI（Clientで取得＋絞り込み）🔎🎀
 
+![next_study_087_search_ui](./picture/next_study_087_search_ui.png)
+
 ### やること🌟
 
 * 初回にClientで一覧を取得📥
@@ -74,6 +80,8 @@ Next.jsでは **Client Componentを `async function` にしない**のが基本�
 * ついでに「読み込み中」も表示⏳
 
 ### 1) ページを作る📄✨（App Router）
+
+![next_study_087_useEffect_fetch](./picture/next_study_087_useEffect_fetch.png)
 
 `app/search/page.tsx` を作ってね！
 
@@ -187,6 +195,8 @@ npm run dev
 ---
 
 ## もう一歩：Clientで取るなら “SWR” が便利🧁✨
+
+![next_study_087_swr_benefit](./picture/next_study_087_swr_benefit.png)
 
 Client取得が増えてくると、**キャッシュ・再取得・フォーカス復帰時の更新**とかが面倒になりがち…🥺
 そこでNext.js側も **SWRをおすすめ**してるよ〜！ ([Next.js][4])

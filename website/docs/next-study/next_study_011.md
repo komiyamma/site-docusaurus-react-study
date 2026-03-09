@@ -7,6 +7,8 @@
 
 ## 1) まずは作業場所を決めよ〜📁✨
 
+![011 Workspace Setup](./picture/next_study_011_workspace_setup.png)
+
 例えばこんな感じがおすすめ👇（Windowsだとわかりやすい💕）
 
 * `C:\dev\` の中にプロジェクトを作る
@@ -17,6 +19,8 @@
 
 ## 2) VS Code でターミナルを開くよ〜🖥️💖
 
+![011 Terminal Icon](./picture/next_study_011_terminal_icon.png)
+
 VS Code を開いたら👇
 
 * メニュー → **ターミナル** → **新しいターミナル**
@@ -26,6 +30,8 @@ VS Code を開いたら👇
 ---
 
 ## 3) Node.js のバージョンだけ確認✅🔎
+
+![011 Node Check](./picture/next_study_011_node_check.png)
 
 Next.js の作成ツールは **Node.js 20.9 以上**が目安だよ〜🍀
 （公式の要件に書いてあるよ）([Next.js][1])
@@ -42,6 +48,8 @@ node -v
 ---
 
 ## 4) いよいよ作る！🎉✨（基本コマンド）
+
+![011 Magic Wand Create](./picture/next_study_011_magic_wand_create.png)
 
 `C:\dev` に移動してから、プロジェクト作成するよ〜！
 
@@ -62,6 +70,8 @@ npx create-next-app@latest my-app
 
 ## 5) 質問がいっぱい出てきたら？🤔💭
 
+![011 Skip Questions](./picture/next_study_011_skip_questions.png)
+
 作成中にいくつか質問（TypeScript使う？など）が出ることがあるよ〜！
 ここは次の章で丁寧にやるけど、迷ったらいったん「おすすめ寄り」で進めても大丈夫🙆‍♀️🌸
 
@@ -76,6 +86,8 @@ npx create-next-app@latest my-app --yes
 ---
 
 ## 6) 作れたかチェック👀✅
+
+![011 Folder Gift](./picture/next_study_011_folder_gift.png)
 
 作成が終わったら、フォルダができてるはず！🎊
 
@@ -118,6 +130,8 @@ flowchart TD
 → **y** を押して Enter だよ〜🎯
 
 ### ✅ 3) 会社/学校Wi-Fiで落ちる（たまにある😭）
+
+![011 Wifi Pitfall](./picture/next_study_011_wifi_pitfall.png)
 
 → いったん別回線（スマホテザリング等）で作って、あとで戻すのもアリ📶✨
 

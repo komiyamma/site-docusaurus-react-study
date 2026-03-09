@@ -43,6 +43,10 @@ flowchart LR
 
 ## 4) Next.js 側の準備：Viewportを入れる📱🧩
 
+![Viewport Concept](./picture/next_study_057_viewport_concept.png)
+
+
+
 App Router なら、`app/layout.tsx` に **viewport** を書いておくと安心だよ✨
 
 ```tsx
@@ -111,6 +115,10 @@ export default function Home() {
 ポイントはこれ👇
 
 * **`max-width` で中央寄せ**
+
+![Max-Width and Centering](./picture/next_study_057_max_width_center.png)
+
+
 * **`grid` + `minmax()` で自動調整**
 * **Media Query は 2段階くらい**（増やしすぎない✂️）
 
@@ -190,6 +198,10 @@ export default function Home() {
 
 ## 6) これだけは覚えて！“ハミ出し”対策3点セット🧯📦
 
+![Overflow Cause](./picture/next_study_057_overflow_cause.png)
+
+
+
 スマホでよくある事故が「横スクロール出ちゃう😭」なんだけど、原因はだいたいコレ👇
 
 ### ✅ ① 画像がデカい
@@ -248,7 +260,11 @@ A. **一覧（カードの集合）はGridが超強い**🔥
 この章の“最小セット”はこれだけ👇
 
 * **Viewportを設定**📱
-* **`max-width` で中央寄せ**🧸
+* **`max-width` で中央寄せ**
+
+![Max-Width and Centering](./picture/next_study_057_max_width_center.png)
+
+🧸
 * **Gridで1→2→3カラム**🧱
 * **Media Queryは増やしすぎない**✂️
 

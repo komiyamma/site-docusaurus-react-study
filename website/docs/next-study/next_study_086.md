@@ -15,6 +15,8 @@ Next.js（App Router）は **Suspense** と組み合わせると、**遅いパ�
 
 ## Streamingってなに？🌊（超ざっくり）
 
+![next_study_086_fast_vs_slow](./picture/next_study_086_fast_vs_slow.png)
+
 普通の表示だと、遅い処理（APIとかDBとか）があると **全部そろうまで画面が出ない**ことがあるよね🥲
 でもStreamingだと…
 
@@ -22,6 +24,8 @@ Next.js（App Router）は **Suspense** と組み合わせると、**遅いパ�
 * 🟠 **遅い部分（ランキングとかおすすめとか）** → 後から到着して差し替え🌊
 
 Suspenseは「ここはあとでOK！」っていう**境界線**を作る感じだよ〜🫧 ([React][2])
+
+![next_study_086_suspense_boundary](./picture/next_study_086_suspense_boundary.png)
 
 ---
 
@@ -54,6 +58,8 @@ sequenceDiagram
 ---
 
 ### 2) `page.tsx`（速い部分＋Suspense）を書く🏠🫧
+
+![next_study_086_fallback_card](./picture/next_study_086_fallback_card.png)
 
 ```tsx
 // app/streaming-demo/page.tsx
@@ -121,6 +127,8 @@ export default function Page() {
 
 ### 3) `SlowRanking.tsx`（わざと遅い部品）を書く🐢💤
 
+![next_study_086_sleeping_turtle](./picture/next_study_086_sleeping_turtle.png)
+
 ```tsx
 // app/streaming-demo/SlowRanking.tsx
 function delay(ms: number) {
@@ -186,6 +194,8 @@ npm run dev
 ---
 
 ## うれしさポイント3つ💖
+
+![next_study_086_happy_user](./picture/next_study_086_happy_user.png)
 
 * 🏎️ **体感が速い**：全部待たなくていい
 * 🧩 **遅いところだけ隔離できる**：ページ全体が巻き込まれない

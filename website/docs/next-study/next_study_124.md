@@ -37,6 +37,9 @@ flowchart TD
 
 ## ✅ まず作るもの（ファイル一覧）📁✨
 
+![next_study_124_files_map](./picture/next_study_124_files_map.png)
+
+
 * `proxy.ts`（旧 middleware.ts。最新では `proxy.ts` が推奨だよ〜） ([Next.js][1])
 * `app/login/page.tsx`（ログイン画面）
 * `app/dashboard/page.tsx`（保護したい画面）
@@ -144,6 +147,9 @@ export default function LogoutButton() {
 
 ## 2) ログイン/ログアウトAPI（クッキーを付ける🍪✨）
 
+![next_study_124_cookie_handover](./picture/next_study_124_cookie_handover.png)
+
+
 Next.js は Route Handler / Server Action から `cookies()` でクッキーを **set/delete** できるよ〜！ ([Next.js][2])
 
 ### ✅ `app/api/demo-login/route.ts`
@@ -184,6 +190,8 @@ export async function POST() {
 
 ## 3) いよいよ入口ガード！ `proxy.ts` を作る🧤🚦
 
+![next_study_124_proxy_check](./picture/next_study_124_proxy_check.png)
+
 💡 **ポイント：** `proxy.ts` は「ページが描画される前」に先に動ける“門番”だよ〜！🧱
 （昔は `middleware.ts` って呼ばれてたけど、最新では `proxy.ts` が推奨になってるよ） ([Next.js][1])
 
@@ -204,7 +212,11 @@ export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone()
   url.pathname = '/login'
   url.searchParams.set('from', request.nextUrl.pathname)
+```
 
+![next_study_124_redirect_param](./picture/next_study_124_redirect_param.png)
+
+```ts
   return NextResponse.redirect(url)
 }
 

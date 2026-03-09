@@ -22,11 +22,17 @@
 
 ### ルールC：その区間（セグメント）ごとに **`layout/loading/error/not-found` を置ける**🎁
 
+![next_study_074_page_vs_layout.png](./picture/next_study_074_page_vs_layout.png)
+
+
 * 「このエリアだけ」ローディング出す、エラー分ける、ができるのが強い💪✨
 
 ---
 
 ## 2) ルーティング地図（フォルダ構造＝世界地図）🗺️🧠
+
+![next_study_074_routing_map.png](./picture/next_study_074_routing_map.png)
+
 
 次の図は「よくある構成」を**地図っぽく**したものだよ😊
 （Route Group / Dynamic Route / Parallel / Intercepting まで一気に載せるね！）
@@ -91,6 +97,9 @@ flowchart TD
 
 ### あるある①：`page.tsx` を作ったのに表示されない😵‍💫
 
+![next_study_074_pitfall_placement.png](./picture/next_study_074_pitfall_placement.png)
+
+
 ✅ チェック：
 
 * 置き場所が `app/` 配下？（`src/app` の場合もあるよ📁）
@@ -110,6 +119,9 @@ flowchart TD
 
 ### あるある③：Dynamic Route がごちゃる（`[id]` どこ？）🧩
 
+![next_study_074_dynamic_confusion.png](./picture/next_study_074_dynamic_confusion.png)
+
+
 ✅ 迷ったら：
 
 * URLを分解して、**スラッシュごとにフォルダにする**だけ！✂️
@@ -120,6 +132,9 @@ flowchart TD
 ---
 
 ## 5) “迷子にならない”最強の手順（毎回これでOK）✅🗺️
+
+![next_study_074_creation_steps.png](./picture/next_study_074_creation_steps.png)
+
 
 ルーティングを作る時は、次の順番にすると脳がスッキリするよ☺️🌸
 

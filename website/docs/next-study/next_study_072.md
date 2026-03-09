@@ -10,6 +10,9 @@
 
 ## 人間に優しいURLって、どんなの？👀💡
 
+![next_study_072_friendly_vs_bad.png](./picture/next_study_072_friendly_vs_bad.png)
+
+
 人間に優しいURLは、ざっくり言うとこう👇
 
 * 読める📖（意味がわかる）
@@ -28,6 +31,9 @@
 
 ### ルール①：URLは「名詞」で作る📚
 
+![next_study_072_noun_rule.png](./picture/next_study_072_noun_rule.png)
+
+
 URLは「何を見せる場所か」なので、動詞より名詞が向いてるよ〜😊
 
 * ✅ `/posts`（記事）
@@ -37,6 +43,9 @@ URLは「何を見せる場所か」なので、動詞より名詞が向いて�
 ---
 
 ### ルール②：階層は深くしすぎない🏠➡️🏠➡️🏠（疲れる🥺）
+
+![next_study_072_hierarchy_depth.png](./picture/next_study_072_hierarchy_depth.png)
+
 
 深いURLは、理解も管理も大変💦
 目安：**2〜4階層くらい**が気持ちいいことが多いよ✨
@@ -67,6 +76,9 @@ URLは「何を見せる場所か」なので、動詞より名詞が向いて�
 
 ### ルール⑤：詳細ページは “slug” を使うと優しい😊🪄
 
+![next_study_072_slug_friendly.png](./picture/next_study_072_slug_friendly.png)
+
+
 slug = URLに入れる“読みやすい名前”だよ✨
 
 * ✅ `/posts/nextjs-url-design`
@@ -79,6 +91,9 @@ slug = URLに入れる“読みやすい名前”だよ✨
 ---
 
 ### ルール⑥：パスは「何か（対象）」、クエリは「絞り込み」🔍
+
+![next_study_072_path_vs_query.png](./picture/next_study_072_path_vs_query.png)
+
 
 ここめちゃ大事〜！🫶
 
@@ -99,6 +114,9 @@ slug = URLに入れる“読みやすい名前”だよ✨
 ---
 
 ## URL設計の全体像（どこに何を入れる？）🧠🗺️
+
+![next_study_072_design_map_flow.png](./picture/next_study_072_design_map_flow.png)
+
 
 ```mermaid
 flowchart TD

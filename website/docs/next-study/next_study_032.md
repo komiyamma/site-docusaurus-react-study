@@ -9,6 +9,8 @@
 
 ## `loading.tsx` ってなに？🍩
 
+![next_study_032_suspense_wrap](./picture/next_study_032_suspense_wrap.png)
+
 `loading.tsx` は、**そのルート（正確には route segment）の中身が準備できるまでの間だけ表示される**「待機用UI」だよ〜⏳
 Next.js が **React Suspense と streaming** を使って、先にローディングUIを出して、準備できたら自動で本物の画面に差し替えてくれるイメージ☺️✨ ([Next.js][1])
 
@@ -17,6 +19,8 @@ Next.js が **React Suspense と streaming** を使って、先にローディ�
 ---
 
 ## どこに置くの？（効く範囲）🗂️
+
+![next_study_032_loading_scope_map](./picture/next_study_032_loading_scope_map.png)
 
 **置いたフォルダ＝そのルート区間（segment）に効く**よ🎯
 例：`app/about/loading.tsx` を作ると、`/about` が準備中の間に表示される✨
@@ -38,6 +42,8 @@ flowchart TD
 なので、**/about を2秒だけ遅らせる**よ〜⏳✨
 
 ### 1) `app/about/page.tsx` を作る📄
+
+![next_study_032_turtle_sleep](./picture/next_study_032_turtle_sleep.png)
 
 ```tsx
 // app/about/page.tsx
@@ -84,6 +90,8 @@ export default function Home() {
 
 ## `loading.tsx` を作る（かわいいスケルトンUI）🧁✨
 
+![next_study_032_skeleton_transition](./picture/next_study_032_skeleton_transition.png)
+
 ### 1) `app/about/loading.tsx`
 
 ```tsx
@@ -107,6 +115,8 @@ export default function Loading() {
 ```
 
 ### 2) `app/about/loading.module.css`
+
+![next_study_032_shimmer_css](./picture/next_study_032_shimmer_css.png)
 
 ```css
 /* app/about/loading.module.css */
@@ -208,7 +218,9 @@ sequenceDiagram
 ## よくある「見えない！」ポイント🥲👉解決
 
 * **ページが速すぎる**：一瞬で終わって見えないことあるよ〜（今回は `sleep(2000)` で確実に見えるようにしたよ🐢）
-* **`<Link>` のプリフェッチで速い**：本番だと `<Link>` が事前読み込みして速くなることがあるの。必要なら `prefetch={false}` にできるよ🧯 ([Next.js][3])
+* **`<Link>` のプリフェッチで速い**：本番だと
+
+![next_study_032_prefetch_link](./picture/next_study_032_prefetch_link.png) `<Link>` が事前読み込みして速くなることがあるの。必要なら `prefetch={false}` にできるよ🧯 ([Next.js][3])
   例：
 
   ```tsx

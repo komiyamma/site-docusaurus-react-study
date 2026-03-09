@@ -16,6 +16,8 @@ APIは便利だけど、増えるほど **保守・セキュリティ・型管�
 
 ## そもそも：APIを増やすと何が増える？📈😵
 
+![next study 116 api burden](./picture/next_study_116_api_burden.png)
+
 API（Route Handler）を1個作るたびに、だいたいこういう“宿題”が増えます👇
 
 * 入力チェック（バリデーション）🛡️
@@ -48,6 +50,8 @@ CORSやWebhook受信みたいな「HTTPっぽいこと」も得意です🌍🔔
 ---
 
 ## 使い分けの超ざっくり結論⚖️✨
+
+![next study 116 chef vs delivery](./picture/next_study_116_chef_vs_delivery.png)
 
 ### ✅ Server Actions を選びやすい場面🧑‍🍳
 
@@ -103,6 +107,8 @@ flowchart LR
 ---
 
 ## ミニ例：内部だけの「TODO追加」はServer Actionで十分💡🫶
+
+![next study 116 internal ui](./picture/next_study_116_internal_ui.png)
 
 ### ✅ Server Action（内部専用の追加処理）
 

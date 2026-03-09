@@ -14,7 +14,10 @@
 
 ---
 
-## 2) 「遮断」より「案内」が勝つ理由 🫶📈
+## 2) 「遮断」より「案内」が勝つ理由
+
+![Stop sign vs Guide pointing way](./picture/next_study_130_stop_vs_guide.png)
+ 🫶📈
 
 たとえば未ログインで /dashboard を開いた時に…
 
@@ -27,7 +30,10 @@
 
 ---
 
-## 3) 全体の流れ（図解）🗺️✨
+## 3) 全体の流れ（図解）
+
+![Concierge directing traffic](./picture/next_study_130_proxy_concierge.png)
+🗺️✨
 
 ![イメージ図](./picture/next_study_130_redirect_guide.png)
 
@@ -101,7 +107,10 @@ export const config = {
 
 ---
 
-## 5) /login 側：next を受け取って「戻る」🫶🔁
+## 5) /login 側：next を受け取って「戻る」
+
+![Ticket with Return to Dashboard written on it](./picture/next_study_130_login_return_ticket.png)
+🫶🔁
 
 Next.jsの Page は **searchParams を受け取れる**よ（最近は Promise 扱いが基本！） ([Next.js][3])
 
@@ -167,7 +176,10 @@ export default async function LoginPage(props: Props) {
 
 ---
 
-## 6) ログイン処理（デモ）：cookieをセットして next にリダイレクト 🍪➡️🏃‍♀️
+## 6) ログイン処理（デモ）
+
+![User running back to dashboard with ticket](./picture/next_study_130_login_success_return.png)
+：cookieをセットして next にリダイレクト 🍪➡️🏃‍♀️
 
 cookieのセットは **Route Handler / Server Action** でやるのが基本だよ（ヘッダーでSet-Cookieを返す必要があるから） ([Next.js][4])
 
@@ -204,7 +216,10 @@ export async function POST(req: Request) {
 
 ---
 
-## 7) よくある落とし穴（ここだけ注意しておけばOK）🧯✨
+## 7) よくある落とし穴
+
+![Guard rail preventing falling off a cliff](./picture/next_study_130_open_redirect_guard.png)
+（ここだけ注意しておけばOK）🧯✨
 
 * 🔁 **リダイレクトループ**
   /login 自体を「保護」しちゃうと無限ループになるので、/login は公開ルートにする👌

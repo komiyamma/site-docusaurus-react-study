@@ -40,6 +40,8 @@ flowchart LR
 
 ### 作るファイル構成🗂️
 
+![next_study_088_file_structure_door](./picture/next_study_088_file_structure_door.png)
+
 * `app/api/cafes/route.ts`（アプリ内API 🚪）
 * `app/cafes/page.tsx`（ページ 🏠）
 * `app/cafes/CafeSearch.tsx`（検索UI：クライアント 🎮）
@@ -229,6 +231,8 @@ export default function Page() {
 
 ## 4) 動かし方（WindowsでもOK）🪟✨
 
+![next_study_088_request_url](./picture/next_study_088_request_url.png)
+
 ```bash
 npm run dev
 ```
@@ -245,6 +249,8 @@ http://localhost:3000/api/cafes?q=latte
 ## 5) Route Handler を挟む理由（超大事3つ）🔐🧯🧼
 
 ### ✅ ① 秘密を守れる（APIキーとか）🔐
+
+![next_study_088_api_key_shield](./picture/next_study_088_api_key_shield.png)
 
 `.env.local` に書いた値は、**`NEXT_PUBLIC_` が付いてない限り**クライアントから見えないよ〜！ ([Next.js][2])
 だから Route Handler の中でだけ使えば安心感アップ😺
@@ -264,12 +270,16 @@ const apiKey = process.env.DATA_API_KEY
 
 ### ✅ ② 外部APIのクセを“吸収”できる🧼
 
+![next_study_088_data_cleaning](./picture/next_study_088_data_cleaning.png)
+
 外部APIが返すデータって「画面で使いにくい形」だったりするじゃん？🥺
 Route Handler で **必要な形に整形してから返す**と、画面コードがめっちゃ綺麗になるよ〜✨
 
 ---
 
 ### ✅ ③ 画面は `/api/...` だけ叩けばOK（CORSに悩まない）🧯
+
+![next_study_088_cors_prevention](./picture/next_study_088_cors_prevention.png)
 
 クライアントは同じアプリの `/api/cafes` を叩くだけだから、余計なトラブルが減るよ〜😌
 

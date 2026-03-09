@@ -9,12 +9,19 @@
 
 ## `loading.tsx` ってなに？🤔
 
+![next_study_085_replacement.png](./picture/next_study_085_replacement.png)
+
 `loading.tsx` は、**特定のルート（= ルートセグメント）が読み込み中の間だけ表示される**「待ち画面」だよ⏳
 Next.jsはこれを **React Suspense** を使っていい感じに扱ってくれて、**サーバーから中身が届いたら自動で差し替え**してくれるよ🔁✨ ([Next.js][1])
 
 ---
 
 ## どこに置くの？（超重要）📁✨
+
+
+
+![next_study_085_scope_visual.png](./picture/next_study_085_scope_visual.png)
+
 
 基本はこれだけ覚えればOK🙆‍♀️💕
 
@@ -35,10 +42,17 @@ sequenceDiagram
     participant S as Server ("RSC")
     U->>N: Linkで /slow へ移動
     N-->>U: loading.tsx を先に表示⏳
+
+
+
+
     N->>S: page.tsx の描画を依頼
     S-->>N: 画面データを返す（遅いかも）
     N-->>U: ローディングから本画面へ差し替え✅
 ```
+
+![next_study_085_suspense_mechanism.png](./picture/next_study_085_suspense_mechanism.png)
+
 
 ---
 
@@ -122,6 +136,9 @@ export default function Loading() {
 
 ### 4) スケルトン用CSS（`loading.module.css`）🧁✨
 
+![next_study_085_skeleton_ui.png](./picture/next_study_085_skeleton_ui.png)
+
+
 `app/slow/loading.module.css` を作って、これ👇
 
 ```css
@@ -181,6 +198,11 @@ npm run dev
     みたいな配下でも効くよ（同じセグメント配下だから）📁✨ ([Next.js][1])
 
 ### パターンC：アプリ全体に“共通ローディング”を置きたい🌍
+
+
+
+![next_study_085_root_vs_segment.png](./picture/next_study_085_root_vs_segment.png)
+
 
 * `app/loading.tsx`
   👉 かなり広く効くので、やりすぎると「毎回全部真っ白…😢」になりやすいから注意〜⚠️

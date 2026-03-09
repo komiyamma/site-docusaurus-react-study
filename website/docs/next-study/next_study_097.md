@@ -17,6 +17,8 @@
 
 ## 404は2種類あるよ（ここ大事）🧠✨
 
+![next_study_097_two_404s.png](./picture/next_study_097_two_404s.png)
+
 1. **URLそのものが存在しない**（例：`/hogehoge`）
 2. **ページはあるけど中身（データ）が無い**（例：`/posts/存在しないslug`）
 
@@ -25,6 +27,8 @@
 ---
 
 ## 図解：404が出るまでの流れ 🗺️✨（Mermaid）
+
+![next_study_097_404_flow.png](./picture/next_study_097_404_flow.png)
 
 ```mermaid
 flowchart TD
@@ -182,6 +186,8 @@ export default function NotFound() {
 
 ## 2) 「戻るボタン」を作ろう（小さなClient部品）🔙✨
 
+![next_study_097_back_button.png](./picture/next_study_097_back_button.png)
+
 `not-found.tsx` 自体は基本サーバー側のコンポーネントだけど、
 「ブラウザの履歴_attach で戻る」はクライアントでやりたいよね😊
 
@@ -215,6 +221,8 @@ export default function BackButton({ className }: Props) {
 ---
 
 ## 3) 動的ページで「データが無い」→ `notFound()` を呼ぼう 🧠📰
+
+![next_study_097_not_found_trigger.png](./picture/next_study_097_not_found_trigger.png)
 
 たとえば `/posts/[slug]` の詳細ページで、
 その `slug` の記事が存在しなかったら **404にしたい**よね🥺
@@ -282,6 +290,8 @@ export default function NotFound() {
 ---
 
 ## 図解：`not-found.tsx` は「近いのが優先」🧭✨
+
+![next_study_097_priority_rule.png](./picture/next_study_097_priority_rule.png)
 
 ```mermaid
 flowchart TD

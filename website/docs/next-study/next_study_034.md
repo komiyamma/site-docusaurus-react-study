@@ -7,6 +7,8 @@
 
 ## 1) `params` って何者？👀🧩
 
+![next_study_034_params_promise](./picture/next_study_034_params_promise.png)
+
 ![Params Type Safety](./picture/next_study_034_params_type.png)
 
 Dynamic Route（例：`app/students/[id]/page.tsx`）にアクセスすると、Next.js が `params` にルートの値を入れて渡してくれます📦✨
@@ -26,10 +28,14 @@ flowchart TD
 
 ## 2) いちばんおすすめ：`PageProps<'/route'>` で型を自動で付ける🎯✨
 
+![next_study_034_page_props_wizard](./picture/next_study_034_page_props_wizard.png)
+
 Next.js には **ページの props を型付けできる `PageProps`** が用意されています（グローバルに使えるヘルパーだよ）([Next.js][1])
 Dynamic Route の `params` / `searchParams` を **ルート文字列から推論**してくれるので、初心者ほど助かるやつです🫶
 
 ### ✅ 例：`/students/[id]` の `id` を安全に受け取る
+
+![next_study_034_autocomplete_success](./picture/next_study_034_autocomplete_success.png)
 
 `app/students/[id]/page.tsx`
 
@@ -61,6 +67,8 @@ export default async function Page({ params }: PageProps<'/students/[id]'>) {
 
 ## 3) 自分で型を書きたいとき（手動タイプ）✍️🧠
 
+![next_study_034_manual_type_craft](./picture/next_study_034_manual_type_craft.png)
+
 「まだ `PageProps` に慣れてないから、自分で型を書きたい！」も全然OKです😊
 App Router のページは `NextPage` みたいな型じゃなくて、ふつうに props を型付けします([GitHub][2])
 
@@ -81,6 +89,8 @@ export default async function Page({ params }: Props) {
 
 ### ❌ `params.id` って直接触っちゃう
 
+![next_study_034_no_await_shock](./picture/next_study_034_no_await_shock.png)
+
 `params` が Promise なので、これだと型エラーになりがちです😵‍💫
 
 ```tsx
@@ -100,6 +110,8 @@ export default async function Page({ params }: PageProps<'/students/[id]'>) {
 ```
 
 ### ❌ `async` を付け忘れて await できない
+
+![next_study_034_async_badge](./picture/next_study_034_async_badge.png)
 
 `await` するなら **関数を `async`** にしようね😊
 

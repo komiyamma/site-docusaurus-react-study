@@ -38,6 +38,10 @@ flowchart TD
 
 ### ✅ ① 主役は「軸」！
 
+![next_study_052_flex_axes.png](./picture/next_study_052_flex_axes.png)
+
+
+
 Flexは「**どっち向きに並べる？**」から始まるよ〜✨
 
 * `flex-direction: row;`（横並び：デフォ）➡️
@@ -72,6 +76,10 @@ flowchart LR
 
 ### ✅ ① 列を決める（ほぼこれ）
 
+![next_study_052_grid_columns.png](./picture/next_study_052_grid_columns.png)
+
+
+
 * `grid-template-columns` で列の形が決まるよ✨
 
 例：**2カラム（左メニュー + 本文）**
@@ -83,6 +91,10 @@ flowchart LR
 Gridも `gap` が強い💪✨
 
 ### ✅ ③ カード一覧は「自動で増える列」が便利🌟
+
+![next_study_052_card_autofit.png](./picture/next_study_052_card_autofit.png)
+
+
 
 これ覚えたら勝ち〜！🥳
 

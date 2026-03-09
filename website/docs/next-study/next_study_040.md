@@ -44,6 +44,10 @@ type Props = {
 
 ### `React.ReactNode` って何が入るの？🤔
 
+![next study 040 react node types](./picture/next_study_040_react_node_types.png)
+
+
+
 だいたいこれ全部入るよ〜！🙆‍♀️✨
 
 * 文字（"hello"）
@@ -55,6 +59,10 @@ type Props = {
 ---
 
 ## 4) Next.js で一番よく見る：`layout.tsx` の `children` 🏠
+
+![next study 040 layout wrapping](./picture/next_study_040_layout_wrapping.png)
+
+
 
 App Router のレイアウトは「外枠」で、ページの中身が `children` として入ってくるよ〜！🧱✨
 
@@ -93,6 +101,10 @@ export default function RootLayout({
 `Card` みたいな「囲うだけの部品」を作れるようになると、UIが一気に作りやすくなるよ🧱💕
 
 ### ✅ ① `components/Card.tsx` を作る
+
+![next study 040 card component](./picture/next_study_040_card_component.png)
+
+
 
 ```tsx
 // components/Card.tsx
@@ -150,11 +162,19 @@ export default function Page() {
 
 ### ❌ `{children}` を書き忘れる
 
+![next study 040 missing children](./picture/next_study_040_missing_children.png)
+
+
+
 枠だけ出て「中身が表示されない」あるある！😂
 
 * ちゃんと `<div>{children}</div>` があるかチェック✅
 
 ### ❌ `children: string` とかにしちゃう
+
+![next study 040 string limit](./picture/next_study_040_string_limit.png)
+
+
 
 文字しか入らなくなって、`<p>` とか入れると詰むよ〜🫠
 基本は `React.ReactNode` でOK！🙆‍♀️
@@ -162,6 +182,10 @@ export default function Page() {
 ---
 
 ## 7) ミニ練習問題（5分）⏱️💪
+
+![next study 040 panel exercise](./picture/next_study_040_panel_exercise.png)
+
+
 
 ### 🎯 お題：`Panel` を作ろう！
 

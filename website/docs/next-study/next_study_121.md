@@ -10,6 +10,9 @@
 
 ## まず大事な感覚：Middleware は「入口の係員」だよ🚪👮‍♀️
 
+![next_study_121_bottleneck](./picture/next_study_121_bottleneck.png)
+
+
 Middleware は **ルートに入る前**に動く“前さばき”みたいなもの✨
 ここで時間がかかると、**毎回ぜんぶのリクエストが遅くなる**のが最大の怖さ😱🐢
 
@@ -37,6 +40,9 @@ flowchart LR
 ---
 
 ## 「重い処理」ってなに？（Middleware では避けるやつ）🪨🙅‍♀️
+
+![next_study_121_heavy_vs_light](./picture/next_study_121_heavy_vs_light.png)
+
 
 ### ❌ Middleware に置かないほうがいい代表例
 
@@ -80,6 +86,9 @@ flowchart TD
 ---
 
 ## 実例：ダッシュボードは「入口で軽く止める」だけにする🚦🍪
+
+![next_study_121_optimistic_check](./picture/next_study_121_optimistic_check.png)
+
 
 やりたいこと：
 
@@ -127,6 +136,9 @@ export const config = {
 ---
 
 ## じゃあ「本当のチェック」はどこでやるの？🏠🔐
+
+![next_study_121_check_location](./picture/next_study_121_check_location.png)
+
 
 おすすめはこのへん👇✨
 

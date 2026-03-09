@@ -34,6 +34,8 @@ flowchart TD
 
 ## 3) `loading.tsx` が得意なこと 🧱⏳
 
+![next_study_093_loading_curtain](./picture/next_study_093_loading_curtain.png)
+
 ### ✅ 得意
 
 * **ページ遷移中**に「画面まるごと読み込み中」を出す
@@ -47,6 +49,8 @@ flowchart TD
 ---
 
 ## 4) `Suspense` が得意なこと 🫧🧩
+
+![next_study_093_suspense_spotlight](./picture/next_study_093_suspense_spotlight.png)
 
 ### ✅ 得意
 
@@ -62,6 +66,8 @@ flowchart TD
 ---
 
 ## 5) 実例で覚える：記事一覧ページを作って使い分ける📰✨
+
+![next_study_093_mixed_example](./picture/next_study_093_mixed_example.png)
 
 ここからはミニ構成で理解するよ〜！🍀
 `/articles` に移動すると…
@@ -167,6 +173,8 @@ export default function Page() {
 
 ### Step 4：遅いパーツ（ランキング）を“わざと遅く”する⏱️😺
 
+![next_study_093_sleep_timer](./picture/next_study_093_sleep_timer.png)
+
 ```tsx
 // components/Ranking.tsx
 import { sleep } from "@/lib/sleep";
@@ -190,6 +198,8 @@ export default async function Ranking() {
 ---
 
 ## 6) 使い分けの「判断フロー」🧭💡
+
+![next_study_093_decision_compass](./picture/next_study_093_decision_compass.png)
 
 * それが **ページ遷移の最初から必要**？
 

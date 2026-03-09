@@ -29,6 +29,8 @@ Next.jsには2種類あるよ👇
 
 ---
 
+![next_study_003_compare_table_visual.png](./picture/next_study_003_compare_table_visual.png)
+
 ## 3) ざっくり比較表📋✨
 
 | 観点         | App Router（app/）🆕                                                 | Pages Router（pages/）📚                  |
@@ -43,10 +45,17 @@ Next.jsには2種類あるよ👇
 
 ## 4) 同居できるけど「同じURL」はダメ🙅‍♀️💥
 
+![next_study_003_priority_check.png](./picture/next_study_003_priority_check.png)
+
+
 App Router と Pages Router は **同じプロジェクトに共存できる**よ〜！でも…⚠️
 
 * **App Router の方が優先される**([Next.js][8])
 * そして **同じURLを両方で作ると競合してビルド時にエラー**になるよ💣([Next.js][8])
+
+![next_study_003_route_conflict.png](./picture/next_study_003_route_conflict.png)
+
+
 
 図にするとこんな感じ👇（このMermaidは基本文法に沿って書いてあるよ🧩）
 
@@ -109,6 +118,8 @@ export default function LegacyPage() {
 
 ---
 
+![next_study_003_layout_nesting.png](./picture/next_study_003_layout_nesting.png)
+
 ## 6) レイアウトの感覚だけ先にチラ見👀🧱
 
 App Router の “積み重ねレイアウト” はこんなイメージだよ👇
@@ -127,7 +138,10 @@ flowchart TB
 
 * `app/` と `pages/` の **同じURLを両方で作っちゃう** → 競合エラーになりがち💥([Next.js][8])
 * App Router は **Server Components がデフォルト** → ブラウザAPI（`window` とか）はそのままだと使えない場面があるよ（後の章でちゃんとやるよ）🧊🌐([Next.js][8])
-* 既存プロジェクト移行は「一気に」じゃなくて段階的が基本だよ🪜✨([Next.js][7])
+* 既存プロジェクト移行は「一気に」じゃなくて段階的が基本だよ🪜✨
+
+![next_study_003_migration_step.png](./picture/next_study_003_migration_step.png)
+([Next.js][7])
 
 ---
 

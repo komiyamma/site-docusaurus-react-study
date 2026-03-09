@@ -25,6 +25,9 @@ Next.jsのキャッシュを、ざっくりこう覚えると超ラクだよ😊
 
 ## 3) 図で見る：どこに何が溜まる？🗺️✨（超ざっくり）
 
+![next_study_077_cache_layers.png](./picture/next_study_077_cache_layers.png)
+
+
 ```mermaid
 flowchart TB
   U["ブラウザ / ユーザー"] -->|"アクセス"| S["Next.js サーバー"]
@@ -49,6 +52,9 @@ flowchart TB
 
 ### A. データキャッシュ（Data Cache）🍵
 
+![next_study_077_data_cache.png](./picture/next_study_077_data_cache.png)
+
+
 **「データそのもの」を溜める場所**だよ〜！
 たとえば `fetch()` で取ったJSONとか、DBクエリ結果とか🧾
 
@@ -63,6 +69,9 @@ flowchart TB
 
 ### B. レンダーキャッシュ（Full Route Cache）🍱✨
 
+![next_study_077_full_route_cache.png](./picture/next_study_077_full_route_cache.png)
+
+
 **「ページをレンダリングした結果（完成品）」**を溜める場所！
 
 * どこ？👉 **サーバー**
@@ -75,6 +84,9 @@ flowchart TB
 ---
 
 ### C. ルートキャッシュ（Router Cache）🎒🌟
+
+![next_study_077_router_cache.png](./picture/next_study_077_router_cache.png)
+
 
 **画面遷移のときに、ブラウザ側で“次の表示”をスムーズにするキャッシュ**！
 
@@ -93,6 +105,9 @@ flowchart TB
 なので「データは毎回取り直してるけど、ページはプリレンダーされて速い」みたいなケースも起きるよ〜😳 ([Next.js][3])
 
 ### 「更新したのに表示が変わらない！」🔄😵
+
+![next_study_077_cache_troubleshoot.png](./picture/next_study_077_cache_troubleshoot.png)
+
 
 まずこの順で疑うと迷子になりにくいよ👇
 

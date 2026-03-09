@@ -7,6 +7,9 @@
 
 ## 🎯 今日のゴール
 
+![next_study_142_fetch_vs_action](./picture/next_study_142_fetch_vs_action.png)
+
+
 ✅ ボタン押したら **Server Action が動く**
 ✅ 追加後に **`/todos` の表示が更新**される（`revalidatePath`）
 ✅ 送信中はボタンを **無効化＆文言変更**（`useFormStatus`）
@@ -31,6 +34,9 @@ flowchart LR
 ---
 
 ## 🛠️ 手順（この章で作る/直すファイル）
+
+![next_study_142_file_structure](./picture/next_study_142_file_structure.png)
+
 
 この章では例として `/todos` ページがある前提で進めるね☺️
 （Windows＋VSCodeなら、左のエクスプローラーでそのままファイル作ってOK！📁✨）
@@ -68,6 +74,9 @@ export function addTodo(title: string): Todo {
 ---
 
 ### ✅ 2) Server Action を作る（ここが今回の主役🧑‍🍳✨）
+
+![next_study_142_revalidate_refresh](./picture/next_study_142_revalidate_refresh.png)
+
 
 `/app/todos/actions.ts` を作るよ！
 ポイントは **`'use server'`** と、最後の **`revalidatePath('/todos')`** 🔁
@@ -109,6 +118,9 @@ export async function addTodoAction(
 ---
 
 ### ✅ 3) フォームを Server Actions 対応に置き換える（`useActionState` 使用）
+
+![next_study_142_pending_state](./picture/next_study_142_pending_state.png)
+
 
 ここで「fetchでPOST」してた部分を消して、**`<form action={...}>`** にするよ📮✨
 `useActionState` を使うと、Server Actionの返り値（今回だと message）をフォーム側で受け取れるよ🧠✨ ([React][4])

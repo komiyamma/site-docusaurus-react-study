@@ -89,6 +89,8 @@ src/
 
 ## 1) `lib/posts.ts`：読み取り関数をここに集約📚✨
 
+![next_study_089_lib_bookshelf](./picture/next_study_089_lib_bookshelf.png)
+
 ポイントは👇
 
 * **型を置く**
@@ -110,6 +112,8 @@ async function fetchJson<T>(input: RequestInfo, init?: RequestInit): Promise<T> 
 
   if (!res.ok) {
     // error.tsx に流れるように「投げる」✨
+
+![next_study_089_error_throw_catch](./picture/next_study_089_error_throw_catch.png)
     throw new Error(`Fetch failed: ${res.status} ${res.statusText}`);
   }
   return (await res.json()) as T;
@@ -136,6 +140,8 @@ export async function getPost(id: string): Promise<Post> {
 ---
 
 ## 2) 一覧ページ `app/posts/page.tsx` 📋✨
+
+![next_study_089_list_ui](./picture/next_study_089_list_ui.png)
 
 ```tsx
 // src/app/posts/page.tsx
@@ -164,6 +170,8 @@ export default async function PostsPage() {
 ---
 
 ## 3) ローディング `app/posts/loading.tsx` ⏳💗
+
+![next_study_089_loading_sandglass](./picture/next_study_089_loading_sandglass.png)
 
 ```tsx
 // src/app/posts/loading.tsx
@@ -226,6 +234,8 @@ export default async function PostDetailPage({ params }: { params: Promise<{ id:
 ---
 
 ## キャッシュ設計の“ミニ判断”🧊🧠
+
+![next_study_089_cache_decision_mini](./picture/next_study_089_cache_decision_mini.png)
 
 「どれ使う？」って迷ったら、まずこの分岐でOKだよ😊
 

@@ -20,6 +20,8 @@
 
 ## まず結論：Route Group は「フォルダ整理＋共通UI分岐」📦💡
 
+![next_study_029_route_group_ui.png](./picture/next_study_029_route_group_ui.png)
+
 `app/(site)/about/page.tsx` を作っても、URLはこうなるよ👇
 
 * `app/(site)/page.tsx` → `/`
@@ -30,6 +32,8 @@
 ---
 
 ## 図解：`layout` がどう重なるの？🧱🧠
+
+![next_study_029_nested_structure.png](./picture/next_study_029_nested_structure.png)
 
 ![Group Layouts](./picture/next_study_029_group_layouts.png)
 
@@ -55,6 +59,8 @@ flowchart TD
 
 ### 1) まずフォルダ構成を作る📁
 
+![next_study_029_folder_tree_final.png](./picture/next_study_029_folder_tree_final.png)
+
 こんな感じにするよ！（`(site)` と `(dashboard)` がポイント）
 
 ```mermaid
@@ -76,6 +82,8 @@ flowchart LR
 ---
 
 ### 2) `app/layout.tsx`（全体の一番外側）を用意する🌍
+
+![next_study_029_layout_code_structure.png](./picture/next_study_029_layout_code_structure.png)
 
 ✅ ここだけは `html` / `body` を書くのが基本だよ（下のレイアウトには書かない！）🙅‍♀️
 
@@ -242,6 +250,8 @@ export default function DashboardPage() {
 ---
 
 ## 動作チェック✅（ここ大事！）
+
+![next_study_029_browser_verification.png](./picture/next_study_029_browser_verification.png)
 
 開発サーバー起動（もう起動してたらOK）💨
 

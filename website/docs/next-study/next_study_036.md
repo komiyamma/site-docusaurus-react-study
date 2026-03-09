@@ -17,6 +17,8 @@ Next.js（App Router）っぽさが一気にわかる練習です😊💕
 
 ## 🗺️ ルートとファイルの地図（Route Groupも使うよ📦）
 
+![next_study_036_site_group_box](./picture/next_study_036_site_group_box.png)
+
 ![Site Structure Map](./picture/next_study_036_site_structure.png)
 
 `(site)` は **URLに出ない整理用フォルダ**だよ〜！便利🧸✨
@@ -46,6 +48,8 @@ flowchart TD
 ---
 
 ## 2) 共通ナビを作る：`app/(site)/layout.tsx` 🧱💗
+
+![next_study_036_layout_wireframe](./picture/next_study_036_layout_wireframe.png)
 
 ```tsx
 import Link from "next/link";
@@ -222,6 +226,8 @@ export default function AccessPage() {
 
 ## 4) ちょい見た目を整える：`app/globals.css` 💅✨
 
+![next_study_036_grid_layout](./picture/next_study_036_grid_layout.png)
+
 すでにあるなら、下を「追記」してね😊（上書きしないでOK！）
 
 ```css
@@ -326,6 +332,8 @@ export default function AccessPage() {
 
 ## 5) 動作チェック✅✨（WindowsでOK！）
 
+![next_study_036_nav_interaction](./picture/next_study_036_nav_interaction.png)
+
 ターミナルで👇
 
 ```bash
@@ -358,6 +366,8 @@ flowchart LR
 ---
 
 ## 🎯 仕上げミッション（任意で楽しく💞）
+
+![next_study_036_tab_titles](./picture/next_study_036_tab_titles.png)
 
 * トップに「学科の3つの強み💪」セクションを追加してみる✨
 * `metadata` の `description` をページごとに変えてみる🔎

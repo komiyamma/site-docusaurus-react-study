@@ -16,6 +16,8 @@
 
 ## まずは結論：エラーは3種類で考える🧩
 
+![next_study_095_three_errors.png](./picture/next_study_095_three_errors.png)
+
 ### ① 通信エラー（ネットワーク系）📡⚡
 
 「外とのやり取り」がうまくいかないやつ！
@@ -83,6 +85,8 @@ flowchart TD
 
 ## ありがち落とし穴：`fetch` は 404/500 では投げない🙅‍♀️
 
+![next_study_095_fetch_trap.png](./picture/next_study_095_fetch_trap.png)
+
 Next.js/Nodeの `fetch` は、**404や500でも基本は成功扱い（例外じゃない）** で `Response` が返るよ〜😳
 だから **`res.ok` を必ず見る**のが大事✨
 
@@ -94,6 +98,8 @@ Next.js/Nodeの `fetch` は、**404や500でも基本は成功扱い（例外じ
 （表示の仕上げは、この先で `error.tsx` などに繋がるイメージ🫶）
 
 ### 1) エラー種別を作る（超シンプル版）✨
+
+![next_study_095_error_tagging.png](./picture/next_study_095_error_tagging.png)
 
 ```ts
 // lib/errors.ts
@@ -112,6 +118,8 @@ export class AppError extends Error {
 ```
 
 ### 2) `fetch` を包む関数（通信/HTTP を分ける）📦
+
+![next_study_095_fetch_wrapper.png](./picture/next_study_095_fetch_wrapper.png)
 
 ```ts
 // lib/fetchJson.ts
@@ -156,6 +164,8 @@ export async function fetchJson<T>(url: string): Promise<T> {
 ## ミニ練習：わざと3種類を起こして“分類できた！”を体験🔬✨
 
 ### 手順A：テスト用APIを作る🧪
+
+![next_study_095_error_testing.png](./picture/next_study_095_error_testing.png)
 
 `app/api/demo/route.ts` を作ってね👇
 

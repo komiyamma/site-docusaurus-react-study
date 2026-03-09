@@ -9,6 +9,8 @@
 
 ## 1) `Suspense` って結局なに？🤔🫧
 
+![next_study_091_waiting_zone](./picture/next_study_091_waiting_zone.png)
+
 `<Suspense>` は、**子コンポーネントの準備が終わるまで**、代わりに **fallback（仮の表示）** を出してくれる“待機ゾーン”だよ〜⏳✨
 子が「まだ無理〜！」って一時停止（suspend）すると、自動で fallback に切り替わる感じ！ ([React][1])
 
@@ -17,6 +19,8 @@
 ## 2) 何がうれしいの？🥰🌊
 
 ### ✅ “待つ場所”を小さくできる🧁
+
+![next_study_091_partial_loading_cupcake](./picture/next_study_091_partial_loading_cupcake.png)
 
 ページ全体が真っ白で待つんじゃなくて、
 **先に見せられるところは先に見せて**、遅い部分だけ「読み込み中」を出せるよ💡
@@ -35,6 +39,8 @@ Next.js（App Router）は `Suspense` と相性がよくて、**HTMLを小分け
 `app/suspense-demo/page.tsx`
 
 ### 手順②：コードを書く✍️
+
+![next_study_091_sleep_function](./picture/next_study_091_sleep_function.png)
 
 ```tsx
 import { Suspense } from "react";
@@ -102,6 +108,8 @@ npm run dev
 
 ## 4) 超重要：`await` を“どこに置くか”で結果が変わる⚠️😵‍💫
 
+![next_study_091_parent_vs_child_await](./picture/next_study_091_parent_vs_child_await.png)
+
 ### ❌ ダメ例：親（Page）で待つと、全部待つ💥
 
 ```tsx
@@ -144,6 +152,8 @@ flowchart TD
 ---
 
 ## 7) ミニ練習🎀💪
+
+![next_study_091_multiple_suspense](./picture/next_study_091_multiple_suspense.png)
 
 1. `sleep(2000)` を `sleep(5000)` にしてみよ〜⏳
 2. fallback の文言を変えて、もっと可愛くしてみよ〜🧸💖

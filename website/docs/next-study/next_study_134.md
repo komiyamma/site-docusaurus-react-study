@@ -6,6 +6,10 @@
 
 ## 1) まず結論：`action` は「URL」だけじゃなく「関数」も置ける🎯
 
+![next_study_134_action_concept.png](./picture/next_study_134_action_concept.png)
+
+
+
 React 19 では、`<form action={...}>` の `action` に **関数**を渡せるようになってるよ✨
 送信すると、その関数が **`FormData` を受け取って呼び出される**感じ！📦🧡 ([React][1])
 
@@ -17,6 +21,10 @@ Next.jsでもこの流れが超重要で、**Server Actionsのフォーム**は�
 ---
 
 ## 2) `onSubmit` と何が違うの？🤔💭
+
+![next_study_134_onsubmit_vs_action.png](./picture/next_study_134_onsubmit_vs_action.png)
+
+
 
 ざっくり言うと…
 
@@ -38,6 +46,10 @@ Next.jsでもこの流れが超重要で、**Server Actionsのフォーム**は�
 ---
 
 ## 3) 図でイメージつかもう🧠✨（Mermaid）
+
+![next_study_134_flowchart_visual.png](./picture/next_study_134_flowchart_visual.png)
+
+
 
 ![イメージ図](./picture/next_study_134_form_action_prop.png)
 
@@ -64,6 +76,10 @@ sequenceDiagram
 ---
 
 ## 4) ミニ実験：`action` に関数を渡してみよう🧪💗（クライアント側で体験）
+
+![next_study_134_client_experiment.png](./picture/next_study_134_client_experiment.png)
+
+
 
 > ここでは「考え方」を体験したいので、まずは **Client Component** で動かすよ😊
 > （次の章で “サーバーで動く版” に進むイメージ✨）
@@ -126,6 +142,10 @@ export default function Page() {
 
 ## 5) ここが超大事ポイント🧷✨
 
+![next_study_134_name_attribute_importance.png](./picture/next_study_134_name_attribute_importance.png)
+
+
+
 ### ✅ `name="..."` がないと、`FormData` に入らないよ！😵
 
 * `formData.get('name')` は、フォーム内の `name="name"` を探して取ってくる感じ🧠
@@ -139,6 +159,10 @@ export default function Page() {
 ---
 
 ## 6) よくあるつまずき集🪤💦
+
+![next_study_134_button_type_trap.png](./picture/next_study_134_button_type_trap.png)
+
+
 
 * **`button` の `type` を書き忘れる**
   フォームの中の `button` は、デフォルトで `submit` になりがち😇

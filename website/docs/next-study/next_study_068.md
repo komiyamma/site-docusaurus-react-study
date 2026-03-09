@@ -7,6 +7,8 @@ Next.js（App Router）のエラー処理って、ざっくり言うと **「フ
 
 ### 1) “区間（ルートセグメント）”ってなに？🧩
 
+![next_study_068_error_boundary_concept](./picture/next_study_068_error_boundary_concept.png)
+
 App Routerでは、`app/` 配下の **フォルダが区間（セグメント）** になりやすいよ📁✨
 そして **その区間の中で起きた予期せぬエラー（throwされたエラー）** は、**いちばん近い `error.tsx`** が受け止めるの！🧯 ([Next.js][1])
 
@@ -49,6 +51,8 @@ flowchart TD
 ---
 
 ### (1) フォルダ構成を作る📁
+
+![next_study_068_list_vs_detail_error](./picture/next_study_068_list_vs_detail_error.png)
 
 こんな感じにするよ👇
 
@@ -96,6 +100,8 @@ export default async function ProductDetailPage({
   const { id } = await params;
 
   // わざと落とす（例：id=2 のときだけ落ちる）
+
+![next_study_068_throw_error](./picture/next_study_068_throw_error.png)
   if (id === "2") {
     throw new Error("在庫情報の取得に失敗しました💥（デモ）");
   }
@@ -113,6 +119,8 @@ export default async function ProductDetailPage({
 ---
 
 ### (4) products区間のエラー境界：`app/products/error.tsx` 🧯
+
+![next_study_068_error_ui](./picture/next_study_068_error_ui.png)
 
 ここが **`/products` 配下の“ざっくり保険”** になるよ！
 
@@ -153,9 +161,13 @@ export default function ProductsError({
 * `error.tsx` は **Client Component 必須** だから、先頭に `"use client"` がいるよ⚠️ ([Next.js][2])
 * `reset()` は **その区間の再レンダリングを試す** ボタンにできるよ🔁 ([Next.js][2])
 
+![next_study_068_reset_function](./picture/next_study_068_reset_function.png)
+
 ---
 
 ### (5) detail区間のエラー境界：`app/products/[id]/error.tsx` 🎯
+
+![next_study_068_detail_specific_error](./picture/next_study_068_detail_specific_error.png)
 
 ここが今回の主役！✨
 **詳細ページだけのエラーを、詳細ページだけで受け止める**よ🧯

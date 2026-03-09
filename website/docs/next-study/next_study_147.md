@@ -64,10 +64,16 @@ app/
 
 ## 2) TextField（Input+Label+Error）を作る🧩📝
 
+![next_study_147_text_field_anatomy](./picture/next_study_147_text_field_anatomy.png)
+
+
 ![Assembly Line](./picture/next_study_147_assembly_line.png)
 
 
 ### ✅ ポイント（ここが“整う”コツ）💡
+
+![next_study_147_a11y_connect](./picture/next_study_147_a11y_connect.png)
+
 
 * `label` と `id` をセットにして、クリックでフォーカスできるようにする👆✨
 * エラーがあるときは `aria-invalid` を付ける（やさしい）🫶
@@ -175,6 +181,9 @@ export function TextField({
 
 ## 3) SubmitButton（送信中を自動制御）を作る⏳🔘✨
 
+![next_study_147_submit_button_isolation](./picture/next_study_147_submit_button_isolation.png)
+
+
 Server Actionsのフォームだと、送信中を知るのに `useFormStatus()` が便利だよ！
 ただしこれはフックなので **Client Component** にする必要あり👇
 
@@ -223,6 +232,9 @@ export function SubmitButton({ children, pendingText = "送信中…" }: Props) 
 ---
 
 ## 4) 使ってみよう（お問い合わせフォーム例）📮✨
+
+![next_study_147_clean_page_code](./picture/next_study_147_clean_page_code.png)
+
 
 ここでは「TextFieldとSubmitButtonを組み合わせて、ページ側をスッキリさせる」のが目的だよ😊🌸
 （送信処理はダミーでOK！）

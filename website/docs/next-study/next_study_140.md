@@ -15,6 +15,10 @@
 
 ## `useOptimistic` ってなに？🫧
 
+![next_study_140_optimistic_concept.png](./picture/next_study_140_optimistic_concept.png)
+
+
+
 `useOptimistic` は、**非同期処理（サーバーへ送信とか）中だけ**、UIを「うまくいった想定」で**先に見せる**ためのReactフックだよ✨ ([React][1])
 
 基本形はこれ👇 ([React][1])
@@ -31,6 +35,10 @@ const [optimisticState, addOptimistic] = useOptimistic(state, updateFn);
 ---
 
 ## 流れを図でつかむ🧠➡️✨（Mermaid）
+
+![next_study_140_optimistic_flow.png](./picture/next_study_140_optimistic_flow.png)
+
+
 
 ![イメージ図](./picture/next_study_140_optimistic_preview.png)
 
@@ -153,6 +161,10 @@ export default function Page() {
 
 ### `components/MessageBoard.tsx`（Client Component：主役✨）
 
+![next_study_140_temporary_state.png](./picture/next_study_140_temporary_state.png)
+
+
+
 ```tsx
 "use client";
 
@@ -269,6 +281,10 @@ npm run dev
 
 ## ここが大事ポイント3つ🧠✨
 
+![next_study_140_revert_failure.png](./picture/next_study_140_revert_failure.png)
+
+
+
 1. `useOptimistic` は「**処理中だけ**見せる仮UI」だよ🫧 ([React][1])
 2. **成功したら確定stateを更新**（DBやサーバー結果に合わせる）🧊
 3. **失敗したら確定stateが増えない**ので、仮表示は自然に戻る🔙（エラー表示は別で用意）🧯 ([React][1])
@@ -287,6 +303,10 @@ npm run dev
 ---
 
 ## ミニ練習🎀（5分）
+
+![next_study_140_form_reset.png](./picture/next_study_140_form_reset.png)
+
+
 
 1. 「（送信中…）⏳」を **薄い文字**にしてみよ〜🙂
 2. 成功したら input を空にしたい！

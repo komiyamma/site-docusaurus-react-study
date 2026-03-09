@@ -7,6 +7,10 @@
 
 ## 完成イメージ🎯💌
 
+![next_study_141_final_mockup.png](./picture/next_study_141_final_mockup.png)
+
+
+
 * 名前・メール・本文を入力📝
 * 送信すると…
 
@@ -16,6 +20,10 @@
 ---
 
 ## ざっくり仕組み図🧠📨
+
+![next_study_141_architecture_overview.png](./picture/next_study_141_architecture_overview.png)
+
+
 
 ![イメージ図](./picture/next_study_141_contact_form.png)
 
@@ -47,6 +55,10 @@ flowchart TD
 ---
 
 ## 1) Server Action を作る（サーバー側）🧑‍🍳🔥
+
+![next_study_141_validation_logic.png](./picture/next_study_141_validation_logic.png)
+
+
 
 `app/contact/actions.ts`
 
@@ -100,6 +112,10 @@ export async function submitContact(prevState: ContactState, formData: FormData)
 ---
 
 ## 2) フォームUI（クライアント側）を作る🧸✨
+
+![next_study_141_form_assembly.png](./picture/next_study_141_form_assembly.png)
+
+
 
 `app/contact/ContactForm.tsx`
 
@@ -196,6 +212,10 @@ export default function ContactPage() {
 ---
 
 ## 4) ちょい見た目を整える🎀✨（CSS Modules）
+
+![next_study_141_styling_polish.png](./picture/next_study_141_styling_polish.png)
+
+
 
 `app/contact/contact.module.css`
 

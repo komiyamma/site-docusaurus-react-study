@@ -7,6 +7,8 @@ Next.js（App Router）は **`error.tsx` を置くだけ** で、そのルート
 
 ## 1) `error.tsx` って何？🤔💭
 
+![next_study_084_error_scope.png](./picture/next_study_084_error_scope.png)
+
 エラーには大きく2種類あるよ👇
 
 * ✅ **想定内のエラー**：バリデーション失敗、入力ミス、ログイン失敗…など（戻り値で扱うのが基本） ([Next.js][2])
@@ -33,9 +35,16 @@ flowchart TD
   C -->|"No"| D["普通に表示✨"]
   C -->|"Yes"| E["同じ区間の error.tsx が表示🧯"]
   E --> F["ユーザーが「再試行」押す🔁"]
+
+
+
+
   F --> G["reset()で再レンダリングを試す"]
   G --> C
 ```
+
+![next_study_084_reset_button.png](./picture/next_study_084_reset_button.png)
+
 
 `reset()` は「もう一回その区間を描画しなおしてみる」って感じだよ🔁 ([Next.js][1])
 
@@ -114,10 +123,16 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ f
 ### 3-3) `error.tsx`（エラー画面を作る）🧯💖
 
 `error.tsx` は **必ずClient Component** なので先頭に `'use client'` を書くよ！ ([Next.js][1])
+
+![next_study_084_use_client_req.png](./picture/next_study_084_use_client_req.png)
 `reset()` をボタンに繋ぐと「もう一回！」ができる✨ ([Next.js][1])
 
 ```tsx
 // app/demo-error/error.tsx
+
+
+
+
 'use client'
 
 import { useEffect } from 'react'
@@ -164,6 +179,9 @@ export default function Error({
 }
 ```
 
+![next_study_084_error_object.png](./picture/next_study_084_error_object.png)
+
+
 補足：本番ではサーバー由来のエラー詳細をそのまま出さない挙動になることがあるよ（情報漏えい防止）🕵️‍♀️🔒 ([Next.js][1])
 
 ---
@@ -182,6 +200,11 @@ export default function Error({
 ---
 
 ## 4) よくあるハマり🔥あるある3つ
+
+
+
+![next_study_084_placement_strategy.png](./picture/next_study_084_placement_strategy.png)
+
 
 * **`'use client'` 書き忘れ** → `error.tsx` はClient必須だよ〜！🧡 ([Next.js][1])
 * **どこに置けばいいか迷子** → “その区間だけ守りたい”フォルダの中に置く（例：`app/demo-error/error.tsx`）🗺️ ([Next.js][3])

@@ -32,6 +32,8 @@ flowchart LR
 
 ## 2) フォルダ構成：`[id]` を作る📁🧩
 
+![next_study_033_bracket_folder](./picture/next_study_033_bracket_folder.png)
+
 以下のようにフォルダを作るよ！（WindowsでもOK✨）
 
 ```text
@@ -81,12 +83,18 @@ export default function StudentsPage() {
 
 * ``<Link href={`/students/${s.id}`}>`` で **動的なURL**を作ってるよ！
 
+![next_study_033_link_template](./picture/next_study_033_link_template.png)
+
 ---
 
 ## 4) 詳細ページを作る：`/students/1` みたいな場所🔍✨
 
+![next_study_033_url_parser](./picture/next_study_033_url_parser.png)
+
 次に `app/students/[id]/page.tsx` を作るよ！
 ここでは URL の `id` を **`params.id`** で受け取れるのがポイント🧩
+
+![next_study_033_params_destructure](./picture/next_study_033_params_destructure.png)
 
 ```tsx
 type Props = {
@@ -131,6 +139,8 @@ npm run dev
 ## 6) よくあるつまずきポイント集🧯😵‍💫
 
 * **`[id]` をファイル名にしてしまった！**
+
+![next_study_033_filename_error](./picture/next_study_033_filename_error.png)
   ✅ 正解は **フォルダ名が `[id]`** だよ〜（`[id]/page.tsx`）📁
 
 * **`params` が undefined っぽい…**
@@ -138,6 +148,8 @@ npm run dev
   （Client Componentにすると受け取り方が変わるので、まずはこの形でOK😊）
 
 * **`/students?id=1` と混ざる**
+
+![next_study_033_query_vs_path](./picture/next_study_033_query_vs_path.png)
   ✅ それは「クエリパラメータ」
   ✅ 今回は「パスの一部」：`/students/1` だよ🛣️✨
 

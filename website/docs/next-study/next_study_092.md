@@ -35,6 +35,8 @@ flowchart LR
 
 ## 3) いちばん簡単な `fallback`（まずはこれでOK）🍼✨
 
+![next_study_092_simple_fallback](./picture/next_study_092_simple_fallback.png)
+
 `app/articles/page.tsx` を作って、`<Suspense fallback={...}>` を置くだけです👇
 （App Router の `page.tsx` は基本 Server Component なので、そのまま書けるよ😊）
 
@@ -64,6 +66,8 @@ export default function Page() {
 
 ### 4-1) まずはスケルトン部品（fallback用コンポーネント）🧩
 
+![next_study_092_skeleton_bones](./picture/next_study_092_skeleton_bones.png)
+
 ```tsx
 // components/ArticleListSkeleton.tsx
 import styles from "./ArticleListSkeleton.module.css";
@@ -84,6 +88,8 @@ export function ArticleListSkeleton() {
 ```
 
 ### 4-2) CSS Modules（超シンプルでOK）🎨✨
+
+![next_study_092_pulse_animation](./picture/next_study_092_pulse_animation.png)
 
 ```css
 /* components/ArticleListSkeleton.module.css */
@@ -172,9 +178,14 @@ export async function ArticleList() {
 
 ## 6) `fallback` を作るときのコツ（ここ超大事）🫶📌
 
+![next_study_092_shape_matching](./picture/next_study_092_shape_matching.png)
+
 * ✅ **“形”を合わせる**：本体とだいたい同じ高さ/幅にするとガクッと動かない（安心）🧱
 * ✅ **軽いUIだけ**：画像の大量表示や重い計算は避ける💦
 * ✅ **アクセシビリティ**：`role="status"` / `aria-busy="true"` を付けるとやさしい🥰
+
+  ![next_study_092_accessibility_role](./picture/next_study_092_accessibility_role.png)
+
 * ❌ **fallback の中で fetch**：待つUIがさらに待つ…みたいになりがち😵‍💫
 
 ---

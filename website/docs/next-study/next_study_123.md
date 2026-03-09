@@ -13,6 +13,9 @@ Next.jsのMiddlewareは、`middleware.ts` に `export const config = { matcher: 
 
 ## 2) いちばん簡単：特定フォルダ配下だけ適用する📁✨
 
+![next_study_123_folder_umbrella](./picture/next_study_123_folder_umbrella.png)
+
+
 たとえば「`/dashboard` 配下だけログイン必須にしたい！」ってよくあるよね😊
 この場合はこれでOK👇
 
@@ -58,6 +61,9 @@ export const config = {
 
 ## 4) ちょい難しいけど超便利：除外（除外したいものが多い時）🙅‍♀️🧼
 
+![next_study_123_negative_shield](./picture/next_study_123_negative_shield.png)
+
+
 「基本は全部に効かせたい！でも **APIや静的ファイルは除外したい**」って時あるよね🤔
 そのときは公式でも出てくる **negative lookahead（否定先読み）** の正規表現が便利✨ ([Next.js][1])
 
@@ -81,6 +87,9 @@ export const config = {
 ---
 
 ## 5) 「画像（png）も除外したい」みたいな拡張もできる🖼️🚫
+
+![next_study_123_png_block](./picture/next_study_123_png_block.png)
+
 
 例えば「`.png` は全部除外したい」ならこんな感じ👇
 （`.png` を正規表現で弾いてるよ〜） ([Next.js][3])

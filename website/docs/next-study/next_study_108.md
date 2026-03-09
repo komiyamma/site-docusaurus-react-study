@@ -22,6 +22,10 @@ POSTは「データを送る」イメージ💌
 
 ## 🗺️ 図解：POSTで body が届く流れ（イメージ）📨➡️📦
 
+![Request body flow](./picture/next_study_108_request_flow.png)
+
+
+
 ![POSTで body が届く流れ](./picture/next_study_108_post_body.png)
 
 ```mermaid
@@ -38,6 +42,10 @@ sequenceDiagram
 
 ## ✅ 1) `app/api/feedback/route.ts` を作ろう🗂️✨
 
+![Code Structure (POST)](./picture/next_study_108_post_code.png)
+
+
+
 `app/api/feedback/route.ts` を作って、次を書いてね👇
 
 ```ts
@@ -50,6 +58,11 @@ type FeedbackBody = {
 
 export async function POST(request: Request) {
   // ① Content-Type を軽くチェック（雑でOK🙆‍♀️）
+```
+
+![Content-Type Check](./picture/next_study_108_content_type.png)
+
+```ts
   const contentType = request.headers.get("content-type") ?? "";
   if (!contentType.includes("application/json")) {
     return NextResponse.json(
@@ -59,6 +72,11 @@ export async function POST(request: Request) {
   }
 
   // ② body を読む（JSON → JSオブジェクト）
+```
+
+![Body Parsing](./picture/next_study_108_body_parsing.png)
+
+```ts
   // request.json() は Promise なので await が必要だよ✨ :contentReference[oaicite:2]{index=2}
   let body: FeedbackBody;
   try {
@@ -71,6 +89,11 @@ export async function POST(request: Request) {
   }
 
   // ③ ここでは“超軽い”チェックだけ（本格バリデーションは次章で🛡️）
+```
+
+![Validation Logic](./picture/next_study_108_validation.png)
+
+```ts
   if (!body?.name || !body?.message) {
     return NextResponse.json(
       { ok: false, error: "name と message は必須だよ〜🙏" },
@@ -79,6 +102,11 @@ export async function POST(request: Request) {
   }
 
   // ④ 受け取った内容を返す（本来はDB保存とかに進む）
+```
+
+![Response Construction](./picture/next_study_108_response.png)
+
+```ts
   return NextResponse.json(
     {
       ok: true,
@@ -109,6 +137,10 @@ npm run dev
 ```
 
 ### A) `curl.exe` で送る（PowerShellで安全に）🌀
+
+![Testing with Curl (PowerShell)](./picture/next_study_108_curl_test.png)
+
+
 
 PowerShell だと `curl` が別物なことがあるから、**`curl.exe`** を使うのが安心だよ😊
 
@@ -143,6 +175,10 @@ Invoke-RestMethod `
 * だから今回みたいに `try/catch` があると安心〜🫶
 
 ### 2) `request.json()` を2回呼ぶと…？
+
+![Common Pitfall](./picture/next_study_108_double_read.png)
+
+
 
 bodyは基本「読み切り」なので、**一回で変数に保存**して使うのが安全だよ😊
 （何回も必要なら、最初に `const body = await request.json()` して使い回そ〜！） ([MDNウェブドキュメント][2])

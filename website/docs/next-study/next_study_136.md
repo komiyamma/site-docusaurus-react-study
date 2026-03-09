@@ -16,12 +16,20 @@
 
 ## まず結論：送信中UIの基本は `useFormStatus()` 🎯
 
+![next_study_136_useformstatus_concept.png](./picture/next_study_136_useformstatus_concept.png)
+
+
+
 React 19 では、フォーム送信の状態（`pending`）を **フォームの中の子コンポーネント**から取れるよ🫶
 これが `useFormStatus()` だよ〜！ ([React][3])
 
 ---
 
 ## 図でイメージする（送信ボタンが変身する流れ）🪄
+
+![next_study_136_button_transform.png](./picture/next_study_136_button_transform.png)
+
+
 
 ![イメージ図](./picture/next_study_136_form_status.png)
 
@@ -69,6 +77,10 @@ export async function sendContact(formData: FormData) {
 ---
 
 ### 2) 送信ボタン（Client Component）を作る 🧩🎮
+
+![next_study_136_disabled_state.png](./picture/next_study_136_disabled_state.png)
+
+
 
 `app/contact/SubmitButton.tsx`
 
@@ -160,9 +172,17 @@ export default function ContactPage() {
 
 ## よくあるハマり 🥺🪤（ここだけ見れば助かる）
 
+![next_study_136_outside_form_trap.png](./picture/next_study_136_outside_form_trap.png)
+
+
+
 * **`useFormStatus()` をフォームの外で使ってる**
   → `useFormStatus()` は「そのフォームの中の子」じゃないと状態を取れないよ！ ([React][2])
 * **`SubmitButton` に `'use client'` がない**
+
+![next_study_136_use_client_req.png](./picture/next_study_136_use_client_req.png)
+
+
   → フックが使えなくてエラーになりがち💥
 * **「送信中」にならない気がする**
   → 送信が一瞬で終わってるだけかも！章の例みたいに `setTimeout` で 1.5秒待たせると確認しやすいよ⏳✨

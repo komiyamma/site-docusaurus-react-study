@@ -6,6 +6,8 @@
 
 ## 1) なんで `@/` が必要なの？🥺💭
 
+![next_study_017_relative_hell](./picture/next_study_017_relative_hell.png)
+
 相対パスって、最初はラクなんだけど…
 
 * ファイルが深い場所に行くほど `../../..` が増える😵‍💫
@@ -28,6 +30,8 @@ Next.js は `tsconfig.json` / `jsconfig.json` の **`baseUrl` と `paths`** を�
 ---
 
 ## 3) まずは現状チェック👀🗂️
+
+![next_study_017_tsconfig_setup](./picture/next_study_017_tsconfig_setup.png)
 
 プロジェクト直下の `tsconfig.json` を開いて、ここを探してみてね👇
 
@@ -95,6 +99,8 @@ Next.jsのドキュメントでも、こういう “before/after” の形で�
 
 ## 6) フォルダ配置のおすすめ（迷子防止セット）🧸📦
 
+![next_study_017_folder_structure](./picture/next_study_017_folder_structure.png)
+
 こんな感じにしておくと、`@/` がめちゃ効くよ〜✨
 
 ```txt
@@ -134,10 +140,14 @@ flowchart LR
 
 ### ✅ 1) VSCodeで補完やジャンプが効かない😢
 
+![next_study_017_restart_ts_server](./picture/next_study_017_restart_ts_server.png)
+
 * だいたいこれで直る：**TypeScriptサーバー再起動**
   VSCodeで `Ctrl + Shift + P` → **TypeScript: Restart TS server** 🔄✨
 
 ### ✅ 2) `paths` の `"./"` が抜けてる
+
+![next_study_017_missing_dot](./picture/next_study_017_missing_dot.png)
 
 * `["src/*"]` じゃなくて、まずは `["./src/*"]` が無難👌✨
 

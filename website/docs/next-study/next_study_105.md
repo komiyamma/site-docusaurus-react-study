@@ -7,6 +7,10 @@
 
 ## 1) Route Handlerって一言でいうと？🧠💡
 
+![Route Handler Concept](./picture/next_study_105_concept.png)
+
+
+
 **「Next.jsアプリの中に作れる、ミニAPI（エンドポイント）」** です🚪✨
 たとえば `/api/hello` にアクセスしたら、JSONを返す…みたいなことができます📦
 
@@ -16,6 +20,10 @@ Next.js公式でも「Route Handlersは `app` ディレクトリの中で使え�
 ---
 
 ## 2) 何がうれしいの？（使う理由）😍🎁
+
+![Why use it?](./picture/next_study_105_benefits.png)
+
+
 
 Route Handlerがあると、こういうのがラクになります👇✨
 
@@ -31,6 +39,10 @@ Route Handlerがあると、こういうのがラクになります👇✨
 
 ## 3) どこに置くの？どんなURLになるの？🗂️➡️🌐
 
+![File Placement](./picture/next_study_105_file_placement.png)
+
+
+
 Route Handlerは `app` の中で、**`route.ts`（または `route.js`）** という特別なファイル名で作ります📌
 たとえば：
 
@@ -42,6 +54,10 @@ Route Handlerは `app` の中で、**`route.ts`（または `route.js`）** と�
 ---
 
 ## 4) ざっくり全体の流れ（図）🗺️✨
+
+![Request/Response Flow](./picture/next_study_105_flow_diagram.png)
+
+
 
 ![ざっくり全体の流れ](./picture/next_study_105_route_handler_intro.png)
 
@@ -58,6 +74,10 @@ flowchart LR
 ---
 
 ## 5) Route Handlerの中身は何を書くの？🧩
+
+![Code Structure](./picture/next_study_105_code_structure.png)
+
+
 
 ポイントはこれだけ覚えればOKです🙆‍♀️✨
 
@@ -99,6 +119,10 @@ export async function GET() {
 
 ## 7) 実行環境（Runtime）ってなに？🧠⚡
 
+![Runtime Concept](./picture/next_study_105_runtime.png)
+
+
+
 Route Handlerはサーバーで動きます。Next.jsには主に **Node.js Runtime（通常）** と **Edge Runtime（制約ありだけど速い系）** があり、ルートごとに指定できます🧭
 
 ```ts
@@ -114,6 +138,10 @@ Edgeは **Node.jsの機能が全部使えるわけじゃない** ので、慣れ
 ---
 
 ## 8) よくある「つまずき」あるある🪤😵‍💫
+
+![Common Mistakes](./picture/next_study_105_mistakes.png)
+
+
 
 * `route.ts` の名前を間違える（`routes.ts` とか）😇
 * `app/api/...` の場所じゃないところに置く🥲

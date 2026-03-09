@@ -7,6 +7,11 @@
 
 ## 1) ありがちな事故：同じユーザー情報を3回取りに行ってる😇📡📡📡
 
+
+
+![next_study_081_duplicate_fetch.png](./picture/next_study_081_duplicate_fetch.png)
+
+
 たとえば、こんな画面👇
 
 * ヘッダーに「こんにちは、◯◯さん」😊
@@ -19,6 +24,11 @@
 ---
 
 ## 2) まず知っておきたい：Next.jsには「同じfetchは1回にまとめる」仕組みがある🍀
+
+
+
+![next_study_081_memoization_mechanism.png](./picture/next_study_081_memoization_mechanism.png)
+
 
 Next.js は `fetch` を拡張していて、**URLとオプションが同じ `fetch` を自動でメモ化（重複排除）**してくれるよ✅
 だから、**同じデータを複数箇所で `fetch` しても、レンダリング中は1回にまとまる**ことがあるの✨ ([Next.js][1])
@@ -67,15 +77,27 @@ flowchart TD
 
 ### 作法A：データ取得を「1つの関数」に集める📦（最重要！）
 
+
+
+![next_study_081_shared_service.png](./picture/next_study_081_shared_service.png)
+
+
 同じデータを取りに行く処理を、あちこちに散らさないで
 `src/lib/` に **1本化**しちゃうのが超おすすめ🥰
 
 ### 作法B：`cache()` で「同じ引数なら同じ結果」を保証する🍪
 
+![next_study_081_react_cache.png](./picture/next_study_081_react_cache.png)
+
 `fetch` 以外（DB/ORM/SDK）って、Nextの `fetch` 重複排除が効かないことがあるのね😵
 そこで **Reactの `cache()`** を使うと、**同じ引数の呼び出しは1回にまとまる**よ✨
 
 ### 作法C：「同じURL/同じoptions」を守る🧷
+
+
+
+![next_study_081_mismatch_pitfall.png](./picture/next_study_081_mismatch_pitfall.png)
+
 
 同じに見えて、地味に違うと別リクエスト判定になるよ⚠️
 例：

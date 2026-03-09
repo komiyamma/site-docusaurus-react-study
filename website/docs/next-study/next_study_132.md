@@ -7,6 +7,8 @@
 
 ## この章のゴール🎯
 
+![Overview of the secure system](./picture/next_study_132_fortress_overview.png)
+
 * ✅ `/dashboard` に未ログインで行くと → `/login` に飛ばされる
 * ✅ `/login` で「ログイン（仮）」すると → `/dashboard` に入れる
 * ✅ 「ログアウト」すると → また `/dashboard` は入れなくなる
@@ -40,6 +42,7 @@ Middleware は「ルートに入る前」に動くよ〜！というのが超大
 * `middleware.ts`
 * `app/dashboard/page.tsx`
 * `app/login/page.tsx`
+
 * `app/api/login/route.ts`
 * `app/api/logout/route.ts`
 
@@ -67,6 +70,8 @@ export default function DashboardPage() {
 ---
 
 ## Step 2️⃣ `/login` ページを作る🔑✨
+
+![Door with Login sign](./picture/next_study_132_login_page_door.png)
 
 `app/login/page.tsx`
 
@@ -103,6 +108,8 @@ export default async function LoginPage({ searchParams }: Props) {
 
 ## Step 3️⃣ ログインAPI（Cookieをセット）を作る🍪✅
 
+![Machine issuing a key card](./picture/next_study_132_cookie_key_issue.png)
+
 `app/api/login/route.ts`
 
 ```ts
@@ -132,6 +139,8 @@ export async function POST(request: NextRequest) {
 
 ## Step 4️⃣ ログアウトAPI（Cookieを消す）を作る🧹🚪
 
+![Broom sweeping away the key card](./picture/next_study_132_logout_broom.png)
+
 `app/api/logout/route.ts`
 
 ```ts
@@ -156,6 +165,8 @@ export async function POST(request: NextRequest) {
 ---
 
 ## Step 5️⃣ いよいよ本体！Middlewareで `/dashboard` を守る🧤⚡
+
+![Checkpoint barrier](./picture/next_study_132_middleware_checkpoint.png)
 
 プロジェクト直下に `middleware.ts` を作ってね
 （もし `src/` を使う構成なら `src/middleware.ts` でもOKだよ👍）

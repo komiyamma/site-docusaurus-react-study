@@ -15,6 +15,8 @@
 
 ## なんで「境界を小さく」するの？🤔💡
 
+![next_study_101_small_boundary.png](./picture/next_study_101_small_boundary.png)
+
 例えばブログ記事ページで…
 
 * 本文：すぐ見せたい📖✨
@@ -41,6 +43,8 @@ flowchart LR
 # 1) やってみよう：サイドバーだけ後から出す🌊✨（Suspenseで小さく待つ）
 
 ## 手順①：ページを作る📄
+
+![next_study_101_layout_structure.png](./picture/next_study_101_layout_structure.png)
 
 例として `app/articles/page.tsx` を作るよ〜🛠️
 
@@ -137,6 +141,8 @@ flowchart TD
 
 ## 手順③：おすすめ取得（遅い + たまに失敗）を作る🧪
 
+![next_study_101_component_isolation.png](./picture/next_study_101_component_isolation.png)
+
 ```tsx
 // components/RecommendedPosts.tsx
 type Post = { id: number; title: string };
@@ -187,6 +193,8 @@ export default async function RecommendedPosts() {
 ---
 
 ## ✅ チェックポイント（できたら勝ち！）🏁🎉
+
+![next_study_101_smooth_ux.png](./picture/next_study_101_smooth_ux.png)
 
 * ページを開くと **本文が先に表示** される📖✨
 * 右側は最初 **スケルトン** が出る🧸⏳

@@ -7,6 +7,9 @@
 
 ## 1) Middlewareのイメージ（超ざっくり）🧠✨
 
+![next_study_119_gatekeeper](./picture/next_study_119_gatekeeper.png)
+
+
 * ブラウザからリクエストが来る📨
 * **ルーティングされる前**にMiddlewareがチェックする🧤
 * OKならページへ、ダメならリダイレクトや書き換えができる🚦➡️
@@ -16,6 +19,9 @@
 ---
 
 ## 2) どこで動くの？いつ動くの？⏱️👀
+
+![next_study_119_middleware_location](./picture/next_study_119_middleware_location.png)
+
 
 Middlewareは **プロジェクト直下**に `middleware.ts`（または `middleware.js`）を置くと動きます📁✨
 `app/` の中じゃなくて、`app/` と同じ階層に置くのがポイントだよ〜！✅
@@ -68,6 +74,9 @@ export function middleware(request: NextRequest) {
 
 ### ✅ 5-2. 起動して確認（Windows / PowerShellでもOK）🖥️💨
 
+![next_study_119_console_log](./picture/next_study_119_console_log.png)
+
+
 ```bash
 npm run dev
 ```
@@ -81,6 +90,9 @@ npm run dev
 ---
 
 ## 6) “門番っぽい”例：/secret に入ろうとしたら /login へ🚦🔐
+
+![next_study_119_secret_redirect](./picture/next_study_119_secret_redirect.png)
+
 
 「門番感」を出すために、**/secret は強制で /login に飛ばす**例をやってみよ〜！🧤💨
 

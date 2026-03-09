@@ -8,6 +8,8 @@
 
 ## 1) まず結論：next: \{ revalidate \} は何？🧠✨
 
+![next_study_080_syntax_visual.png](./picture/next_study_080_syntax_visual.png)
+
 Server 側の fetch にこう書くやつ👇
 
 ```ts
@@ -137,6 +139,11 @@ npm start
 
 ## 4) 観察ポイント（ここが楽しい）👀✨
 
+
+
+![next_study_080_swr_flow.png](./picture/next_study_080_swr_flow.png)
+
+
 1. ページを開く（1回目）
 2. **10秒以内**にリロード → **同じ datetime** が出やすい🧊
 3. **10秒を過ぎて**リロード →
@@ -151,6 +158,11 @@ npm start
 
 ### ハマり①：DevTools の「ハードリロード」で効かない😵
 
+
+
+![next_study_080_hard_reload.png](./picture/next_study_080_hard_reload.png)
+
+
 開発中のハードリロード等で `cache-control: no-cache` が付くと、**cache / revalidate / tags が無視**されることがあるよ〜 ([Next.js][2])
 👉 まずは普通のリロードで試すのがおすすめ😊
 
@@ -161,12 +173,22 @@ npm start
 
 ### ハマり③：cache: "no-store" と一緒に書いちゃった😇
 
+
+
+![next_study_080_conflict_warning.png](./picture/next_study_080_conflict_warning.png)
+
+
 `revalidate` と `no-store` はケンカしがちで、矛盾すると無視される（開発だと警告）ことがあるよ〜 ([Next.js][2])
 👉 “毎回最新”にしたいなら **revalidate: 0** か **no-store** のどっちかに寄せるのが◎
 
 ---
 
 ## 6) まとめ（第80章の合言葉）🎀✨
+
+
+
+![next_study_080_summary_badge.png](./picture/next_study_080_summary_badge.png)
+
 
 * **next: \{ revalidate: 秒 \}** は「この fetch の更新頻度」を決める⏱️
 * **速さ**と**新しさ**のバランスを取る仕組み🧊⚡

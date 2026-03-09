@@ -36,6 +36,8 @@ flowchart TD
 
 ### 1) `app/retry/page.tsx` を作る🏗️
 
+![next_study_099_random_fail.png](./picture/next_study_099_random_fail.png)
+
 「成功したらメッセージ表示、失敗したら throw」するページだよ〜😆
 
 ```tsx
@@ -106,6 +108,8 @@ export default function Loading() {
 
 ### 3) `app/retry/error.tsx` を作る🧯🔁（ここが本番！）
 
+![next_study_099_use_transition.png](./picture/next_study_099_use_transition.png)
+
 `error.tsx` は **Client Component が必須**だから、先頭に `"use client"` を書くよ🧠
 ここで `reset()` をボタンから呼ぶと、**その区間を再レンダーして復帰を試せる**よ✨ ([Next.js][1])
 
@@ -173,6 +177,8 @@ export default function Error({
 ---
 
 ## よくあるハマりどころ🪤（ここだけ見れば助かる）
+
+![next_study_099_force_dynamic.png](./picture/next_study_099_force_dynamic.png)
 
 * **`error.tsx` に `"use client"` が無い** → 動かない💥（エラーバウンダリはクライアント扱いだよ） ([Next.js 16 日本語ドキュメント][2])
 * **置き場所が違う** → `app/retry/error.tsx` みたいに、**同じルート区間の中**に置くのが大事📁

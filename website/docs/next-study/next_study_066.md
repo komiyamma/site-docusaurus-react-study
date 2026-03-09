@@ -12,6 +12,8 @@
 
 ## ざっくりイメージ図🧠✨（ソフト遷移 vs ハード遷移）
 
+![next_study_066_intercepting_concept](./picture/next_study_066_intercepting_concept.png)
+
 * **ソフト遷移**：アプリ内の `<Link>` クリック（Nextが“いい感じ”に部分更新してくれる）🧩
 * **ハード遷移**：ブラウザ更新 / 直URL入力（最初からページを丸ごと読み込み）🔄
 
@@ -31,6 +33,8 @@ flowchart TD
 ## 重要ルール（ここだけ覚えればOK）✅
 
 ### ① どのルートを“横取り”するかは、フォルダ名で決まる📁
+
+![next_study_066_folder_syntax](./picture/next_study_066_folder_syntax.png)
 
 Intercepting Routes の目印はこれ👇（ルート**セグメント**基準だよ〜） ([Next.js][1])
 
@@ -70,6 +74,8 @@ components/
 
 ## 1) `app/photos/layout.tsx`（モーダル枠を置く）🧱🪟
 
+![next_study_066_layout_modal_slot](./picture/next_study_066_layout_modal_slot.png)
+
 `@modal` を使うには **layoutで受け取って描画**するよ〜！（pageじゃなくて layout！） ([Next.js][2])
 
 ```tsx
@@ -93,6 +99,8 @@ export default function PhotosLayout({
 ---
 
 ## 2) `app/photos/page.tsx`（一覧ページ）📷📚
+
+![next_study_066_photo_grid](./picture/next_study_066_photo_grid.png)
 
 クリックしたら `/photos/1` に行くけど、**ソフト遷移だとモーダルになる**よ✨
 スクロール位置が気になるときは `scroll={false}` が便利🫶
@@ -161,6 +169,8 @@ export default async function PhotoDetailPage({
 
 ## 4) `app/photos/@modal/default.tsx`（モーダルが無い時は何も出さない）🫥
 
+![next_study_066_default_null](./picture/next_study_066_default_null.png)
+
 `default.tsx` は **スロットにマッチしないときの保険**！
 これが無いと、リロード時に困ることがあるよ〜⚠️ ([Next.js][2])
 
@@ -174,6 +184,8 @@ export default function Default() {
 ---
 
 ## 5) `components/Modal.tsx`（モーダルの見た目＋閉じる）🪟🧸
+
+![next_study_066_modal_ui](./picture/next_study_066_modal_ui.png)
 
 閉じるは `router.back()` が気持ちいい✨（戻るボタンと同じ動きになる） ([Next.js][2])
 
@@ -233,6 +245,8 @@ export function Modal({ children }: { children: React.ReactNode }) {
 ---
 
 ## 6) `app/photos/@modal/(.)[id]/page.tsx`（ここが主役：横取りルート！）🪄🔥
+
+![next_study_066_magic_folder](./picture/next_study_066_magic_folder.png)
 
 `(.)` で **同じ階層の `[id]` を横取り**して、`@modal` に表示するよ✨ ([Next.js][1])
 

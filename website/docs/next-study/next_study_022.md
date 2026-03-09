@@ -7,6 +7,9 @@
 
 ## ゴール🎯💡
 
+![next_study_022_goal_before_after.png](./picture/next_study_022_goal_before_after.png)
+
+
 * `app/page.tsx` の文章を好きに変えられる📝✨
 * ちょっとだけ見た目を整えられる（CSS or Tailwind）💅🌈
 * 保存したらブラウザで反映されるのを体験する👀⚡
@@ -43,6 +46,9 @@ npm run dev
 ---
 
 ## STEP 1：`app/page.tsx` の文言を変える📝✨
+
+![next_study_022_editing_vscode.png](./picture/next_study_022_editing_vscode.png)
+
 
 ### 1) VSCodeで開く場所📌
 
@@ -127,12 +133,18 @@ export default function Home() {
 
 ## STEP 2：保存してブラウザで確認👀⚡
 
+![next_study_022_browser_result.png](./picture/next_study_022_browser_result.png)
+
+
 * `Ctrl + S` で保存💾
 * ブラウザを見て、見出しや文章が変わってたら成功🎉🎉🎉
 
 ---
 
 ## よくあるつまづき（すぐ直せる）🧯💡
+
+![next_study_022_syntax_error.png](./picture/next_study_022_syntax_error.png)
+
 
 ### 1) 画面が変わらない😵
 

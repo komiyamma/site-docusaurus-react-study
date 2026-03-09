@@ -24,6 +24,9 @@ Next.jsは、できるだけ…
 
 ### ✅ `fetch` 自体は “デフォルトでは毎回取りに行く” 寄り（特に開発中）🏗️
 
+![next_study_076_dev_vs_prod.png](./picture/next_study_076_dev_vs_prod.png)
+
+
 `fetch` の `cache` オプションのデフォルトは、公式の `fetch` リファレンスでは **`auto no cache`（デフォルト）** と説明されていて、**開発中は毎回リモートに取りに行く**動きになります。([Next.js][2])
 さらに「`fetch` レスポンスはデフォルトではキャッシュされない」とも書かれています。([Next.js][3])
 
@@ -40,6 +43,9 @@ Next.jsは、できるだけ…
 ---
 
 ## 3) 図でイメージ：1回目だけ頑張って、次から楽する🧊➡️⚡
+
+![next_study_076_cache_intro.png](./picture/next_study_076_cache_intro.png)
+
 
 ```mermaid
 sequenceDiagram
@@ -128,6 +134,9 @@ npm run start
 
 ## 5) どういう時に“作り置き”できないの？🍪🔐
 
+![next_study_076_dynamic_exclude.png](./picture/next_study_076_dynamic_exclude.png)
+
+
 Next.jsは **リクエストごとに内容が変わりそう**だと判断すると、ページの作り置きをやめます🙅‍♀️
 たとえば、**cookie/headers/searchParams** など “その人のリクエスト依存” を使うと、ルートが動的になり、ページの作り置き（Full Route Cache）から外れます。([Next.js][1])
 
@@ -147,6 +156,9 @@ Next.jsは **リクエストごとに内容が変わりそう**だと判断す�
 なので、キャッシュ体感は **build/start** のほうが分かりやすいよ〜😊
 
 ### 「データが更新されないんだけど…？」
+
+![next_study_076_fast_but_old.png](./picture/next_study_076_fast_but_old.png)
+
 
 それ、**“速い代わりに古い”**が起きてるかも🧊
 この対策（更新のさせ方）は、次の章でちゃんと扱う（`no-store` や `revalidate` など）ので安心してね😉✨ ([Next.js][3])

@@ -14,6 +14,10 @@
 
 ## 1) グローバルCSSってなに？🌎🧴
 
+![next_study_051_global_umbrella.png](./picture/next_study_051_global_umbrella.png)
+
+
+
 グローバルCSSは、ざっくり言うと **“アプリ全体に効くルール”** だよ😊
 たとえば👇
 
@@ -34,6 +38,10 @@
 Next.js公式も **グローバルCSSを作って、ルートレイアウトでimport** する形を案内してるよ📌 ([Next.js][1])
 
 ### ✅ 読み込む場所（importする場所）
+
+![next_study_051_import_location.png](./picture/next_study_051_import_location.png)
+
+
 
 **`app/layout.tsx`（RootLayout）** で読み込みます😊
 （ここが「全ページ共通の外枠」だからね🧱）
@@ -119,6 +127,10 @@ export default function RootLayout({
 ## 4) よくあるハマりポイント集😵‍💫🧯
 
 ### 💥 ハマり①：グローバルCSSを“あちこち”でimportしてカオスになる
+
+![next_study_051_scope_conflict.png](./picture/next_study_051_scope_conflict.png)
+
+
 
 Next.jsでは **`app/` 配下なら layout/page/component でもimport自体はできる**んだけど、**ルート移動してもスタイルが外れず残ることがあって競合しやすい**のね🥲
 だから基本は「本当に全体に必要なものだけ」をグローバルにするのが推奨だよ🫶 ([Next.js][1])

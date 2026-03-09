@@ -28,6 +28,9 @@ Next.jsには **Turbopack** という仕組みが入っていて、JavaScript/Ty
 
 ## dev / build / start の違い（超だいじ）🧁📦🚀
 
+![next_study_021_lifecycle_flow.png](./picture/next_study_021_lifecycle_flow.png)
+
+
 * `npm run dev`：**開発モード**（編集→すぐ反映、エラーも親切）🛠️✨
 * `npm run build`：**本番用に最適化して組み立てる**（チェックも厳しめ）📦🔍
 * `npm run start`：**本番モードで起動**（※ build 済みが前提）🚀🏁 ([Next.js][2])
@@ -51,6 +54,9 @@ flowchart TD
 
 ### ① 開発で動かす（いつものやつ）🌈
 
+![next_study_021_dev_mode.png](./picture/next_study_021_dev_mode.png)
+
+
 ```bash
 npm run dev
 ```
@@ -59,6 +65,9 @@ npm run dev
 **すぐ画面が変わったらOK！**（これが開発の気持ちよさ💖）
 
 ### ② 本番ビルドしてみる（ちょい緊張）📦😳
+
+![next_study_021_build_mode.png](./picture/next_study_021_build_mode.png)
+
 
 いったん dev を止めて（ターミナルで `Ctrl + C`）👇
 
@@ -71,6 +80,9 @@ npm run build
 
 ### ③ 本番っぽく起動する🚀
 
+![next_study_021_start_mode.png](./picture/next_study_021_start_mode.png)
+
+
 ```bash
 npm run start
 ```
@@ -82,6 +94,9 @@ npm run start
 ## もし困ったら（ありがち3つ）🧯💡
 
 ### 1) 3000番ポートが埋まってる😵‍💫
+
+![next_study_021_port_conflict.png](./picture/next_study_021_port_conflict.png)
+
 
 別ポートで起動しよ👇
 

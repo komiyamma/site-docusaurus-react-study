@@ -7,10 +7,14 @@ Next.js（App Router）では、**何も書かなければ基本ぜんぶ Server
 
 ### 1) Server Component ってなに？🧊
 
+![next_study_037_cloud_vs_laptop](./picture/next_study_037_cloud_vs_laptop.png)
+
 **サーバー側（Node.js側）で動いて、HTMLを作ってブラウザに返すコンポーネント**だよ🍵
 ポイントはこれ👇
 
 * ✅ **コンポーネントの中身（JSの処理）が基本ブラウザに送られない** → 速い⚡軽い🪽
+
+![next_study_037_zero_bundle](./picture/next_study_037_zero_bundle.png)
 * ✅ **DBや秘密情報（APIキーなど）を安全に扱える**🔐
 * ✅ **`async` でそのままデータ取得しやすい**📦
 
@@ -38,6 +42,8 @@ flowchart LR
 
 ### 3) 「デフォルトがServer」って、具体的に何が起きるの？👀
 
+![next_study_037_default_stamp](./picture/next_study_037_default_stamp.png)
+
 App Router（`app/`）の世界では…
 
 * `app/page.tsx` も
@@ -55,12 +61,16 @@ App Router（`app/`）の世界では…
 
 #### ✅ できること（得意）💪
 
+![next_study_037_server_powers](./picture/next_study_037_server_powers.png)
+
 * `fetch()` でデータ取得📡（ページ表示前に取れるの強い！）
 * DBアクセス（サーバーだけで完結）🗃️
 * `process.env` の**秘密の環境変数**を使う🔐
 * 重い処理をサーバーでやる🧠
 
 #### ❌ できないこと（苦手）🙅‍♀️
+
+![next_study_037_no_mouse](./picture/next_study_037_no_mouse.png)
 
 * クリックイベント（`onClick` など）🖱️
 * `useState` / `useEffect` などのReact Hooks🎣
@@ -72,6 +82,8 @@ App Router（`app/`）の世界では…
 ---
 
 ### 5) ミニ実習：Server Component が普通に書けるのを体感しよ🧪✨
+
+![next_study_037_async_fetch_code](./picture/next_study_037_async_fetch_code.png)
 
 #### ✅ 手順
 

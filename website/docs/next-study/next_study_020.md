@@ -7,6 +7,9 @@ APIキーとかURLとか、“そのままコードに書かない”のがポ�
 
 ## 1) 環境変数ってなに？ざっくり🧠💡
 
+![next_study_020_env_concept.png](./picture/next_study_020_env_concept.png)
+
+
 環境変数は「**設定を外から差し込む仕組み**」だよ✨
 
 * 例：APIのURL、DB接続情報、秘密のキー🔑
@@ -15,6 +18,9 @@ APIキーとかURLとか、“そのままコードに書かない”のがポ�
 ---
 
 ## 2) `.env.local` は「ローカル専用の秘密ノート」📓🔒
+
+![next_study_020_file_types.png](./picture/next_study_020_file_types.png)
+
 
 Next.jsではプロジェクトのルートに `.env.local` を置くと、環境変数を読み込めるよ✨
 
@@ -50,6 +56,9 @@ Next.jsではプロジェクトのルートに `.env.local` を置くと、環�
 プロジェクト直下（`package.json` がある場所）に **`.env.local`** を作るよ〜！
 
 ### ① `.env.local` を作成
+
+![next_study_020_create_file.png](./picture/next_study_020_create_file.png)
+
 
 VSCodeで新規ファイル → 名前を **`.env.local`** にするだけでOK✨
 
@@ -89,6 +98,9 @@ export default function Home() {
 
 ## 6) 変更したら「devサーバー再起動」必要だよ🔁⚡
 
+![next_study_020_restart_server.png](./picture/next_study_020_restart_server.png)
+
+
 `.env.local` を編集したのに反映されないときは、だいたいこれ！😂
 
 1. ターミナルで `Ctrl + C`（止める）🛑
@@ -101,6 +113,9 @@ npm run dev
 ---
 
 ## 7) うっかり事故防止：`.env.local` はGitに入れない🙅‍♀️📦
+
+![next_study_020_git_ignore.png](./picture/next_study_020_git_ignore.png)
+
 
 基本、`.env.local` は **コミットしない** よ！🔐
 （秘密が漏れちゃう可能性があるからね…😱）

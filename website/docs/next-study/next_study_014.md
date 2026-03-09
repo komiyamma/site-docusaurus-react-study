@@ -28,6 +28,8 @@ flowchart TD
 
 ## 1) `app/` ってなに？🛣️🏠
 
+![014 App Control Room](./picture/next_study_014_app_control_room.png)
+
 `app/` は、**URL（ページ）を作る中心地**だよ〜✨
 たとえば `app/page.tsx` はトップページ（`/`）担当！って感じ😊 ([Next.js][1])
 
@@ -42,6 +44,8 @@ flowchart TD
 
 ## 2) `public/` ってなに？📦🖼️
 
+![014 Public Showcase](./picture/next_study_014_public_showcase.png)
+
 `public/` は、**中身がそのままWebに置かれる倉庫**だよ〜📦✨
 ここに入れたファイルは、基本的に **`/ファイル名`** でアクセスできる！ ([Next.js][2])
 
@@ -52,6 +56,8 @@ flowchart TD
 ---
 
 ## 3) `next.config.*` ってなに？🛠️⚙️
+
+![014 Config Gear](./picture/next_study_014_config_gear.png)
 
 Next.jsの動きをカスタマイズする **設定ファイル**だよ〜！✨
 置き場所は **プロジェクトのルート（`package.json` と同じ階層）**。 ([Next.js][3])
@@ -68,6 +74,8 @@ Next.jsの動きをカスタマイズする **設定ファイル**だよ〜！�
 ## ちょい実験🪄：`public/` のファイルが見えるか確認しよ📄✨
 
 ### ① `public/hello.txt` を作る📝
+
+![014 Hello Flyer](./picture/next_study_014_hello_flyer.png)
 
 1. VSCodeで `public` フォルダを右クリック
 2. 新しいファイル → `hello.txt`
@@ -89,12 +97,18 @@ Next.jsの動きをカスタマイズする **設定ファイル**だよ〜！�
 ## よくある「迷子ポイント」🧭💦
 
 * 「`public` に置いたのに import しなきゃ？」
+
+![014 No Import Line](./picture/next_study_014_no_import_line.png)
   → しなくてOK！**URLでそのまま見える**のが特徴だよ📦✨ ([Next.js][2])
 
 * 「`app` にコンポーネント置いていいの？」
+
+![014 App Vs Comp Stage](./picture/next_study_014_app_vs_comp_stage.png)
   → 置けるけど、まずは **“ページ＝app”** って覚えるのがラク😊🛣️ ([Next.js][1])
 
 * 「`next.config.*` 見当たらない！」
+
+![014 Ghost Config](./picture/next_study_014_ghost_config.png)
   → 最初は無いこともあるよ〜！必要になったら作ればOK👌✨ ([Next.js][3])
 
 ---

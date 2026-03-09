@@ -6,6 +6,8 @@
 
 ## 1) `revalidate`って結局なに？🤔💡
 
+![next_study_079_revalidate_concept.png](./picture/next_study_079_revalidate_concept.png)
+
 一言でいうと…
 
 **「このデータ、何秒くらい“新鮮”って扱っていい？」**を決める仕組みだよ🍓🧊
@@ -19,6 +21,11 @@ Next.jsの公式でも、**一定時間ごとに再取得して新しいデー�
 ---
 
 ## 2) どう動くの？（超ざっくり）🧠🔁
+
+
+
+![next_study_079_trigger_mechanism.png](./picture/next_study_079_trigger_mechanism.png)
+
 
 ポイントはここ👇
 
@@ -62,6 +69,8 @@ flowchart TD
 
 ## 4) `revalidate`はどこで決めるの？📍🧩
 
+![next_study_079_config_locations.png](./picture/next_study_079_config_locations.png)
+
 大きく2つの考え方があるよ〜！
 
 ### A. ページ/レイアウト単位で「このルートはこの頻度」🧱
@@ -78,6 +87,11 @@ flowchart TD
 ---
 
 ## 5) どんな時に使う？使わない？🎯🙅‍♀️
+
+
+
+![next_study_079_good_bad_use.png](./picture/next_study_079_good_bad_use.png)
+
 
 ### 使うと気持ちいい例😍✨
 
@@ -128,6 +142,11 @@ export default async function Page() {
 ---
 
 ## 7) ありがちハマりポイント集🪤😵‍💫
+
+
+
+![next_study_079_dev_mode_warning.png](./picture/next_study_079_dev_mode_warning.png)
+
 
 * **Devで試して「変わらない/毎回変わる」って混乱する**
   → Devはキャッシュされない前提になりやすいよ🧪 ([Next.js][2])

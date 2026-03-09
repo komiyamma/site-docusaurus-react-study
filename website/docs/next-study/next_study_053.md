@@ -7,6 +7,10 @@
 
 ## 1) Tailwind CSSってなに？🤔🧵
 
+![next_study_053_no_css_file.png](./picture/next_study_053_no_css_file.png)
+
+
+
 Tailwindは **「CSSを書かずに、class名で見た目を組み立てる」** スタイルのCSSフレームワークだよ〜💅✨
 たとえばこんな感じ👇
 
@@ -109,6 +113,10 @@ export default config;
 
 ## 6) いったん触ってみる：1分で「それっぽい」✨⏱️
 
+![next_study_053_class_bricks.png](./picture/next_study_053_class_bricks.png)
+
+
+
 `app/page.tsx` をちょい変えるだけで雰囲気つかめるよ〜🌷
 公式例でもこんな感じで `className` に書くよね！ ([Tailwind CSS][2])
 
@@ -137,6 +145,10 @@ export default function Home() {
 ---
 
 ## 7) classNameが長い問題、どうする？😵‍💫➡️🙂
+
+![next_study_053_long_classname.png](./picture/next_study_053_long_classname.png)
+
+
 
 Tailwindは便利だけど、慣れるまで `className` が長くてびっくりするかも😂
 対策はシンプルにこれ👇

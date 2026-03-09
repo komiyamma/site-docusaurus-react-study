@@ -39,6 +39,9 @@ sequenceDiagram
 
 ## フォルダ構成（今回の完成形）📁✨
 
+![next study 150 folder structure](./picture/next_study_150_folder_structure.png)
+
+
 ```mermaid
 flowchart TD
   P[app/todos/page.tsx] --> CF[app/todos/_components/CreateTodoForm.tsx]
@@ -51,6 +54,9 @@ flowchart TD
 ---
 
 ## 1) メモリ保存の「仮TODOストア」を作る🧠📦
+
+![next study 150 memory store](./picture/next_study_150_memory_store.png)
+
 
 > これは学習用だよ！本番では次のDB章でちゃんと永続化するよ〜🗃️✨
 
@@ -98,6 +104,9 @@ export function removeTodo(id: string): boolean {
 ---
 
 ## 2) Server Actions（追加・編集・削除）を用意する🧑‍🍳✨
+
+![next study 150 validation logic](./picture/next_study_150_validation_logic.png)
+
 
 **`app/todos/actions.ts`** を作ってね👇
 （ここが今回のメイン！✏️🗑️✨）
@@ -210,6 +219,9 @@ export default function TodosPage() {
 
 ## 4) 追加フォーム（useActionStateで優しく）➕💕
 
+![next study 150 create form ui](./picture/next_study_150_create_form_ui.png)
+
+
 **`app/todos/_components/CreateTodoForm.tsx`**
 
 ```tsx
@@ -252,6 +264,9 @@ export default function CreateTodoForm() {
 ---
 
 ## 5) 送信中ボタン（useFormStatus）⏳🔒
+
+![next study 150 submit loading](./picture/next_study_150_submit_loading.png)
+
 
 **`app/todos/_components/SubmitButton.tsx`**
 

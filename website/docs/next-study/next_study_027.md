@@ -14,6 +14,8 @@ Next.js（App Router）は **フォルダとファイルを置くだけでURLが
 
 ## 🗺️ しくみ：URLはどのファイル？（図で覚える）👀
 
+![next_study_027_folder_url_map.png](./picture/next_study_027_folder_url_map.png)
+
 ![New Route Creation](./picture/next_study_027_new_route.png)
 
 ```mermaid
@@ -59,11 +61,16 @@ export default function AboutPage() {
 ポイント👇
 
 * **`export default` が必須**だよ！ないとページとして表示できないことがあるよ〜😵‍💫
+
+![next_study_027_export_default.png](./picture/next_study_027_export_default.png)
+
 * ここでは `"use client"` は **いらない**（ページは基本サーバー側でOK）🧊
 
 ---
 
 ## 🔎 動作確認しよう！🌈
+
+![next_study_027_success_screen.png](./picture/next_study_027_success_screen.png)
 
 開発サーバーが起動してる前提で…
 
@@ -81,6 +88,8 @@ npm run dev
 
 ## 🧭 ついでに：ファイル構成を「地図」で見る👀🗺️
 
+![next_study_027_file_map_tree.png](./picture/next_study_027_file_map_tree.png)
+
 こんな状態になっていればOK！
 
 ```txt
@@ -93,6 +102,8 @@ app/
 ---
 
 ## 🥺 よくあるミス集（あるある）🧯
+
+![next_study_027_common_mistakes.png](./picture/next_study_027_common_mistakes.png)
 
 * `app/about.tsx` を作っちゃった → ❌（App Routerは **フォルダ**が基本だよ）
 * `pages/about.tsx` を作っちゃった → ❌（今回は `app/` を使う流れだよ）

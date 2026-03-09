@@ -6,7 +6,10 @@
 
 ---
 
-## 1) ログを残す目的は3つだけ覚えよっ🧠💡
+## 1) ログを残す目的は3つだけ覚えよっ
+
+![Future self thanking Past self](./picture/next_study_129_future_self_memo.png)
+🧠💡
 
 * **① デバッグ（開発中）**：今どこ通ってる？値どうなってる？👀
 * **② 監視（本番）**：エラー増えてない？不正アクセスっぽくない？🚨
@@ -16,7 +19,10 @@
 
 ---
 
-## 2) “残すと強い”ログの最小セット✅🧩
+## 2) “残すと強い”ログの最小セット
+
+![5 puzzle pieces of log info](./picture/next_study_129_log_puzzle_pieces.png)
+✅🧩
 
 最低限これがあると超つよい💪✨（全部そろえなくてもOKだよ〜）
 
@@ -29,7 +35,10 @@
 
 ---
 
-## 3) “残しちゃダメ寄り”のもの🙅‍♀️🔒
+## 3) “残しちゃダメ寄り”のもの
+
+![Notebook with black marker over secrets](./picture/next_study_129_log_secret_mask.png)
+🙅‍♀️🔒
 
 ログは本番だと、あとから色んな人が見る可能性あるよね👀💦
 だからこれは避けよ〜！
@@ -69,7 +78,10 @@ flowchart LR
 
 ---
 
-## 5) 実践：Middlewareで“追跡しやすいログ”を出してみよ🧤🧵✨
+## 5) 実践：Middlewareで“追跡しやすいログ”
+
+![Footprints leading through a gate](./picture/next_study_129_middleware_log_trace.png)
+を出してみよ🧤🧵✨
 
 ### ねらい🎯
 
@@ -144,7 +156,10 @@ export function middleware(req: NextRequest) {
 
 ---
 
-## 7) 今日のまとめ（これだけ覚えたら勝ち）🏆💕
+## 7) 今日のまとめ
+
+![Red string connecting user to server actions](./picture/next_study_129_request_id_string.png)
+（これだけ覚えたら勝ち）🏆💕
 
 * ログは **未来の自分を助けるメモ** 📒✨
 * **requestId があると追跡が激ラク** 🧵

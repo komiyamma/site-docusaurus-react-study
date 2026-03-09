@@ -7,6 +7,10 @@
 
 ## 1) Server Actionってなに？ざっくり 🍵
 
+![next_study_135_server_action_def.png](./picture/next_study_135_server_action_def.png)
+
+
+
 * **サーバーで動く関数**だよ（ブラウザじゃなくてサーバーで実行）🧊
 * `form` の `action` に渡すと、送信時にその関数が呼ばれる📨
 * 関数は自動で **`FormData`** を受け取れるよ🧺([Next.js][1])
@@ -15,6 +19,10 @@
 ---
 
 ## 2) 図でイメージする（全体の流れ）🗺️
+
+![next_study_135_process_flow.png](./picture/next_study_135_process_flow.png)
+
+
 
 ![イメージ図](./picture/next_study_135_use_server.png)
 
@@ -47,6 +55,10 @@ flowchart TD
 
 ## 4) Server Actionを作る（別ファイル方式）🧩
 
+![next_study_135_use_server_directive.png](./picture/next_study_135_use_server_directive.png)
+
+
+
 `app/actions.ts` を作って、こう書くよ👇
 ポイントは **ファイル先頭の `'use server'`**！これで **このファイルのexportがServer Action扱い**になるよ🧊([Next.js][2])
 
@@ -70,6 +82,10 @@ export async function submitContact(formData: FormData) {
 ---
 
 ## 5) フォーム側：`action={submitContact}` を付ける 📨✨
+
+![next_study_135_connect_action.png](./picture/next_study_135_connect_action.png)
+
+
 
 `app/contact/page.tsx` を作って👇
 **`<form action={submitContact}>`** が超大事！これで送信時にサーバー関数が呼ばれるよ🧑‍🍳([Next.js][1])
@@ -126,6 +142,10 @@ export default function ThanksPage() {
 
 ## 7) 動作チェック（ここまででOK）✅✨
 
+![next_study_135_server_console.png](./picture/next_study_135_server_console.png)
+
+
+
 1. 開発サーバー起動：`npm run dev` ▶️
 2. ブラウザで：`http://localhost:3000/contact` にアクセス🌐
 3. 入力して送信📨
@@ -135,6 +155,10 @@ export default function ThanksPage() {
 ---
 
 ## 8) もう1つの書き方（ページ内に直接書く方式）✍️
+
+![next_study_135_inline_action.png](./picture/next_study_135_inline_action.png)
+
+
 
 Server Component（つまり普通の `page.tsx`）の中で、関数の先頭に `'use server'` を置く書き方もあるよ🧊([Next.js][1])
 

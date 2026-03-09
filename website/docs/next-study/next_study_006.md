@@ -15,13 +15,19 @@
 
 ## 5分説明⌛：SSR / SSG / ISR ってなに？🍰
 
+![Rendering Trio](./picture/next_study_006_rendering_trio.png)
+
 ### SSG（Static Site Generation）🧊
+
+![SSG Bento](./picture/next_study_006_ssg_bento.png)
 
 * **ビルド時（`next build`）にHTMLを作って**、それをずっと使う感じ✨
 * だから速い！CDNにも乗せやすい！🛰️
   SSGは「HTMLをビルド時に生成して再利用する」って説明されてるよ。([Next.js][1])
 
 ### SSR（Server-side Rendering）🔥
+
+![SSR Chef](./picture/next_study_006_ssr_chef.png)
 
 * **アクセスされるたびに、サーバーでHTMLを作る**感じ！
 * 新しい情報（ログイン中のユーザーごとの表示とか）に強い💪
@@ -154,6 +160,8 @@ SSRは「毎リクエストでHTML生成（Dynamic Rendering）」って説明�
 
 ### 3) ISR🧊🔁：60秒ごとに更新してみる
 
+![Isr Mechanism](./picture/next_study_006_isr_mechanism.png)
+
 `app/isr/page.tsx`
 
 ```tsx
@@ -182,6 +190,8 @@ ISRは「サイト全体をビルドし直さずに静的ページを更新で�
 ---
 
 ## 超たいじ⚠️：`next dev` だとISRが分かりにくいかも😵
+
+![Dev vs Prod ISR](./picture/next_study_006_dev_vs_prod_isr.png)
 
 開発中（`next dev`）は「ページは常にオンデマンドで描画され、キャッシュされない」って説明があるの…！([Next.js][5])
 だから **ISRの“時間で更新される感じ”を体感したいなら**、一回これで見るのがオススメ👇

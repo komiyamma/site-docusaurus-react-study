@@ -5,7 +5,10 @@ Webアプリってね、**画面（UI）からだけ使われる**…と思い�
 
 ---
 
-## 1) 「直接叩かれる」ってどういうこと？🕵️‍♀️💻
+## 1) 「直接叩かれる」ってどういうこと？
+
+![Thief jumping over a fence (UI)](./picture/next_study_127_direct_access_risk.png)
+🕵️‍♀️💻
 
 たとえば `/api/todos` があるとするよね？
 ユーザーは画面のボタンから使うかもだけど…実際は **URLを知ってれば誰でもアクセスできる**（可能性がある）んだよ〜😱
@@ -39,6 +42,9 @@ flowchart LR
 
 ### ✅ 絶対やること 3点セット
 
+![Three security shields](./picture/next_study_127_three_security_shields.png)
+
+
 1. **認証（Authentication）**：ログインしてる？🪪
 2. **認可（Authorization）**：その人がそれを操作していい？👑
 3. **入力検証（Validation）**：変な値じゃない？🧼
@@ -48,7 +54,10 @@ UIでボタンを消すのは「親切」だけど、**セキュリティじゃ�
 
 ---
 
-## 4) Next.jsで「どこを守る？」マップ🗺️✨
+## 4) Next.jsで「どこを守る？」マップ
+
+![Castle map of security layers](./picture/next_study_127_security_map_castle.png)
+🗺️✨
 
 * **Middleware**：入口の門番🧤（ざっくり止めるのに強い）
 * **Server Component / page.tsx**：ページ表示の時にガードできる🏠
@@ -123,7 +132,10 @@ export const config = {
 
 ---
 
-## 7) 「認可」こそ命：他人のデータを触れないようにする🧱🗃️
+## 7) 「認可」こそ命
+
+![User accessing their own locker](./picture/next_study_127_authorization_my_data.png)
+：他人のデータを触れないようにする🧱🗃️
 
 ここ、めちゃ大事！！💥
 たとえば `/api/todos/123` があって、ログインしてても…
@@ -155,7 +167,10 @@ if (!todo) {
 
 ---
 
-## 8) セキュリティ思考の合言葉📣💖
+## 8) セキュリティ思考の合言葉
+
+![Server Judge making the final call](./picture/next_study_127_server_final_judgment.png)
+📣💖
 
 ### ✅ 「信用しない」チェックリスト
 

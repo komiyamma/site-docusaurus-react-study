@@ -15,6 +15,9 @@
 
 ## 1) フォームの「状態」ってなに？🧠🧩
 
+![next_study_148_data_vs_ux](./picture/next_study_148_data_vs_ux.png)
+
+
 最低限これだけは持っておくと強いよ〜👇
 
 * 入力値（name/email/message…）✍️
@@ -66,6 +69,9 @@ flowchart TD
 
 ## 3) 2025の王道：`<form action={...}>` + Server Actions 🍵✨
 
+![next_study_148_full_flow](./picture/next_study_148_full_flow.png)
+
+
 Next.js のガイドでも、**`<form>` の `action` に Server Actions を渡す**のが基本ルートになってるよ🧾✨ ([Next.js][2])
 
 * Server Action（サーバーで動く関数）には `"use server"` を付ける🧑‍🍳 ([Next.js][3])
@@ -75,6 +81,9 @@ Next.js のガイドでも、**`<form>` の `action` に Server Actions を渡�
 ---
 
 ## 図解：コンポーネント構成のイメージ🧱✨
+
+![next_study_148_component_hierarchy](./picture/next_study_148_component_hierarchy.png)
+
 
 ```mermaid
 flowchart LR
@@ -282,6 +291,9 @@ npm run dev
 ---
 
 # 6) ミニ練習（おすすめ）💪🌸
+
+![next_study_148_optimistic_ui](./picture/next_study_148_optimistic_ui.png)
+
 
 できそうなのから1個でOKだよ〜😊
 

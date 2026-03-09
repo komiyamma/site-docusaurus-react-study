@@ -6,6 +6,8 @@
 
 ## 1) まず結論：コミットは「1つの意図＝1コミット」🧠✅
 
+![next_study_019_commit_granularity](./picture/next_study_019_commit_granularity.png)
+
 コミット粒度（どれくらいのまとまりで保存するか）のコツはこれだけ覚えればOK👇✨
 
 * **1コミット = 1つの理由（意図）** 🎯
@@ -16,6 +18,8 @@
   * 「不要なコードを整理した」🧹
 
 * **大きすぎるコミットは、未来の自分が泣く**😭
+
+![next_study_019_too_big_commit](./picture/next_study_019_too_big_commit.png)
   「全部いっぺんに変えた」コミットは、後で原因調査が地獄になりがち…🔥
 
 * **小さすぎるコミットもやりすぎ注意**🫠
@@ -60,6 +64,8 @@ git commit -m "メッセージ"
 
 ### ✅ 便利：`git add -p`（変更を選んで箱に入れる）🧺✨
 
+![next_study_019_git_add_p](./picture/next_study_019_git_add_p.png)
+
 ```bash
 git add -p
 ```
@@ -74,6 +80,8 @@ git add -p
 ---
 
 ## 5) コミットメッセージのコツ（短く・具体的に）📝💖
+
+![next_study_019_commit_message](./picture/next_study_019_commit_message.png)
 
 「未来の自分（とチーム）」が読んでわかるのが正義〜！😆
 
@@ -97,6 +105,8 @@ git add -p
 ---
 
 ## 6) 失敗しても大丈夫！よくある事故の直し方🧯✨
+
+![next_study_019_undo_options](./picture/next_study_019_undo_options.png)
 
 ### A) 間違って入れたファイルを “コミット前に” 外したい🙅‍♀️
 

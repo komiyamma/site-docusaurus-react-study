@@ -42,6 +42,10 @@ flowchart LR
 
 ## ① まずは作ってみよう！📁✨（ページにスタイルを当てる）
 
+![next_study_050_file_pair.png](./picture/next_study_050_file_pair.png)
+
+
+
 例：`/profile` ページを作って、カードっぽくします💳🌸
 
 ### フォルダ構成（この章の完成形）📦
@@ -121,6 +125,10 @@ export default function ProfilePage() {
 
 ## ここが大事！✅ `.module.css` が付くと何が起きるの？🪄
 
+![next_study_050_class_transform.png](./picture/next_study_050_class_transform.png)
+
+
+
 * `.title` みたいな「ありがちな名前」でもOK🙆‍♀️
 * Next.jsが内部でこういう感じに変えてくれる（イメージ）👇
 
@@ -133,6 +141,10 @@ export default function ProfilePage() {
 ---
 
 ## よくあるハマりどころ😵‍💫🪤（先に潰す！）
+
+![next_study_050_common_mistakes.png](./picture/next_study_050_common_mistakes.png)
+
+
 
 ### ❌ 1) `styles.css` にしちゃった
 

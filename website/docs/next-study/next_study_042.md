@@ -15,6 +15,10 @@
 
 ## なぜ分けるの？（混ざるとツラい😇）
 
+![next study 042 split benefit](./picture/next_study_042_split_benefit.png)
+
+
+
 UIとロジックが1ファイルに混ざると…
 
 * JSXが長くて、**読むのに時間かかる**🌀
@@ -48,6 +52,10 @@ flowchart TD
 
 ## 分け方の“黄金3ステップ”🥇✨
 
+![next study 042 three layers](./picture/next_study_042_three_layers.png)
+
+
+
 ### ① まず「見た目」だけにする🎨
 
 * propsでもらったものだけ表示
@@ -75,6 +83,10 @@ flowchart TD
 ---
 
 ## 1) 見た目担当：`LikeButton.tsx`（UIだけ🎀）
+
+![next study 042 like button ui](./picture/next_study_042_like_button_ui.png)
+
+
 
 ```tsx
 // components/LikeButton.tsx
@@ -114,6 +126,10 @@ export function LikeButton({ count, disabled = false, onLike }: Props) {
 ---
 
 ## 2) ロジック担当：`useLike.ts`（Hook🪄）
+
+![next study 042 logic hook](./picture/next_study_042_logic_hook.png)
+
+
 
 ```tsx
 // hooks/useLike.ts
@@ -159,6 +175,10 @@ export function useLike(options: Options = {}) {
 ---
 
 ## 3) つなぎ役：`LikeSection.tsx`（Container🧩）
+
+![next study 042 container connection](./picture/next_study_042_container_connection.png)
+
+
 
 ```tsx
 // components/LikeSection.tsx
@@ -271,6 +291,10 @@ JSXが200行超えた…😵
   `「よかったら押してね😊」` を表示
 
 📌ルール：
+
+![next study 042 message logic](./picture/next_study_042_message_logic.png)
+
+
 **表示だけのif**はUI側に寄せてもOK（見た目だから）✨
 でも、条件が増えて計算が複雑なら **Hookに寄せる**のが◎🧠
 

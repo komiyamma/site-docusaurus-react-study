@@ -7,6 +7,10 @@
 
 ## この章のゴール🎯✨
 
+![next study 045 goal visual](./picture/next_study_045_goal_visual.png)
+
+
+
 * Server側でプロフィールデータを用意する🧊（安全＆速いイメージ）
 * Client側で「フォローする」ボタンを動かす🎮（クリック・localStorageなど）
 * **“見た目は1枚のカード”** だけど、中身は **Server/Clientの役割分担** になってる状態にする💡
@@ -51,6 +55,10 @@ export default function ProfilePage() {
 ---
 
 ## 2) Server Component（データ担当）を作る🧊📦
+
+![next study 045 server role](./picture/next_study_045_server_role.png)
+
+
 
 ここは「**データを準備して**」「**Clientに渡す**」係だよ〜！🍵✨
 （クリック操作やlocalStorageはやらない！）
@@ -98,6 +106,10 @@ export default async function ProfileCardServer({ userId }: Props) {
 ---
 
 ## 3) Client Component（操作担当）を作る🎮💖
+
+![next study 045 client role](./picture/next_study_045_client_role.png)
+
+
 
 ここが「ボタン押したら変わる！」担当😍
 ついでに **localStorage** で「フォロー中」を記憶しちゃうよ〜！🧠✨
@@ -184,6 +196,10 @@ export default function ProfileCardClient({ profile }: Props) {
 
 ## 4) CSS Modulesでカードっぽくする💅✨
 
+![next study 045 css modules](./picture/next_study_045_css_modules.png)
+
+
+
 ### ✅ `components/profile/ProfileCard.module.css` を作成
 
 ```css
@@ -261,12 +277,20 @@ export default function ProfileCardClient({ profile }: Props) {
 
 ## 5) 画像を置く🖼️✨（超かんたん）
 
+![next study 045 avatar placement](./picture/next_study_045_avatar_placement.png)
+
+
+
 * `public/avatar.png` を作って、好きな画像を `avatar.png` という名前で置いてね📁💕
   （Windowsならエクスプローラで `public` にドラッグでOK！🖱️✨）
 
 ---
 
 ## 6) 動作チェック✅🌈
+
+![next study 045 browser check](./picture/next_study_045_browser_check.png)
+
+
 
 PowerShell でプロジェクトのルートに移動して…
 

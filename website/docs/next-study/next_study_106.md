@@ -18,19 +18,35 @@
 
 ### ✅ ルール①：場所で URL が決まる
 
+![Rule 1: Location determines URL](./picture/next_study_106_url_mapping.png)
+
+
+
 * `app/api/hello/route.ts` → `/api/hello` になる✨
 
 ### ✅ ルール②：ファイル名は **`route.ts`** 固定
 
+![Rule 2: Filename is route.ts](./picture/next_study_106_filename_rule.png)
+
+
+
 * `route.ts` じゃないと Route Handler にならないよ🙅‍♀️
 
 ### ✅ ルール③：HTTPメソッドは “関数を export” する
+
+![Rule 3: Export function](./picture/next_study_106_export_rule.png)
+
+
 
 * `export async function GET()` を書けば GET に反応するよ📥📤
 
 ---
 
 ## 3) フォルダ構成イメージ🌳✨
+
+![Folder Structure](./picture/next_study_106_folder_visual.png)
+
+
 
 ```txt
 my-next-app/
@@ -47,6 +63,10 @@ my-next-app/
 
 ### Step 1：ファイルを作る🛠️
 
+![Hands-on Step 1](./picture/next_study_106_hands_on_code.png)
+
+
+
 `app/api/hello/route.ts` を作成して、これを書いてね👇
 
 ```ts
@@ -62,11 +82,19 @@ export async function GET() {
 
 ### Step 2：開発サーバー起動🚀
 
+![Hands-on Step 2](./picture/next_study_106_dev_command.png)
+
+
+
 ```bash
 npm run dev
 ```
 
 ### Step 3：ブラウザでアクセス🌈
+
+![Hands-on Step 3](./picture/next_study_106_browser_access.png)
+
+
 
 ブラウザでここへ👇
 `http://localhost:3000/api/hello`
@@ -91,6 +119,10 @@ flowchart TD
 ---
 
 ## 6) よくある「つまずき」あるある🫠🧯
+
+![Common Mistakes](./picture/next_study_106_404_mistake.png)
+
+
 
 ### ❓ 404になる…
 

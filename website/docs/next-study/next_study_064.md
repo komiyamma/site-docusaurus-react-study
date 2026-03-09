@@ -12,6 +12,8 @@ Route Group（ルートグループ）を使うと、**URLはそのまま**な�
 
 ## 1) Route Groupってなに？🤔💡
 
+![next_study_064_route_group_ghost](./picture/next_study_064_route_group_ghost.png)
+
 `app/(site)/...` みたいに **カッコ `( )` のフォルダ**を作ると、それが Route Group 📦
 
 * ✅ **URLには出ない**（ここ大事！）
@@ -20,6 +22,8 @@ Route Group（ルートグループ）を使うと、**URLはそのまま**な�
 ---
 
 ## 2) まずは完成イメージを掴もう👀✨
+
+![next_study_064_multiple_layouts](./picture/next_study_064_multiple_layouts.png)
 
 ### ✅ こうしたい（URLは普通のまま）
 
@@ -68,6 +72,8 @@ flowchart TD
 
 ## 4) 実装してみよう！🛠️✨
 
+![next_study_064_folder_tree_groups](./picture/next_study_064_folder_tree_groups.png)
+
 ### 4-1) ルートレイアウト（全ページ共通）🧱
 
 `app/layout.tsx`
@@ -91,6 +97,8 @@ export default function RootLayout({
 ---
 
 ### 4-2) 公開ページ用レイアウト（site）🏠🌸
+
+![next_study_064_site_layout](./picture/next_study_064_site_layout.png)
 
 `app/(site)/layout.tsx`
 
@@ -121,6 +129,8 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
 ---
 
 ### 4-3) 管理画面用レイアウト（dashboard）🧑‍💻🪟
+
+![next_study_064_dashboard_layout](./picture/next_study_064_dashboard_layout.png)
 
 `app/(dashboard)/layout.tsx`
 
@@ -207,10 +217,14 @@ export default function DashboardPage() {
 
 ### ✅ URLに `(site)` は入らない
 
+![next_study_064_url_mapping](./picture/next_study_064_url_mapping.png)
+
 * フォルダは `app/(dashboard)/dashboard/page.tsx`
 * でもURLは **`/dashboard`** だよ！✨
 
 ### ✅ LinkもURLだけ書く
+
+![next_study_064_link_mistake](./picture/next_study_064_link_mistake.png)
 
 * `href="/dashboard"` ✅
 * `href="/(dashboard)/dashboard"` ❌（そんなURLは存在しないよ〜😂）

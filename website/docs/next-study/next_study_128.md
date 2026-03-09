@@ -8,7 +8,10 @@
 
 ---
 
-## 1) なんでUIだけだとダメなの？😵‍💫
+## 1) なんでUIだけだとダメなの？
+
+![Mask on a face vs locked door](./picture/next_study_128_ui_mask_useless.png)
+😵‍💫
 
 ### UIで隠しても、叩けちゃう問題🔨
 
@@ -65,7 +68,10 @@ flowchart LR
 
 ---
 
-### ✅ 4-1) Middlewareで入口チェック🧤
+### ✅ 4-1) Middlewareで入口チェック
+
+![Bouncer at the club entrance](./picture/next_study_128_middleware_gatekeeper.png)
+🧤
 
 `middleware.ts`（プロジェクト直下）を作るよ📄
 
@@ -98,7 +104,10 @@ export const config = {
 
 ---
 
-### ✅ 4-2) Server側でも最終チェック（保険）🧊🛡️
+### ✅ 4-2) Server側でも最終チェック
+
+![Guard inside checking again](./picture/next_study_128_server_double_check.png)
+（保険）🧊🛡️
 
 Middlewareがあっても、**サーバー側のページでも“念のため”チェック**するのが強いよ💪
 （運用でmiddlewareの設定が変わったり、例外が出たり…そういう時の保険！）
@@ -131,7 +140,10 @@ export default async function DashboardPage() {
 
 ---
 
-## 5) 「UIだけガード」が危ない例⚠️（やりがち…！）
+## 5) 「UIだけガード」が危ない例
+
+![Transparent box labeled Secret](./picture/next_study_128_client_component_false_security.png)
+⚠️（やりがち…！）
 
 例えばClient Componentで「ログインしてないなら表示しない」ってやっても…
 
@@ -152,7 +164,10 @@ export function SecretPanel() {
 
 ---
 
-## 6) 超重要メモ：`localStorage` を“ログイン証拠”にしない🙅‍♀️🧨
+## 6) 超重要メモ
+
+![Glass jar vs Safe](./picture/next_study_128_localstorage_vs_cookie.png)
+：`localStorage` を“ログイン証拠”にしない🙅‍♀️🧨
 
 * `localStorage` は **JavaScriptから読める**
 * XSSが起きたら **盗まれやすい**

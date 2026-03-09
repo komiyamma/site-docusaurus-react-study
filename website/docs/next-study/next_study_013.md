@@ -40,6 +40,8 @@ flowchart LR
 
 ### ✅ `localhost` ってなに？🏠
 
+![013 Localhost House](./picture/next_study_013_localhost_house.png)
+
 * 自分のPCの中を指す特別な住所みたいなものだよ📍💻
 * つまり「自分のPCで動いてるアプリを自分で見てる」状態😊
 
@@ -68,6 +70,8 @@ pwd
 
 ### ④ 開発サーバー起動！🌈🚀
 
+![013 Start Button](./picture/next_study_013_start_button.png)
+
 ```bash
 npm run dev
 ```
@@ -78,6 +82,8 @@ npm run dev
 
 ### ⑤ ブラウザで開く🌐💞
 
+![013 Browser Success](./picture/next_study_013_browser_success.png)
+
 ブラウザでここを開くよ👇
 `http://localhost:3000`
 
@@ -86,6 +92,8 @@ npm run dev
 ---
 
 ## 体験しよう🪄⚡「編集したら変わる」をやってみる！
+
+![013 Hot Reload](./picture/next_study_013_hot_reload.png)
 
 ### ① `app/page.tsx` を開く📄
 
@@ -113,6 +121,8 @@ export default function Home() {
 
 ## 止め方🛑（これ超大事！）
 
+![013 Stop Sign](./picture/next_study_013_stop_sign.png)
+
 開発サーバーは「起動しっぱなし」になるから、終わるときは止めるよ💡
 
 * ターミナルをクリック
@@ -131,11 +141,15 @@ export default function Home() {
 
 ### 🌀 2) “3000番ポートが使われてる” っぽいエラー
 
+![013 Port Busy](./picture/next_study_013_port_busy.png)
+
 別のアプリが3000を使ってる時があるよ〜😵‍💫
 その場合、Next.jsが「じゃあ3001ね！」って変えて起動してくれることもある✨
 ターミナルの `Local:` のURLを見て、そっちを開いてね🧭💖
 
 ### 🌀 3) `node_modules` がない系（見つからない）エラー
+
+![013 Npm Install Toolbox](./picture/next_study_013_npm_install_toolbox.png)
 
 依存関係が入ってない時はこれでOK👇
 

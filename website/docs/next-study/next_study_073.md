@@ -7,6 +7,9 @@
 
 ## 1) まず結論：こんなとき “ルート分割” しよ！✂️🛣️
 
+![next_study_073_bloated_page.png](./picture/next_study_073_bloated_page.png)
+
+
 ✅ **ルート分割したほうがいいサイン**（あるある〜！）
 
 * スクロールが長すぎて「どこに何書いたっけ？」ってなる📜😵
@@ -18,6 +21,9 @@
 ---
 
 ## 2) 図解：コンポーネント分割 vs ルート分割 🧩🛣️
+
+![next_study_073_route_split_concept.png](./picture/next_study_073_route_split_concept.png)
+
 
 ```mermaid
 flowchart TD
@@ -61,6 +67,9 @@ flowchart TD
 
 ## 4) フォルダ構成：こう分けると気持ちいい🗂️💗
 
+![next_study_073_split_folder_structure.png](./picture/next_study_073_split_folder_structure.png)
+
+
 ```txt
 app/
   circle/
@@ -83,6 +92,9 @@ app/
 ---
 
 ## 5) 共通レイアウト（ナビ付き）を作る 🧭💕
+
+![next_study_073_common_layout.png](./picture/next_study_073_common_layout.png)
+
 
 `app/circle/layout.tsx`
 
@@ -159,6 +171,9 @@ export default function CircleEventsPage() {
 ---
 
 ## 7) ルート分割の“うれしい副作用”🎁✨
+
+![next_study_073_split_benefits.png](./picture/next_study_073_split_benefits.png)
+
 
 * **URLで案内できる**：イベントだけ見せたい時に `/circle/events` を送れる📩🔗
 * **ページごとに読み込み演出できる**：`app/circle/events/loading.tsx` とか置ける⏳💖

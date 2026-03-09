@@ -39,6 +39,9 @@ flowchart LR
 
 ## 1) 作るファイルたち📁✨
 
+![next_study_149_files_map](./picture/next_study_149_files_map.png)
+
+
 次の4つを作ります（フォルダはなければ作ってね😉）
 
 * `lib/todoStore.ts`（仮ストア）
@@ -49,6 +52,9 @@ flowchart LR
 ---
 
 ## 2) 仮ストア（メモリ保存）を作る📦📝
+
+![next_study_149_in_memory_store](./picture/next_study_149_in_memory_store.png)
+
 
 `lib/todoStore.ts` を作って、これを貼り付けてね👇
 （※開発中の練習用！サーバー再起動で消えるよ。でも今はそれでOK😊）
@@ -84,6 +90,9 @@ export function addTodo(title: string): Todo {
 ---
 
 ## 3) Server Action（追加処理）を作る🧑‍🍳➕
+
+![next_study_149_validation_gate](./picture/next_study_149_validation_gate.png)
+
 
 `app/todos/actions.ts` を作って、これ👇
 
@@ -148,6 +157,9 @@ export async function addTodoAction(
 ---
 
 ## 4) フォーム（Client Component）を作る📮✨
+
+![next_study_149_success_reset](./picture/next_study_149_success_reset.png)
+
 
 `app/todos/AddTodoForm.tsx` を作ってね👇
 送信中の表示は `useFormStatus()` で作るよ〜⏳ ([React][2])

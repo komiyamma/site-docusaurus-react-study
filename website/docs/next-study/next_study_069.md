@@ -10,6 +10,8 @@
 
 ## `generateStaticParams` ってなに？🤔🧊
 
+![next_study_069_generate_static_params](./picture/next_study_069_generate_static_params.png)
+
 動的ルート（例：`app/posts/[slug]/page.tsx`）に対して、**どの `slug` のページを作るか（= パラメータ一覧）を返す関数**だよ✨
 これがあると Next.js は **ビルド時にその分のページを先に作ってくれる**の！速いし安定しやすい〜🚀💖 ([Next.js][1])
 
@@ -20,6 +22,8 @@
 ---
 
 ## 図でイメージするよ🧩🧊（Mermaid）
+
+![next_study_069_build_process](./picture/next_study_069_build_process.png)
 
 ```mermaid
 flowchart TD
@@ -37,6 +41,8 @@ flowchart TD
 ## 実例：ミニブログを“静的に”作ってみよう📝✨
 
 ### 1) 投稿データ（固定リスト）を用意する📚
+
+![next_study_069_static_data](./picture/next_study_069_static_data.png)
 
 `src/lib/posts.ts` を作ってね（場所は自由だけど、こうすると分かりやすいよ😊）
 
@@ -72,6 +78,8 @@ export function generateStaticParams() {
 }
 
 // ✅ 一覧にないslugは 404 にしたいならこれ！
+
+![next_study_069_dynamic_params_false](./picture/next_study_069_dynamic_params_false.png)
 export const dynamicParams = false
 
 export default async function Page({
@@ -94,6 +102,8 @@ export default async function Page({
 ```
 
 #### ここ、超だいじポイント3つ🧠✨
+
+![next_study_069_array_return](./picture/next_study_069_array_return.png)
 
 * `generateStaticParams` は **配列を返す**（空でも配列！）→ そうじゃないと動的扱いになっちゃうことがあるよ⚠️ ([Next.js][1])
 * 戻り値のキー名は **`[slug]` なら `slug`**！一致してないと作れない🥲 ([Next.js][1])
@@ -119,6 +129,8 @@ npm run dev
 * `http://localhost:3000/posts/unknown` → `dynamicParams = false` なら **404** になるはず🚪❌
 
 ### ビルドで「静的生成」を体験🏗️🧊
+
+![next_study_069_build_log](./picture/next_study_069_build_log.png)
 
 ```bash
 npm run build

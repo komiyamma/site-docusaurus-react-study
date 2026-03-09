@@ -7,6 +7,8 @@ Next.js（App Router）では **“ページが全部そろう前に、先に表
 
 ## 1. Streamingってなに？🤔🌊
 
+![next_study_094_streaming_concept.png](./picture/next_study_094_streaming_concept.png)
+
 イメージはこれ👇
 
 * 🧱 **先に出せるUI（見出し、枠、説明文）** をまず表示
@@ -44,6 +46,8 @@ sequenceDiagram
 ## 4. ハンズオン：Streamingを体験しよう🧪🌊
 
 ### Step 1：ページを作る📄✨
+
+![next_study_094_step1_structure.png](./picture/next_study_094_step1_structure.png)
 
 `app/streaming/page.tsx` を作ってね😊
 
@@ -103,6 +107,8 @@ export default function Page() {
 
 ### Step 2：わざと遅いコンポーネントを作る🐢💤
 
+![next_study_094_slow_component.png](./picture/next_study_094_slow_component.png)
+
 同じフォルダに `app/streaming/slow-section.tsx` を作ってね！
 
 ```tsx
@@ -156,6 +162,8 @@ npm run dev
 
 見るポイント👀💡
 
+![next_study_094_browser_result.png](./picture/next_study_094_browser_result.png)
+
 * ✅ 見出し＆説明＆「先に表示されるゾーン」が先に出る⚡
 * ✅ 「読み込み中だよ〜⏳💤」が出る
 * ✅ 2.5秒後に「あとから届くゾーン🌊✨」が差し込まれる
@@ -166,10 +174,14 @@ npm run dev
 
 ### ✅ Streamingしたいなら「遅い部分を分離」する✂️🐢
 
+![next_study_094_separation_logic.png](./picture/next_study_094_separation_logic.png)
+
 * ページ全体を遅くするんじゃなくて、**遅い部分だけを別コンポーネント**にして
 * それを **Suspenseで包む** のがコツだよ🫧
 
 ### ✅ `await` をページ最上段でやると、全体が待つ🙅‍♀️
+
+![next_study_094_blocking_await.png](./picture/next_study_094_blocking_await.png)
 
 たとえば `page.tsx` のトップで `await` すると、**見出しすら出ない** になりがち😵
 → 遅いのは子に押し込もう〜！📦✨
@@ -177,6 +189,8 @@ npm run dev
 ---
 
 ## 6. 1枚で理解：Streamingの考え方🧩🌊
+
+![next_study_094_summary_chart.png](./picture/next_study_094_summary_chart.png)
 
 ```mermaid
 flowchart TD

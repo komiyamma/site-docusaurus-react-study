@@ -22,6 +22,10 @@ flowchart LR
 
 ## 2) 基本形：`type Props = { ... }` を作る🧩
 
+![next study 039 type guard](./picture/next_study_039_type_guard.png)
+
+
+
 一番よく使う形はこれ！👇✨
 
 ```tsx
@@ -52,6 +56,10 @@ export function Greeting({ name }: Props) {
 
 ## 3) 使う側（親）で「型の恩恵」を感じる🎁
 
+![next study 039 error detection](./picture/next_study_039_error_detection.png)
+
+
+
 親でこうやって使うと…
 
 ```tsx
@@ -81,6 +89,10 @@ export default function Page() {
 
 ### (A) 任意（オプショナル）にする：`?` 🌷
 
+![next study 039 optional prop](./picture/next_study_039_optional_prop.png)
+
+
+
 「渡してもいいし、渡さなくてもいい」やつ！
 
 ```tsx
@@ -103,6 +115,10 @@ export function Greeting({ name, subtitle }: Props) {
 
 ### (B) 選べる値にする（ユニオン）：`"sm" | "md" | "lg"` 👗
 
+![next study 039 union choice](./picture/next_study_039_union_choice.png)
+
+
+
 「サイズはこの3つだけ！」みたいに縛れる✨
 
 ```tsx
@@ -122,6 +138,10 @@ export function Badge({ label, size }: Props) {
 
 ### (C) デフォルト値を入れる（初心者に超おすすめ）🍀
 
+![next study 039 default value](./picture/next_study_039_default_value.png)
+
+
+
 propsが任意のとき、表示が安定する😊✨
 
 ```tsx
@@ -138,6 +158,10 @@ export function Greeting({ name, emoji = "🌸" }: Props) {
 ---
 
 ## 5) ありがちミス集（ここだけ覚えればOK）🧯
+
+![next study 039 any danger](./picture/next_study_039_any_danger.png)
+
+
 
 * `type Props` に書いた名前と、実際に渡す名前が違う😵‍💫
   例：`type Props = { userName: string }` なのに `<Comp name="..." />` みたいなズレ

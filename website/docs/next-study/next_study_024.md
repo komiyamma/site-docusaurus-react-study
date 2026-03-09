@@ -7,6 +7,9 @@
 
 ## 1) `layout.tsx` ってなに？🧩
 
+![next_study_024_layout_concept.png](./picture/next_study_024_layout_concept.png)
+
+
 `layout.tsx` は、そのフォルダ配下のページを **まとめて包む“外枠”** だよ〜🏠✨
 たとえばヘッダー・フッター・ナビとか、「毎回同じでいい部分」をここに置く感じ！🧸🎀
 
@@ -41,6 +44,9 @@ flowchart TD
 ---
 
 ## 4) `app/layout.tsx` を “ヘッダー＋フッター付き” にしてみよう💅✨
+
+![next_study_024_html_structure.png](./picture/next_study_024_html_structure.png)
+
 
 `app/layout.tsx` を開いて、こんな感じにして保存してみてね👇
 （見た目はシンプル！でも「外枠ができた感」出るよ〜🥳）
@@ -95,6 +101,9 @@ export default function RootLayout({
 
 ## 5) 動作確認しよ〜💨🌈
 
+![next_study_024_browser_frame.png](./picture/next_study_024_browser_frame.png)
+
+
 開発サーバー起動（まだなら）👇
 
 ```bash
@@ -109,6 +118,9 @@ npm run dev
 ---
 
 ## 6) 「layoutが入れ子になる」もチラ見せ👀🧁
+
+![next_study_024_nested_layout.png](./picture/next_study_024_nested_layout.png)
+
 
 `layout.tsx` は、フォルダの中にも作れるよ！
 たとえば `app/dashboard/layout.tsx` を作ると、`/dashboard` 配下だけ別の外枠にできるの✨ ([Next.js][2])

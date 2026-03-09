@@ -38,6 +38,10 @@ flowchart LR
 
 ## 1) まずはデータ取得ユーティリティを作る📡🍵
 
+![Mock Data Utility](./picture/next_study_104_mock_data_utility.png)
+
+
+
 `app/lib/articles.ts` を作ってね（なければ `app/lib` フォルダも作成）✨
 ※外部APIは例として JSONPlaceholder を使うよ🧪
 
@@ -113,6 +117,10 @@ export async function fetchArticleById(
 
 ## 2) 一覧ページ `/articles` を作る🗂️💕
 
+![Article List UI](./picture/next_study_104_list_ui.png)
+
+
+
 `app/articles/page.tsx`
 
 ```tsx
@@ -164,6 +172,10 @@ export default async function ArticlesPage({
 
 ### 一覧のローディング⏳（`loading.tsx`）
 
+![Loading Skeleton (List)](./picture/next_study_104_list_skeleton.png)
+
+
+
 `app/articles/loading.tsx`
 
 ```tsx
@@ -201,6 +213,10 @@ export default function Loading() {
 ---
 
 ## 3) 詳細ページ `/articles/[id]` を作る🔎🧡
+
+![Article Detail UI](./picture/next_study_104_detail_ui.png)
+
+
 
 `app/articles/[id]/page.tsx`
 
@@ -260,6 +276,10 @@ export default async function ArticlePage({
 
 ## 4) 詳細のローディング⏳（`[id]/loading.tsx`）
 
+![Loading Skeleton (Detail)](./picture/next_study_104_detail_skeleton.png)
+
+
+
 `app/articles/[id]/loading.tsx`
 
 ```tsx
@@ -283,6 +303,10 @@ export default function Loading() {
 ---
 
 ## 5) 詳細のエラー画面🧯（`[id]/error.tsx`）＋再試行🔁
+
+![Error UI (Detail)](./picture/next_study_104_detail_error.png)
+
+
 
 ![Error Boundary Shield](./picture/next_study_104_error_boundary.png)
 
@@ -348,6 +372,10 @@ export default function Error({
 ---
 
 ## 6) 詳細の 404 画面🚪（`[id]/not-found.tsx`）
+
+![404 UI (Detail)](./picture/next_study_104_detail_404.png)
+
+
 
 `app/articles/[id]/not-found.tsx`
 

@@ -15,6 +15,8 @@
 
 ## ざっくり図解🗺️（これがやりたい流れ！）
 
+![next study 112 fetch phone](./picture/next_study_112_fetch_phone.png)
+
 ![ざっくり図解](./picture/next_study_112_client_fetch.png)
 
 ```mermaid
@@ -74,8 +76,12 @@ export async function GET() {
 ポイントはここっ👇
 
 * **Client Component** でやる（＝ファイル先頭に `"use client"` 必須！）⚠️
+
+![next study 112 use client badge](./picture/next_study_112_use_client_badge.png)
 * `fetch()` → `response.ok` をチェック → `response.json()`
 * Loading / Error をちゃんと作る（優しさ💗）
+
+![next study 112 loading states](./picture/next_study_112_loading_states.png)
 
 ### 例：`app/ping/page.tsx` を作って表示する📄
 
@@ -175,6 +181,8 @@ export default function PingPage() {
 * 404でも500でも `json()` は呼べちゃうことがあるけど、**まず `res.ok`** で分岐するのが安心🍀
 
 ### ❌ `/api/...` を絶対URLにしちゃう
+
+![next study 112 relative path](./picture/next_study_112_relative_path.png)
 
 * 基本は **`fetch("/api/ping")` みたいに相対パスでOK**🙆‍♀️
 * 同一オリジンだからCORS地獄にならないのが嬉しいポイント🎉

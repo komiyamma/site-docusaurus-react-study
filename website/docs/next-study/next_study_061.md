@@ -16,6 +16,10 @@
 ### ✅ `useRouter`（画面遷移をする🚗💨）
 
 * ボタンを押したら移動したい（`router.push()`）🖱️➡️
+
+![router.push Navigation](./picture/next_study_061_router_push_car.png)
+
+
 * 置き換えたい（履歴を残したくないとき `router.replace()`）🧼
 * “再読み込み”っぽく最新を取り直したい（`router.refresh()`）🔄
 * ブラウザの戻る/進むをしたい（`router.back()` / `router.forward()`）⬅️➡️
@@ -39,9 +43,17 @@ flowchart TD
 
 `<Link>` は表示されると **prefetch** してくれるのが強みだよ〜✨（体感速くなるやつ） ([Next.js][3])
 
+![Link Prefetching](./picture/next_study_061_prefetch_link.png)
+
+
+
 ---
 
 ## 3) 超重要：App Router では import 先が違うよ⚠️
+
+![Import Trap](./picture/next_study_061_import_trap.png)
+
+
 
 App Router の場合は **`next/navigation`** から読み込むよ✅
 （`next/router` じゃない！ここで詰まりがち🥹）
@@ -54,6 +66,8 @@ App Router の場合は **`next/navigation`** から読み込むよ✅
 ## 4) ハンズオン①：ヘッダーで“今いるページ”をハイライトしよう🌸📍
 
 ### 4-1) `components/NavBar.tsx` を作る（Client Component）🧩
+
+![Active Link Highlight](./picture/next_study_061_use_pathname_highlight.png)
 
 ```tsx
 'use client'

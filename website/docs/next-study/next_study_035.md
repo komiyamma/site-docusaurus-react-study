@@ -6,6 +6,8 @@
 
 ## 1) Catch-all ってなに？🤔💡
 
+![next_study_035_dots_folder](./picture/next_study_035_dots_folder.png)
+
 たとえば、こういうURLたち👇
 
 * `/docs/intro`
@@ -18,11 +20,15 @@
 
 みたいに書くと、ぜんぶキャッチしてくれるよ〜🪤✨
 このとき `slug` は **配列**になるのがポイント！
-`/docs/a/b/c` → `slug = ["a","b","c"]` みたいな感じだよ🎯 ([nextjs.org][1])
+`/docs/a/b/c` → `slug = ["a","b","c"]` みたいな感じだよ🎯
+
+![next_study_035_path_to_array](./picture/next_study_035_path_to_array.png) ([nextjs.org][1])
 
 ---
 
 ## 2) どんなときに使う？🧭📚
+
+![next_study_035_use_case_icons](./picture/next_study_035_use_case_icons.png)
 
 よくある使いどころはこんな感じ👇
 
@@ -170,6 +176,8 @@ export default async function DocsCatchAllPage({
 
 ## 5) ついでに：Optional Catch-all も知っておく？👀✨
 
+![next_study_035_optional_net](./picture/next_study_035_optional_net.png)
+
 Catch-allの「親玉」みたいなやつで、
 
 * `app/docs/[[...slug]]/page.tsx`
@@ -183,7 +191,11 @@ Catch-allの「親玉」みたいなやつで、
 
 * `slug` を **文字列だと思って** `slug.toUpperCase()` とかすると壊れる💥
   → **配列**だよ！`slug.join("/")` みたいに使うのが基本✨ ([nextjs.org][1])
+
+![next_study_035_slug_join](./picture/next_study_035_slug_join.png)
 * ルート直下（`app/[...slug]`）に置くと、他のルートを飲み込みやすい🥺
+
+![next_study_035_root_conflict_monster](./picture/next_study_035_root_conflict_monster.png)
   → まずは今回みたいに `docs/` の下に置くのが安心だよ〜🫶 ([GitHub][2])
 
 ---

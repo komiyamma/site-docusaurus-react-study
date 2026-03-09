@@ -7,6 +7,10 @@ Route Handler（`app/api/.../route.ts`）は **「外から直接叩ける入口
 
 ## なんで“絶対”サーバーでやるの？🤔
 
+![Why Server Validation?](./picture/next_study_109_why_server.png)
+
+
+
 あなたの画面（フォーム）から送る人だけじゃなくて、こんな人も来ます…😇
 
 * ブラウザじゃなくて **Postman / curl** で叩く人🧪
@@ -20,6 +24,10 @@ Route Handler（`app/api/.../route.ts`）は **「外から直接叩ける入口
 ---
 
 ## イメージ図（入口でチェック！）🧭
+
+![Validation Concept](./picture/next_study_109_validation_concept.png)
+
+
 
 ![イメージ図（入口でチェック！）](./picture/next_study_109_validation_zod.png)
 
@@ -66,6 +74,11 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 
 // ① 受け取りたい形（スキーマ）を決める🧩
+```
+
+![Zod Schema](./picture/next_study_109_zod_schema.png)
+
+```ts
 const CreateTodoSchema = z.object({
   title: z
     .string()
@@ -91,6 +104,11 @@ export async function POST(request: Request) {
   }
 
   // ④ safeParseで「落ちずに」チェックする🛡️
+```
+
+![Safe Parse Flow](./picture/next_study_109_safe_parse.png)
+
+```ts
   const parsed = CreateTodoSchema.safeParse(body);
 
   if (!parsed.success) {
@@ -125,6 +143,10 @@ export async function POST(request: Request) {
 
 ## 返ってくるエラーの形（例）🧾✨
 
+![Error Response Format](./picture/next_study_109_error_response.png)
+
+
+
 例えば `title: ""` で送ると、こういう感じで返せるよ👇
 
 * `error`: 何が起きたか
@@ -143,6 +165,10 @@ export async function POST(request: Request) {
 ---
 
 ## テストしてみる（WindowsのPowerShellでOK）🧪✨
+
+![Testing with Curl](./picture/next_study_109_curl_commands.png)
+
+
 
 ### ✅ 正常ケース
 
@@ -164,6 +190,10 @@ curl -X POST http://localhost:3000/api/todos ^
 
 ## よくある落とし穴🥲（ここだけ注意！）
 
+![Common Pitfalls](./picture/next_study_109_json_fail.png)
+
+
+
 * **`request.json()` は失敗することがある**（JSON壊れてると例外！）→ `try/catch` 必須🧯
 * **バリデーションは “落とさない” 書き方が大事** → `parse` じゃなくて `safeParse` が安心🛡️
 * **クライアント側チェックだけに頼るのはNG**（外から直で叩けるから）🙅‍♀️
@@ -171,6 +201,10 @@ curl -X POST http://localhost:3000/api/todos ^
 ---
 
 ## 会話の流れ（超ざっくり）💬
+
+![Sequence Diagram](./picture/next_study_109_sequence.png)
+
+
 
 ```mermaid
 sequenceDiagram

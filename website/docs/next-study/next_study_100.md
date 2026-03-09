@@ -30,6 +30,8 @@ console は便利！でも **それだけ**だと、こうなりがち👇
 
 ## まず決める！ログ方針の「3点セット」📌📌📌
 
+![next_study_100_log_strategy.png](./picture/next_study_100_log_strategy.png)
+
 ### ① 何を残す？（ログの中身）📝
 
 最低限これがあると強いよ💪✨
@@ -86,6 +88,8 @@ flowchart TD
 ---
 
 ### 1) 受け口を作る：Route Handler（API）🚪📦
+
+![next_study_100_client_post.png](./picture/next_study_100_client_post.png)
 
 ![Log Payload](./picture/next_study_100_log_payload.png)
 
@@ -248,6 +252,8 @@ export default function Error({
 ---
 
 ## “いいログ”のコツ（初心者でもできる）✨📝
+
+![next_study_100_json_vs_string.png](./picture/next_study_100_json_vs_string.png)
 
 ### ✅ 1) ログは「文章」じゃなく「データ」にする📦
 

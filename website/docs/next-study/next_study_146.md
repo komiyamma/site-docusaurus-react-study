@@ -7,6 +7,9 @@
 
 ## 今日はこれを作るよ🧁
 
+![next_study_146_toast_anatomy](./picture/next_study_146_toast_anatomy.png)
+
+
 * 送信成功 → ✅「できたよ！」トースト
 * 送信失敗 → ❌「ごめん、失敗…」トースト
 * **Server Actionsはサーバーで動く**ので、トースト表示は **クライアント側で**やるよ🙆‍♀️
@@ -46,6 +49,9 @@ npm i sonner
 
 ## Step 2：Toaster（通知の置き場所）をアプリに常設する🏠🔔
 
+![next_study_146_toaster_portal](./picture/next_study_146_toaster_portal.png)
+
+
 App Routerの `layout.tsx` は基本サーバー側だから、**ToasterはClient Componentに分けて置く**のが安全だよ🙆‍♀️
 
 ### `app/_components/ToasterProvider.tsx`
@@ -81,6 +87,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 ---
 
 ## Step 3：Server Actionは「結果を返す」だけにする📦🧑‍🍳
+
+![next_study_146_server_client_handshake](./picture/next_study_146_server_client_handshake.png)
+
 
 `useActionState` を使うと、Server Actionの引数が **(prevState, formData)** になるよ。 ([Next.js][3])
 ここで **成功/失敗とメッセージ**を返すようにするのがポイント✨
@@ -120,6 +129,9 @@ export async function addTodo(
 ---
 
 ## Step 4：クライアント側で state を見てトースト出す🔔💖
+
+![next_study_146_use_effect_trigger](./picture/next_study_146_use_effect_trigger.png)
+
 
 Server Actionはサーバーで動くから、**toast.success / toast.error はクライアントで呼ぶ**よ😊
 `useEffect` で state の変化を見て出すのが王道✨

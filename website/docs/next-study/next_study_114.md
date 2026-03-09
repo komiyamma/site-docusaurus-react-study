@@ -16,6 +16,8 @@
 
 ## まずは図でイメージしよ〜🧠🪄
 
+![next study 114 post mailbox](./picture/next_study_114_post_mailbox.png)
+
 ![まずは図でイメージしよ〜](./picture/next_study_114_post_todo.png)
 
 ```mermaid
@@ -36,6 +38,8 @@ sequenceDiagram
 > 第113章で `GET` がある前提で、**同じファイルにPOSTも足す**感じでいくよ〜😊
 
 ### ✅ 完成形（GET + POST）
+
+![next study 114 validation gate](./picture/next_study_114_validation_gate.png)
 
 ```ts
 import { NextResponse } from "next/server";
@@ -120,6 +124,8 @@ export async function POST(req: Request) {
 
 ## 動作確認：Windowsで叩いてみよう🎯💻
 
+![next study 114 curl terminal](./picture/next_study_114_curl_terminal.png)
+
 開発サーバー起動（すでに起動中ならOK）🚀
 
 ```bash
@@ -153,6 +159,8 @@ curl http://localhost:3000/api/todos
 ---
 
 ## 期待するレスポンス例🎁✨
+
+![next study 114 201 factory](./picture/next_study_114_201_factory.png)
 
 ### POST成功（201）
 

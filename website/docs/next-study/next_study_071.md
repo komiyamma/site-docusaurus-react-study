@@ -8,6 +8,9 @@
 
 ## まず結論：この2つは“分岐スイッチ”🎛️
 
+![next_study_071_switch_metaphor.png](./picture/next_study_071_switch_metaphor.png)
+
+
 * `redirect()` 👉 **別のURLへ強制移動**させたいとき🚶‍♀️➡️🏠
 * `notFound()` 👉 **存在しない扱い（404）**にしたいとき🚪❌
 
@@ -16,6 +19,9 @@
 ---
 
 ## 図解：どっちを使う？🤔🗺️（Mermaid）
+
+![next_study_071_decision_flow.png](./picture/next_study_071_decision_flow.png)
+
 
 ```mermaid
 flowchart TD
@@ -31,6 +37,9 @@ flowchart TD
 ---
 
 ## `notFound()`：404を“きれいに”出す担当🚪❌
+
+![next_study_071_not_found_door.png](./picture/next_study_071_not_found_door.png)
+
 
 ### いつ使う？🥺
 
@@ -82,6 +91,9 @@ export default async function Page({ params }: Props) {
 
 ## `redirect()`：別ページへ“移動させる”担当🚦➡️
 
+![next_study_071_redirect_traffic.png](./picture/next_study_071_redirect_traffic.png)
+
+
 ### いつ使う？😊
 
 * ログインしてない人を `/login` に飛ばす🔐➡️
@@ -117,6 +129,9 @@ export default async function Page() {
 ---
 
 ## 使い分けの“超シンプルルール”💡
+
+![next_study_071_simple_rule.png](./picture/next_study_071_simple_rule.png)
+
 
 * **そのページ（データ）が存在しない** 👉 `notFound()` 🚪❌
 * **存在はするけど、行き先が別にある** 👉 `redirect()` 🚦➡️

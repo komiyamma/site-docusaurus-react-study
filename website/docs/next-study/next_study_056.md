@@ -15,6 +15,10 @@
 
 ## ダークモードの方針は大きく2つ🌙🔀
 
+![CSS vs Class Approach](./picture/next_study_056_css_vs_class.png)
+
+
+
 ### ① CSSだけでやる（OS設定に合わせる）🧊
 
 * OS/ブラウザの設定（ライト/ダーク）に自動追従✨
@@ -94,6 +98,10 @@ body {
 ```
 
 `prefers-color-scheme` はOS/ブラウザの設定に合わせてくれるよ〜！([MDN Web Docs][1])
+
+![prefers-color-scheme](./picture/next_study_056_color_scheme.png)
+
+
 あと `color-scheme` を入れると、入力欄とかスクロールバー系が馴染みやすくなることがあるよ✨ ([MDN Web Docs][3])
 
 ---
@@ -115,6 +123,10 @@ npm i next-themes
 ---
 
 ### 2) `app/providers.tsx` を作る（Client Component）🧩
+
+![ThemeProvider Wrapper](./picture/next_study_056_theme_provider.png)
+
+
 
 ```tsx
 "use client";
@@ -194,6 +206,10 @@ body {
 ---
 
 ### 5) トグルボタンを作る🔘✨（`components/ThemeToggle.tsx`）
+
+![Toggle Button Interaction](./picture/next_study_056_toggle_button.png)
+
+
 
 最初の表示ズレ防止で「マウント後に表示」するのがコツだよ〜！🫶
 （Hydrationのズレ回避の考え方は公式メッセージも参考になるよ）([nextjs.org][5])

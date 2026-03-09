@@ -7,6 +7,10 @@
 
 ## 1) まず“Next.jsの整理ルール”だけ最小で知ろう🧠
 
+![next_study_048_route_vs_private.png](./picture/next_study_048_route_vs_private.png)
+
+
+
 Next.js（App Router）は、ざっくりこう考えるとラクだよ👇
 
 * **ルート（URLとして公開）になるのは `page` や `route` がある時**
@@ -29,6 +33,10 @@ Next.jsは整理方法を強制しないから、**“一度決めて固定”�
 ---
 
 ## 3) バランス型テンプレ（これを“固定の型”にしよう）📁✅
+
+![next_study_048_balance_structure.png](./picture/next_study_048_balance_structure.png)
+
+
 
 おすすめは `src/` を使う形！
 Next.jsは `src` 配下に `app` を置く構成もサポートしてるよ👍 ([Next.js][1])
@@ -65,6 +73,10 @@ my-next-app/
 
 ### ここが大事ポイント🥰
 
+![next_study_048_private_shield.png](./picture/next_study_048_private_shield.png)
+
+
+
 * `app/(site)/...` みたいに **(group)** を使うと、URLを変えずに区分けできるよ📦 ([Next.js][1])
 * `app/.../_components` とか `app/.../_lib` みたいに **`_` で始めるフォルダは Private folder** 扱いで、ルーティング対象から外せるよ🔒 ([Next.js][1])
 
@@ -92,6 +104,10 @@ flowchart TD
 
 ## 5) 命名ルールも“固定”しよう📛✨（迷子防止）
 
+![next_study_048_naming_rules.png](./picture/next_study_048_naming_rules.png)
+
+
+
 おすすめの最小ルールはこれ👇（少ないほど続く！）
 
 * 共有UI（どこでも使う）
@@ -99,6 +115,10 @@ flowchart TD
   * `src/components/`
   * 小さな汎用UIは `src/components/ui/`（Buttonとか）🧩
 * ルート専用UI（そのページだけ）
+
+![next_study_048_colocation_toolbox.png](./picture/next_study_048_colocation_toolbox.png)
+
+
 
   * `src/app/(site)/about/_components/` みたいに **ルートの近く** に置く📍
 * 便利関数

@@ -15,6 +15,9 @@
 
 ## しくみの図解🧠🗺️（Mermaid）
 
+![next_study_070_modal_routing_flow.png](./picture/next_study_070_modal_routing_flow.png)
+
+
 ```mermaid
 flowchart TD
   A["/articles 一覧ページ📚/"] -->|"Linkで遷移"| B["/articles/1 詳細URL🔗/"]
@@ -37,6 +40,9 @@ flowchart TD
 
 ## フォルダ構成（今回作る場所）🗂️✨
 
+![next_study_070_folder_structure_modal.png](./picture/next_study_070_folder_structure_modal.png)
+
+
 ```txt
 app/
   articles/
@@ -57,6 +63,9 @@ components/
 ---
 
 ## Step 1：記事データを用意する📦📝
+
+![next_study_070_data_source.png](./picture/next_study_070_data_source.png)
+
 
 `app/articles/_data/articles.ts` を作ってね👇
 
@@ -86,6 +95,9 @@ export function getArticle(id: string) {
 ---
 
 ## Step 2：`/articles` のレイアウトに “モーダル枠” を追加🪟🧱
+
+![next_study_070_layout_slot.png](./picture/next_study_070_layout_slot.png)
+
 
 `app/articles/layout.tsx` を作成👇
 ここが **Parallel Routes の受け口**（`modal`）になるよ✨
@@ -282,6 +294,9 @@ export default function Modal({ children }: { children: ReactNode }) {
 ---
 
 ## Step 7：Intercepting Routeで “詳細をモーダルとして差し込む” 🪄🪟
+
+![next_study_070_intercept_magic.png](./picture/next_study_070_intercept_magic.png)
+
 
 ここがこの章の主役〜！！🎉
 `app/articles/@modal/(.)[id]/page.tsx` を作成👇

@@ -22,6 +22,10 @@ Server で作った UI ツリーは **RSC Payload** という形で送られて�
 
 ## 2) 「シリアライズ」ってなに？🧺✨
 
+![next study 043 network bridge](./picture/next_study_043_network_bridge.png)
+
+
+
 超ざっくり言うと：
 
 * **サーバーのメモリ上にある“そのままの値”**は
@@ -36,6 +40,10 @@ Next.js でも **“Client Component の props はシリアライズ可能であ
 ## 3) 渡してOKなprops / ダメなprops（目安）✅❌
 
 ### ✅ OK（代表）
+
+![next study 043 ok types](./picture/next_study_043_ok_types.png)
+
+
 
 React（RSC）のルールでは、たとえばこんなのは「送れる」よ👍
 （迷ったら **プリミティブ + 配列 + プレーンオブジェクト** が最強💪）
@@ -52,6 +60,10 @@ React（RSC）のルールでは、たとえばこんなのは「送れる」よ
 
 ### ❌ NG（やりがち）
 
+![next study 043 ng types](./picture/next_study_043_ng_types.png)
+
+
+
 * **普通の関数**（イベントハンドラなど）
 * **class のインスタンス**（`new User()` みたいなやつ）
 * `Error` などクラス由来のオブジェクト（だいたいアウト）
@@ -62,6 +74,10 @@ React（RSC）のルールでは、たとえばこんなのは「送れる」よ
 ## 4) ありがちエラー例（これ見たら「はいはい、シリアライズね」ってなる😇）
 
 ### ❌ 関数を渡して死ぬパターン💥
+
+![next study 043 function error](./picture/next_study_043_function_error.png)
+
+
 
 「Server → Client に関数を渡そうとした」時によく出るやつ👇
 （Next.js 側でも “関数はシリアライズできない” って感じで怒られる） ([GitHub][4])
@@ -127,6 +143,10 @@ export default function ProfileCard({ user, onLike }: Props) {
 
 ### 5-2) ✅ 正しい例：渡すのはデータだけ、関数はClientで作る🎮✨
 
+![next study 043 correct pattern](./picture/next_study_043_correct_pattern.png)
+
+
+
 **app/page.tsx（Server）**
 
 ```tsx
@@ -174,6 +194,10 @@ export default function ProfileCard({ user }: Props) {
 ---
 
 ## 6) もっと実戦っぽいコツ：DB結果は“安全な形”に整える🧼✨
+
+![next study 043 db conversion](./picture/next_study_043_db_conversion.png)
+
+
 
 DBやライブラリの返す値って、**クラスのインスタンス**が混ざりがち（例：Decimal系とか）😵
 そのときは **Client に渡す前に“普通の値”へ変換**しよ〜！

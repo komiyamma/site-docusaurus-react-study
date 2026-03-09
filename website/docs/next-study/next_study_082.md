@@ -7,6 +7,11 @@
 
 ## 1) ゴール🎯
 
+
+
+![next_study_082_server_fetch_concept.png](./picture/next_study_082_server_fetch_concept.png)
+
+
 * `/posts` にアクセスしたら、**記事っぽい一覧**が表示される📃✨
 * データは **公開API** から取得する🌍📥
 
@@ -29,6 +34,8 @@ flowchart LR
 ---
 
 ## 3) ルートを作ろう：`app/posts/page.tsx` 🛣️📄
+
+![next_study_082_code_structure.png](./picture/next_study_082_code_structure.png)
 
 ### ✅ 作成するファイル
 
@@ -104,6 +111,8 @@ export default async function PostsPage() {
 
 ## 4) トップから `/posts` に行けるようにしよう🏠➡️📥
 
+![next_study_082_link_navigation.png](./picture/next_study_082_link_navigation.png)
+
 `app/page.tsx` にリンクを1個置くと親切だよ〜😊🔗
 （すでにトップが別内容なら、リンクだけ追加してね）
 
@@ -155,6 +164,8 @@ npm run dev
 
 ### ❓ `fetch` ってどこで動いてるの？
 
+![next_study_082_cors_benefit.png](./picture/next_study_082_cors_benefit.png)
+
 * ここでは **Server Component** だから、`fetch` は基本 **サーバー側**で動くよ🧊🍵
   （だから、ブラウザのCORSに悩みにくいのが嬉しいポイント✨）
 
@@ -166,6 +177,11 @@ npm run dev
 ---
 
 ## 7) ミニ課題（できたら最高🌟）🎒
+
+
+
+![next_study_082_limit_param.png](./picture/next_study_082_limit_param.png)
+
 
 * 表示件数を変えてみよう（`_limit=5` とか）✂️
 * `body` を短くして「…」にしてみよう（見た目がそれっぽくなる😊）✨

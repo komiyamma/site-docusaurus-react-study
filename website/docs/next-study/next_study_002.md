@@ -11,6 +11,9 @@
 
 ### ✅ ① ルーティング（画面を増やす）🛣️
 
+![next_study_002_routing_explorer.png](./picture/next_study_002_routing_explorer.png)
+
+
 * ファイルを置くだけでページが増える（例：`/about` とか）📄✨
 * 画面遷移もスムーズ（`Link` で移動）🔗
 
@@ -26,12 +29,19 @@ Next.jsはページごとに「作り方」を選べる感じ！
 * **SSG**：先に作っておいて配る（高速つよめ）⚡
 * **ISR**：基本はSSG、たまに更新（バランス型）🧊🔁
 
+![next_study_002_rendering_types.png](./picture/next_study_002_rendering_types.png)
+
+
+
 ISRの考え方は公式ガイドにまとまってるよ📝 ([Next.js][2])
 SSRの説明も公式にあるよ🧾 ([Next.js][3])
 
 ---
 
 ### ✅ ③ SEO（検索・SNSで“ちゃんとして見える”）🔎💖
+
+![next_study_002_seo_card.png](./picture/next_study_002_seo_card.png)
+
 
 * タイトルや説明文、OGPなどを**Next.jsの仕組みで整理して設定**できる✨
 * `metadata` や `generateMetadata` でページごとに変えられる🧡
@@ -41,6 +51,9 @@ SSRの説明も公式にあるよ🧾 ([Next.js][3])
 ---
 
 ### ✅ ④ API（アプリの中に“自分のAPI”を作れる）🚪🧪
+
+![next_study_002_api_door.png](./picture/next_study_002_api_door.png)
+
 
 * `app/api/.../route.ts` を作ると **自前API** が生える🌱
 * ちょいDBや、外部APIの中継、フォーム送信の受け口にも便利💌
@@ -78,6 +91,8 @@ flowchart TD
 ```
 
 ---
+
+![next_study_002_decision_tree.png](./picture/next_study_002_decision_tree.png)
 
 ## 4) 図解②：「やりたい！」から機能を選ぶミニ診断🎯💡
 

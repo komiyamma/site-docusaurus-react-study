@@ -10,6 +10,8 @@
 
 ## まず約束ね🤝💕
 
+![010 Big Vs Small](./picture/next_study_010_big_vs_small.png)
+
 困ったら、こう考えるだけでOK👇
 
 ✅ **「大きいまま戦わない」** 🙅‍♀️
@@ -65,15 +67,21 @@ flowchart LR
 
 ### ✅ 手順①：まず「動く最小」を作る🐣
 
+![010 Step1 Min State](./picture/next_study_010_step1_min_state.png)
+
 * 画面に **文字が出る** だけでOK🙂
 * そこから少しずつ足していく➕✨
 
 ### ✅ 手順②：原因を1個にする🎯
 
+![010 Step2 Isolate](./picture/next_study_010_step2_isolate.png)
+
 * いま触ってる変更を **いったん1つだけ** にする
 * 2つ同時に変えると迷子になる🌀🥲
 
 ### ✅ 手順③：切り分ける（ON/OFF作戦）🔁
+
+![010 Step3 On Off](./picture/next_study_010_step3_on_off.png)
 
 * CSSを一旦外す
 * コンポーネントを一旦1個にする
@@ -82,10 +90,14 @@ flowchart LR
 
 ### ✅ 手順④：小さく再現する🧪
 
+![010 Step4 Reproduce Small](./picture/next_study_010_step4_reproduce_small.png)
+
 * “この画面だけ” “この部品だけ” で同じ問題が起きる？
 * 起きるなら、そこが犯人の近く👀✨
 
 ### ✅ 手順⑤：直ったら「戻さない工夫」を1個入れる🧷
+
+![010 Step5 Pin Fix](./picture/next_study_010_step5_pin_fix.png)
 
 * 例：型を付ける / 関数名を分かりやすく / 1行コメント
   ちょいでOK！未来の自分が助かる💖

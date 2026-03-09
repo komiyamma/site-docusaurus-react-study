@@ -29,6 +29,10 @@ flowchart LR
 
 ## 作るもの：/api/hello が JSON を返すAPI 🥰📤
 
+![Response Structure](./picture/next_study_107_response_structure.png)
+
+
+
 アクセスするとこんなのが返ってくるよ👇
 
 * URL例：**[http://localhost:3000/api/hello](http://localhost:3000/api/hello)**
@@ -42,6 +46,10 @@ flowchart LR
 
 ## 手順①：ファイルを作る 🗂️✨
 
+![File Placement (Windows)](./picture/next_study_107_windows_path.png)
+
+
+
 プロジェクトの中に、次の場所にファイルを作ってね👇
 
 * **app/api/hello/route.ts**
@@ -50,6 +58,10 @@ flowchart LR
 ---
 
 ## 手順②：GET を実装する（JSONを返す）🧪📤
+
+![GET Implementation](./picture/next_study_107_get_code.png)
+
+
 
 **app/api/hello/route.ts** にこれを書いてね👇
 
@@ -67,6 +79,10 @@ export async function GET(request: Request) {
 
 ポイントだよ👇🥺✨
 
+![Query Parameter Logic](./picture/next_study_107_query_logic.png)
+
+
+
 * **GET関数をexport**する（これが「GET来たらこの処理ね！」の合図）📣
 * **Response.json(...)** で JSON を返せる📦
 * クエリ（?name=...）は `new URL(request.url)` で読めるよ🔎
@@ -83,6 +99,10 @@ npm run dev
 
 ### 2) ブラウザでアクセス🌐✨
 
+![Browser Access](./picture/next_study_107_browser_test.png)
+
+
+
 * **[http://localhost:3000/api/hello](http://localhost:3000/api/hello)**
 * **[http://localhost:3000/api/hello?name=Yui](http://localhost:3000/api/hello?name=Yui)**
 
@@ -92,6 +112,10 @@ JSONが表示されたら成功〜！🎉🎉🎉
 
 ## ちょい理解：Route Handler ってどこで動いてるの？🧠🏠
 
+![Server Side Execution](./picture/next_study_107_server_side.png)
+
+
+
 Route Handler は基本「サーバー側」で動くよ🍵
 だから、APIキーとかDBとか「表に出したくない処理」を置く場所としても便利✨
 （今はまず “JSON返せた！” が最強の一歩👏💓）
@@ -99,6 +123,10 @@ Route Handler は基本「サーバー側」で動くよ🍵
 ---
 
 ## ミニ練習：/api/fortune を作ってみよう 🎴✨（おみくじ）
+
+![Fortune API Challenge](./picture/next_study_107_fortune_api.png)
+
+
 
 次は自分で増やしてみよ〜！😆
 **app/api/fortune/route.ts** を作って👇
@@ -123,6 +151,10 @@ export async function GET() {
 ---
 
 ## よくあるミス集（ここだけ見れば助かる）🆘💡
+
+![Common Mistakes](./picture/next_study_107_return_mistake.png)
+
+
 
 * **404になる**😵
   → フォルダ名・ファイル名が違うかも！

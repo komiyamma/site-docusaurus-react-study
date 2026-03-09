@@ -10,6 +10,8 @@
 
 ## 📦 Route Groupってなに？（超ざっくり）
 
+![next_study_028_group_concept.png](./picture/next_study_028_group_concept.png)
+
 Next.jsのApp Routerでは、ふつう `app/〇〇/` はURLの `/〇〇` になります。
 でも、フォルダ名を **`( )` で包む**と、そのフォルダは **URLに出ません**😳✨
 
@@ -43,6 +45,8 @@ flowchart LR
 
 ### ② 一部のページだけ同じ layout を当てたい🧱
 
+![next_study_028_layout_separation.png](./picture/next_study_028_layout_separation.png)
+
 「このページ群だけ共通ヘッダーにしたい！」みたいな時に便利です。 ([Next.js][2])
 
 ### ③ フォルダ構成をキレイにして迷子を防ぐ🗂️
@@ -54,6 +58,8 @@ flowchart LR
 ## 🛠️ 実践：`(site)` と `(admin)` で整理してみよう🎮✨
 
 ### ✅ 1) フォルダ構成をこうする（例）
+
+![next_study_028_folder_structure_example.png](./picture/next_study_028_folder_structure_example.png)
 
 「URLはそのまま」で、見た目の枠だけ分ける構成です💡
 
@@ -179,6 +185,8 @@ export default function DashboardPage() {
 
 ## 👀 仕上げのイメージ図：layoutが分かれる🌈
 
+![next_study_028_site_vs_admin.png](./picture/next_study_028_site_vs_admin.png)
+
 ```mermaid
 flowchart TD
   Root["app/layout.tsx（全体の土台）🧱"] --> Site["app/(#quot;site#quot;)/layout.tsx（一般用）🎀"]
@@ -196,6 +204,8 @@ flowchart TD
 ---
 
 ## 💥 よくあるハマりどころ（ここ大事！）⚠️
+
+![next_study_028_url_conflict.png](./picture/next_study_028_url_conflict.png)
 
 * **同じURLになるページを2つ作れない**
   例：`app/(a)/about/page.tsx` と `app/(b)/about/page.tsx` は、どっちも `/about` になって衝突💥

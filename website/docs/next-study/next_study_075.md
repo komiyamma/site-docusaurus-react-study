@@ -13,6 +13,9 @@ Serverでデータを取ってHTMLを作ってから返すので、**最初の�
 
 ### 2) APIキーとか秘密を守れる🔐🛡️
 
+![next_study_075_security_benefit.png](./picture/next_study_075_security_benefit.png)
+
+
 Serverなら `.env.local` の秘密情報を使っても、**ブラウザに漏れにくい**よ！（超大事💥）
 
 ### 3) クライアント側のJavaScriptを増やしにくい📦➡️🪶
@@ -31,6 +34,9 @@ Next.jsの `fetch` は、あとで出てくる**キャッシュ**とも仲良し
 ---
 
 ## 図でイメージ！📨➡️🍵（Server fetch の流れ）
+
+![next_study_075_server_fetch_flow.png](./picture/next_study_075_server_fetch_flow.png)
+
 
 ```mermaid
 flowchart LR
@@ -51,6 +57,9 @@ flowchart LR
 ---
 
 ## 最小コード：Server Componentで `fetch` して表示する🧊📥
+
+![next_study_075_simple_code.png](./picture/next_study_075_simple_code.png)
+
 
 App Routerでは、基本のページ（`page.tsx`）は**Server Component（デフォルト）**だから、普通に `await fetch()` できるよ！
 
@@ -89,6 +98,9 @@ export default async function Page() {
 ---
 
 ## Clientで取る場合と何が違う？🎮🆚🧊
+
+![next_study_075_client_vs_server.png](./picture/next_study_075_client_vs_server.png)
+
 
 ### Client fetch（`useEffect`）の雰囲気😵‍💫
 
@@ -188,6 +200,9 @@ npm run dev
 ---
 
 ## よくあるつまずきポイント🪤（ここだけ注意！）
+
+![next_study_075_use_client_mistake.png](./picture/next_study_075_use_client_mistake.png)
+
 
 * **`"use client"` を付けるとServer fetchの話じゃなくなる**（Clientになっちゃう）🎮⚠️
 * **Server Componentでは `useState` / `useEffect` は使えない**（使うならClient）🧊🙅‍♀️

@@ -21,6 +21,10 @@
 * **揃え（幅・行間・整列）** 📏
 * **まとまり（グルーピング）** 🧺
 
+![Grouping Fields](./picture/next_study_055_grouping.png)
+
+
+
 色や装飾は最後でOK〜！🎀
 
 ---
@@ -46,6 +50,10 @@ Fieldごとに余白を統一すると、勝手に美しくなる✨
 ---
 
 ## 余白の“おすすめルール”📏✨（迷ったらこれ）
+
+![Spacing Rules Visualized](./picture/next_study_055_spacing_rules.png)
+
+
 
 フォームはだいたいこのルールで崩れにくいよ👇🥰
 
@@ -250,10 +258,18 @@ export default function ContactPage() {
 
 ### ② ラベルは上に置く（迷わない）⬆️
 
+![Label Alignment](./picture/next_study_055_vertical_align.png)
+
+
+
 * 横並びは難易度上がりやすいよ〜💦
   まずは **縦並びが正解**🙆‍♀️✨
 
 ### ③ フォーカスを目立たせる（使いやすさ直結）👀
+
+![Focus Ring Effect](./picture/next_study_055_focus_ring.png)
+
+
 
 * `:focus-visible` でリングを出すと、急にプロっぽい💍✨
 

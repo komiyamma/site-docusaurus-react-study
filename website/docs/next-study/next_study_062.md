@@ -7,6 +7,8 @@ URLが `/articles/1` とか `/articles/hello` みたいに **変わる部分**�
 
 ## 1) Dynamic Routeってなに？🧩
 
+![next_study_062_dynamic_route_concept](./picture/next_study_062_dynamic_route_concept.png)
+
 フォルダ名を **`[id]`** みたいに `[]` で囲むと、そこが **可変（dynamic）** になります✨
 そして、その値は `params` から受け取れます📦
 
@@ -19,6 +21,8 @@ URLが `/articles/1` とか `/articles/hello` みたいに **変わる部分**�
 
 ## 2) フォルダ構成を作ろう📁✨（これが今回の主役！）
 
+![next_study_062_folder_structure](./picture/next_study_062_folder_structure.png)
+
 こんな構成を作ります👇
 
 * `app/articles/page.tsx`（一覧）
@@ -27,6 +31,8 @@ URLが `/articles/1` とか `/articles/hello` みたいに **変わる部分**�
 ---
 
 ## 3) 図でイメージを掴む🗺️💡（Mermaid）
+
+![next_study_062_list_to_detail_flow](./picture/next_study_062_list_to_detail_flow.png)
 
 ```mermaid
 flowchart LR
@@ -40,6 +46,8 @@ flowchart LR
 ---
 
 ## 4) 一覧ページを作る📰✨（`/articles`）
+
+![next_study_062_link_code](./picture/next_study_062_link_code.png)
 
 まずは「記事一覧」っぽいページを作って、詳細へのリンクを貼ろう💨
 
@@ -85,6 +93,8 @@ export default function ArticlesPage() {
 
 ## 5) 詳細ページを作る🔎✨（`/articles/[id]`）
 
+![next_study_062_params_object](./picture/next_study_062_params_object.png)
+
 次に「詳細ページ」を作ります！
 `app/articles/[id]/page.tsx` を作成👇
 
@@ -110,6 +120,8 @@ export default async function ArticleDetailPage({
   const article = articles.find((a) => a.id === id);
 
   if (!article) {
+
+![next_study_062_404_logic](./picture/next_study_062_404_logic.png)
     return (
       <main style={{ padding: 24 }}>
         <h1>記事が見つかりませんでした🥺</h1>
@@ -140,6 +152,8 @@ export default async function ArticleDetailPage({
 ---
 
 ## 6) よくあるハマりポイント集🪤💦
+
+![next_study_062_pitfalls](./picture/next_study_062_pitfalls.png)
 
 * `[id]` の角括弧を忘れて `id` フォルダにしちゃう😵
   → **Dynamicにならない**ので注意！

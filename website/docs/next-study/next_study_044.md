@@ -8,6 +8,10 @@ Next.js（App Router）では **Server Component がデフォルト** だから�
 
 ## 1) まず結論✅：ブラウザAPIは「ブラウザの中」だけに存在する💡
 
+![next study 044 browser only](./picture/next_study_044_browser_only.png)
+
+
+
 * ✅ **ブラウザAPI**：`window` / `document` / `localStorage` / `navigator` など
   → **ブラウザ（＝Client）にしかない** 🌐
 * ✅ **Server Component**：サーバー側で実行される🧊
@@ -31,6 +35,10 @@ flowchart TB
 ---
 
 ## 3) よく出るエラー例😇（これ出たらこの章の話！）
+
+![next study 044 server error](./picture/next_study_044_server_error.png)
+
+
 
 * `ReferenceError: window is not defined`
 * `ReferenceError: localStorage is not defined`
@@ -61,6 +69,10 @@ Server Component で触ると危ないやつたち👇
 
 ### パターンA：そのコンポーネントを Client Component にする🎮
 
+![next study 044 use effect guard](./picture/next_study_044_use_effect_guard.png)
+
+
+
 ブラウザAPIを使うファイルの先頭にこれ👇
 
 ```tsx
@@ -86,6 +98,10 @@ export function ThemeHint() {
 ---
 
 ### パターンB：Server と Client に分割する✂️（いちばん綺麗✨）
+
+![next study 044 pattern b split](./picture/next_study_044_pattern_b_split.png)
+
+
 
 **データ取得やDBはServer🧊**、**ブラウザ操作はClient🌐** に分けるやつ！
 
@@ -130,6 +146,10 @@ export function ClientPart() {
 
 ### パターンC：どうしても1ファイルに書きたい時の最終手段🧯
 
+![next study 044 pattern c check](./picture/next_study_044_pattern_c_check.png)
+
+
+
 `typeof window !== "undefined"` で「今ブラウザ？」をチェックする方法！
 
 ```tsx
@@ -150,6 +170,10 @@ export function SafeCheck() {
 ---
 
 ## 6) ミニ練習💪✨：localStorageで「ニックネーム」を表示しよう
+
+![next study 044 local storage flow](./picture/next_study_044_local_storage_flow.png)
+
+
 
 やること：
 

@@ -16,9 +16,14 @@
 **React = 料理（UI）**🍳
 **Next.js = キッチン＋レシピ＋配達＋お店の運営セット**🏠📦✨
 
+![next_study_001_chef_metaphor.png](./picture/next_study_001_chef_metaphor.png)
+
+
 ![React vs Next.js](./picture/next_study_001_react_vs_next.png)
 
 ---
+
+![next_study_001_toolbox.png](./picture/next_study_001_toolbox.png)
 
 ## Reactだけだと、何が「別途必要」になりやすいの？🤔
 
@@ -37,6 +42,9 @@ Next.js はこのへんを **「最初から標準装備」**でまとめてく�
 ---
 
 ## Next.js が「翼」っぽい理由🪽
+
+![next_study_001_wings_concept.png](./picture/next_study_001_wings_concept.png)
+
 
 Next.js は React をそのまま使いながら、アプリに必要な機能を“自然に”足してくれるよ😊
 特に今の Next.js は **App Router** が中心で、ページやレイアウトは **デフォルトで Server Components**（サーバーで描画しやすい）という考え方が軸になってるよ〜🧊✨ ([Next.js][1])
@@ -83,6 +91,12 @@ flowchart LR
 * `/`：トップ（学科の魅力）🌟
 * `/courses`：授業一覧📚
 * `/access`：アクセス🚃
+
+![next_study_001_mini_site_map.png](./picture/next_study_001_mini_site_map.png)
+
+
+
+![next_study_001_three_questions.png](./picture/next_study_001_three_questions.png)
 
 ここで質問！🙋‍♀️
 

@@ -24,7 +24,10 @@ Middleware は「ルートに入る前の関所」みたいに動けて、リク
 
 ---
 
-## Cookieってなに？🍪（超ざっくり）
+## Cookieってなに？
+
+![Browser holding a cookie ticket](./picture/next_study_126_cookie_analogy.png)
+🍪（超ざっくり）
 
 Cookie はブラウザが持つ小さなメモで、**リクエストのたびにサーバーへ送られる**のが強みです📨✨
 Next.js では Middleware の `NextRequest` / `NextResponse` に **cookies操作の仕組み**が用意されてます。 ([Next.js][2])
@@ -69,6 +72,9 @@ export default function DashboardPage() {
 
 # 2) Middleware で「ticket Cookie」をチェックする🧤👀
 
+![Middleware acting as a bouncer](./picture/next_study_126_middleware_bouncer.png)
+
+
 プロジェクト直下に `middleware.ts` を作成します（`app/` と同じ階層）📁
 
 `middleware.ts`
@@ -108,6 +114,8 @@ export const config = {
 
 # 3) /login ページ（入場券を発行する入口）🎫✨
 
+![Login page issuing a ticket](./picture/next_study_126_login_ticket_issue.png)
+
 `app/login/page.tsx`
 
 ```tsx
@@ -136,6 +144,8 @@ export default async function LoginPage({
 ---
 
 # 4) Route Handlerで Cookie をセットする（/api/login）🧪🍪
+
+![Server setting the cookie in response](./picture/next_study_126_cookie_set_process.png)
 
 `app/api/login/route.ts`
 
@@ -168,6 +178,8 @@ Cookie は `NextResponse` 側で `set` できます🍪✨ ([Next.js][3])
 ---
 
 # 5) ログアウト（Cookieを消す /api/logout）🚪🧼
+
+![Logout deleting the cookie](./picture/next_study_126_logout_delete.png)
 
 `app/api/logout/route.ts`
 

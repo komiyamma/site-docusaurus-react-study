@@ -7,6 +7,8 @@ Next.js（App Router）では、ページ移動は基本 **`<Link>`** を使う�
 
 ## 1) なんで `a` タグじゃなくて `Link`？🤔🧠
 
+![next_study_026_reload_vs_spa.png](./picture/next_study_026_reload_vs_spa.png)
+
 ### ✅ `a` タグで内部ページへ行くと…
 
 * **ページが丸ごと再読み込み**（フルリロード）になりやすい😵‍💫
@@ -22,7 +24,11 @@ Next.js（App Router）では、ページ移動は基本 **`<Link>`** を使う�
 
 ## 2) まずは最小の `Link` を書いてみよう🔗🌸
 
+![next_study_026_prefetch_worker.png](./picture/next_study_026_prefetch_worker.png)
+
 ### ✅ トップページにナビを置く（`app/page.tsx`）
+
+![next_study_026_nav_bar.png](./picture/next_study_026_nav_bar.png)
 
 ```tsx
 import Link from "next/link";
@@ -91,6 +97,8 @@ flowchart LR
 ---
 
 ## 5) じゃあ `a` タグはいつ使うの？🌍✉️
+
+![next_study_026_external_link.png](./picture/next_study_026_external_link.png)
 
 **外部サイト**に行くときは `a` タグがわかりやすいよ😊
 （例：別ドメイン、PDF直リンク、`mailto:` など）

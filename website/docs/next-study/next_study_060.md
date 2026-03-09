@@ -7,6 +7,10 @@
 
 ## ゴール🎯
 
+![Fixed Header](./picture/next_study_060_fixed_header.png)
+
+
+
 * ヘッダーを画面上部に固定（スクロールしても消えない）🧲
 * PCでは横並びメニュー🖥️
 * スマホでは 🍔 ボタンでメニューが開く📱

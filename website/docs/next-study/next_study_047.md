@@ -26,6 +26,10 @@
 
 ### パターンA：万能ボタン病（なんでも Button に押し込む）🔘😇
 
+![next_study_047_god_component.png](./picture/next_study_047_god_component.png)
+
+
+
 「ボタンは全部共通化しよ！」ってやると…
 
 * `Button` が肥大化して、実装が読めない
@@ -47,6 +51,10 @@
 
 ### ✅ ルール1：「3回目で共通化」ルール（通称：Rule of Three）🧩
 
+![next_study_047_rule_of_three.png](./picture/next_study_047_rule_of_three.png)
+
+
+
 * 1回目：普通に作る🙂
 * 2回目：ちょいコピペでもOK🙂‍↕️
 * 3回目：**「共通の形」が見えてきたら**共通化を検討👀✨
@@ -54,6 +62,10 @@
 ---
 
 ### ✅ ルール2：props が増えたら黄色信号🚥
+
+![next_study_047_props_traffic_light.png](./picture/next_study_047_props_traffic_light.png)
+
+
 
 目安だけど👇
 
@@ -71,6 +83,10 @@
 ---
 
 ### ✅ ルール4：「UIの最小部品」と「用途部品」を分ける🧱✨
+
+![next_study_047_primitive_vs_feature.png](./picture/next_study_047_primitive_vs_feature.png)
+
+
 
 * UI最小部品（プリミティブ）👉 `Button`, `Input`, `Badge` みたいな“素材”🍳
 * 用途部品（フィーチャー）👉 `LoginButton`, `AddTodoButton` みたいな“料理”🍝
@@ -180,6 +196,10 @@ export function DeleteButton({ onConfirm }: Props) {
 ## 「ちょい違い」への対処テク3つ🧰✨
 
 ### 1) “コピペでOK” と割り切る勇気🙂‍↕️
+
+![next_study_047_copy_paste_ok.png](./picture/next_study_047_copy_paste_ok.png)
+
+
 
 * 似てるけど微妙に違う
 * この先増えるか分からない

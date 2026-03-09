@@ -19,6 +19,8 @@ Next.jsは情報量が多いから、やり方がフワッとしてると一気�
 
 ## 2) “毎章ちょい達成”ってなに？🍬
 
+![Small Wins](./picture/next_study_008_small_wins.png)
+
 **毎章で「小さく終わらせる」**ってことだよ😆✨
 大きな成功より、**小さな成功を毎回**の方が続きやすいの🎯💕
 
@@ -58,6 +60,8 @@ flowchart TD
 
 ## 4) Done条件（この章クリア！の基準）✅🎀
 
+![Done Stamp](./picture/next_study_008_done_stamp.png)
+
 毎章、最後にこれだけチェックしよう💕
 
 * [ ] その章のキーワードを1行で言える🗣️
@@ -74,6 +78,8 @@ flowchart TD
 ここはガチで効くよ〜！続く人はだいたいこれやってる✨
 
 ### ① プロジェクト直下に `LEARNING_LOG.md` を作る📝
+
+![Learning Log](./picture/next_study_008_learning_log_notebook.png)
 
 中身はこれをコピペでOKだよ👇
 
@@ -121,6 +127,8 @@ flowchart TD
 
 ## 6) 詰まった時の“救急フロー”🧯🚑
 
+![Rescue Flow](./picture/next_study_008_rescue_flow.png)
+
 沼る前に、これで切り上げ判断しよう〜！🥺💦
 
 ```mermaid
@@ -144,6 +152,8 @@ flowchart TD
 ---
 
 ## 7) “やる気が落ちる日”の最小ムーブ🌧️➡️🌤️
+
+![Low Energy Mode](./picture/next_study_008_low_battery_mode.png)
 
 落ちる日は落ちる！人間だもん🥺💗
 そんな日はこれだけで勝ちにしよ✨
