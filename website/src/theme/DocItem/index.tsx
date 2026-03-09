@@ -8,7 +8,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 type Props = WrapperProps<typeof DocItemType>;
 
-export default function DocItemWrapper(props: Props): JSX.Element {
+export default function DocItemWrapper(props: Props): React.JSX.Element {
   const { content } = props as any;
   const { metadata } = content || {};
   
