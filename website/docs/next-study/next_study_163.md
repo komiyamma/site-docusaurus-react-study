@@ -24,6 +24,9 @@ Prismaは、ざっくり言うと👇
 
 ## 2) いちばん大事：**モデル（model）＝型の“元”**📘➡️🔧
 
+![next study 163 model source](./picture/next_study_163_model_source.png)
+
+
 Prismaの中心は **`schema.prisma`** に書く **model** だよ✍️✨
 ここに「DBに保存するデータの形」を書くと、Prismaがそれを元に…
 
@@ -42,6 +45,9 @@ flowchart LR
 ---
 
 ## 3) Prismaの登場人物（最低限これだけ！）👥✨
+
+![next study 163 four characters](./picture/next_study_163_four_characters.png)
+
 
 ### ✅ ① schema.prisma（設計図）📘
 
@@ -67,6 +73,9 @@ flowchart LR
 
 ## 4) “model”ってどんな感じ？超ミニ例🍬
 
+![next study 163 code example](./picture/next_study_163_code_example.png)
+
+
 `schema.prisma` にこんな感じで書くとするね👇
 
 ```ts
@@ -87,6 +96,9 @@ model Todo {
 ---
 
 ## 5) Next.jsでの立ち位置（超ざっくり）🧊🌐
+
+![next study 163 server position](./picture/next_study_163_server_position.png)
+
 
 Prismaは基本 **サーバー側で使う**よ☝️
 （ブラウザ＝クライアントにはDB直結はしない！危ない！🧨）

@@ -57,6 +57,9 @@ npm i zod
 
 ## 手順2：Server Action（サーバー側バリデーション）を作る🧑‍🍳🛡️
 
+![next study 157 error types](./picture/next_study_157_error_types.png)
+
+
 ![Zod Guard](./picture/next_study_157_zod_guard.png)
 
 
@@ -138,6 +141,15 @@ export async function submitContact(
 ---
 
 ## 手順3：フォームUI（エラー表示つき）を作る🧩💅
+
+![next study 157 submit button loading](./picture/next_study_157_submit_button_loading.png)
+
+
+![next study 157 field error ui](./picture/next_study_157_field_error_ui.png)
+
+
+![next study 157 focus error](./picture/next_study_157_focus_error.png)
+
 
 `components/ContactForm.tsx` を作ってね👇
 
@@ -364,6 +376,9 @@ export default function Page() {
 ---
 
 ## 仕上げのコツ（丁寧さのテンプレ）🧁✨
+
+![next study 157 friendly message](./picture/next_study_157_friendly_message.png)
+
 
 エラー文言は、だいたいこの型が最強だよ👇😊
 

@@ -16,6 +16,10 @@ APIって「自分のコードの外」からデータが飛んでくる場所�
 
 ## どこで検証するのが正解？🧠✨（図で理解）
 
+![279_validation_point](./picture/next_study_279_validation_point.png)
+
+
+
 ![API Response Guard](./picture/next_study_279_api_guard.png)
 
 
@@ -37,6 +41,10 @@ flowchart LR
 ---
 
 ## 1) まず「APIレスポンスの形」を決めよう📐📦
+
+![279_api_response_shape](./picture/next_study_279_api_response_shape.png)
+
+
 
 今回は例として `/api/todo/1` を叩くと、こう返すことにするよ👇
 
@@ -90,6 +98,12 @@ export type TodoResponse = v.InferOutput<typeof TodoResponseSchema>;
 ---
 
 ## 2) Route Handlerで「外部APIのJSON」を検証してから返す🛣️✅
+
+![279_route_handler_logic](./picture/next_study_279_route_handler_logic.png)
+
+
+
+
 
 Next.jsのRoute Handlerは **Web標準のRequest/Response** で書けるよ〜！
 `return Response.json(...)` みたいに返せるのも便利✨([Next.js][4])
@@ -150,6 +164,12 @@ export async function GET(
 
 ## 3) フロント側でレスポンスを検証して安全に表示📱✨
 
+![279_client_fetch_verify](./picture/next_study_279_client_fetch_verify.png)
+
+
+
+
+
 ### `app/todo-demo/page.tsx`
 
 ```tsx
@@ -202,6 +222,10 @@ export default function TodoDemoPage() {
 
 ## よくあるハマり⚠️：`safeParse` は分割代入しない方が安全かも🙅‍♀️
 
+![279_destructuring_trap](./picture/next_study_279_destructuring_trap.png)
+
+
+
 `safeParse` は `success` を見てから `output` を使うと型が絞れるんだけど、**分割代入すると絞り込みが効かないことがある**よ〜🥺
 （`const result = ...` のまま扱うのが安心！）([GitHub][5])
 
@@ -215,6 +239,10 @@ export default function TodoDemoPage() {
 ---
 
 ## まとめ🌸
+
+![279_response_union](./picture/next_study_279_response_union.png)
+
+
 
 * APIのJSONは **unknown扱い**からスタートが基本🧊
 * **境界（外部→自分のサーバー）**でValibot検証するだけで事故が激減🛡️✨

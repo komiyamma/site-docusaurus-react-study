@@ -7,6 +7,10 @@ URLに入ってると、**リロードしても状態が残る**し、**URLを�
 
 ## 1) URL Stateってなに？🤔💡
 
+![URL as State Container](./picture/next_study_258_url_container.png)
+
+
+
 たとえば商品一覧で…
 
 * 検索ワード：`q=cat` 🐱
@@ -52,6 +56,10 @@ npm install nuqs
 `nuqs@^2` は Next.js（App Router含む）をサポートしてるよ〜 ([nuqs.dev][2])
 
 ### 3-2. `NuqsAdapter` を RootLayout に付ける（重要！）🧩
+
+![NuqsAdapter Wrapping](./picture/next_study_258_adapter_wrap.png)
+
+
 
 `nuqs` v2 は、Next.jsで使うとき **`NuqsAdapter` で全体をラップ**する必要があるよ！ ([nuqs.dev][3])
 
@@ -209,11 +217,17 @@ URLコピペで同じ状態に戻れるはず〜📎✨
 
 ### 履歴：`history: 'replace' | 'push'` 🧭
 
+![History Replace vs Push](./picture/next_study_258_history_stack.png)
+
 * `'replace'`：入力しても履歴が増えない（基本これが安心） ([nuqs.dev][5])
 * `'push'`：状態変化ごとに履歴が積まれて「戻る」で状態が戻せる（タブ切替・モーダルとかに向く）
   ※やりすぎると「戻るボタン壊れた😇」ってなるので注意！ ([nuqs.dev][5])
 
 ### サーバーも更新したい：`shallow: false` 🌐
+
+![Shallow vs Deep Update](./picture/next_study_258_shallow_deep.png)
+
+
 
 `shallow: false` にすると、URL変更をサーバーにも知らせて **RSC側も再レンダリング**させられるよ！ ([nuqs.dev][5])
 
@@ -232,6 +246,10 @@ sequenceDiagram
 ```
 
 ### 検索ボックスは「最後の入力だけURLに反映」したい😵‍💫➡️😊
+
+![Debounce Typing](./picture/next_study_258_debounce_typing.png)
+
+
 
 入力って連打になるから、`limitUrlUpdates: debounce(500)` が便利！
 しかも **UIのstateは即時更新で、URL更新だけ遅らせる** っていう設計なのがありがたい✨ ([nuqs.dev][5])

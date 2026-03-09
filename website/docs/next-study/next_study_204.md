@@ -11,6 +11,8 @@
 
 ### ✅ ユニットテスト（Unit）⚡
 
+![204 unit test](./picture/next_study_204_unit_test.png)
+
 **“部品ひとつ”を単体でチェック**するテストだよ〜🔧
 例：関数、計算ロジック、文字変換、バリデーションなど🧼
 
@@ -21,6 +23,8 @@
 ---
 
 ### ✅ 統合テスト（Integration）🧩
+
+![204 integration test](./picture/next_study_204_integration_test.png)
 
 **“部品どうしをつなげた状態”でチェック**するテストだよ〜🧷
 例：Reactコンポーネント + 入力 + ボタン操作 + 表示結果 みたいに、ちょっと広め👀✨
@@ -33,6 +37,8 @@
 
 ### ✅ E2Eテスト（End-to-End）🎬
 
+![204 e2e test](./picture/next_study_204_e2e_test.png)
+
 **“ユーザーの操作を最初から最後まで”**再現するテストだよ〜🖱️📱
 例：ログイン→一覧→追加→保存→表示確認、みたいな流れ全部🌊
 
@@ -43,6 +49,8 @@
 ---
 
 ## ざっくり比較表📊✨
+
+![204 comparison table](./picture/next_study_204_comparison_table.png)
 
 | 種類   | 何を守る？🛡️   | 速さ💨 | 壊れやすさ🫧 | 例          |
 | ---- | ---------- | ---: | ------: | ---------- |
@@ -67,6 +75,8 @@ flowchart TD
 ---
 
 ## Next.jsでの具体例（イメージ）🧁✨
+
+![204 nextjs examples](./picture/next_study_204_nextjs_examples.png)
 
 ### ユニットテスト向き⚡
 
@@ -106,12 +116,16 @@ flowchart TD
 
 ### ❌ モックは悪？
 
+![204 mock balance](./picture/next_study_204_mock_balance.png)
+
 → 悪じゃないよ〜🎭✨
 ただ、**モックしすぎると“現実とズレたテスト”**になりやすいから、目的に合わせてほどほどが正義🧘‍♀️
 
 ---
 
 ## 迷ったときの選び方（超実用）🧭✨
+
+![204 decision guide](./picture/next_study_204_decision_guide.png)
 
 * 「この関数の計算、絶対壊したくない」→ **ユニット**⚡
 * 「この画面、操作したらちゃんと変わってほしい」→ **統合**🧩

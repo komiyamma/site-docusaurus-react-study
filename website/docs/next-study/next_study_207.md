@@ -28,6 +28,9 @@ flowchart LR
 `render(<Component />)` を呼ぶと、コンポーネントが **テスト用のDOM（仮のブラウザ）** に表示されるよ〜！
 しかも基本は、自動で `document.body` 配下に入れてくれるんだ（便利！）🫶✨ ([Testing Library][1])
 
+![207 virtual dom](./picture/next_study_207_virtual_dom.png)
+
+
 ---
 
 ## `screen`ってなに？🔎✨
@@ -53,6 +56,8 @@ type Props = {
 export function ProfileCard({ name }: Props) {
   return (
     <section aria-label="profile">
+
+
       <h2>プロフィール</h2>
       <p>{name} さん、ようこそ！</p>
       <button type="button">フォロー</button>
@@ -60,6 +65,7 @@ export function ProfileCard({ name }: Props) {
   );
 }
 ```
+![207 profile card visual](./picture/next_study_207_profile_card_visual.png)
 
 ---
 
@@ -77,6 +83,8 @@ describe("ProfileCard", () => {
     render(<ProfileCard name="さくら" />);
 
     // 見出し（role=heading）を探す🌸
+
+
     expect(
       screen.getByRole("heading", { name: "プロフィール" })
     ).toBeInTheDocument();
@@ -93,6 +101,7 @@ describe("ProfileCard", () => {
   });
 });
 ```
+![207 role match](./picture/next_study_207_role_match.png)
 
 ※ `toBeInTheDocument()` を使うには、どこか（setupファイルなど）で `@testing-library/jest-dom/vitest` を読み込む形が一般的だよ〜🧩 ([Testing Library][3])
 
@@ -105,6 +114,9 @@ describe("ProfileCard", () => {
 * `getBy...`：**無かったら即エラー**（基本これ）💥
 * `queryBy...`：**無かったら `null`**（「無いこと」を確認したい時）🌙
 * `findBy...`：**非同期で待つ**（あとで出てくる要素向き）⏳
+
+![207 query types](./picture/next_study_207_query_types.png)
+
 
 この違いは公式でも説明されてるよ📘✨ ([Testing Library][4])
 
@@ -131,6 +143,9 @@ screen.debug();
 
 今のDOMがログに出てくるから、めっちゃ助かるよ〜！📸✨
 
+![207 screen debug](./picture/next_study_207_screen_debug.png)
+
+
 ---
 
 ## ちいさな練習🎯💕
@@ -138,7 +153,9 @@ screen.debug();
 さっきのテストに、これを1行追加してみてね👇
 
 * `screen.getByRole("region", { name: "profile" })` が取れるか確認してみる✨
-  （`<section aria-label="profile">` だから “region” 扱いになるよ〜😊）
+  （`<section aria-label="profile">
+
+` だから “region” 扱いになるよ〜😊）
 
 ---
 

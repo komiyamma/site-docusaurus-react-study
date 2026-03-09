@@ -7,11 +7,19 @@ UI（HTML構造）が **勝手に変わってない？** を検知するのが�
 
 ## 1) スナップショットって何をしてるの？🤔📸
 
+![snapshot_camera_moment](./picture/next_study_216_snapshot_camera_moment.png)
+
+
+
 ![snapshots](./picture/next_study_216_snapshots.png)
 
 * テストの中で `toMatchSnapshot()` を使う
 * 初回実行で `.snap`（スナップショット）ファイルが作られる
-* 次回以降は **「今の出力」vs「保存済み」** を比較して、違ったら落ちる💥 ([Vitest][1])
+* 次回以降は **「今の出力」vs「保存済み」** を比較して、違ったら落ちる💥
+
+![diff_highlight](./picture/next_study_216_diff_highlight.png)
+
+ ([Vitest][1])
 
 ---
 
@@ -29,6 +37,10 @@ flowchart TD
 ---
 
 ## 3) スナップショットが向いてる例👍✨
+
+![good_bad_usage](./picture/next_study_216_good_bad_usage.png)
+
+
 
 * **小さめの見た目部品**（カード、バッジ、空状態表示など）🪪✨
 * **HTML構造が大事**で、変更があったら気づきたいところ（例：見出し階層、ボタン配置）🔍
@@ -93,6 +105,10 @@ describe("ProfileCard", () => {
 
 ## 6) スナップショット更新のしかた（WindowsでもOK）🔁💻
 
+![update_key](./picture/next_study_216_update_key.png)
+
+
+
 見た目を **意図して変更した** ときは、スナップショットも更新する必要があるよ〜！
 
 * watchモード中に **`u` キー**で更新できる⌨️✨
@@ -115,6 +131,10 @@ npx vitest -u
 ---
 
 ## 7) “壊れない運用”のコツ3つ🧊✨
+
+![pr_review](./picture/next_study_216_pr_review.png)
+
+
 
 1. **小さく撮る📸**（コンポーネント単位で）
 2. **差分が読めないなら撮らない👀**（読めない＝守れない）

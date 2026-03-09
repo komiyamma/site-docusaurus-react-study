@@ -15,6 +15,10 @@
 
 ## まず結論！境界線はこの3ルールでOK 🙆‍♀️✨
 
+![3 Rules for Component Boundary](./picture/next_study_255_three_rules.png)
+
+
+
 ### 1) サーバーに置くもの（Server Components）🧊
 
 * DBやAPIからの取得（fetch）📥
@@ -59,6 +63,10 @@ flowchart TD
 
 ## Props と State の違い（超やさしく）🧸✨
 
+![Props vs State Metaphor](./picture/next_study_255_props_ingredients.png)
+
+
+
 * **Props**：外から渡される「材料」🥕
   → *最初から決まってることが多い*（データ・設定など）
 * **State**：コンポーネントの「記憶」🧠
@@ -67,6 +75,10 @@ flowchart TD
 ---
 
 ## 実装して体で覚えよう！ミニ例：カフェメニュー☕🍰（サーバー取得＋クライアント操作）
+
+![Cafe Menu Data Flow](./picture/next_study_255_cafe_architecture.png)
+
+
 
 やることはこれ👇✨
 
@@ -211,6 +223,10 @@ npm run dev
 
 ## 図解：Server→Clientの境界ってこういう感じ 🧊➡️🎮
 
+![Server to Client Boundary](./picture/next_study_255_boundary_landscape.png)
+
+
+
 ```mermaid
 flowchart LR
   A["app/page.tsx<br/>Server Component🧊"] -->|"Propsで渡す📦"| B["MenuClient.tsx<br/>Client Component🎮"]
@@ -221,6 +237,10 @@ flowchart LR
 ---
 
 ## ここが超大事！「Server→Clientに渡せるProps」注意点⚠️📦
+
+![Safe Props Serialization](./picture/next_study_255_safe_props.png)
+
+
 
 Server ComponentからClient Componentに渡すPropsは、基本的に **“JSONっぽい形”** が安全だよ😊✨
 

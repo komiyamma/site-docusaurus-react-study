@@ -6,6 +6,10 @@
 
 ## 1) 環境変数ってなに？（超ざっくり）🧃
 
+![secret_key_tag](./picture/next_study_220_secret_key_tag.png)
+
+
+
 **コードに書きたくない値**を、外から渡すしくみだよ👇
 
 * DBの接続文字列（`DATABASE_URL`）🗄️
@@ -20,10 +24,16 @@ Next.jsは `.env*` を自動で読み込んで `process.env` に入れてくれ�
 
 ### ルール①：秘密は `NEXT_PUBLIC_` を付けない🙅‍♀️🚫
 
+![billboard_safe](./picture/next_study_220_billboard_safe.png)
+
 * `NEXT_PUBLIC_` が付いたものは**ブラウザに配られるJSに埋め込まれる**（＝見ようと思えば見える）よ！([Next.js][1])
 * 秘密（トークン/DBパスワード等）には **絶対つけない**でね🫣
 
 ### ルール②：Vercelで値を変えたら“再デプロイ”が必要🔁🚀
+
+![console_leak_warning](./picture/next_study_220_console_leak_warning.png)
+
+
 
 Vercelは「環境変数の変更 = 既存デプロイには反映されない」タイプ！
 **変更したら再デプロイ**しないと古い値のままです😵‍💫([Vercel][2])
@@ -85,6 +95,10 @@ NEXT_PUBLIC_APP_NAME="Campus Todo"
 
 ## 5) 本番（Vercel）での正しい置き場所🧰🌍
 
+![vercel_settings_ui](./picture/next_study_220_vercel_settings_ui.png)
+
+
+
 ### ✅ 設定場所
 
 Vercelの **Project Settings → Environment Variables** に入れるよ🔧
@@ -106,6 +120,10 @@ vercel env pull
 ---
 
 ## 6) 実装ミニ例：秘密は漏らさず確認する🕵️‍♀️🔐
+
+![guard_check](./picture/next_study_220_guard_check.png)
+
+
 
 ### 6-1) Route Handlerで “設定されてるかだけ” 返す（安全）🧯
 

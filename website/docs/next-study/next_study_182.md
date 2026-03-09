@@ -1,5 +1,7 @@
 # 第182章：ユーザー情報を表示する（ヘッダーに名前）😊
 
+![next_study_182_header_component.png](./picture/next_study_182_header_component.png)
+
 今日は「ログインしてたら、ヘッダーに名前を出す」やつを作るよ〜！🎀✨
 これができると一気に“アプリっぽさ”が出る😆👏
 
@@ -37,6 +39,8 @@ Auth.jsの「セッション取得」は `auth()` を使う例が公式に載っ
 ---
 
 ## 1) ヘッダー用コンポーネントを作る 🧱✨
+
+![next_study_182_auth_status.png](./picture/next_study_182_auth_status.png)
 
 ### 📁 `components/Header.tsx`（Server Component）
 
@@ -219,6 +223,8 @@ export function SignOutButton() {
 
 ## 4) `layout.tsx` にヘッダーを差し込む 🧩✨
 
+![next_study_182_layout_integration.png](./picture/next_study_182_layout_integration.png)
+
 ### 📁 `app/layout.tsx`
 
 すでにレイアウトがあるはずなので、`<Header />` だけ追加してね😊
@@ -269,6 +275,8 @@ export default function RootLayout({
 ## つまずきポイント（あるある）🪤😵‍💫
 
 ### ① 名前が `undefined` っぽい
+
+![next_study_182_undefined_risk.png](./picture/next_study_182_undefined_risk.png)
 
 プロバイダや設定によって `user.name` が空のことあるよ〜！
 この章のコードは `name → email → ゲスト` で逃げてるから安心😊🧡

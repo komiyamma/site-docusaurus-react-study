@@ -16,6 +16,10 @@
 
 ## 1) JSX Style Propsってなに？🧩✨
 
+![next study 272 style props vs class](./picture/next_study_272_style_props_vs_class.png)
+
+
+
 ざっくり言うと、こういうやつ👇
 
 * className で書くスタイル（いつもの）
@@ -87,6 +91,10 @@ export default function Page() {
 
 ## 4) じゃあ設定しよっか！⚙️✨（Next.js）
 
+![next study 272 config settings](./picture/next_study_272_config_settings.png)
+
+
+
 ### 手順①：`panda.config.ts` に `jsxFramework` を入れる✅
 
 JSX Style Props を抽出してほしいなら、これが必須だよ〜！ ([panda-css.com][1])
@@ -127,6 +135,10 @@ npm run dev
 
 ## 5) `<Box p="4" />` の正体を知ろう🪄📦
 
+![next study 272 box component](./picture/next_study_272_box_component.png)
+
+
+
 `Box` は「追加スタイルなしの基本箱」で、**JSXでスタイルpropsを書けるようにするための存在**って感じ！
 Panda の Patterns の一つとして用意されてるよ🐼📦 ([panda-css.com][4])
 
@@ -154,6 +166,10 @@ export default function Page() {
 → JSXから style props を抽出しないよ！って明確に書かれてるやつ⚠️ ([panda-css.com][1])
 
 ### ❌ 2) “実行時に作った値” をstyle propsに入れすぎ
+
+![next study 272 props trap](./picture/next_study_272_props_trap.png)
+
+
 
 Panda は静的解析だから、「ぱっと見で分からない値」は苦手💦（動的すぎるとCSS生成できないことがある） ([panda-css.com][7])
 

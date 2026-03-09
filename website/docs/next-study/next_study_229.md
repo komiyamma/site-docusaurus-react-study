@@ -29,6 +29,9 @@ npm run build
 
 ## 1) 友だち用「ミッション」を3つ作ろう🎮✨
 
+![mission_card](./picture/next_study_229_mission_card.png)
+
+
 友だちに「自由に触って〜！」だけだと、意外と何も起きないことあるの😂
 なので、**短いミッション**を渡すのがコツ！
 
@@ -42,12 +45,18 @@ npm run build
 
 ## 2) 友だちに送るメッセージテンプレ💌✨
 
+![message_template](./picture/next_study_229_message_template.png)
+
+
 LINEでもDMでもOK！短くてやさしいのが正義🫶
 
 * 送る内容はこの4点だけでOK👇
 
   1. URL
   2. 所要時間（5〜10分）
+
+![five_minute_timer](./picture/next_study_229_five_minute_timer.png)
+
   3. ミッション3つ
   4. 返してほしいもの（スクショ＋一言）
 
@@ -72,6 +81,9 @@ LINEでもDMでもOK！短くてやさしいのが正義🫶
 ---
 
 ## 4) フィードバックを「その場で整理」する🧺✨
+
+![feedback_sorting](./picture/next_study_229_feedback_sorting.png)
+
 
 返ってきた内容は、まずこの3分類にすると迷子にならないよ〜🧠💡
 
@@ -113,6 +125,9 @@ flowchart TD
 
 ## 図解：友だちテストのやりとり（イメージ）📨
 
+![interaction_diagram](./picture/next_study_229_interaction_diagram.png)
+
+
 ```mermaid
 sequenceDiagram
   participant You as You
@@ -124,6 +139,8 @@ sequenceDiagram
   You->>App: 修正して再デプロイ🔧🚀
   You-->>Friend: 直った！ありがとう🧡
 ```
+
+![thank_you_sticker](./picture/next_study_229_thank_you_sticker.png)
 
 ---
 

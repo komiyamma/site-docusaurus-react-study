@@ -21,6 +21,8 @@ Next.js（App Router）は **コンポーネントがデフォルトでServer Co
 
 ## 状態って、ざっくり2種類💡
 
+![next study 263 server vs client](./picture/next_study_263_server_vs_client.png)
+
 ### 🖥️ サーバーで持つべき状態（Server State）
 
 **「正しいデータ」「守るべきデータ」「みんなと共有されるデータ」** はサーバー側が本体🧱
@@ -47,6 +49,8 @@ Next.js（App Router）は **コンポーネントがデフォルトでServer Co
 ---
 
 ## ちょい重要：第3の置き場所（中間）もあるよ🔗🍪
+
+![next study 263 third place](./picture/next_study_263_third_place.png)
 
 「サーバー or クライアント」だけじゃなくて、**“共有したい度合い”** でここも使えるよ👇
 
@@ -77,6 +81,8 @@ flowchart TD
 ---
 
 ## 超大事な考え方：「真実は1つ」💎
+
+![next study 263 truth diamond](./picture/next_study_263_truth_diamond.png)
 
 状態は増やすと壊れやすい💥
 だから基本はこれ👇
@@ -293,6 +299,8 @@ export default function ProductList({
 
 ## クリックしたときの流れ（図解）🧠
 
+![next study 263 sequence diagram](./picture/next_study_263_sequence_diagram.png)
+
 ```mermaid
 sequenceDiagram
   participant U as User
@@ -312,6 +320,8 @@ sequenceDiagram
 
 ## よくある落とし穴⚠️（ここだけは避けて！）
 
+![next study 263 security check](./picture/next_study_263_security_check.png)
+
 * ❌ ログイン・権限を「クライアント状態だけ」で信じる
   → UIは騙せても、サーバーで守らないと意味ないよ🛡️
 * ❌ DBの事実（在庫/価格）をクライアントだけで持って更新する
@@ -322,6 +332,8 @@ sequenceDiagram
 ---
 
 ## ミニチェック問題🎓（3問）
+
+![next study 263 quiz boxes](./picture/next_study_263_quiz_boxes.png)
 
 1. 「モーダルが開いてるか」→ サーバー？クライアント？🪟
 2. 「ユーザーの権限（admin）」→ サーバー？クライアント？👑

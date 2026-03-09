@@ -34,6 +34,10 @@ flowchart LR
 
 ## 3) 置き方のおすすめ構成📁✨（迷子防止）
 
+![next_study_191_folder_structure_map.png](./picture/next_study_191_folder_structure_map.png)
+
+
+
 ```text
 my-next-app/
   app/
@@ -85,6 +89,10 @@ export default function Page() {
 
 ### B. 次は本命：`next/image`（速くてキレイ）📸✨
 
+![next_study_191_image_component_vs_img.png](./picture/next_study_191_image_component_vs_img.png)
+
+
+
 ローカル画像は `public/` に置くのが定番だよ〜！ ([Next.js][2])
 
 ```tsx
@@ -134,6 +142,10 @@ export default function Page() {
 
 ## 7) 注意：`public/` に置いたものは “全部公開” だよ🔓😳
 
+![next_study_191_public_warning.png](./picture/next_study_191_public_warning.png)
+
+
+
 `public/` は **誰でもURL直打ちで見れる**場所！
 だから…
 
@@ -157,6 +169,10 @@ export default function Page() {
 ---
 
 ## 9) ちょい混乱ポイント：favicon や robots はどこ？🤖🍎
+
+![next_study_191_favicon_location.png](./picture/next_study_191_favicon_location.png)
+
+
 
 App Routerだと、`robots.txt` や `favicon` などは **`app/` の“メタデータ用ファイル規約”を使うのが推奨**だよ〜！ ([Next.js][3])
 （もちろん “静的ファイルは `public/`” って覚え方は合ってるんだけど、Next.js的には専用ルールがある感じ！）

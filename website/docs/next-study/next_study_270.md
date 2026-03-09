@@ -34,6 +34,10 @@ flowchart LR
 
 ### Stackで覚える4つだけ🫶
 
+![next study 270 stack anatomy](./picture/next_study_270_stack_anatomy.png)
+
+
+
 `stack()` は主にこの4つが超重要だよ👇
 
 * `direction`：縦か横か（デフォルトは縦）
@@ -129,6 +133,10 @@ Grid は「行と列（2次元）」のレイアウトに強いよ〜！
 
 ### ✅ 例3：カード一覧（grid + minChildWidth）🃏✨
 
+![next study 270 grid mechanism](./picture/next_study_270_grid_mechanism.png)
+
+
+
 「画面が広いほど横に増える」感じが、超それっぽい🥰
 
 ```tsx
@@ -164,6 +172,10 @@ export default function Page() {
 ---
 
 ### ✅ 例4：おすすめだけ大きく（gridItem）👑✨
+
+![next study 270 grid item span](./picture/next_study_270_grid_item_span.png)
+
+
 
 `gridItem({ colSpan: 2 })` みたいに「何列ぶん使う？」ができるよ！ ([panda-css.com][1])
 
@@ -201,6 +213,10 @@ export default function Page() {
 ---
 
 ## StackとGrid、どっち使う？🤔💭
+
+![next study 270 layout decision](./picture/next_study_270_layout_decision.png)
+
+
 
 ![Layout Patterns](./picture/next_study_270_layout_patterns.png)
 

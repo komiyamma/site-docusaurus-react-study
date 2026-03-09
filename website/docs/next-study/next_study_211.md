@@ -27,6 +27,9 @@
 
 ざっくり使い分けるとこんな感じ！
 
+![211 stub mock spy](./picture/next_study_211_stub_mock_spy.png)
+
+
 * **Stub（スタブ）**：戻り値だけ決める係📦（「これ返してね」）
 * **Mock（モック）**：呼ばれ方もチェックしたい係📞（「何回呼んだ？引数は？」）
 * **Spy（スパイ）**：本物を見張る係🕵️（「本物は動かしつつ、呼び出しログだけ取る」）
@@ -39,6 +42,9 @@ Vitestだと、だいたいこの3つでOK👇
 ---
 
 ## 3) どこをモックする？「境界だけ」がおすすめ🚧✨
+
+![211 mock boundaries](./picture/next_study_211_mock_boundaries.png)
+
 
 コツはシンプルで、**アプリの“境界”だけモック**するのが安定しやすいよ🎯
 （境界＝ネットワーク、時間、ブラウザAPI、Nextのルーター、外部SDKなど）
@@ -58,6 +64,9 @@ flowchart TD
 ---
 
 ## 4) やりすぎ注意ポイント⚠️🧊（モックしすぎると起きる事故）
+
+![211 over mocking](./picture/next_study_211_over_mocking.png)
+
 
 モックを増やしすぎると、テストがこうなりがち👇
 
@@ -94,10 +103,13 @@ test("モック関数が呼ばれる", () => {
 
   onClick("hello");
 
+
+
   expect(onClick).toHaveBeenCalledTimes(1);
   expect(onClick).toHaveBeenCalledWith("hello");
 });
 ```
+![211 vi fn usage](./picture/next_study_211_vi_fn_usage.png)
 
 `vi.fn` は「呼び出し回数・引数」チェックに強いよ💪 ([vitest.dev][2])
 
@@ -128,6 +140,9 @@ test("console.error を監視する", () => {
 ### 6-3) `vi.mock()`：モジュールごと差し替え（Nextのhook等）🧩🎭
 
 Next.js（App Router）で超よくあるのが `next/navigation` のhooksだよね🚀
+
+![211 mocking router](./picture/next_study_211_mocking_router.png)
+
 テストだと「Routerがマウントされてないよ」系のエラーが出やすくて、**ここをモック**するのが定番！🛣️ ([GitHub][4])
 
 例：ボタン押したら `router.push("/mypage")` するコンポーネントをテスト✨

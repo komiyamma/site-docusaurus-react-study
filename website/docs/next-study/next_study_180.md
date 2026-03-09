@@ -62,6 +62,9 @@ Auth.js（NextAuth v5系）では、保護は「セッションが無ければ�
 
 ## ① Middlewareで「入口ガード」🧤🚪
 
+![next_study_180_middleware_filter.png](./picture/next_study_180_middleware_filter.png)
+
+
 プロジェクト直下に `middleware.ts` を作るよ〜！
 
 ```ts
@@ -137,10 +140,16 @@ export default async function ProtectedLayout({
 
 ### ❶ 無限リダイレクトする😇
 
+![next_study_180_infinite_loop.png](./picture/next_study_180_infinite_loop.png)
+
+
 * `matcher` が広すぎて `/login` まで守っちゃうのが原因あるある！
   → まずは **`/mypage/:path*` みたいに限定**しよう🧤✨
 
 ### ❷ Middlewareで重いことをやろうとする🐘
+
+![next_study_180_heavy_middleware.png](./picture/next_study_180_heavy_middleware.png)
+
 
 * Middlewareは「入口で軽く判定」が得意！
 * ガッツリ権限チェック（DB参照など）は **Server側（layout/page/route handler）** へ寄せるのが安全✨
@@ -159,6 +168,9 @@ export default async function ProtectedLayout({
 5. ✅ `/login` に飛べたら成功🎉✨
 
 ### ✅ できたら追加チャレンジ🌟
+
+![next_study_180_callback_return.png](./picture/next_study_180_callback_return.png)
+
 
 * `callbackUrl` を付けたので、ログイン後に戻れる導線を作ってみよ〜！🔁💖
   （ログインページ側で `callbackUrl` を読んで、成功後にそこへ戻す感じだよ😊）

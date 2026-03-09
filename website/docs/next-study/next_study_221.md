@@ -36,6 +36,10 @@ npm run start
 
 ## 手順2：GitHubにアップしておく（Vercelの最短ルート）🐙⬆️
 
+![rocket_push](./picture/next_study_221_rocket_push.png)
+
+
+
 もうGitHubに置けてるならここは飛ばしてOKだよ🙆‍♀️✨
 まだなら、ざっくり最短はこんな感じ👇
 
@@ -52,6 +56,10 @@ git push -u origin main
 
 ## 手順3：Vercelで「Import」してデプロイする🚀🌍
 
+![vercel_import_ui](./picture/next_study_221_vercel_import_ui.png)
+
+
+
 1. Vercelにログイン（GitHub連携がラクだよ〜🔗）
 2. **Add New → Project**
 3. GitHubのリポジトリを選んで **Import**
@@ -62,6 +70,10 @@ Vercelは有名フレームワークはビルド設定を自動でいい感じ�
 ---
 
 ## 手順4：環境変数があるならVercel側に入れる🔐🍪
+
+![cloud_sync](./picture/next_study_221_cloud_sync.png)
+
+
 
 ここ、初心者さんが一番ハマりがちポイント〜！⚠️💦
 
@@ -76,6 +88,10 @@ Vercelは有名フレームワークはビルド設定を自動でいい感じ�
 
 ## 手順5：Deployボタン！→ URLで確認🎉🔍
 
+![success_confetti](./picture/next_study_221_success_confetti.png)
+
+
+
 Import時にそのまま **Deploy** すると、
 
 * ビルドが走る🏗️
@@ -87,6 +103,10 @@ Import時にそのまま **Deploy** すると、
 ---
 
 ## うまくいかない時の“最短チェック”🧯😵‍💫
+
+![log_detective](./picture/next_study_221_log_detective.png)
+
+
 
 * ✅ **ローカルで `npm run build` が通る？**（まずここ！）
 * ✅ Vercelの **Deployments** のログにエラー出てない？（赤い行がヒント👀）

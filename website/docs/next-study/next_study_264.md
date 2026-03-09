@@ -28,6 +28,8 @@ flowchart LR
 
 ## 2) まずは作るもの（今回のフィルター）🧋🌸
 
+![next study 264 filter ingredients](./picture/next_study_264_filter_ingredients.png)
+
 * `q`：キーワード（入力）🔤
 * `area`：エリア（select）🗺️
 * `minPrice` / `maxPrice`：価格帯（数値）💰
@@ -43,6 +45,8 @@ URLは例えばこんな感じ👇
 
 ## 3) フォルダ構成（最小）📁✨
 
+![next study 264 folder structure](./picture/next_study_264_folder_structure.png)
+
 ```
 app/
   cafes/
@@ -57,6 +61,8 @@ lib/
 ---
 
 ## 4) ダミーデータ＆検索関数を用意する☕️📦
+
+![next study 264 dummy data box](./picture/next_study_264_dummy_data_box.png)
 
 ### `lib/cafes.ts`
 
@@ -285,6 +291,8 @@ export default async function CafesPage(props: PageProps) {
 ---
 
 ## 7) Client側（FilterPanel）で “下書き→URL反映” を作る✍️➡️🔗
+
+![next study 264 draft sketch](./picture/next_study_264_draft_sketch.png)
 
 ここが状態管理の山場🏔️💕
 
@@ -558,6 +566,8 @@ export default function FilterPanel({ initialFilters, totalPages }: Props) {
 
 ## 8) ちょい見た目を整える（CSS Modules）🎀✨
 
+![next study 264 css paint](./picture/next_study_264_css_paint.png)
+
 ### `app/cafes/CafesPage.module.css`
 
 ```
@@ -624,6 +634,8 @@ export default function FilterPanel({ initialFilters, totalPages }: Props) {
 ---
 
 ## 9) 状態管理で「事故りやすいポイント」まとめ🚧💡
+
+![next study 264 traffic cones](./picture/next_study_264_traffic_cones.png)
 
 ```mermaid
 flowchart TD

@@ -7,6 +7,10 @@
 
 ## 1) テスト＝“保険”ってどういうこと？🛡️💡
 
+![insurance_shield](./picture/next_study_217_insurance_shield.png)
+
+
+
 テストを書いておくと、こんな「安心」が手に入るよ🥹✨
 
 * リファクタしても壊れてないって自信が持てる🧼✨
@@ -21,7 +25,15 @@
 
 ## 2) どこをテストすると“得”しやすい？🎯💎
 
+![scale_cost_value](./picture/next_study_217_scale_cost_value.png)
+
+
+
 ### ✅ 優先度が高い（保険料が安くて、事故が怖い）
+
+![priority_bullseye](./picture/next_study_217_priority_bullseye.png)
+
+
 
 * 認証（ログイン/ログアウト）🔐
 * CRUD（作成・更新・削除）📝🗑️
@@ -65,6 +77,10 @@ flowchart TD
 
 ### ✅ 画面テストは「ユーザー目線」👀🫶
 
+![user_glasses](./picture/next_study_217_user_glasses.png)
+
+
+
 * ボタンのクリック、入力、表示…みたいに **人が触る形**で書く🖱️⌨️
 * “中の実装”に依存しすぎない（内部stateを覗きすぎない）🙈
 
@@ -81,6 +97,10 @@ flowchart TD
 ---
 
 ## 5) “今この場面、何を書く？”の判断チャート🧭✨
+
+![decision_flow](./picture/next_study_217_decision_flow.png)
+
+
 
 ```mermaid
 flowchart TD

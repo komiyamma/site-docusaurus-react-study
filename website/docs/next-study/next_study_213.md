@@ -64,7 +64,10 @@ mkdir e2e
 ## 3) Playwrightの設定（Next.jsを自動で起動させる）⚙️🚀
 
 `playwright.config.ts` をプロジェクト直下に作って👇
-（ポイント：`webServer` で Next.js を立ち上げてからテストを走らせる💡） ([Playwright][4])
+（ポイント：`webServer` で Next.js を立ち上げてからテストを走らせる💡）
+
+![213 webserver setup](./picture/next_study_213_webserver_setup.png)
+ ([Playwright][4])
 
 ```ts
 import { defineConfig, devices } from '@playwright/test';
@@ -98,6 +101,9 @@ npm i -D dotenv
 
 ## 4) テスト用ログイン情報（例）を用意する🔐🧪
 
+![213 env secrets](./picture/next_study_213_env_secrets.png)
+
+
 プロジェクト直下に `.env.e2e` を作って、こんな感じでOK👇
 （※本物の秘密情報は入れないでね🙅‍♀️ ここはローカル練習用で！）
 
@@ -111,6 +117,9 @@ E2E_PASSWORD=testpass
 ---
 
 ## 5) 画面側に“テストしやすい目印”を付ける（超重要）👀✨
+
+![213 locators](./picture/next_study_213_locators.png)
+
 
 Playwrightは **ラベル（label）やrole** を頼りに要素を探すのが安定だよ🧸
 最低限、ログインフォームとTODO入力に **ラベル** がある状態にしてね✅
@@ -132,6 +141,8 @@ Playwrightは **ラベル（label）やrole** を頼りに要素を探すのが�
 import { test, expect } from '@playwright/test';
 
 test('ログインしてTODOを追加できる🔐➕', async ({ page }) => {
+
+
   const email = process.env.E2E_EMAIL ?? 'test@example.com';
   const password = process.env.E2E_PASSWORD ?? 'testpass';
   const todoText = `E2E Todo ${Date.now()}`;
@@ -160,6 +171,7 @@ test('ログインしてTODOを追加できる🔐➕', async ({ page }) => {
   await expect(page.getByRole('listitem', { name: todoText })).toBeVisible();
 });
 ```
+![213 login flow](./picture/next_study_213_login_flow.png)
 
 💡もし `getByRole('listitem', { name: todoText })` が上手く拾えないUIなら、`data-testid` を付けるのが最強の保険だよ🛟✨
 （例：`<li data-testid="todo-item">...</li>` みたいに）
@@ -172,7 +184,10 @@ test('ログインしてTODOを追加できる🔐➕', async ({ page }) => {
 npx playwright test
 ```
 
-UIでデバッグしたいならこれ👇（超おすすめ👀✨） ([Playwright][2])
+UIでデバッグしたいならこれ👇（超おすすめ👀✨）
+
+![213 trace viewer](./picture/next_study_213_trace_viewer.png)
+ ([Playwright][2])
 
 ```bash
 npx playwright test --ui

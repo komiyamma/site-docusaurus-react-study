@@ -17,6 +17,9 @@
 
 ## XSSってなに？🧨
 
+![next study 151 xss concept](./picture/next_study_151_xss_concept.png)
+
+
 **XSS = 悪い人が“入力欄”にスクリプト（JavaScript）を仕込んで、あなたのページ上で動かす攻撃**だよ💣
 
 たとえば、コメント欄や検索欄に変な文字列を入れられて、ページ上で実行されちゃう…みたいな感じ😵‍💫
@@ -24,6 +27,9 @@
 ---
 
 ## 何が起きるの？（被害イメージ）😱🍪
+
+![next study 151 cookie theft](./picture/next_study_151_cookie_theft.png)
+
 
 XSSが起きると、例えばこんなことがされる可能性があるよ👇
 
@@ -52,6 +58,9 @@ flowchart LR
 
 ### ✅ Reactは基本“安全寄り”だよ🫶
 
+![next study 151 react escape](./picture/next_study_151_react_escape.png)
+
+
 React（JSX）は、普通にこう表示する限り **基本的に文字列をエスケープ**してくれるよ✨
 
 例：コメントを普通に表示（基本OK）👇
@@ -70,6 +79,9 @@ export default function Page() {
 ## でも…ここからが危ないゾーン😱（XSSが起きやすい場所）
 
 ### ☠️ 危険その1：`dangerouslySetInnerHTML` を使う
+
+![next study 151 dangerously risk](./picture/next_study_151_dangerously_risk.png)
+
 
 名前からして危険そうでしょ🙅‍♀️💦
 **“この文字列をHTMLとして解釈してね”**って頼む機能だよ。
@@ -103,6 +115,9 @@ export default async function Page({
 ---
 
 ## 安全な書き方（まずはこれでOK）✅💞
+
+![next study 151 html vs text](./picture/next_study_151_html_vs_text.png)
+
 
 ### ✅ ルール：ユーザー入力は“文字として”表示する
 

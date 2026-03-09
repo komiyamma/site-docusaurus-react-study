@@ -16,6 +16,8 @@ DBって、たま〜に失敗します🥲（通信が不安定、制約に引�
 
 ## 2) まず結論：エラーは2種類に分けるのが最強💪🧊
 
+![next_study_172_error_buckets](./picture/next_study_172_error_buckets.png)
+
 * **想定内（ユーザー操作で起きがち）**
   例）同じメールで登録しちゃった、必須項目が空、対象データがもう消えてた
   → これは **画面内でメッセージ表示** が正解🙂💬
@@ -52,6 +54,8 @@ flowchart TD
 
 ### 4-1) 返す結果の型を決める📦✨
 
+![next_study_172_result_card](./picture/next_study_172_result_card.png)
+
 ```ts
 // app/_types/actionResult.ts
 export type ActionResult =
@@ -60,6 +64,8 @@ export type ActionResult =
 ```
 
 ### 4-2) Prismaエラーを“人間の言葉”に変換する関数を作る🪄
+
+![next_study_172_error_translator](./picture/next_study_172_error_translator.png)
 
 ```ts
 // app/_lib/dbErrorToMessage.ts
@@ -136,6 +142,8 @@ export async function addTodoAction(_prev: ActionResult, formData: FormData): Pr
 
 ## 5) 画面側：エラー文を“その場で”見せる🫶💡
 
+![next_study_172_inline_error](./picture/next_study_172_inline_error.png)
+
 `useActionState` で結果を受け取って表示するよ〜🙂✨
 
 ```tsx
@@ -189,6 +197,8 @@ export default function TodosPage() {
 
 ## 6) パターンB：想定外は throw → error.tsx で“ごめんね案内”🧯🚑
 
+![next_study_172_throw_chute](./picture/next_study_172_throw_chute.png)
+
 「これは利用者に説明しても直せない…🥲」ってときは、**画面を統一して**案内するのが◎
 
 ### 6-1) Server Actionで想定外は throw する例🔥
@@ -214,6 +224,8 @@ export async function dangerousAction(_prev: ActionResult, formData: FormData): 
 ```
 
 ### 6-2) error.tsx（“その区間”の共通エラー画面）🧯✨
+
+![next_study_172_retry_button](./picture/next_study_172_retry_button.png)
 
 ```tsx
 // app/todos/error.tsx

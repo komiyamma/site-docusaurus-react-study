@@ -7,6 +7,8 @@
 
 ## ゴール 🎯✨
 
+![next_study_171_crud_circle](./picture/next_study_171_crud_circle.png)
+
 * ✅ **Read**：DBのTODO一覧を表示する📖
 * ✅ **Create**：フォームで追加できる➕
 * ✅ **Update**：タイトルを編集して更新できる✏️
@@ -41,6 +43,8 @@ flowchart TD
 ---
 
 ## 1) Server Actions を作る（CRUDぜんぶ）⚙️🧤
+
+![next_study_171_actions_hub](./picture/next_study_171_actions_hub.png)
 
 `app/todos/actions.ts` を作って、ここにCRUDを全部集約します✨
 
@@ -118,12 +122,18 @@ export async function toggleTodo(formData: FormData) {
 
 ポイントだよ〜📌✨
 
+![next_study_171_revalidate_wiper](./picture/next_study_171_revalidate_wiper.png)
+
+![next_study_171_toggle_switch](./picture/next_study_171_toggle_switch.png)
+
 * `actions.ts` の先頭に **`"use server"`** が必要💡（忘れると動かない🙅‍♀️）
 * 変更後に `revalidatePath("/todos")` で **ページを最新化**🔁
 
 ---
 
 ## 2) 削除ボタン用の Client Component を作る🗑️✨
+
+![next_study_171_delete_form_button](./picture/next_study_171_delete_form_button.png)
 
 Server Component の中では `onClick` が使えないよ〜💡
 確認ダイアログを出したい「削除ボタン」だけ別ファイル（Client Component）にするね！
@@ -156,6 +166,8 @@ export function DeleteForm({ id }: { id: string }) {
 ---
 
 ## 3) ページ本体を作る（Server Component）📄✨
+
+![next_study_171_full_ui](./picture/next_study_171_full_ui.png)
 
 `app/todos/page.tsx` を作ります！
 ここで `DeleteForm` を読み込んで使うよ😊

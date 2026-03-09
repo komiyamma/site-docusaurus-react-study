@@ -6,6 +6,8 @@
 
 ## 1) Slot Recipe ってなに？🧩
 
+![next study 269 slot concept](./picture/next_study_269_slot_concept.png)
+
 **Slot Recipe**は、1つのコンポーネントの中にある複数パーツ（= slots）を、まとめてスタイル定義する仕組みだよ🍱
 `slots / base / variants / defaultVariants / compoundVariants` を持てるのが特徴！ ([panda-css.com][1])
 
@@ -28,6 +30,8 @@ flowchart LR
 ## 2) ハンズオン①：Card を Slot Recipe + Compound Pattern で作る🃏✨
 
 ### 2-1. Slot Recipe を定義する（Config Slot Recipe）🧾
+
+![next study 269 config scroll](./picture/next_study_269_config_scroll.png)
 
 プロジェクト直下に `panda/slot-recipes/` を作って、ここに置く想定でいくね😊
 
@@ -140,6 +144,8 @@ PandaのSlot Recipeページでも、**createStyleContextでCompound Components�
 
 ### 図：Rootがスタイルを配り、子はそれを受け取る📦
 
+![next study 269 orb pass](./picture/next_study_269_orb_pass.png)
+
 ```mermaid
 flowchart TB
   Root["Card.Root<br>(#quot;variantsを受け取る#quot;)"] --> Ctx["Style Context<br>(#quot;クラスを共有#quot;)"]
@@ -239,6 +245,8 @@ npm install @ark-ui/react
 ---
 
 ## 5) Dialog の Slot Recipe を作る🧾✨
+
+![next study 269 dialog parts](./picture/next_study_269_dialog_parts.png)
 
 Park UIのDialog例だと、`dialogAnatomy` でslot一覧を作って、さらに `header/body/footer` を足してるよ（このやり方が超便利！） ([Park UI][2])
 
@@ -351,6 +359,8 @@ npx panda codegen
 
 ## 6) Dialog コンポーネントを作る（Ark UI × createStyleContext）🪄
 
+![next study 269 gears mesh](./picture/next_study_269_gears_mesh.png)
+
 Park UIのDialog例みたいに、`createStyleContext(dialog)` から `withRootProvider / withContext` を作ってつなぐよ！ ([Park UI][2])
 
 **`components/ui/dialog.tsx`**
@@ -442,6 +452,8 @@ Ark UIのDialogはこういう構造（Root/Trigger/Backdrop/Positioner/Content�
 ---
 
 ## 8) よくあるハマりどころ🧯😵‍💫
+
+![next study 269 portal layer](./picture/next_study_269_portal_layer.png)
 
 * `npx panda codegen` 忘れた → `styled-system/recipes` に `card` / `dialog` が出てこない💦 ([panda-css.com][1])
 * slot名のタイポ → そのパーツだけスタイル当たらない😵‍💫

@@ -148,6 +148,10 @@ export default defineConfig({
 
 ## 3) Recipes を作る（Button / Badge）🧂✨
 
+![next study 274 recipe anatomy](./picture/next_study_274_recipe_anatomy.png)
+
+
+
 Pandaの **Config Recipe** は `defineRecipe` で作って、`theme.recipes` に登録するよ！ ([panda-css.com][5])
 状態（hoverとか）は `_hover` が使えるよ〜🫶 ([panda-css.com][6])
 
@@ -243,6 +247,10 @@ export const badgeRecipe = defineRecipe({
 ---
 
 ## 4) Slot Recipe で Card を作る🍱✨（複数パーツに最強）
+
+![next study 274 slot recipe card](./picture/next_study_274_slot_recipe_card.png)
+
+
 
 Slot Recipe は「root/header/body/footer…」みたいな **複数パーツ**をまとめてスタイリングできる仕組みだよ📦 ([panda-css.com][7])
 
@@ -363,6 +371,10 @@ export function Card({ title, desc, footer, children, variant, className }: Prop
 
 ## 6) `/catalog` ページを作る📖✨（見本を並べよう！）
 
+![next study 274 catalog page](./picture/next_study_274_catalog_page.png)
+
+
+
 ### ルート構成イメージ🗺️
 
 ```mermaid
@@ -409,6 +421,10 @@ export default function CatalogPage() {
 ```
 
 ### `app/catalog/CatalogClient.tsx`
+
+![next study 274 variant switch](./picture/next_study_274_variant_switch.png)
+
+
 
 ```tsx
 "use client";

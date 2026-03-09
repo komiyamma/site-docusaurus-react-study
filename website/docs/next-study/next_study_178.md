@@ -15,6 +15,9 @@ Auth.js（NextAuth v5系）では、**「ログイン専用ページ」を自分
 
 ## まずはフォルダ構成（Route Groupで整理）📦🧭
 
+![next_study_178_folder_map.png](./picture/next_study_178_folder_map.png)
+
+
 ログイン系は `(auth)` にまとめるとスッキリするよ〜！
 `(auth)` は **URLに出ない整理用フォルダ**だから安心😊 ([Next.js][4])
 
@@ -31,6 +34,9 @@ flowchart TB
 ---
 
 ## Step 1：ログインページを作る 🛠️📄
+
+![next_study_178_login_ui.png](./picture/next_study_178_login_ui.png)
+
 
 ### ① `app/(auth)/login/page.tsx`
 
@@ -65,6 +71,9 @@ export default function LoginPage() {
 ---
 
 ## Step 2：ログインボタン（Auth.jsの `signIn()`）を置く 🔘✨
+
+![next_study_178_server_action_button.png](./picture/next_study_178_server_action_button.png)
+
 
 Auth.js公式のおすすめは、**Server Action（`<form action={...}>`）**で `signIn()` を呼ぶ方法だよ〜！
 これだと **`"use client"` なしでも動かせてラク**🥰 ([Auth.js][2])
@@ -160,6 +169,9 @@ const buttonStyle: React.CSSProperties = {
 
 ## Step 4：「ログインが必要な場所から来た人」を `/login` に誘導する🧭🔐
 
+![next_study_178_custom_page_config.png](./picture/next_study_178_custom_page_config.png)
+
+
 Auth.js（NextAuth系）は、**カスタムログインページ**を使いたい時に `pages.signIn` を指定できるよ！
 指定すると、デフォルトのサインインページじゃなくて **`/login` に来てくれる**🙌 ([Next.js][5])
 
@@ -174,6 +186,9 @@ pages: {
 ---
 
 ## ログインの流れ（超ざっくり図解）📨➡️🔑➡️🎉
+
+![next_study_178_redirect_dashboard.png](./picture/next_study_178_redirect_dashboard.png)
+
 
 ![next_study_178_login_page](./picture/next_study_178_login_page.png)
 

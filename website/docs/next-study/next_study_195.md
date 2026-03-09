@@ -28,6 +28,10 @@ flowchart LR
 
 ## 1) robots.txt ってなに？🤖🧤
 
+![next_study_195_robots_gatekeeper.png](./picture/next_study_195_robots_gatekeeper.png)
+
+
+
 robots.txt は「クローラさん、ここはOKだよ〜 / ここは見ないでね〜」って伝えるテキスト📄
 Next.jsでは `app/robots.txt` を置けば静的に、`app/robots.ts` ならコードで生成できるよ！ ([Next.js][1])
 
@@ -73,6 +77,10 @@ export default function robots(): MetadataRoute.Robots {
 
 ## 2) sitemap.xml ってなに？🗺️📚
 
+![next_study_195_sitemap_map.png](./picture/next_study_195_sitemap_map.png)
+
+
+
 sitemap.xml は、検索エンジンに「うちのサイトはこのURLたちだよ〜！」って渡す**URLリスト**✨
 Next.jsでは `sitemap.(xml|js|ts)` が特別扱いで、`app/` 直下に置くと `/sitemap.xml` で配信されるよ！ ([Next.js][2])
 
@@ -81,6 +89,10 @@ Next.jsでは `sitemap.(xml|js|ts)` が特別扱いで、`app/` 直下に置く�
 `app/sitemap.xml` を置けばOK！ ([Next.js][2])
 
 ### ✅ コードで作る（記事が増えるサイト向き✨）
+
+![next_study_195_dynamic_sitemap_code.png](./picture/next_study_195_dynamic_sitemap_code.png)
+
+
 
 `app/sitemap.ts` を作って、**URL配列を返す**だけでOK！ ([Next.js][2])
 
@@ -152,6 +164,10 @@ npm run dev
 ---
 
 ## 5) よくあるミス集（ここだけ見ればOK）😵‍💫➡️😆
+
+![next_study_195_disallow_vs_security.png](./picture/next_study_195_disallow_vs_security.png)
+
+
 
 * `sitemap.ts` の `url` を **`/about` みたいな相対URLにしちゃう** → **絶対URLにする**（`https://.../about`） ([Next.js][2])
 * robots.txt に書いた `Disallow` は **「セキュリティ」じゃない**🔐

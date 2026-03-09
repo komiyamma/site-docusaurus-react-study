@@ -8,6 +8,9 @@
 
 ## 1) まず大事：ログイン状態は「Serverで判断」が基本🧊🛡️
 
+![next_study_179_server_gate.png](./picture/next_study_179_server_gate.png)
+
+
 ブラウザからページが開かれるとき、サーバーは **Cookie（セッションの手がかり🍪）** を見て「この人ログインしてる？」を判断できるよ✅
 そしてログインしてなければ **そこで止める（リダイレクトする）** のが強い！🚧➡️🚪
 Next.js は Server Component から `redirect()` が使えるから、ここでガードできるよ〜！([Next.js][1])
@@ -15,6 +18,9 @@ Next.js は Server Component から `redirect()` が使えるから、ここで�
 ---
 
 ## 2) 全体の流れを図でつかもう👀🧠（Mermaid）
+
+![next_study_179_redirect_block.png](./picture/next_study_179_redirect_block.png)
+
 
 ![next_study_179_server_protect](./picture/next_study_179_server_protect.png)
 
@@ -79,6 +85,9 @@ export default async function MyPage() {
 
 ### ✅ パターンB：まとめて守る（Protected Layout）📦🛡️
 
+![next_study_179_protected_layout.png](./picture/next_study_179_protected_layout.png)
+
+
 「/mypage も /settings も全部ログイン必須にしたい！」みたいなときは、**ルートグループ＋layout** が超便利💡
 
 例：こんな構成にするよ👇
@@ -115,6 +124,9 @@ export default async function ProtectedLayout({
 
 ## 5) ついでに：API（Route Handler）も守れるよ🚪🧪
 
+![next_study_179_api_guard.png](./picture/next_study_179_api_guard.png)
+
+
 ページだけ守っても、**API が開いてたら抜け道**になることがあるよね😇
 Auth.js 側でも「セッションが無ければ 401 返す」みたいな守り方が紹介されてるよ([authjs.dev][3])
 
@@ -137,6 +149,9 @@ export async function GET() {
 ---
 
 ## 6) よくあるハマりどころ集🌀（先に潰そ〜！🧯）
+
+![next_study_179_client_hiding_risk.png](./picture/next_study_179_client_hiding_risk.png)
+
 
 * **「Clientで隠せばOK」になっちゃう**
   → それだと、ネットワーク的には取れちゃう可能性があるよ😖

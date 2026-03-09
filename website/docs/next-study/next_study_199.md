@@ -26,6 +26,8 @@ flowchart TD
 
 ## 2) 目標ライン（“Good”）だけ覚えよっか✅✨
 
+![199 cwv thresholds](./picture/next_study_199_cwv_thresholds.png)
+
 まずは「良い」ラインだけ暗記でOK〜！😆🧠
 （CWVは **75パーセンタイル** で判定するよ、ってのもふんわり覚えておくと◎） ([Google for Developers][1])
 
@@ -43,6 +45,8 @@ flowchart TD
 
 ## 3) 「気にしすぎない」ってどういうこと？🫶🌙
 
+![199 lab vs field](./picture/next_study_199_lab_vs_field.png)
+
 CWVって、**テストの点数で満点を目指すゲーム**じゃなくて、
 **“ユーザーがストレス感じてない？”の健康診断**みたいなものだよ〜🏥💕
 
@@ -56,6 +60,8 @@ CWVって、**テストの点数で満点を目指すゲーム**じゃなくて�
 ---
 
 ## 4) どこで見ればいいの？（3つだけ）👀✨
+
+![199 tools trio](./picture/next_study_199_tools_trio.png)
 
 ```mermaid
 flowchart LR
@@ -87,6 +93,8 @@ CWV の扱い（INP/LCP/CLS、75パーセンタイル判定）もここが分か
 
 ### 🏃‍♀️ LCP（表示が遅い）
 
+![199 lcp improvement](./picture/next_study_199_lcp_improvement.png)
+
 ありがち原因：
 
 * でかい画像（特にヒーロー画像）🖼️💦
@@ -100,6 +108,8 @@ CWV の扱い（INP/LCP/CLS、75パーセンタイル判定）もここが分か
 * 「主役」が画像なら `next/image` を素直に使う（前章までの知識でOK）📸✨
 
 ### 🖱️ INP（押しても反応が遅い）
+
+![199 inp improvement](./picture/next_study_199_inp_improvement.png)
 
 ありがち原因：
 
@@ -115,6 +125,8 @@ CWV の扱い（INP/LCP/CLS、75パーセンタイル判定）もここが分か
 
 ### 📐 CLS（ガタガタ動く）
 
+![199 cls improvement](./picture/next_study_199_cls_improvement.png)
+
 ありがち原因：
 
 * 画像のサイズ未指定（表示後にズレる）📦↕️
@@ -128,6 +140,8 @@ CWV の扱い（INP/LCP/CLS、75パーセンタイル判定）もここが分か
 ---
 
 ## 6) おまけ：Next.jsでCWVをログに出してみる（超ミニ）📝✨
+
+![199 use report web vitals](./picture/next_study_199_use_report_web_vitals.png)
 
 「今どんな値が出てるの？」を知りたい時は、Next.js の `useReportWebVitals` が使えるよ🙌
 （App RouterでもOK） ([Next.js][6])

@@ -1,5 +1,7 @@
 # 第189章：`next/image` の考え方（速くて綺麗）📸
 
+![next_study_189_img_vs_image.png](./picture/next_study_189_img_vs_image.png)
+
 この章では **Next.js の `<Image />`（`next/image`）** を使って、画像を「速く・きれいに・レイアウト崩れ少なく」表示する基本をつかむよ〜🥰🫶
 （ふつうの `<img>` との違いがわかると、一気にラクになるやつ！✨）
 
@@ -17,6 +19,8 @@
 
 ## 2) 何が「うれしい」の？（メリット）🎁✨
 
+![next_study_189_optimization_magic.png](./picture/next_study_189_optimization_magic.png)
+
 `next/image` の `<Image>` は、だいたい次を助けてくれるよ👇
 
 * **端末に合うサイズ**で配信してくれる（ムダにデカい画像を送らない）📱💻 ([Next.js][1])
@@ -27,6 +31,8 @@
 ---
 
 ## 3) まず最重要ルール：`width/height` か `fill` どっちか！🧠🧷
+
+![next_study_189_width_height_rule.png](./picture/next_study_189_width_height_rule.png)
 
 基本はこのどっちかを守るだけでOKだよ〜🙆‍♀️✨
 
@@ -84,6 +90,8 @@ export default function Page() {
 ---
 
 ## 5) ハンズオン②：枠にフィットさせたいなら `fill` 🧱✨
+
+![next_study_189_fill_mode.png](./picture/next_study_189_fill_mode.png)
 
 カードの枠とか、バナー枠とか、「ここにピッタリ入れたい！」時あるよね😊
 そんなときは `fill` が便利！
@@ -180,6 +188,8 @@ npm i sharp
 ---
 
 ## 9) よくあるハマり集（先に潰す）🪤😵‍💫
+
+![next_study_189_cls_prevention.png](./picture/next_study_189_cls_prevention.png)
 
 * ❌ `width` だけ指定（`height` なし） → レイアウトが不安定になりやすい
 * ❌ `fill` なのに親が `position: relative` じゃない → うまく表示されない

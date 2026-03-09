@@ -84,6 +84,10 @@ export function getPost(slug: string): Post | undefined {
 
 ### Step B：OGP画像を `public/og/` に置く🖼️📁
 
+![next_study_197_directory_structure.png](./picture/next_study_197_directory_structure.png)
+
+
+
 `public/og/hello.png` と `public/og/rsc.png` を置いてね！
 （中身は仮画像でOKだよ〜😊✨）
 
@@ -92,6 +96,10 @@ export function getPost(slug: string): Post | undefined {
 ---
 
 ### Step C：`metadataBase` を設定する（超大事）⚠️🌍
+
+![next_study_197_absolute_url_rule.png](./picture/next_study_197_absolute_url_rule.png)
+
+
 
 OGP画像URLは **絶対URL** が強いよ（SNSが取りに行ける形）🏃‍♀️💨
 なので `app/layout.tsx` に `metadataBase` を入れておくと安定するよ✨
@@ -201,6 +209,10 @@ npm run dev
 
 ### 確認ポイント（超カンタン）🔎💖
 
+![next_study_197_ogp_debugger.png](./picture/next_study_197_ogp_debugger.png)
+
+
+
 1. `http://localhost:3000/blog/hello` を開く
 2. ブラウザで「ページのソースを表示」して、`og:title` とかが入ってるか見る👀✨
 3. `hello` と `rsc` で **タイトル/画像が切り替わってる** なら成功🎉🎉🎉
@@ -214,6 +226,10 @@ npm run dev
   → 画像パスは `"/og/hello.png"` みたいに先頭スラッシュが安心✨
 
 * **SNSでプレビューが変わらない**
+
+![next_study_197_cache_refresh.png](./picture/next_study_197_cache_refresh.png)
+
+
   → SNS側がキャッシュしてることあるよ〜📦💤
   → 本番URLで確認したり、SNSの「キャッシュ更新ツール」を使うと直ることが多いよ🔁✨
   （ローカルhostはSNSから見えないので、基本プレビュー検証は本番/公開URLが強いよ🌍）

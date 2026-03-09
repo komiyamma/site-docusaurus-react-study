@@ -10,6 +10,10 @@
 
 ## あるある：テストが壊れる瞬間😇🧨
 
+![house_of_cards](./picture/next_study_215_house_of_cards.png)
+
+
+
 * デザイナーさんがボタン文言を「追加」→「登録」に変えた📝
   → **機能はOKなのにテストだけ落ちる**😭
 * 文言の句読点や絵文字が増えた（「保存」→「保存✨」）
@@ -36,6 +40,10 @@ flowchart TD
 
 ### ✅ “ユーザーができること”をテストする
 
+![user_vs_script](./picture/next_study_215_user_vs_script.png)
+
+
+
 * クリックできる🖱️
 * 入力できる⌨️
 * 追加された/消えた/無効になった✅
@@ -57,6 +65,10 @@ React Testing Library（RTL）では、だいたいこの優先度が強いよ�
 
 1. **getByRole**（いちばんおすすめ）🥇
 
+![aria_anchor](./picture/next_study_215_aria_anchor.png)
+
+
+
 * ボタンなら `role=button`、入力なら `textbox` みたいに探せる
 * アクセシビリティ的にも良い方向👏
 
@@ -66,6 +78,10 @@ React Testing Library（RTL）では、だいたいこの優先度が強いよ�
 * 見た目の文言に寄せずに、**安定したラベル**を付けられる✨
 
 3. **getByTestId**（最終手段）🥉
+
+![rtl_pyramid](./picture/next_study_215_rtl_pyramid.png)
+
+
 
 * `data-testid` は便利だけど、増やしすぎ注意⚠️
 * 「ユーザー視点」からは遠くなるので、ここぞの場面だけ🧩
@@ -136,6 +152,10 @@ test("ボタン文言が『追加』なら押せる", async () => {
 
 ### ✅ 安定しやすい例（役割＋ラベル＋挙動）✨
 
+![refactoring_safety](./picture/next_study_215_refactoring_safety.png)
+
+
+
 ```ts
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -195,3 +215,5 @@ test("TODOを追加できて、入力が空に戻る", async () => {
 ---
 
 次の章では、今回の話と相性が良い **スナップショットの使いどころ**に入るよ📸🧊✨
+
+![snapshot_camera](./picture/next_study_215_snapshot_camera.png)

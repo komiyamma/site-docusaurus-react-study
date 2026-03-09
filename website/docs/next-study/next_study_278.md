@@ -46,6 +46,10 @@ Server Actions は **POSTで呼ばれる**のが基本だよ〜📮 ([Next.js][1
 
 ## 1) Valibot を入れる🐼📦
 
+![278_install_valibot](./picture/next_study_278_install_valibot.png)
+
+
+
 PowerShell（またはVSCodeのターミナル）で👇
 
 ```bash
@@ -55,6 +59,10 @@ npm i valibot
 ---
 
 ## 2) Server Action（サーバー側）を書く🧑‍🍳🛡️
+
+![278_server_action_code](./picture/next_study_278_server_action_code.png)
+
+
 
 ### `app/actions/contact.ts` を作成✨
 
@@ -151,6 +159,10 @@ export async function sendContact(
 
 ## 3) フォームUI（クライアント側）を書く🧸🖥️
 
+![278_client_ui_code](./picture/next_study_278_client_ui_code.png)
+
+
+
 エラー表示したいから、フォーム側は Client Component にするよ〜🎮
 `useActionState` を使うと、**state（結果）**と**pending（送信中）**を一緒に扱えて便利✨ ([Next.js][5])
 
@@ -243,6 +255,10 @@ const buttonStyle: React.CSSProperties = {
 
 ## 4) 動かして確認しよ〜🚀
 
+![278_running_check](./picture/next_study_278_running_check.png)
+
+
+
 ```bash
 npm run dev
 ```
@@ -254,6 +270,10 @@ npm run dev
 ---
 
 ## よくあるハマりどころ🪤（ここだけ押さえたら勝ち✌️）
+
+![278_trap_point](./picture/next_study_278_trap_point.png)
+
+
 
 * **Server Action 側に `"use server"` がない** → ただの関数になっちゃう🥲 ([Next.js][1])
 * **エラー表示したいのにフォームがServer Componentのまま** → `useActionState` が使えないので `use client` にする🎮 ([Next.js][5])

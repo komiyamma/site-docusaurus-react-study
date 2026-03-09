@@ -1,5 +1,7 @@
 # 第185章：練習：ログイン中だけTODO編集できるようにする✏️
 
+![next_study_185_edit_permission.png](./picture/next_study_185_edit_permission.png)
+
 やることはシンプルだよ〜！😊
 **「編集ボタンをログイン中だけ見せる」＋「URL直打ちでも編集ページに入れない」＋「サーバー側でも編集を拒否する」** の3点セットで完成🎉
 
@@ -102,6 +104,8 @@ export default async function TodoDetailPage({
 
 ## Step2：編集ページを作って「ログインしてなければredirect」する🚦🔑
 
+![next_study_185_redirect_logic.png](./picture/next_study_185_redirect_logic.png)
+
 `app/todos/[id]/edit/page.tsx`
 
 ```tsx
@@ -175,6 +179,8 @@ export default async function TodoEditPage({
 
 ## Step3：Server Actionで「ログインしてなければ更新拒否」する🧯🔒
 
+![next_study_185_server_action_check.png](./picture/next_study_185_server_action_check.png)
+
 `app/todos/[id]/edit/actions.ts`
 
 ```ts
@@ -215,6 +221,8 @@ export async function updateTodoAction(formData: FormData) {
 ---
 
 ## Step4：動作チェック✅🧪（ここ楽しいやつ！）
+
+![next_study_185_testing_scenario.png](./picture/next_study_185_testing_scenario.png)
 
 1. 開発サーバー起動💻✨
 

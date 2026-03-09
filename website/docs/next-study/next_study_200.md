@@ -31,6 +31,8 @@ flowchart TD
 
 ### 1) どの画像が重いか、まず特定する🔎👀
 
+![200 devtools network](./picture/next_study_200_devtools_network.png)
+
 **Chrome DevTools**でOKだよ！
 
 * `F12` → **Network** タブ📡
@@ -47,6 +49,8 @@ flowchart TD
 
 ### 2) 画像の「縦横サイズ」がデカすぎない？📐😵
 
+![200 resize concept](./picture/next_study_200_resize_concept.png)
+
 **表示が 400px 幅なのに、画像が 4000px** みたいなの、あるある😂
 
 * まずは画像の実サイズを縮める（リサイズ）✂️
@@ -55,6 +59,8 @@ flowchart TD
 ---
 
 ### 3) 形式は AVIF / WebP にできる？🧁➡️🧊
+
+![200 format comparison](./picture/next_study_200_format_comparison.png)
 
 * **AVIF**：だいたい最強に軽い🏆（ただし作成に時間かかることも）
 * **WebP**：互換性もよくて使いやすい💖
@@ -65,6 +71,8 @@ flowchart TD
 
 ### 4) 圧縮（Quality）を下げても見た目いける？🗜️😌
 
+![200 compression quality](./picture/next_study_200_compression_quality.png)
+
 写真系は **quality をちょい下げるだけで激変**するよ！
 
 * まず **80 → 70 → 60** くらいで試す🎚️
@@ -73,6 +81,8 @@ flowchart TD
 ---
 
 ### 5) Next.js なら `next/image` を正しく使う📸⚡
+
+![200 next image power](./picture/next_study_200_next_image_power.png)
 
 「画像が重い」問題は **next/image** でかなり勝てるよ〜！💪💕
 
@@ -108,6 +118,8 @@ export default function Hero() {
 
 ### 6) “最初に読みすぎ”をやめる（特に一覧）🧺🫨
 
+![200 lazy load list](./picture/next_study_200_lazy_load_list.png)
+
 一覧ページで画像がズラ〜って並ぶと、最初が重くなりがち🥲
 
 * **上の方だけ先に見せたい** → それ以外は遅延ロード⏳
@@ -126,6 +138,8 @@ CSS の `background-image` は、最適化が効きにくいことがあるよ�
 ---
 
 ### 8) 外部画像（CMSとか）なら配信元もチェック🌐🧃
+
+![200 external cdn](./picture/next_study_200_external_cdn.png)
 
 外部ドメインからの画像が遅いと、どう頑張っても遅いことある🥲
 その場合は👇を疑う！

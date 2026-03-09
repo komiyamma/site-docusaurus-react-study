@@ -18,6 +18,8 @@ Next.js の開発って、作るのは楽しいけど「更新」が地味に大
 
 ## まず知っておくルール：更新には種類がある🧠
 
+![next_study_245_update_types](./picture/next_study_245_update_types.png)
+
 ざっくり、アップデートには3タイプあるよ👇
 
 * **パッチ（Patch）**：バグ修正・セキュリティ修正中心（だいたい安全）✅
@@ -60,6 +62,8 @@ flowchart TD
 
 ### 1) まずは「何が古い？」を見る👀
 
+![next_study_245_terminal_outdated](./picture/next_study_245_terminal_outdated.png)
+
 ```bash
 npm outdated
 ```
@@ -91,6 +95,8 @@ Next.js は基本この3点セットを意識してね👇
 ---
 
 ## セキュリティ更新の基本（超大事）🚨🔐
+
+![next_study_245_security_shield](./picture/next_study_245_security_shield.png)
 
 ### 1) 警告を見る
 
@@ -150,6 +156,8 @@ npm run lint
 
 ## 「今すぐ上げるべき？」判断の早見表🧭
 
+![next_study_245_priority_compass](./picture/next_study_245_priority_compass.png)
+
 ```mermaid
 flowchart TD
   A["更新通知きた！"] --> B{"セキュリティ修正？"}
@@ -168,6 +176,8 @@ flowchart TD
 月1でいいから「依存関係お掃除デー」作ると、未来が平和🕊️✨
 
 ### ✅ 2) 自動でPRを作ってもらう（超ラク）🤖
+
+![next_study_245_dependabot_mail](./picture/next_study_245_dependabot_mail.png)
 
 * **Dependabot（GitHub）**
 * **Renovate**

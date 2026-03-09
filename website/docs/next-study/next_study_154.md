@@ -48,6 +48,9 @@ flowchart TD
 
 ### バリデーションの例🧾
 
+![next study 154 validation role](./picture/next_study_154_validation_role.png)
+
+
 * 名前：1〜30文字
 * メール：メール形式
 * 年齢：0〜120
@@ -57,6 +60,9 @@ flowchart TD
 **ここでは危険な文字を削る必要はない**（削るのはサニタイズ側）🙅‍♀️
 
 ### サニタイズの例🧼
+
+![next study 154 sanitization role](./picture/next_study_154_sanitization_role.png)
+
 
 * `trim()` で前後の空白を除去
 * 変な制御文字を消す（コピペで混ざるやつ😵）
@@ -83,6 +89,9 @@ npm i zod sanitize-html
 
 ### 6-2) バリデーション（Zod）を書く🧾
 
+![next study 154 zod schema](./picture/next_study_154_zod_schema.png)
+
+
 `src/lib/validation.ts`
 
 ```ts
@@ -107,6 +116,9 @@ export type ContactInput = z.infer<typeof contactSchema>;
 ```
 
 ### 6-3) “軽いサニタイズ” を用意🧼（まずはこれでOK）
+
+![next study 154 sanitize text](./picture/next_study_154_sanitize_text.png)
+
 
 `src/lib/sanitize.ts`
 
@@ -177,6 +189,9 @@ export async function submitContact(_prev: ActionState, formData: FormData): Pro
 ## 7) 超よくある誤解3つ😵‍💫→こう考える！
 
 ### 誤解①：サニタイズすればバリデーションいらない？🙅‍♀️
+
+![next study 154 misconception check](./picture/next_study_154_misconception_check.png)
+
 
 **いらないはダメ！**
 サニタイズは「無害化」、バリデーションは「仕様チェック」🧼🧾

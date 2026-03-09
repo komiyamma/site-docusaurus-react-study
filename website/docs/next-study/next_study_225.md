@@ -43,6 +43,9 @@ flowchart LR
 
 ### 例：`images.remotePatterns` を設定する✅
 
+![remote_patterns_gate](./picture/next_study_225_remote_patterns_gate.png)
+
+
 `next.config.mjs`（または `next.config.ts/js`）にこう書くよ👇
 
 ```js
@@ -85,6 +88,9 @@ export default nextConfig;
 
 ### 結論（超だいじ）✅
 
+![db_pool_vs_direct](./picture/next_study_225_db_pool_vs_direct.png)
+
+
 **「アプリが使うURL（プール接続）」と「マイグレーション用URL（直結）」を分ける**のが鉄板です🧱✨
 Vercel Postgres + Prisma の公式ガイドでも、`url`（プール）と `directUrl`（直結）を分ける構成になってるよ。([Vercel][3])
 
@@ -110,6 +116,9 @@ vercel env pull .env
 > `.env.local` 派でもOKだけど、運用ルールはチーム/自分の方針で統一しよ〜📌😊
 
 ### PrismaClient：作り方で“接続数”が暴れることがある🧨
+
+![singleton_prisma](./picture/next_study_225_singleton_prisma.png)
+
 
 開発中（ホットリロード）に PrismaClient を作り直しまくると、接続が増えて死ぬことがあるので、**シングルトン化**が定番です🧊
 （本番でも「毎リクエストで重く初期化」しない形にしておくと安心）🧘‍♀️
@@ -141,6 +150,9 @@ if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
 
 ### まず最優先：`AUTH_SECRET`（または互換の `NEXTAUTH_SECRET`）🔑
 
+![auth_secret_key](./picture/next_study_225_auth_secret_key.png)
+
+
 Auth.js（NextAuth v5系）では **本番で `AUTH_SECRET` が必須**って書かれてるよ。([Auth.js][4])
 なので、本番環境変数に **必ず**入れる！💪
 
@@ -169,12 +181,18 @@ AUTH_TRUST_HOST="true"
 
 ### コールバックURL不一致の対策📌
 
+![callback_url_puzzle](./picture/next_study_225_callback_url_puzzle.png)
+
+
 OAuth（GitHub/Google等）は「登録したURL」と「実際に戻ってくるURL」が違うと失敗しがち。
 Vercelの公式ガイドでも **コールバックURLと `NEXTAUTH_URL` を揃える**説明があるよ（例では `/api/auth` を使ってる）([Vercel][3])
 
 ---
 
 ## 本番前の“3分チェック”✅⏱️✨（ここだけやれば事故減る）
+
+![deployment_checklist](./picture/next_study_225_deployment_checklist.png)
+
 
 * 🖼️ 外部画像を使うなら `remotePatterns` を入れた？（本番URLのホストね！）([Next.js][2])
 * 🗄️ Prismaの `url` はプール、`directUrl` は直結で分けた？([Vercel][3])

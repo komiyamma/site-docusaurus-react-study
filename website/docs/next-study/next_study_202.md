@@ -37,6 +37,8 @@ flowchart TD
 
 ### ✅ 作るファイル
 
+![202 posts data structure](./picture/next_study_202_posts_data_structure.png)
+
 * `lib/posts.ts`
 
 ```ts
@@ -98,6 +100,8 @@ export function getPostBySlug(slug: string) {
 
 ## 2) 画像を `public/` に置こう🖼️📁
 
+![202 public images folder](./picture/next_study_202_public_images_folder.png)
+
 `next/image` は `public/` 配下の画像が扱いやすいです✨
 
 ### ✅ フォルダ例
@@ -110,6 +114,8 @@ export function getPostBySlug(slug: string) {
 ---
 
 ## 3) フォントを入れて「ブログ感」を上げる🔤✨
+
+![202 font setup](./picture/next_study_202_font_setup.png)
 
 `app/layout.tsx` に `next/font/google` を足して、全体の文字を整えます🌸
 （すでに入ってたら “確認だけ” でOK！）
@@ -148,7 +154,11 @@ export default function RootLayout({
 
 ## 4) `/blog`（一覧ページ）を作ろう📚✨
 
+![202 blog list ui](./picture/next_study_202_blog_list_ui.png)
+
 ### ✅ 作るファイル
+
+![202 posts data structure](./picture/next_study_202_posts_data_structure.png)
 
 * `app/blog/page.tsx`
 * `app/blog/blog.module.css`
@@ -305,14 +315,20 @@ export default function BlogListPage() {
 
 ## 5) `/blog/[slug]`（記事詳細）を完成させよう📝✨（OGPも！）
 
+![202 blog detail ui](./picture/next_study_202_blog_detail_ui.png)
+
 ![OGP Generation Flow](./picture/next_study_202_ogp_flow.png)
 
 ### ✅ 作るファイル
+
+![202 posts data structure](./picture/next_study_202_posts_data_structure.png)
 
 * `app/blog/[slug]/page.tsx`
 * `app/blog/[slug]/post.module.css`
 
 #### `app/blog/[slug]/page.tsx`
+
+![202 ogp result](./picture/next_study_202_ogp_result.png)
 
 ```tsx
 import Image from "next/image";
@@ -489,6 +505,8 @@ export default async function BlogPostPage({ params }: Props) {
 ---
 
 ## 仕上げチェックリスト🧾✨（ここまでできたらクリア！）
+
+![202 check points](./picture/next_study_202_check_points.png)
 
 * [ ] `/blog` が表示される📚
 * [ ] カードを押すと `/blog/[slug]` に遷移する🔗

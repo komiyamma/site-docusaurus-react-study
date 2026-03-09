@@ -7,6 +7,10 @@ CI（シーアイ）って一言でいうと、**「GitHubにpush / PRしたら�
 
 ## 1) 今日のゴール🎯💖
 
+![robot_guard](./picture/next_study_214_robot_guard.png)
+
+
+
 * ✅ push / PR のたびに **lint → test → build** が自動で走る
 * ✅ どれか1つでも失敗したら **そこで止まって「失敗」扱いになる**
 * ✅（できれば）PRを**「CIが通らないとマージできない」**状態にする🔒
@@ -51,6 +55,10 @@ flowchart TD
 ---
 
 ### 3-2. ワークフローを作る📁✨
+
+![github_actions_ui](./picture/next_study_214_github_actions_ui.png)
+
+
 
 プロジェクト直下に、このファイルを作ってね👇
 
@@ -103,6 +111,10 @@ jobs:
 
 ## 4) 「失敗したら止める」ってどういうこと？🚦💥
 
+![failure_stop](./picture/next_study_214_failure_stop.png)
+
+
+
 GitHub Actionsは、基本こう動くよ👇
 
 * 各 step（Lint/Test/Build）はコマンドを実行する
@@ -116,6 +128,10 @@ GitHub Actionsは、基本こう動くよ👇
 
 ## 5) （重要💡）CIが通らないとマージできないようにする🔒✅
 
+![branch_lock](./picture/next_study_214_branch_lock.png)
+
+
+
 「赤いのにうっかりマージ」って、たまに起きるのね🥲💦
 それを防ぐには GitHub の設定で、
 
@@ -128,6 +144,10 @@ GitHub Actionsは、基本こう動くよ👇
 ---
 
 ## 6) ちょい速くする小技：Next.jsのビルドキャッシュ🧊⚡（任意）
+
+![cache_freezer](./picture/next_study_214_cache_freezer.png)
+
+
 
 Next.js はビルドで `.next/cache` を使うんだけど、CIでもこれを保存しておくと速くなることがあるよ🚀
 （保存してないと “No Cache Detected” みたいな話が出ることもある） ([Next.js][5])
@@ -150,6 +170,10 @@ Next.js はビルドで `.next/cache` を使うんだけど、CIでもこれを�
 ---
 
 ## 7) ミニ練習🎓✨（わざと失敗→直す！）
+
+![green_merge](./picture/next_study_214_green_merge.png)
+
+
 
 1. 何かを変更してPRを作る💌
 2. わざとテストが落ちる変更を入れる（例：テストで期待される文言を変えちゃう）😈🧪

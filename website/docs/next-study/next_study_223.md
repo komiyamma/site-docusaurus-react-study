@@ -7,6 +7,9 @@
 
 ## 1) まず最初に：ログは2種類あるよ📌
 
+![build_vs_runtime_logs](./picture/next_study_223_build_vs_runtime_logs.png)
+
+
 ざっくり、ここを分けるのが最重要🎯
 
 * **ビルドログ**：デプロイ時の「組み立て」ログ🏗️
@@ -40,6 +43,9 @@ flowchart TD
 
 ## 3) ローカル（Windows）で見るログ🪟💻
 
+![console_vs_terminal](./picture/next_study_223_console_vs_terminal.png)
+
+
 ### ✅ ログが出る場所はここ！
 
 * **ブラウザのConsole**：Client Componentの `console.log` はここ🌈
@@ -72,6 +78,9 @@ Vercelでは、**ビルドログはランタイムログとは別**で、デプ�
 
 ### 4-2) ランタイムログ🏃‍♀️（公開後の不具合はこっち！）
 
+![runtime_log_tab](./picture/next_study_223_runtime_log_tab.png)
+
+
 症状：
 
 * デプロイは成功するのに、アクセスすると **500** とか💥
@@ -87,6 +96,9 @@ Vercelでは、**ビルドログはランタイムログとは別**で、デプ�
 ---
 
 ## 5) Logsタブで「詰まりポイント」を特定するコツ🔎🧠✨
+
+![filtering_logs](./picture/next_study_223_filtering_logs.png)
+
 
 ### コツ①：まず **Path（どのURLか）** で絞る🛣️
 
@@ -104,11 +116,17 @@ Vercelでは、**ビルドログはランタイムログとは別**で、デプ�
 
 ### コツ③：Request ID（リクエストID）で追跡する🧵
 
+![request_id_trace](./picture/next_study_223_request_id_trace.png)
+
+
 Vercelのログは **Request IDでフィルタ**できるので、1回のアクセスに紐づくログだけ追えたりするよ🧡 ([Vercel][3])
 
 ---
 
 ## 6) いい感じのログの出し方（最小セット）🧁✨
+
+![structured_logging](./picture/next_study_223_structured_logging.png)
+
 
 ### ✅ 「どの処理のログか」わかるように、ラベルを付けよう🏷️
 

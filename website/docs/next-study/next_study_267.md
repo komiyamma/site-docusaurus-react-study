@@ -31,6 +31,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 ## 1) `css()` の基本：className を作るだけ 🌸
 
+![next study 267 css machine](./picture/next_study_267_css_machine.png)
+
 `css({ ... })` に「書きたい見た目」を入れると、**クラス名文字列**が返ってくるよ！([panda-css.com][1])
 
 ```tsx
@@ -70,6 +72,8 @@ flowchart LR
 
 ## 2) よく使うスタイル（まずはこれだけで勝てる🏆）🧁
 
+![next study 267 card ingredients](./picture/next_study_267_card_ingredients.png)
+
 まずは「カードっぽい見た目」を作る鉄板セットを覚えよ〜！💕
 
 ```tsx
@@ -96,6 +100,8 @@ export const cardClass = css({
 ---
 
 ## 3) ホバー・フォーカスも超かんたん 🫶✨
+
+![next study 267 button states](./picture/next_study_267_button_states.png)
 
 Panda は `_hover` みたいに書けるよ〜！
 
@@ -127,6 +133,8 @@ export const buttonClass = css({
 
 ## 4) レスポンシブ対応（スマホ→PC）📱➡️💻
 
+![next study 267 responsive array](./picture/next_study_267_responsive_array.png)
+
 Panda は **配列でブレイクポイントごと**に指定できるよ！([panda-css.com][3])
 
 ```tsx
@@ -144,6 +152,8 @@ export const wrapClass = css({
 
 ## 5) className を合体したいとき（`cx`）🧷✨
 
+![next study 267 puzzle join](./picture/next_study_267_puzzle_join.png)
+
 「ベースのスタイル + 追加のスタイル」をくっつけたいときは `cx` が便利！([panda-css.com][1])
 
 ```tsx
@@ -160,6 +170,8 @@ export function Notice({ isDanger }: { isDanger: boolean }) {
 ---
 
 ## 6) ミニ実装：大学イベントカードを作ろう 🎓🌸
+
+![next study 267 mockup](./picture/next_study_267_mockup.png)
 
 ### 6-1) `src/components/CampusEventCard.tsx` を作成 🧩
 
@@ -295,6 +307,8 @@ export default function Page() {
 ---
 
 ## 7) よくあるハマり 🪤（ここだけ助かるやつ）
+
+![next study 267 dynamic warning](./picture/next_study_267_dynamic_warning.png)
 
 * **見た目が変わらない**
   → `styled-system/styles.css` の import を再確認！([panda-css.com][2])

@@ -36,6 +36,9 @@ Server Actionsでフォーム送信→サーバーでDB更新→`revalidatePath`
 
 ## まずは「完成形のファイル構成」📁
 
+![next_study_174_file_structure.png](./picture/next_study_174_file_structure.png)
+
+
 ```mermaid
 flowchart TD
   R["(#quot;project root#quot;)"] --> PR["prisma/schema.prisma"]
@@ -70,6 +73,9 @@ DATABASE_URL="file:./dev.db"
 ---
 
 # 手順2：`schema.prisma` を最小TODOモデルにする🧱
+
+![next_study_174_prisma_model.png](./picture/next_study_174_prisma_model.png)
+
 
 `prisma/schema.prisma`
 
@@ -133,6 +139,9 @@ if (process.env.NODE_ENV !== "production") {
 ---
 
 # 手順4：Server Actions（CRUD）を作る🚪✨
+
+![next_study_174_server_action_flow.png](./picture/next_study_174_server_action_flow.png)
+
 
 `src/app/actions/todos.ts`
 

@@ -9,6 +9,10 @@
 
 ## まず結論🧠✨「クローラが安心して辿れるリンク」って？
 
+![next_study_196_crawler_path.png](./picture/next_study_196_crawler_path.png)
+
+
+
 クローラは基本的に **HTMLの a 要素（アンカー）で、href が入ってるリンク**を頼りにページを見つけるよ🕵️‍♀️🔎
 逆に、ボタンやdivをクリックして移動する“だけ”の仕組み（onClickで移動）だと、リンクとして拾われにくいことがあるの🥲💦 ([Google for Developers][1])
 
@@ -52,6 +56,10 @@ flowchart TD
 
 ### 2) リンク文言（アンカーテキスト）をちゃんと書く✍️💖
 
+![next_study_196_anchor_text_good_bad.png](./picture/next_study_196_anchor_text_good_bad.png)
+
+
+
 * 「こちら」「詳しく」だけだと、クローラも人も“どこ行くの？”ってなるよ🥺
 * 例：
 
@@ -61,6 +69,10 @@ flowchart TD
     アンカーテキストは、リンク先の内容が想像できる文章が良いよ📚✨ ([Google for Developers][1])
 
 ### 3) 画像リンクなら「alt」が命🖼️🫶
+
+![next_study_196_alt_text_link.png](./picture/next_study_196_alt_text_link.png)
+
+
 
 * 画像をリンクにする時、Googleは画像のaltをリンク文言みたいに扱うことがあるよ🧡 ([Google for Developers][1])
 * だから alt を空にしないのが大事〜！
@@ -125,6 +137,10 @@ export function BadNav() {
 ---
 
 ## ちょいテク🍬：リンクが多すぎる場所は prefetch を調整してもOK
+
+![next_study_196_prefetch_control.png](./picture/next_study_196_prefetch_control.png)
+
+
 
 サイドバーみたいにリンクが大量だと、先読みが多くなりすぎることがあるよ〜😵‍💫
 そんな時は Link の prefetch を切る選択肢もあるよ🧯 ([Next.js][2])

@@ -7,6 +7,9 @@
 
 ## 1) エラー追跡ってなに？🤔📌
 
+![next_study_250_error_tracking_concept.png](./picture/next_study_250_error_tracking_concept.png)
+
+
 ざっくり言うと…
 
 * アプリで起きたエラーを **自動で集めて** 📥
@@ -20,6 +23,9 @@
 
 ## 2) console.log だけじゃダメなの？🥲🪵
 
+![next_study_250_console_vs_tracking.png](./picture/next_study_250_console_vs_tracking.png)
+
+
 `console.error` は開発中は便利なんだけど、本番だと…
 
 * ユーザーのPCで起きたエラーは、基本こっちに届かない😢
@@ -31,6 +37,9 @@
 ---
 
 ## 3) Next.jsのエラーは大きく2種類🧠🧯
+
+![next_study_250_error_types.png](./picture/next_study_250_error_types.png)
+
 
 Next.jsはエラーを **大きく2系統** に分けて考えるのが基本だよ〜！ ([Next.js][1])
 
@@ -46,6 +55,8 @@ Next.jsはエラーを **大きく2系統** に分けて考えるのが基本だ
 
 ## 4) まず覚える：`error.tsx` は「落下防止ネット」🕸️🧯
 
+![next_study_250_error_tsx_net.png](./picture/next_study_250_error_tsx_net.png)
+
 Next.js（App Router）では、各ルート配下に `error.tsx` を置くと、その範囲のクラッシュを受け止めてくれるよ✨
 しかもエラーバウンダリは **Client Component必須** だから、`'use client'` が必要！ ([Next.js][1])
 
@@ -56,6 +67,9 @@ Next.js（App Router）では、各ルート配下に `error.tsx` を置くと�
 ---
 
 ## 5) 仕組みの全体像（図でイメージ）🧁🖼️
+
+![next_study_250_error_flow.png](./picture/next_study_250_error_flow.png)
+
 
 ```mermaid
 flowchart LR
@@ -72,6 +86,9 @@ flowchart LR
 ---
 
 ## 6) 導入の流れ（例：Sentry）🚀🐾
+
+![next_study_250_sentry_wizard.png](./picture/next_study_250_sentry_wizard.png)
+
 
 ここからは **Sentryを例** にするね！（“Sentry等”なので、考え方は他サービスでも同じだよ🙆‍♀️）
 
@@ -109,6 +126,9 @@ NEXT_PUBLIC_SENTRY_DSN="あなたのDSN"
 ---
 
 ## 7) Next.jsの「エラー画面」でSentryへ送る（超重要）📨🧯
+
+![next_study_250_global_error.png](./picture/next_study_250_global_error.png)
+
 
 ### 7-1) `app/global-error.tsx` で “最後の砦” を作る🏰
 

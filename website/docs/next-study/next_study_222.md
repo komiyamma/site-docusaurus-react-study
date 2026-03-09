@@ -7,6 +7,9 @@
 
 ## 1) プレビューURLってなに？🤔🌱
 
+![preview_url_concept](./picture/next_study_222_preview_url_concept.png)
+
+
 Vercelでは、デプロイが成功すると **そのデプロイ専用のURL（Generated URL）**が自動で作られるよ🔗✨
 これが「プレビューURL」になって、**本番に影響ゼロで**動作確認できるのが強い😆💪
 （※URLを使える期間は、プロジェクトの保持ポリシーなどの設定に左右されるよ） ([Vercel][1])
@@ -14,6 +17,9 @@ Vercelでは、デプロイが成功すると **そのデプロイ専用のURL�
 ---
 
 ## 2) なんでそんなに便利なの？🥳📱💻
+
+![mobile_check](./picture/next_study_222_mobile_check.png)
+
 
 プレビューURLがあると、こういう“嬉しい”が起きるよ👇✨
 
@@ -25,6 +31,9 @@ Vercelでは、デプロイが成功すると **そのデプロイ専用のURL�
 ---
 
 ## 3) どうやってプレビューURLが生まれるの？🧬✨
+
+![pr_flow_diagram](./picture/next_study_222_pr_flow_diagram.png)
+
 
 ![preview_url](./picture/next_study_222_preview_url.png)
 
@@ -92,6 +101,9 @@ git push -u origin feature/preview-url
 
 ## 6) プレビュー環境だけ設定を変えたい：環境変数の使い分け🔐🧪
 
+![env_var_override](./picture/next_study_222_env_var_override.png)
+
+
 Vercelには **Preview用の環境変数**があって、**本番ブランチ以外**のデプロイにだけ適用できるよ🌱
 たとえば、Previewはテスト用API、Productionは本番API…みたいに分けられる✨ ([Vercel][4])
 
@@ -99,12 +111,18 @@ Vercelには **Preview用の環境変数**があって、**本番ブランチ以
 
 ## 7) うっかり公開っぽく見せたくないとき：保護する🔒🛡️
 
+![password_protection](./picture/next_study_222_password_protection.png)
+
+
 「まだ見せたくない機能がある…！」ってときは、**プレビューURLにロック**をかけられるよ🔐
 Vercelの **Deployment Protection**（パスワード保護など）で、Preview/Productionを守れる仕組みがあるよ🙆‍♀️ ([Vercel][5])
 
 ---
 
 ## 8) さらに楽しく：プレビュー上にコメントで指摘する📝✨
+
+![vercel_comments](./picture/next_study_222_vercel_comments.png)
+
 
 Vercelには、**Preview Deployment上でコメント**を使ってフィードバックできる機能もあるよ👀🗯️
 「このボタンもうちょい右」みたいなのを、画面上で共有できて便利〜！ ([Vercel][6])

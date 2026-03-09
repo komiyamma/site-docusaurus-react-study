@@ -1,5 +1,7 @@
 # 第187章：復習：認証は“UI”より“ガード”が本体🧱
 
+![next_study_187_ui_vs_guard.png](./picture/next_study_187_ui_vs_guard.png)
+
 認証って、ログイン画面を「作ること」よりも、**「入っちゃダメな人を絶対に通さない仕組み（ガード）」を作ること**が本体だよ〜！😺✨
 ボタンを隠す・ページを見えなくする…だけだと、簡単に突破されちゃうの🥲💥
 
@@ -20,6 +22,8 @@
 ---
 
 ## 2) ガードは「3段構え」で考えるのがラク😎🧱🧱🧱
+
+![next_study_187_three_layers.png](./picture/next_study_187_three_layers.png)
 
 ![ガードの3段構え](./picture/next_study_187_guard_defense.png)
 
@@ -54,6 +58,8 @@ flowchart TB
 
 ### ① Middleware：まず“入場”を止める🧤🚦
 
+![next_study_187_middleware_role.png](./picture/next_study_187_middleware_role.png)
+
 * **向いてる**：`/dashboard` とか「ログイン必須ゾーン」への入場制限🏰
 * **気持ち**：未ログインなら**ページ描画すらさせず**ログインへ送る📮
 
@@ -69,6 +75,8 @@ Middlewareがあっても、**ページ側でも確認しておく**と安心感
 ---
 
 ### ③ Route Handler / Server Actions：いちばん大事な“操作”の守り🚪💥
+
+![next_study_187_server_action_shield.png](./picture/next_study_187_server_action_shield.png)
 
 本当に危ないのはここ！😱
 「更新」「削除」「投稿」みたいな操作は、**UIで隠してても関係なく叩かれる**前提で守るよ🧱✨

@@ -57,7 +57,13 @@ export function Counter() {
 
 ポイント💡
 
+![209 counter ui](./picture/next_study_209_counter_ui.png)
+
+
 * `aria-label="count"` を付けると、テストで **「countって名前の表示」**として取りやすいよ😊🫶
+
+![209 aria label](./picture/next_study_209_aria_label.png)
+
 * ボタンは `type="button"` を付けておくと、フォームの中でも事故りにくい👍✨
 
 ---
@@ -74,6 +80,8 @@ import { describe, it, expect } from "vitest";
 import { Counter } from "../Counter";
 
 describe("Counter", () => {
+
+
   it("ボタンを押すと数が増える", async () => {
     const user = userEvent.setup();
 
@@ -92,6 +100,7 @@ describe("Counter", () => {
   });
 });
 ```
+![209 test steps](./picture/next_study_209_test_steps.png)
 
 ここが超大事ポイント💖
 
@@ -120,6 +129,9 @@ npx vitest
 
 ### 🧊 `document is not defined` が出た！
 
+![209 debug environment](./picture/next_study_209_debug_environment.png)
+
+
 → テスト環境が `jsdom` になってない可能性が高いよ〜！
 
 `vitest.config.ts`（なければ作成）にこういう設定を入れてね👇
@@ -145,6 +157,9 @@ export default defineConfig({
 ---
 
 ## ⑤ ミニチャレンジ（余裕があったら）🌟😆
+
+![209 challenge ideas](./picture/next_study_209_challenge_ideas.png)
+
 
 1. **「減らす」ボタン**も追加して、テストも足してみよ➖🧪
 2. クリック1回で **+5** するボタンを追加してみよ➕➕➕➕➕✨

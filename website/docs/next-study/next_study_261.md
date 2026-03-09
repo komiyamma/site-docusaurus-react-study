@@ -6,6 +6,10 @@
 
 ## Optimistic UI ってなに？🌸
 
+![Instant Feedback](./picture/next_study_261_instant_feedback.png)
+
+
+
 ![Optimistic Time Travel](./picture/next_study_261_use_optimistic.png)
 
 
@@ -21,6 +25,10 @@
 
 ## `useOptimistic` の役割（超大事）🧠✨
 
+![useOptimistic State Merger](./picture/next_study_261_state_zipper.png)
+
+
+
 `useOptimistic(state, updateFn)` はこういうHookだよ👇 ([React][1])
 
 * `state`：本物の状態（サーバーから来たデータとか）
@@ -32,6 +40,10 @@
 ---
 
 ## 図でつかむ：成功✅と失敗❌の流れ（Mermaid）🧁
+
+![Success vs Failure Flow](./picture/next_study_261_flow_split.png)
+
+
 
 ```mermaid
 sequenceDiagram
@@ -267,10 +279,18 @@ npm run dev
 
 ### ✅ 1) `updateFn` は“絶対に”純粋関数にする
 
+![Immutable Update](./picture/next_study_261_immutable_canvas.png)
+
+
+
 `push` とかで配列を直接いじるのはNG🙅（バグりやすい…）
 **必ず新しい配列を返す**のが正解だよ〜！ ([React][1])
 
 ### ✅ 2) 「本物のデータ」はサーバー、optimisticは“上にかぶせる膜”
+
+![Optimistic Membrane Layer](./picture/next_study_261_membrane_layer.png)
+
+
 
 * 本物：Server Component が取ってきた `initialTodos`
 * 仮の膜：`useOptimistic` が作る `optimisticTodos`

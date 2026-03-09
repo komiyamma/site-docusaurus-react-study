@@ -28,6 +28,10 @@ flowchart LR
 
 ## 1) String（文字）のバリデーション 🧵✨
 
+![next study 277 string checks](./picture/next_study_277_string_checks.png)
+
+
+
 文字はまずこれが鉄板だよ👇
 
 * `trim()`（前後の空白消す）
@@ -63,6 +67,10 @@ export const EmailSchema = v.pipe(
 
 ## 2) Number（数字）のバリデーション 🔢✨
 
+![next study 277 number conversion](./picture/next_study_277_number_conversion.png)
+
+
+
 ### ✅ 重要：フォームやURLの数字って「文字」できがち 😭
 
 だからこうするのがめちゃ多い👇
@@ -96,6 +104,10 @@ export const PageSchema = v.pipe(
 
 ## 3) Date（日付）のバリデーション 📅✨
 
+![next study 277 date flow](./picture/next_study_277_date_flow.png)
+
+
+
 日付もだいたい **string** で来るので、よくある勝ちパターン👇
 
 * `isoDate()` で `"yyyy-mm-dd"` 形式チェック ([valibot.dev][8])
@@ -128,6 +140,10 @@ export const EventDateSchema = v.pipe(
 ---
 
 ## ミニ実践：3つの型をまとめて「イベント登録」の入力チェック🎪✨
+
+![next study 277 combined schema](./picture/next_study_277_combined_schema.png)
+
+
 
 ```ts
 // lib/eventSchema.ts

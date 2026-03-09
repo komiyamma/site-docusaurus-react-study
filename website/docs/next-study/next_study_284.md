@@ -166,6 +166,10 @@ export async function POST(request: Request) {
 
 ## 4) フォームUIを作る（送信前チェック→API）📝📨✨
 
+![284_form_state](./picture/next_study_284_form_state.png)
+
+
+
 ファイル：components/ContactForm.tsx
 
 ```tsx
@@ -420,6 +424,10 @@ export default function Page() {
 
 ## 7) 動作チェック✅✨（ここ大事！）
 
+![284_api_response_handling](./picture/next_study_284_api_response_handling.png)
+
+
+
 1. npm run dev で起動🧑‍💻✨
 2. ブラウザで /contact にアクセス🌐
 3. わざとミスしてみてね👇
@@ -432,6 +440,10 @@ export default function Page() {
 ---
 
 ## ミニ課題：仕上げミッション🎓✨（できたら強い！）
+
+![284_ux_flow](./picture/next_study_284_ux_flow.png)
+
+
 
 * ✅ **サーバーのエラー**も必ず表示できる（通信失敗/400）📡⚠️
 * ✅ 送信中はボタンを押せない（連打防止）🖱️🚫

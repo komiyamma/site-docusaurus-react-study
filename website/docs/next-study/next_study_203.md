@@ -33,6 +33,8 @@
 
 ### ① リファクタが怖くなくなる😳➡️😎
 
+![203 refactor confidence](./picture/next_study_203_refactor_confidence.png)
+
 コード整理したいのに、
 「壊したらどうしよ…」で手が止まるやつ！あるある😭
 
@@ -45,6 +47,8 @@
 
 ### ② バグの発見が早くなる🚨➡️🔍
 
+![203 bug snowball](./picture/next_study_203_bug_snowball.png)
+
 バグって、放置すると雪だるま式にでかくなる⛄💥
 テストがあると、**小さいうちに転んでくれる**（大事）🫶
 
@@ -54,6 +58,8 @@
 ---
 
 ### ③ 仕様の“メモ”になる📝✨
+
+![203 test as doc](./picture/next_study_203_test_as_doc.png)
 
 テストって、実は **「この機能はこう動くべき」** の文章みたいなもの📚
 未来の自分が見たときに、
@@ -66,6 +72,8 @@
 ---
 
 ## Next.jsでテストが効きやすい“ありがち瞬間”⚡🧩
+
+![203 nextjs test cases](./picture/next_study_203_nextjs_test_cases.png)
 
 Next.js（App Router）だと、こんな変更がよく起きるよね👇
 
@@ -81,6 +89,8 @@ Next.js（App Router）だと、こんな変更がよく起きるよね👇
 
 ## 図解：テストがいると開発がラクになる流れ🧪🔁
 
+![203 test cycle loop](./picture/next_study_203_test_cycle_loop.png)
+
 （このループが回り始めると、開発が一気に気持ちよくなるよ😆）
 
 ```mermaid
@@ -95,6 +105,8 @@ flowchart LR
 ---
 
 ## “最初に守るべき場所”はここだけでOK✅🫶
+
+![203 protection points](./picture/next_study_203_protection_points.png)
 
 テストって、最初から全部は無理ゲー😇
 だから **「壊れたら困るところ」だけ** からで大丈夫！

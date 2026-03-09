@@ -37,6 +37,8 @@ flowchart TD
 
 ## 1) 404の仕上げ：`app/not-found.tsx` を作る 🚪💖
 
+![next_study_239_404_friendly](./picture/next_study_239_404_friendly.png)
+
 ### ✅ グローバル404（どのURLでも最終的にここ）
 
 `app/not-found.tsx` を作ります。
@@ -75,6 +77,8 @@ export default function NotFound() {
 
 ## 2) 「データが存在しない」を404にする：`notFound()` を使う 🔎🚪
 
+![next_study_239_not_found_searchlight](./picture/next_study_239_not_found_searchlight.png)
+
 URLは存在するけど、**DBやAPIに該当データがない**ときは、ページ側から `notFound()` を呼ぶのが気持ちいいです✨
 （`not-found.tsx` は `notFound()` に反応する、という整理です） ([Next.js][2])
 
@@ -111,6 +115,8 @@ export default async function PostPage({ params }: Props) {
 ---
 
 ## 3) エラーの仕上げ：`error.tsx`（近い階層で受ける）🧯✨
+
+![next_study_239_error_shield](./picture/next_study_239_error_shield.png)
 
 `error.tsx` は **そのルートセグメント配下のクラッシュを受け止める壁**です🧱
 そして大事：`error.tsx` は **必ず `"use client"` が必要**です。 ([Next.js][1])
@@ -164,6 +170,8 @@ export default function ErrorPage({
 
 ## 4) ローディングの仕上げ：`loading.tsx`（待ち時間を可視化）⏳🌸
 
+![next_study_239_loading_skeleton](./picture/next_study_239_loading_skeleton.png)
+
 データ取得があるページは、**真っ白がいちばん不安**です😖
 `loading.tsx` を置くと、その区間で待ちUIが出せます✨
 
@@ -190,6 +198,8 @@ export default function Loading() {
 ---
 
 ## 5) 最後の保険：`app/global-error.tsx`（全体が落ちるのを防ぐ）🧯🪂
+
+![next_study_239_global_error_net](./picture/next_study_239_global_error_net.png)
 
 もしルート全体レベルで大きく崩れたときのために、`global-error.tsx` も置けます。
 これは **ルートレイアウト等を置き換えるタイプのエラーUI**で、**Client必須**など制約もあります。 ([Next.js][3])

@@ -32,6 +32,8 @@ Next.jsは `metadata` / `generateMetadata` / 特殊ファイル（メタデー�
 
 ## 1) まずは共通SEO：`app/layout.tsx` を“整える”🧹✨
 
+![next_study_240_layout_blueprint](./picture/next_study_240_layout_blueprint.png)
+
 サイト全体の **基本プロフィール** をここに置くとスッキリするよ😊💕
 
 ポイントはこのへん👇
@@ -137,6 +139,8 @@ Next.jsは、**ルートセグメントに置くだけ**でOGP画像タグを作
 
 ### いちばん簡単：画像ファイルを置く📁
 
+![next_study_240_file_structure](./picture/next_study_240_file_structure.png)
+
 ```txt
 app/
   opengraph-image.png
@@ -187,6 +191,8 @@ export default async function Image() {
 
 ## 4) アイコン＆manifest：地味だけど完成度アップ🍓✨
 
+![next_study_240_mobile_home](./picture/next_study_240_mobile_home.png)
+
 ### アイコン（タブのやつ！）🧡
 
 `app/` 直下に置く系が多いよ〜（例：`icon.png` / `apple-icon.png` / `favicon.ico`）🧁 ([Next.js][4])
@@ -220,6 +226,8 @@ export default function manifest(): MetadataRoute.Manifest {
 ---
 
 ## 5) robots と sitemap を置く🤖🗺️（検索の入口づくり）
+
+![next_study_240_robot_map](./picture/next_study_240_robot_map.png)
 
 ### robots：クローラさんへの案内📮
 
@@ -270,6 +278,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 ---
 
 ## 6) 画像最適化：最後のチェック✅🖼️💨
+
+![next_study_240_image_checklist](./picture/next_study_240_image_checklist.png)
 
 Next.jsの `<Image />` は、サイズ最適化・レイアウトの安定・遅延読み込み・モダンフォーマットなどを助けてくれるよ〜！ ([Next.js][8])
 

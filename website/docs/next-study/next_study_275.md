@@ -10,6 +10,10 @@
 
 ## そもそもバリデーションって何？🧪📝
 
+![next study 275 validation shield](./picture/next_study_275_validation_shield.png)
+
+
+
 バリデーションは一言でいうと、
 
 **「来たデータが“期待してる形・ルール”になってるかチェックすること」**だよ〜✅😊
@@ -29,6 +33,10 @@
 ---
 
 ## Next.jsだと、どこでチェックするの？🧭
+
+![next study 275 validation locations](./picture/next_study_275_validation_locations.png)
+
+
 
 Next.js（App Router）だと、チェックの場所がいくつかあるよ👇
 
@@ -73,6 +81,10 @@ Valibot は **“1kB級の代替”**として紹介されていて、フォー�
 
 ### ② “モジュール式”だから、使う機能だけ読み込める🧩✨
 
+![next study 275 modular import](./picture/next_study_275_modular_import.png)
+
+
+
 Valibot は機能が細かく分かれていて、**使うものを import した分だけ**使う感じ🧩
 この設計が **tree-shaking（未使用コードの削除）**と相性がよくて、結果的に軽くなりやすいんだって📦✂️✨([builder.io][4])
 
@@ -90,6 +102,10 @@ flowchart TB
 ---
 
 ### ③ TypeScriptと相性がいい（型安全）🧷✨
+
+![next study 275 type safety](./picture/next_study_275_type_safety.png)
+
+
 
 Valibot は「Type safe schema library」として打ち出されていて、**入力チェックと型の整合**を一緒に考えやすいよ🧠🧷([valibot.dev][1])
 

@@ -7,6 +7,9 @@
 
 ## この章のゴール🎯🌸
 
+![next_study_249_log_goal.png](./picture/next_study_249_log_goal.png)
+
+
 * **何をログに出すべきか**がわかる🧠✨
 * **どこに出すべきか（Console / File / Service）**を使い分けられる🔁
 * Next.js（App Router）で使える **“ちょうどいいログ”の型**を作れる📦💕
@@ -14,6 +17,9 @@
 ---
 
 ## 1) まず結論：ログは「設計」が9割🥺✨
+
+![next_study_249_log_principle.png](./picture/next_study_249_log_principle.png)
+
 
 ログは「いっぱい出すほど良い」じゃなくて、
 **“あとで自分が助かる形で、必要十分に出す”**のが正解だよ〜🙆‍♀️💡
@@ -55,13 +61,16 @@ flowchart TD
   end
 ```
 
-![ログ出力先の選択](./picture/next_study_249_log_destinations.png)
+![next_study_249_log_destinations.png](./picture/next_study_249_log_destinations.png)
 
 Vercel には「Drains」でログやトレース等を外部へ流せる仕組みがあるよ〜🚰✨（プラン条件あり）([Vercel][1])
 
 ---
 
 ## 3) ログレベルのおすすめ（迷ったらこれ）🎚️✨
+
+![next_study_249_log_levels.png](./picture/next_study_249_log_levels.png)
+
 
 | レベル     | いつ使う？         | 例            |
 | ------- | ------------- | ------------ |
@@ -75,6 +84,9 @@ Vercel には「Drains」でログやトレース等を外部へ流せる仕組�
 ---
 
 ## 4) Next.jsで「ログ設計」をやるときのポイント🧩✨
+
+![next_study_249_json_logging.png](./picture/next_study_249_json_logging.png)
+
 
 ### A. “構造化ログ”に寄せる（検索しやすい）🔎✨
 
@@ -113,6 +125,9 @@ Next.js は `next.config.js` の `logging.fetches.fullUrl` で、開発時の fe
 ---
 
 ## 5) 実装：まずは “logger.ts” を作ろう📦✨（Pinoで構造化）
+
+![next_study_249_pino_logger.png](./picture/next_study_249_pino_logger.png)
+
 
 ここは「最小で強い」形にするよ〜！💪💕
 
@@ -160,6 +175,9 @@ export const logger = pino({
 ---
 
 ## 6) 使ってみる：Route Handlerでログ🚪🧾✨
+
+![next_study_249_route_log.png](./picture/next_study_249_route_log.png)
+
 
 例として `app/api/todos/route.ts` を作るよ📁✨
 

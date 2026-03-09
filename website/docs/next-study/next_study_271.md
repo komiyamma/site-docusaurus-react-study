@@ -7,6 +7,10 @@ Panda CSS の **tokens / semanticTokens** を使うと、あとからテーマ�
 
 ## 1) まずは超イメージ：色を“2段階”で考える🎨➡️🏷️
 
+![next study 271 semantic benefits](./picture/next_study_271_semantic_benefits.png)
+
+
+
 * **Raw tokens（生のトークン）**：色パレットそのもの（例：`colors.brand.600`）
 * **Semantic tokens（意味トークン）**：用途の名前（例：`colors.accent.solid` / `colors.bg.canvas`）
 
@@ -28,6 +32,10 @@ flowchart LR
 ---
 
 ## 2) 重要ルール：`value` を忘れないでね⚠️
+
+![next study 271 token structure](./picture/next_study_271_token_structure.png)
+
+
 
 Panda のトークンは **必ず `value` キーの中に入れる** ルールがあるよ！🫡 ([panda-css.com][1])
 
@@ -120,6 +128,10 @@ export default defineConfig({
 ---
 
 ## 4) Next.js 側：`data-color-mode` を切り替えられるようにする🌙☀️
+
+![next study 271 dark mode switch](./picture/next_study_271_dark_mode_switch.png)
+
+
 
 ### 4-1) ちらつき防止の“小さいスクリプト”を head に置く🧠✨
 
@@ -291,6 +303,10 @@ Panda を PostCSS 経由で使う場合、ルートCSSに layers が必要だよ
 ---
 
 ## 7) 図で納得：なぜ“切り替わる”の？🔁🎨
+
+![next study 271 color mode flow](./picture/next_study_271_color_mode_flow.png)
+
+
 
 ```mermaid
 sequenceDiagram

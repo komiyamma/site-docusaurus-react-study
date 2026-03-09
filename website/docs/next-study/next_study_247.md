@@ -7,6 +7,9 @@
 
 ## 1) まず知ろう：codemodって何？🤖🧹
 
+![next_study_247_codemod_robot.png](./picture/next_study_247_codemod_robot.png)
+
+
 **codemod = コードを自動で書き換えるお掃除ロボ**だよ✨
 Next.jsの公式codemodは、アップグレード時にありがちな「設定の移行」「廃止APIの置き換え」などを手伝ってくれるよ🧩
 
@@ -16,6 +19,9 @@ Next.jsの公式codemodは、アップグレード時にありがちな「設定
 ---
 
 ## 2) “安全に更新する型”チェックリスト ✅🧊
+
+![next_study_247_upgrade_checklist.png](./picture/next_study_247_upgrade_checklist.png)
+
 
 更新って、実は「作業」より「順番」が命だよ〜！🔁✨
 （この順番にすると、失敗しても戻れる💪）
@@ -34,6 +40,9 @@ Next.jsの公式codemodは、アップグレード時にありがちな「設定
 ---
 
 ## 3) 図解：安全アップデートの流れ 🗺️✨（Mermaid）
+
+![next_study_247_upgrade_flow.png](./picture/next_study_247_upgrade_flow.png)
+
 
 ```mermaid
 flowchart TD
@@ -56,6 +65,9 @@ flowchart TD
 ---
 
 ## 4) 実際のコマンド（WindowsでOK）🪟✨
+
+![next_study_247_upgrade_command.png](./picture/next_study_247_upgrade_command.png)
+
 
 ### A. まず「自分のNext.jsのバージョン」を見る👀
 
@@ -97,6 +109,9 @@ npx @next/codemod@canary upgrade latest
 
 ## 5) “個別codemod”もあるよ（必要な時だけ）🧩✨
 
+![next_study_247_specific_codemod.png](./picture/next_study_247_specific_codemod.png)
+
+
 「全部アップグレード」じゃなくて、**特定の変更だけ直したい**ときに使うよ〜！
 
 例：`next-og-import`（Dynamic OG画像関連の import 移行）📸 ([Next.js][2])
@@ -108,6 +123,9 @@ npx @next/codemod@latest next-og-import .
 ---
 
 ## 6) アップデート後に必ずやる3点セット 🧪🏗️✨
+
+![next_study_247_post_upgrade_checks.png](./picture/next_study_247_post_upgrade_checks.png)
+
 
 最低限これだけやると安心度が一気に上がるよ〜！🫶
 
@@ -123,6 +141,9 @@ npm run build
 ---
 
 ## 7) よくあるハマりどころ（先に知っておくと勝ち）🪤😺
+
+![next_study_247_common_pitfalls.png](./picture/next_study_247_common_pitfalls.png)
+
 
 * **設定ファイルの差分が大きい**（`next.config.*` 周り）→ いったん落ち着いて差分を見る👀
 * **lintコマンド周りが変わる**→ codemodが直してくれることがある（でも最終確認は人間）🤝 ([Next.js][4])

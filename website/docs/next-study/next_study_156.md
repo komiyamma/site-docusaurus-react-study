@@ -7,6 +7,9 @@
 
 ## 1) なんでここだけ“必ず追う”なの？🥺🧠
 
+![next study 156 rsc entry](./picture/next_study_156_rsc_entry.png)
+
+
 RSCやServer Functionsは、ざっくり言うと **「サーバー側に“実行される入口”が増える仕組み」** なのね🚪🖥️
 だから、もし仕組みに穴があると **サーバー側でヤバいことが起きる** 可能性が出るの…😱
 
@@ -48,6 +51,9 @@ sequenceDiagram
 
 ## 3) 追うべき情報源セット（ここだけ見ればOK）📌🔔
 
+![next study 156 info sources](./picture/next_study_156_info_sources.png)
+
+
 最低ラインはこの4つにしよ〜！✨
 
 1. **React公式ブログ（特にRSC関連のSecurity記事）**
@@ -66,6 +72,9 @@ sequenceDiagram
 ---
 
 ## 4) “追う”をラクにするテンプレ（通知→判断→対応）🧠✅
+
+![next study 156 update flow](./picture/next_study_156_update_flow.png)
+
 
 「読むぞ！」って気合じゃなくて、**流れを固定**しよ〜😆
 
@@ -87,6 +96,9 @@ flowchart TD
 ---
 
 ## 5) Windowsでできる“いつもの点検コマンド”🪟💻
+
+![next study 156 audit command](./picture/next_study_156_audit_command.png)
+
 
 プロジェクトのフォルダで（PowerShellでもOK）👇
 
@@ -112,6 +124,9 @@ npm audit --audit-level=high
 ## 6) ありがちな落とし穴（この章で覚えておくと強い）🪤😵
 
 * **「Server Functionsがソースを返しちゃう」系の事故**
+
+![next study 156 source leak risk](./picture/next_study_156_source_leak_risk.png)
+
   Next.jsのSecurity Updateでは、特定条件で **Server Functionsの“コンパイル済みソース”が返る可能性** が説明されてるよ。
   さらに「コードに直書きした秘密情報が混ざると露出しうる」って話も出てる…こわい🥶([Next.js][2])
   👉 対策の方向性：**秘密は環境変数で持つ**、**“直書き”しない**（詳しくは後半でやるやつ！）🔒✨

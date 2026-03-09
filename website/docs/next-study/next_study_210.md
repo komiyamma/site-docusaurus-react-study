@@ -59,6 +59,9 @@ export default defineConfig({
 
 ## 4) `tests/setup.ts` を作る（便利な matchers をON）🧪✨
 
+![210 setup files](./picture/next_study_210_setup_files.png)
+
+
 `toBeInTheDocument()` とか `toBeDisabled()` とかが使えて気持ちいいやつです😆💕
 
 ```ts
@@ -91,6 +94,8 @@ export function ContactForm({ onSubmit }: Props) {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+
+
   const [error, setError] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent) {
@@ -142,6 +147,7 @@ export function ContactForm({ onSubmit }: Props) {
   );
 }
 ```
+![210 form state machine](./picture/next_study_210_form_state_machine.png)
 
 ---
 
@@ -161,6 +167,8 @@ describe("ContactForm", () => {
     const user = userEvent.setup();
 
     const onSubmit = vi.fn(async () => {
+
+
       // ここで本物の通信はしない（テストなのでOK！）
     });
 
@@ -182,7 +190,9 @@ describe("ContactForm", () => {
 
   it("メールが空だとエラーが出て送信されない😵", async () => {
     const user = userEvent.setup();
-    const onSubmit = vi.fn(async () => {});
+    const onSubmit = vi.fn(async () => {
+
+});
 
     render(<ContactForm onSubmit={onSubmit} />);
 
@@ -192,6 +202,8 @@ describe("ContactForm", () => {
 
     expect(onSubmit).not.toHaveBeenCalled();
     expect(screen.getByRole("alert")).toHaveTextContent("メールは必須");
+
+
   });
 
   it("送信中はボタンが無効になる⏳", async () => {
@@ -215,6 +227,8 @@ describe("ContactForm", () => {
     // 送信が終わるまで disabled のはず
     expect(button).toBeDisabled();
 
+
+
     // 送信完了させる🎬
     resolveSubmit();
 
@@ -222,6 +236,9 @@ describe("ContactForm", () => {
   });
 });
 ```
+![210 mock function](./picture/next_study_210_mock_function.png)
+![210 validation error](./picture/next_study_210_validation_error.png)
+![210 disabled button](./picture/next_study_210_disabled_button.png)
 
 ---
 

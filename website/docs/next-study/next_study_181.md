@@ -14,6 +14,9 @@
 
 ## ログアウトって何してるの？🤔
 
+![next_study_181_logout_action.png](./picture/next_study_181_logout_action.png)
+
+
 ざっくり言うと…
 
 * **ログイン状態を表す情報（Cookie/セッション）を無効化**して🧯
@@ -51,6 +54,9 @@ Auth.js公式でも「form action で signOut」例が載ってる✨([Auth.js][
 
 ### 1) ログアウトボタンコンポーネントを作る🧩
 
+![next_study_181_signout_button_comp.png](./picture/next_study_181_signout_button_comp.png)
+
+
 ファイルを作成👇
 **components/auth/SignOutButton.tsx**
 
@@ -80,6 +86,9 @@ export function SignOutButton() {
 ---
 
 ### 2) ヘッダーやナビに置く（例）🧷
+
+![next_study_181_header_placement.png](./picture/next_study_181_header_placement.png)
+
 
 たとえば **app/layout.tsx** やヘッダーコンポーネント（Server Component）から呼ぶ感じ✨
 
@@ -123,6 +132,9 @@ export default async function RootLayout({
 
 ## 動作チェック✅
 
+![next_study_181_redirect_home.png](./picture/next_study_181_redirect_home.png)
+
+
 1. 開発サーバー起動🏃‍♀️
 2. ログイン状態にする🔑
 3. 「ログアウト🚪」押す
@@ -140,6 +152,9 @@ export default async function RootLayout({
 ---
 
 ## おまけ：クライアント側でログアウトする方法（知識として）📌
+
+![next_study_181_client_logout.png](./picture/next_study_181_client_logout.png)
+
 
 「ボタン押したら signOut()」のクライアント版もあるよ〜（ただしバンドル増えがち）🎮
 公式ページでも例がある✨([Auth.js][2])

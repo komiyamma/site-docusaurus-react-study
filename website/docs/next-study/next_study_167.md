@@ -15,6 +15,8 @@ Next.js（App Router）では、**ページ（Server Component）でそのまま
 
 ## 1) Prisma Client を安全に使う準備（devで必須）🧯🧊
 
+![next_study_167_singleton_check](./picture/next_study_167_singleton_check.png)
+
 開発中はホットリロードでサーバーが何度も起動して、**PrismaClientが増殖しがち**です😵‍💫
 なので「1つだけ使い回す」形にします✅
 
@@ -47,6 +49,8 @@ if (process.env.NODE_ENV !== "production") {
 
 ## 2) 動作確認用にデータを入れる（Prisma Studio）🧁✨
 
+![next_study_167_prisma_studio_input](./picture/next_study_167_prisma_studio_input.png)
+
 DBにレコードがないと一覧が空っぽなので、まずはテストデータを入れます😊
 
 ### ✅ Prisma Studio を起動🎛️
@@ -65,6 +69,8 @@ npx prisma studio
 ---
 
 ## 3) `/todos` ページを作る（Server Componentで一覧取得）🧊📄
+
+![next_study_167_server_fetch](./picture/next_study_167_server_fetch.png)
 
 ### ✅ `app/todos/page.tsx` を作成📁
 
@@ -123,6 +129,8 @@ export default async function TodosPage() {
 
 🎉 これで **DB → Prisma → ページ表示** がつながりました！最高〜〜〜！✨🥳
 
+![next_study_167_ui_list](./picture/next_study_167_ui_list.png)
+
 ---
 
 ## 4) 動かして確認する🚀👀
@@ -175,6 +183,8 @@ flowchart TD
 ---
 
 ## ミニ練習（できたら強い💪✨）🎮🌸
+
+![next_study_167_filter_sort](./picture/next_study_167_filter_sort.png)
 
 ### ① 未完了だけ表示したい⬜
 

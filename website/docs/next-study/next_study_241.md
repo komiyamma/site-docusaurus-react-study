@@ -15,6 +15,8 @@
 
 ## 1) まず「重要画面」だけ選ぶ🧠💡
 
+![next_study_241_decision_tree](./picture/next_study_241_decision_tree.png)
+
 おすすめは **3つに絞る**こと！多いと挫折する🥺💦
 
 * 🧍‍♀️ **ユーザーが一番通る導線**（例：ログイン→一覧）
@@ -56,6 +58,8 @@ flowchart TB
 
 ### 3-1. 導入（最短）🚀
 
+![next_study_241_playwright_rocket](./picture/next_study_241_playwright_rocket.png)
+
 公式手順はこれでOK：`npm init playwright` でセットアップできるよ([Next.js][2])
 
 ```bash
@@ -73,6 +77,8 @@ npm init playwright@latest
 ---
 
 ### 3-2. 重要導線テスト（例）を書く🧪✅
+
+![next_study_241_user_journey](./picture/next_study_241_user_journey.png)
 
 あなたの卒業制作に合わせて、**「一番大事な動線」**を1本だけ守ろう💖
 
@@ -115,6 +121,8 @@ npx playwright test --headed
 ---
 
 ## 4) Vitest + React Testing Library（重要UI）を最低1本 🧁🧩
+
+![next_study_241_vitest_puzzle](./picture/next_study_241_vitest_puzzle.png)
 
 E2Eは“全体の安心”だけど、**フォームやボタンの挙動**は小さくテストできるとさらに安心☺️✨
 Next.js公式の Vitest ガイドもこの組み合わせを前提にしてるよ([Next.js][1])
@@ -162,6 +170,8 @@ import "@testing-library/jest-dom/vitest";
 ---
 
 ### 4-2. 重要フォームのテスト（例）🧪✨
+
+![next_study_241_form_test](./picture/next_study_241_form_test.png)
 
 「空送信できない」「押したら呼ばれる」みたいな**事故りやすい所**を守ろう🛡️💕
 

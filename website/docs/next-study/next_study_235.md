@@ -9,6 +9,8 @@
 
 ## 1) URL設計のゴール🎯
 
+![alt](./picture/next_study_235_url_goals.png)
+
 URLは「ユーザーが見る地図」なので、こんな感じを目指すよ👇
 
 * **短い**（深い階層にしすぎない）🪜
@@ -19,6 +21,8 @@ URLは「ユーザーが見る地図」なので、こんな感じを目指す�
 ---
 
 ## 2) “まず決める3点セット”🧠✨
+
+![alt](./picture/next_study_235_three_point_set.png)
 
 ルーティング表を作る前に、これだけ先に決めると爆速になるよ🚀
 
@@ -47,6 +51,8 @@ URLは「ユーザーが見る地図」なので、こんな感じを目指す�
 
 ## 3) Next.js（App Router）に落とし込むとこうなる🗂️
 
+![alt](./picture/next_study_235_app_router_structure.png)
+
 Next.jsのApp Routerは「フォルダ＝URL」だよね🏠
 動的ルートは `[id]` みたいな **Dynamic Segment** で作れるよ🧩 ([Next.js][2])
 
@@ -68,6 +74,8 @@ app/
 
 ## 4) ルーティング表（テンプレ）🧾✨
 
+![alt](./picture/next_study_235_routing_table.png)
+
 まずはコピペして埋めてOKだよ〜！😆
 
 | 種別    | URL                | 画面の意味 | app/のパス（目安）                    | ログイン  | メモ            |
@@ -85,6 +93,8 @@ app/
 ---
 
 ## 5) Route Group で“整理だけ”したい時📦（URLは変えない）
+
+![alt](./picture/next_study_235_route_group.png)
 
 「見た目の都合でフォルダを分けたいけど、URLは変えたくない…！」ってあるよね🥺
 そんな時は **Route Group** の `(group)` が便利！URLには出ないよ✨ ([Next.js][3])
@@ -110,6 +120,8 @@ app/
 ---
 
 ## 6) 図解：URL設計→フォルダが決まる流れ🗺️➡️🗂️
+
+![alt](./picture/next_study_235_design_flow.png)
 
 ![alt](./picture/next_study_235_url_design.png)
 

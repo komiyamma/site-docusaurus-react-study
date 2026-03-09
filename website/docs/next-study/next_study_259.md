@@ -7,6 +7,10 @@
 
 ## 1) Cookieって、なにが嬉しいの？🍪🤔
 
+![Cookie Concept as Sticky Note](./picture/next_study_259_cookie_sticky.png)
+
+
+
 Cookie は「ブラウザに保存される小さなメモ」みたいなものです📒✨
 Next.js だと、
 
@@ -21,6 +25,10 @@ Next.js だと、
 ---
 
 ## 2) 重要ルール（ここだけ覚えて〜！）🧠✨
+
+![Read vs Write Rules](./picture/next_study_259_read_vs_write.png)
+
+
 
 ### ✅ ルールA：読むのは Server Component でOK 👀
 
@@ -103,6 +111,10 @@ export async function setViewMode(formData: FormData) {
 ---
 
 ### 4-2) `app/view-mode-switcher.tsx`（Client側の操作UI）🎛️✨
+
+![View Switcher UI](./picture/next_study_259_view_switcher_ui.png)
+
+
 
 ```tsx
 'use client'
@@ -224,8 +236,16 @@ export default async function Page() {
   → Cookie の set は **Server Action / Route Handler でしかできない**よ！Server Component に `.set()` 書いてない？👀 ([Next.js][1])
 
 * **Q：cookie が保存されない**
+
+![Secure Attribute Pitfall](./picture/next_study_259_secure_pitfall.png)
+
+
   → `secure: true` を localhost（http）で使ってない？⚠️（本番HTTPS向け）
   → `path: '/'` がないと「そのページだけ」になって見失うことあるよ〜🫠
+
+![Path Attribute Pitfall](./picture/next_study_259_path_pitfall.png)
+
+
 
 * **Q：`cookies()` でエラー**
   → 今どきは `const cookieStore = await cookies()` が基本✨ ([Next.js][1])

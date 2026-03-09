@@ -50,6 +50,8 @@ flowchart TD
 
 ## 最低限そろえる「運用3点セット」📦✨
 
+![alt](./picture/next_study_231_operations_trio.png)
+
 ### ① 監視（気づける仕組み）👀🔔
 
 * 「落ちたのに気づかない」が一番つらい😭
@@ -89,6 +91,8 @@ flowchart TD
 
 ## 「Runbook（手順書）」のおすすめ置き場所📁💡
 
+![alt](./picture/next_study_231_runbook_folder.png)
+
 プロジェクト内にこういうフォルダを作るのが超おすすめ👇
 
 * `docs/runbook.md`（困ったときの手順書）📘
@@ -102,6 +106,8 @@ flowchart TD
 ---
 
 ## Runbookの“型”テンプレ（コピペでOK）🧸✨
+
+![alt](./picture/next_study_231_runbook_template.png)
 
 `docs/runbook.md` に、この形で置いちゃおう👇
 
@@ -143,6 +149,8 @@ flowchart TD
 
 ## “定期作業”も手順にしちゃう（運用チェックリスト）✅📅
 
+![alt](./picture/next_study_231_periodic_check.png)
+
 「気づいたときにやる」だと忘れるので、やることを固定するよ〜😆
 
 ```mermaid
@@ -175,6 +183,8 @@ flowchart LR
 ## ありがちな“公開後トラブル”の対処順（超短縮版）🧯⚡
 
 ### ケースA：ページが500になる😭
+
+![alt](./picture/next_study_231_troubleshoot_flow.png)
 
 1. 直前のデプロイ有無を見る🚀
 2. エラーログ（サーバー側）を見る🪵

@@ -41,6 +41,8 @@ flowchart TD
 
 # コース①：APIコース📡（「データでアプリっぽさ」爆上げ！）✨
 
+![next_study_244_api_shield](./picture/next_study_244_api_shield.png)
+
 ### こういうのが好きなら向いてる😍
 
 * ログインしたら自分のデータが見える👤
@@ -71,6 +73,8 @@ export async function GET() {
 ---
 
 # コース②：Edgeコース⚡（「速い・賢い・運用に強い」へ！）
+
+![next_study_244_edge_gate](./picture/next_study_244_edge_gate.png)
 
 ### こういうのが好きなら向いてる😍
 
@@ -116,6 +120,8 @@ export const config = {
 
 # コース③：複雑UIコース🪟（「ダッシュボード系・操作多め」が得意になる！）
 
+![next_study_244_ui_dashboard](./picture/next_study_244_ui_dashboard.png)
+
 ### こういうのが好きなら向いてる😍
 
 * 検索・フィルタ・並び替え・ページングを作りたい🔎🧩
@@ -155,6 +161,8 @@ export const config = {
 
 ## 次の7日間ミニプラン📅✨（ゆるくでOK！）
 
+![next_study_244_calendar_plan](./picture/next_study_244_calendar_plan.png)
+
 * Day1：自分の卒業制作の「弱いところ」を3つメモ📝😌
 * Day2：3コースのうち1つ選ぶ🎯
 * Day3：そのコースの“課題A/B/C”を着手👩‍💻✨
@@ -166,6 +174,8 @@ export const config = {
 ---
 
 ## 最後に：卒業制作を「作品」にする3点セット🎁✨
+
+![next_study_244_portfolio_box](./picture/next_study_244_portfolio_box.png)
 
 * **デモURL**（公開）🌍
 * **README**（何ができる？どう動かす？）📘

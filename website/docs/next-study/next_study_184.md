@@ -1,5 +1,7 @@
 # 第184章：練習：ログイン必須の“マイページ”を作る🏠
 
+![next_study_184_mypage_concept.png](./picture/next_study_184_mypage_concept.png)
+
 今回は **`/mypage`（マイページ）を「ログインしてる人だけ見れる」** ようにします😊🔐
 未ログインなら **`/login` に自動で飛ばす** ようにするよ〜！🚪💨
 
@@ -34,6 +36,8 @@ flowchart TD
 ---
 
 ## フォルダ構成📁✨
+
+![next_study_184_folder_structure.png](./picture/next_study_184_folder_structure.png)
 
 最低限これだけ作るよ👇
 
@@ -150,6 +154,8 @@ export default async function MyPage() {
 
 ## Step 3：動作チェック✅🧪
 
+![next_study_184_redirect_flow.png](./picture/next_study_184_redirect_flow.png)
+
 1. 開発サーバー起動💻✨
 
    ```bash
@@ -168,6 +174,8 @@ export default async function MyPage() {
 ---
 
 ## おまけ：Middlewareでも入口ガードしたい人へ🧤✨（任意）
+
+![next_study_184_middleware_guard.png](./picture/next_study_184_middleware_guard.png)
 
 「`/mypage` に入る前に、まず門番で止めたい！」って時は middleware もアリ😊
 Auth.js 公式は `middleware.ts` で `auth` を使う方法を載せてるよ〜 ([Auth.js][1])

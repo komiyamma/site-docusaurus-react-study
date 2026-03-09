@@ -58,6 +58,8 @@ flowchart TD
 
 ## 4) まずやる：見た目（コード整形）を揃える 🧼🧷
 
+![next_study_243_broom_sweep](./picture/next_study_243_broom_sweep.png)
+
 ### ✅ ESLintの自動修正を使う（まずはここから）
 
 ターミナルでこれ👇（プロジェクト直下）
@@ -82,6 +84,8 @@ npm run lint -- --fix
 
 ## 5) 命名を整えるだけで8割読みやすくなる 📛✨
 
+![next_study_243_naming_contrast](./picture/next_study_243_naming_contrast.png)
+
 ### ✅ よくある “読みにくい命名” あるある 😵‍💫
 
 * `data`, `data2`, `temp`, `item`, `list2`
@@ -98,6 +102,8 @@ npm run lint -- --fix
 
 ## 6) でかいコンポーネントを分割する 🧩✨（超重要）
 
+![next_study_243_puzzle_split](./picture/next_study_243_puzzle_split.png)
+
 ### ✅ 分割の目安
 
 * 1ファイルが**150行**を超えてきたら黄色信号🟡
@@ -108,6 +114,8 @@ npm run lint -- --fix
 ---
 
 ## 7) “ありがち地獄”を直す例（Before → After）🧹✨
+
+![next_study_243_room_cleanup](./picture/next_study_243_room_cleanup.png)
 
 ### Before：JSXの中がロジックだらけ 😭
 
@@ -167,6 +175,8 @@ export function TodoRow({ todo }: { todo: Todo }) {
 ---
 
 ## 8) “置き場所”を決めると迷子が減る 🗂️✨
+
+![next_study_243_filing_cabinet](./picture/next_study_243_filing_cabinet.png)
 
 卒業制作の規模なら、こんな感じが扱いやすいよ👇
 

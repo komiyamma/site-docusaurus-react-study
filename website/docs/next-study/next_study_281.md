@@ -13,7 +13,11 @@ Valibot の `check` を使うと、**「この条件も満たしてね！」** �
 
 ---
 
-## `check`ってなに？🌸
+## `check`ってなに？
+
+![281_check_intro](./picture/next_study_281_check_intro.png)
+
+🌸
 
 `check` は **「バリデーション用のアクション」** で、`pipe` の中に入れて使うよ〜！🧪✨
 「入力がOKなら `true`、ダメなら `false`」を返すだけのシンプル設計！ ([valibot.dev][1])
@@ -23,7 +27,11 @@ Valibot の `check` を使うと、**「この条件も満たしてね！」** �
 
 ---
 
-## 図解：`pipe`の流れに `check` を差し込む🪄
+## 図解：`pipe`の流れに `check` を差し込む
+
+![281_pipe_check_flow](./picture/next_study_281_pipe_check_flow.png)
+
+🪄
 
 ![Custom Check Calculation](./picture/next_study_281_custom_check.png)
 
@@ -56,6 +64,10 @@ const Schema = v.pipe(
 
 ## 例①：大学メールだけOKにする📮🎓（文字列 + check）
 
+![281_email_domain](./picture/next_study_281_email_domain.png)
+
+
+
 「`@uni.ac.jp` で終わるメールだけ許可したい！」みたいな時に便利✨
 
 ```ts
@@ -77,6 +89,10 @@ export const UniversityEmailSchema = v.pipe(
 ---
 
 ## 例②：オブジェクトの中身同士をチェックする🔐💞（パスワード一致）
+
+![281_password_match](./picture/next_study_281_password_match.png)
+
+
 
 `check` は **オブジェクト全体**にも使えるよ！
 公式の例でも「配列の長さが一致してるか」みたいなチェックをしてる感じ🧠✨ ([valibot.dev][1])
@@ -138,6 +154,10 @@ export const RegisterSchema2 = v.pipe(
 ---
 
 ## Next.jsで使う：Server Actionで検証して、エラー表示する🧾✨
+
+![281_server_error_display](./picture/next_study_281_server_error_display.png)
+
+
 
 ### 1) もし入ってなければインストール（npm）
 

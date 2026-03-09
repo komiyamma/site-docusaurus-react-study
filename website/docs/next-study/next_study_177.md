@@ -7,6 +7,9 @@ Auth.js（Next.js だと `next-auth` パッケージ）でいちばん最初に�
 
 ## 1) 「プロバイダ」ってなに？🧃🌈
 
+![next_study_177_provider_plug.png](./picture/next_study_177_provider_plug.png)
+
+
 **プロバイダ（Provider）＝ログイン方法の種類**だよ🙌✨
 たとえば…
 
@@ -21,6 +24,9 @@ Auth.js は、この「ログインの入口」を **providers 配列**に並べ
 ---
 
 ## 2) ログインの流れ（OAuthプロバイダの雰囲気）🐙➡️🏠
+
+![next_study_177_oauth_flow_sketch.png](./picture/next_study_177_oauth_flow_sketch.png)
+
 
 ![next_study_177_auth_provider](./picture/next_study_177_auth_provider.png)
 
@@ -45,6 +51,9 @@ flowchart LR
 ---
 
 ## 3) Next.js（App Router）での“置き場所”イメージ📁✨
+
+![next_study_177_file_structure.png](./picture/next_study_177_file_structure.png)
+
 
 Auth.js（Next.js）では、まずこの2点セットを作るのが基本形！🧱
 
@@ -76,6 +85,9 @@ npm install next-auth@beta
 ```
 
 ### 4-2) `AUTH_SECRET` を作る🔐✨
+
+![next_study_177_secret_key.png](./picture/next_study_177_secret_key.png)
+
 
 Auth.js は **`AUTH_SECRET` が必須**で、CLIで作れるよ！([authjs.dev][1])
 
@@ -125,6 +137,9 @@ export const { GET, POST } = handlers
 ---
 
 ## 5) GitHub側で設定する「Callback URL」ってどれ？🔁🐙
+
+![next_study_177_callback_url.png](./picture/next_study_177_callback_url.png)
+
 
 GitHubのOAuth設定で聞かれる **Callback URL** は、Next.jsだと基本これ👇 ([authjs.dev][2])
 

@@ -10,6 +10,10 @@
 
 ## 1) まず結論：`flatten` すると「表示しやすい形」になるよ🧹✨
 
+![280_issues_array](./picture/next_study_280_issues_array.png)
+
+
+
 Valibotの `safeParse()` が失敗すると、`issues` っていう“詳細なエラー情報の配列”が返ってくるんだけど…
 フォームで使うにはちょっとゴチャゴチャしがち😵‍💫
 
@@ -43,6 +47,10 @@ flowchart LR
 
 ## 3) 日本語化：公式 i18n を読み込んで `lang: "ja"` を指定する🇯🇵✨
 
+![280_i18n_loading](./picture/next_study_280_i18n_loading.png)
+
+
+
 Valibotは公式で i18n（翻訳）パッケージを用意してて、**翻訳は副作用 import で読み込まれる**感じだよ〜！ ([Valibot][2])
 
 今回の基本方針👇
@@ -63,6 +71,10 @@ Valibotは公式で i18n（翻訳）パッケージを用意してて、**翻訳
 ---
 
 ### 4-1) `app/join/actions.ts`（Server Action側）🧑‍🍳🔥
+
+![280_server_action_flow](./picture/next_study_280_server_action_flow.png)
+
+
 
 ```ts
 'use server';
@@ -134,6 +146,10 @@ export async function submitJoin(
 
 ### 4-2) `app/join/page.tsx`（画面側）👀✨
 
+![280_field_error_mapping](./picture/next_study_280_field_error_mapping.png)
+
+
+
 ```tsx
 'use client';
 
@@ -204,6 +220,10 @@ export default function Page() {
 ---
 
 ## 5) もっと“かわいい日本語”にしたいとき（言い回しカスタム）💬✨
+
+![280_custom_message](./picture/next_study_280_custom_message.png)
+
+
 
 公式翻訳だけでも十分だけど、
 「この項目だけは、もっと優しく言いたい🥺」って時あるよね！

@@ -7,6 +7,9 @@
 
 ## 1) まず「永続化」ってなに？🧠💡
 
+![next study 161 persistence concept](./picture/next_study_161_persistence_concept.png)
+
+
 **永続化（えいぞくか）**＝
 アプリを閉じても、PC再起動しても、ページ更新しても、**データが残ること**だよ〜✨
 
@@ -47,6 +50,9 @@ DBがあると、TODOを **「ちゃんと保存」**できるようになるよ
 
 ## 4) Next.js アプリでの立ち位置（ざっくり）🧭
 
+![next study 161 access flow](./picture/next_study_161_access_flow.png)
+
+
 Next.jsは **サーバー側でDBにアクセスしやすい**のが強みだよ💪✨
 （Server Components / Route Handlers / Server Actions あたりが活躍！）
 
@@ -64,11 +70,17 @@ flowchart LR
 ポイントはここ👇
 
 * DBは基本 **サーバー側から触る**（ブラウザから直接触らない）🛡️✨
+
+![next study 161 server only db](./picture/next_study_161_server_only_db.png)
+
 * だから安全にしやすいよ〜🔐
 
 ---
 
 ## 5) 「DBが必要になる瞬間」あるある5選🧁✨
+
+![next study 161 db reasons](./picture/next_study_161_db_reasons.png)
+
 
 1. 🔄 **更新しても残したい**（TODO・メモ・日記）
 2. 👥 **ユーザーごとにデータを分けたい**（ログイン後のマイページ）
@@ -79,6 +91,9 @@ flowchart LR
 ---
 
 ## 6) ちょいイメージ：DBって「整理された箱」📦✨
+
+![next study 161 array vs db](./picture/next_study_161_array_vs_db.png)
+
 
 * 配列：机の上にメモを並べる感じ🗒️🗒️🗒️（散らかりやすい）
 * DB：**引き出し付きの整理棚**🗄️（探しやすい・増えても管理しやすい）

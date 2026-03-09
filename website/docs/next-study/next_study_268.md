@@ -23,6 +23,8 @@ Recipesは、`base / variants / compoundVariants / defaultVariants` で構成さ
 
 ## Recipesのイメージ図 🧠➡️🎨
 
+![next study 268 recipe ingredients](./picture/next_study_268_recipe_ingredients.png)
+
 「props → recipe関数 → className → 見た目が変わる」って流れだよ〜！🪄
 
 ![Recipesのイメージ図](./picture/next_study_268_recipes.png)
@@ -40,6 +42,8 @@ flowchart LR
 
 ## まず知っておく：Recipesは2種類あるよ 🐼✌️
 
+![next study 268 recipe types](./picture/next_study_268_recipe_types.png)
+
 PandaのRecipesには大きく2つあるよ〜👇
 
 * **Atomic Recipe（cva）**：コード内で作る。使った/使ってないに関係なく、基本「全部」生成されがち。 ([panda-css.com][1])
@@ -50,6 +54,8 @@ PandaのRecipesには大きく2つあるよ〜👇
 ---
 
 ## 手順①：ButtonのRecipeを作る 🧁🧂
+
+![next study 268 recipe scroll](./picture/next_study_268_recipe_scroll.png)
 
 たとえばこんな場所にファイルを作る（場所は好みでOK）👇
 
@@ -157,6 +163,8 @@ Recipesは `base / variants / compoundVariants / defaultVariants` で組み立�
 
 ## 手順②：panda.config.ts に登録する 🧱🐼
 
+![next study 268 binder add](./picture/next_study_268_binder_add.png)
+
 `panda.config.ts` の `theme.extend.recipes` に追加するよ！
 
 ```ts
@@ -181,6 +189,8 @@ Config Recipeは「設定に置くと、使った分だけ生成される」系�
 
 ## 手順③：コード生成（panda codegen）する ⚙️✨
 
+![next study 268 gear turn](./picture/next_study_268_gear_turn.png)
+
 Recipeを追加したら、生成を走らせるよ〜！
 
 ```bash
@@ -195,6 +205,8 @@ npx panda codegen
 ---
 
 ## 手順④：Buttonコンポーネントを作る 🧸✨
+
+![next study 268 button assembly](./picture/next_study_268_button_assembly.png)
 
 例：`src/components/ui/Button.tsx`
 
@@ -233,6 +245,8 @@ Recipeの型（ButtonVariants）を `styled-system/recipes` からimportでき�
 ---
 
 ## 手順⑤：動作確認ページを作る 🧪🌸
+
+![next study 268 button gallery](./picture/next_study_268_button_gallery.png)
 
 例：`src/app/panda-demo/page.tsx`
 

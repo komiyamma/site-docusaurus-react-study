@@ -15,6 +15,8 @@
 
 ## 🧁 まず結論：テーブルは“少ないほど正義”🥰
 
+![alt](./picture/next_study_236_small_tables.png)
+
 卒業制作で最初からテーブル増やすと…
 「どこで何を保存してるのか分からん😵‍💫」ってなりがち！
 
@@ -27,6 +29,8 @@
 ---
 
 ## 🧭 DB設計の手順（この順でやると迷子にならない）🗺️✨
+
+![alt](./picture/next_study_236_db_design_steps.png)
 
 ![alt](./picture/next_study_236_db_design.png)
 
@@ -46,6 +50,8 @@ flowchart TD
 ---
 
 ## 🧪 例題：カフェメモアプリ（3テーブルで完成）☕📒✨
+
+![alt](./picture/next_study_236_cafe_er.png)
 
 「キャンパス周辺のカフェをメモして、レビューできる」想定ね🍰💕
 
@@ -94,6 +100,8 @@ flowchart TD
 ---
 
 ## 🧠 関係（リレーション）を決めよう✨
+
+![alt](./picture/next_study_236_one_to_many.png)
 
 * ユーザー1人はレビューをたくさん書ける → **User 1 : Review 多**
 * カフェ1つはレビューをたくさん持てる → **Cafe 1 : Review 多**
@@ -149,6 +157,8 @@ erDiagram
 ---
 
 ## 🧪 Prismaでのイメージ（雰囲気だけ）🧊✨
+
+![alt](./picture/next_study_236_prisma_schema.png)
 
 ※「こういう形になるよ〜」の参考ね😊
 

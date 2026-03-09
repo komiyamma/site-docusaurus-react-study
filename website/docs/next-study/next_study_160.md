@@ -27,12 +27,21 @@ Next.jsはServer ComponentsやServer Actionsで「サーバー寄り」になる
 
 ## まずはこれだけ覚えて💡 セキュリティの“5つの質問”🖐️🛡️
 
+![next study 160 five questions](./picture/next_study_160_five_questions.png)
+
+
 ### ① 入力は信用してない？🧨
+
+![next study 160 input trust](./picture/next_study_160_input_trust.png)
+
 
 * フォーム、URLパラメータ、Cookie、外部API…ぜんぶ「怪しい」前提😈
 * **サーバー側でバリデーション**する（ここ超大事）🛡️
 
 ### ② 表示で危ないことしてない？🖼️
+
+![next study 160 val vs san](./picture/next_study_160_val_vs_san.png)
+
 
 * JSXは基本エスケープしてくれるから安全寄り☺️
 * でも **`dangerouslySetInnerHTML` は最終手段**だよ🙅‍♀️💥（やるならサニタイズ必須） ([React][2])
@@ -42,6 +51,9 @@ Next.jsはServer ComponentsやServer Actionsで「サーバー寄り」になる
 * APIやServer Actionsで、**必要なものだけ返す**（丸ごと返し禁止）📦✂️
 
 ### ④ 権限チェックを“どこで”やってる？🚪
+
+![next study 160 authz check](./picture/next_study_160_authz_check.png)
+
 
 * Middlewareは便利だけど、**それだけに頼らない**（UXの門番くらいに）🧤
 * 本命は **データに触れる場所（Server Actions / Route Handlers / DBアクセス層）で毎回チェック**🔒 ([Next.js][3])
@@ -94,6 +106,9 @@ WindowsのターミナルでOKだよ〜🪟💕
 
 ### ① package.json に “点検コマンド”を用意✅
 
+![next study 160 npm audit routine](./picture/next_study_160_npm_audit_routine.png)
+
+
 （すでにあったら追加しなくてOK！）
 
 ```json
@@ -111,6 +126,9 @@ WindowsのターミナルでOKだよ〜🪟💕
 ---
 
 ## ミニ演習💻✨：ヘッダーで“ガード感”を出す🧱🛡️
+
+![next study 160 security headers](./picture/next_study_160_security_headers.png)
+
 
 Next.jsは `next.config.js` でレスポンスヘッダーを付けられるよ📬 ([Next.js][8])
 さらにCSP（Content Security Policy）も大事な防御になるよ🧱✨ ([Next.js][6])

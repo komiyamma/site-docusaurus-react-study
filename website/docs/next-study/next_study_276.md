@@ -43,11 +43,19 @@ npm i valibot
 
 ## 2) 体験：お問い合わせフォーム（仮）を `safeParse` でチェック📮✨
 
+![next study 276 schema blueprint](./picture/next_study_276_schema_blueprint.png)
+
+
+
 ### 作るファイル
 
 * `app/ch276/page.tsx`
 
 ### コード（コピペOK）🧡
+
+![next study 276 error feedback](./picture/next_study_276_error_feedback.png)
+
+
 
 ```tsx
 'use client';
@@ -228,6 +236,10 @@ npm run dev
 ---
 
 ## ミニ練習🎮✨（1分）
+
+![next study 276 pipe flow](./picture/next_study_276_pipe_flow.png)
+
+
 
 メールを「大学ドメインだけOK」にしてみよ〜🏫📮
 `email` のパイプの最後にこれ足してみて👇（例：`@example.ac.jp` だけ許可）

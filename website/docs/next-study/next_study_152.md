@@ -8,6 +8,9 @@ React（Next.js）には、HTML文字列をそのままDOMに突っ込むため�
 
 ## 1) `dangerouslySetInnerHTML` ってなに？🤔
 
+![next study 152 react safety](./picture/next_study_152_react_safety.png)
+
+
 普通、Reactは **文字列を安全に表示** してくれるよね✨
 たとえば `<script>` とか入ってても「ただの文字」として扱う感じ。
 
@@ -17,6 +20,9 @@ React（Next.js）には、HTML文字列をそのままDOMに突っ込むため�
 ---
 
 ## 2) どれくらい危ないの？（XSSのイメージ）😱🕷️
+
+![next study 152 xss attack flow](./picture/next_study_152_xss_attack_flow.png)
+
 
 XSS（クロスサイトスクリプティング）は、ざっくり言うと…
 
@@ -64,6 +70,9 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ q
 
 ## 5) まずの代替案：HTMLとして表示しない🙆‍♀️✨
 
+![next study 152 text display](./picture/next_study_152_text_display.png)
+
+
 「HTMLを表示したい」って思っても、実は **ただ文章として表示でOK** なこと多いよ📝💕
 
 ```tsx
@@ -76,6 +85,9 @@ export default function Page() {
 ---
 
 ## 6) どうしても必要なときの王道：サニタイズしてから使う🧼✅
+
+![next study 152 sanitize process](./picture/next_study_152_sanitize_process.png)
+
 
 たとえば「CMSの記事本文がHTMLで保存されてる」みたいなときは、現実的に必要なことある🥲
 その場合は **サニタイズ（危険な要素を除去）** してから使うのが基本だよ🧼✨
@@ -124,6 +136,9 @@ export default function Page() {
 ---
 
 ## 7) さらに良い選択肢：Markdownから“安全寄りに”表示する📘✨
+
+![next study 152 markdown option](./picture/next_study_152_markdown_option.png)
+
 
 「記事本文」なら **Markdownで保存して**、表示時にReactでレンダリングする方が安全になりやすいよ😊💕
 

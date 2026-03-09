@@ -8,6 +8,10 @@ Next.js（App Router）では **ページやlayoutは基本 Server Component** �
 
 ## まず結論 🎯（ここだけ覚えれば勝ち✨）
 
+![Bridge between Server and Client Context](./picture/next_study_260_bridge_metaphor.png)
+
+
+
 * ✅ **Context（createContext / useContext）は Client Component で使うもの**
 * ✅ **Server Component からは Context を作れない＆読めない**（やるとエラー） ([Next.js][2])
 * ✅ でも **Server → Client に props で初期値を渡して、Client 側の Provider で配る**のはOK🙆‍♀️ ([Vercel][3])
@@ -35,6 +39,10 @@ flowchart TD
 ---
 
 ## よくある地雷 💣：「Server Component で createContext しちゃった！」
+
+![Server Component Context Error](./picture/next_study_260_context_explosion.png)
+
+
 
 たとえばこれ👇（**やりがち**）
 
@@ -139,6 +147,10 @@ export function useUser() {
 
 ### 4) Server layout で Provider を挟む 🧱✨
 
+![Provider Wrapper Pattern](./picture/next_study_260_wrapper_pattern.png)
+
+
+
 ```tsx
 // app/layout.tsx
 import "./globals.css";
@@ -219,6 +231,10 @@ export default function Page() {
 
 ## 図解：データが流れる道 📨➡️🧠➡️🔦
 
+![Data Relay Flow](./picture/next_study_260_data_relay.png)
+
+
+
 ```mermaid
 sequenceDiagram
   participant S as Server Component（layout/page）
@@ -235,6 +251,10 @@ sequenceDiagram
 ---
 
 ## Provider は「どこに置く？」のコツ 📍✨
+
+![Provider Scope Decision](./picture/next_study_260_provider_scope.png)
+
+
 
 * ✅ **UI全体に関わるもの**（テーマ・言語・ログイン表示など）だけ、上の方に置く
 * ✅ それ以外は **必要な画面グループの layout にだけ置く**のがキレイ🧼

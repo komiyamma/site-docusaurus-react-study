@@ -15,6 +15,10 @@
 
 ## まず「Hydration」ってなに？💧🤔
 
+![Hydration Metaphor](./picture/next_study_256_hydration_metaphor.png)
+
+
+
 Next.js（App Router）は、最初にサーバーがHTMLを作って返してくれて、そのあとブラウザがJSで「操作できる状態」に仕上げます✨
 この「**仕上げ作業**」が Hydration（ハイドレーション）だよ〜🧃
 
@@ -33,6 +37,10 @@ flowchart LR
 ---
 
 ## なぜ「初期値注入」が必要？🧠✨
+
+![Why Initial Injection is Needed](./picture/next_study_256_empty_vs_filled.png)
+
+
 
 たとえば「お気に入り講義リスト📚💗」を表示したいとして、
 
@@ -63,6 +71,10 @@ npm i zustand
 ---
 
 ## 2) ストアを「工場関数」で作る🏭🐻
+
+![Zustand Store Factory](./picture/next_study_256_zustand_factory.png)
+
+
 
 **ポイント：createStore（vanilla）で“作れる形”にして、Providerの中で1回だけ作る！**✨
 
@@ -107,6 +119,10 @@ export function createTodoStore(initial?: Partial<TodoState>) {
 ---
 
 ## 3) Provider（Client Component）で初期値を注入する💉✨
+
+![Provider Injection Mechanism](./picture/next_study_256_provider_syringe.png)
+
+
 
 `src/components/TodoStoreProvider.tsx`
 
@@ -380,6 +396,10 @@ flowchart TD
 ---
 
 ## よくある落とし穴💥（ここだけ注意してね🥺）
+
+![Global Store Leak Danger](./picture/next_study_256_global_leak.png)
+
+
 
 * `"use client"` を付け忘れて、Hookが使えない😵‍💫
 * 初期値に `Date` / `Map` / `Set` みたいな「そのままJSONにできないもの」を入れてしまう📦💥（まずはシンプルに！）

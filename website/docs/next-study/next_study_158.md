@@ -43,6 +43,9 @@ flowchart LR
 
 ## Step 1：Server Actionでログイン/ログアウトを作る🍪✨
 
+![next study 158 cookie set action](./picture/next_study_158_cookie_set_action.png)
+
+
 `app/login/actions.ts` を作ってね👇
 
 ```ts
@@ -82,6 +85,9 @@ export async function logoutAction() {
 ---
 
 ## Step 2：ログインページを作る `/login` 🚪💕
+
+![next study 158 login form flow](./picture/next_study_158_login_form_flow.png)
+
 
 `app/login/page.tsx` を作ってね👇
 
@@ -132,6 +138,9 @@ export default async function LoginPage({ searchParams }: Props) {
 
 ## Step 3：ログイン必須ページ `/dashboard` を作る（ページ側ガード）🏠🔐
 
+![next study 158 dashboard guard](./picture/next_study_158_dashboard_guard.png)
+
+
 ここが大事！✨
 **ページ自体がサーバーでCookieを確認して、ダメなら即リダイレクト**するよ🚦
 
@@ -169,6 +178,9 @@ export default async function DashboardPage() {
 ---
 
 ## Step 4：middleware.ts で入口ガード（直アクセスの第一防衛線）🧤🛡️
+
+![next study 158 middleware logic](./picture/next_study_158_middleware_logic.png)
+
 
 プロジェクト直下に `middleware.ts` を作成👇
 
@@ -216,6 +228,9 @@ export const config = {
 
 ## よくあるNG例（これだけは避けてね🙅‍♀️💦）
 
+![next study 158 ng client check](./picture/next_study_158_ng_client_check.png)
+
+
 * **NG：Client Componentの `useEffect()` で「ログインしてないなら戻す」**
   → これだと「一瞬見えたり」「API叩けたり」しがち😵
   ✅ 正解は **Middleware / Server側で止める** だよ！
@@ -223,6 +238,9 @@ export const config = {
 ---
 
 ## ミニ追加課題（余裕あったら✨）🎯
+
+![next study 158 api secret guard](./picture/next_study_158_api_secret_guard.png)
+
 
 「ページは守れてるけど、APIは…？」ってなることあるよね😳
 なので `/api/secret` も守ってみよう！

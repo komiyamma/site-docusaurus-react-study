@@ -7,6 +7,9 @@
 
 ## 今日つくるもの🎀
 
+![next_study_246_revalidate_tag_concept.png](./picture/next_study_246_revalidate_tag_concept.png)
+
+
 * 画面に「サーバーの今の時刻＋ランダム値」を表示⏰🎲
 * でも **普通にリロードしても同じ値（キャッシュ）** のまま🧊
 * **「更新」ボタン** を押したときだけ、`revalidateTag` でキャッシュを捨てて **新しい値に更新**✨
@@ -35,6 +38,9 @@ flowchart LR
 
 ## 0) 先に知っておく大事ポイント3つ🧠✨
 
+![next_study_246_key_points.png](./picture/next_study_246_key_points.png)
+
+
 ### ✅ ① `revalidateTag` は「サーバーでしか」呼べない🙅‍♀️
 
 Server Action / Route Handler で呼べます。Client Component から直はNGです🚫 ([Next.js][1])
@@ -56,6 +62,9 @@ Server Action / Route Handler で呼べます。Client Component から直はNG�
 
 ## 1) プロジェクト準備（すでにあるならスキップOK）🛠️✨
 
+![next_study_246_project_setup.png](./picture/next_study_246_project_setup.png)
+
+
 Windows のターミナル（PowerShell）で👇
 
 ```bash
@@ -69,6 +78,9 @@ npm run dev
 ---
 
 ## 2) まずは「毎回変わるAPI」を作る（Route Handler）🚪🧪
+
+![next_study_246_random_api.png](./picture/next_study_246_random_api.png)
+
 
 `app/api/demo/route.ts` を作って、これを入れてね👇
 
@@ -86,6 +98,9 @@ export async function GET() {
 ---
 
 ## 3) キャッシュ付きで取得する（タグ付けもする）🏷️🧊
+
+![next_study_246_fetch_with_tag.png](./picture/next_study_246_fetch_with_tag.png)
+
 
 `app/page.tsx` をこうしてね👇（いったんボタンなしでOK）
 
@@ -137,6 +152,8 @@ export default async function Page() {
 
 ## 4) Server Action で `revalidateTag` を呼ぶ🧑‍🍳✨
 
+![next_study_246_server_action.png](./picture/next_study_246_server_action.png)
+
 `app/actions.ts` を作って👇
 
 ```ts
@@ -158,6 +175,9 @@ export async function refreshDemoData() {
 ---
 
 ## 5) 更新ボタン（Client Component）を作る🖱️💕
+
+![next_study_246_client_button.png](./picture/next_study_246_client_button.png)
+
 
 `app/refresh-button.tsx` を作って👇
 

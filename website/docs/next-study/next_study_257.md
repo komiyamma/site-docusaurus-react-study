@@ -12,6 +12,10 @@ Next.js（App Router）だと、更新ルートが大きく **2つ** あるよ�
 
 ## 全体イメージ図🗺️✨（Route Handler と Server Action）
 
+![Two Paths for State Update](./picture/next_study_257_two_paths.png)
+
+
+
 ![Source of Truth](./picture/next_study_257_source_of_truth.png)
 
 
@@ -153,6 +157,10 @@ export async function updateLikes(prevState: LikeState, formData: FormData): Pro
 
 # 4) クライアント：Route Handler 方式のコンポーネント🛰️
 
+![Route Handler Fetch Loop](./picture/next_study_257_route_handler_loop.png)
+
+
+
 **`app/state-update/_components/LikeWithRouteHandler.tsx`**
 
 ```tsx
@@ -220,6 +228,10 @@ export function LikeWithRouteHandler({ initialCount }: Props) {
 ---
 
 # 5) クライアント：Server Action 方式のコンポーネント🧑‍🍳
+
+![Server Action Form Loop](./picture/next_study_257_server_action_loop.png)
+
+
 
 **`app/state-update/_components/LikeWithServerAction.tsx`**
 
@@ -326,8 +338,16 @@ npm run dev
 3. **Server Components の表示も最新にしたいなら refresh 系が効く** 🔄
 
 * クライアントから `router.refresh()`（公式説明あり） ([Next.js][2])
+
+![router.refresh() Concept](./picture/next_study_257_router_refresh.png)
+
+
 * Server Action の中なら `refresh()` 関数もある（使える場所に制限あり） ([Next.js][4])
 * キャッシュ無効化なら `revalidatePath()`（次の訪問/更新で効くイメージ） ([Next.js][3])
+
+![revalidatePath Cleaning](./picture/next_study_257_revalidate_broom.png)
+
+
 
 ---
 

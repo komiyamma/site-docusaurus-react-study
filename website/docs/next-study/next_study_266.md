@@ -43,6 +43,8 @@ cd panda-next
 
 ## 2) Panda CSS をインストールする🐼📦
 
+![next study 266 install box](./picture/next_study_266_install_box.png)
+
 Pandaを **PostCSSプラグインとして入れる** のが推奨だよ〜！✨ ([panda-css.com][1])
 
 ```bash
@@ -52,6 +54,8 @@ npm install -D @pandacss/dev postcss
 ---
 
 ## 3) 初期化（設定ファイルを自動生成）🪄
+
+![next study 266 magic wand](./picture/next_study_266_magic_wand.png)
 
 `panda.config.ts` と、必要なら `postcss.config.cjs` などを作ってくれるよ！ ([panda-css.com][1])
 
@@ -78,6 +82,8 @@ module.exports = {
 ---
 
 ## 5) `panda.config.ts` を Next.js 向けに整える🧩✨
+
+![next study 266 config gear](./picture/next_study_266_config_gear.png)
 
 最低限ここが大事👇
 
@@ -124,6 +130,8 @@ export default defineConfig({
 
 ## 7) いったん codegen を実行してみる🏃‍♀️💨
 
+![next study 266 runner](./picture/next_study_266_runner.png)
+
 `styled-system/` ができたら勝ち！🎉
 
 ```bash
@@ -133,6 +141,8 @@ npm run prepare
 ---
 
 ## 8) エントリーCSSに「layer宣言」を入れる🎀
+
+![next study 266 layer cake](./picture/next_study_266_layer_cake.png)
 
 Pandaはレイヤー前提でCSSを合成するので、**入口になるCSS**（だいたい `app/globals.css`）にこれを入れるよ！ ([panda-css.com][1])
 
@@ -164,6 +174,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 ---
 
 ## 10) 動作チェック（超かんたん）✅✨
+
+![next study 266 browser party](./picture/next_study_266_browser_party.png)
 
 `app/page.tsx` で Panda の `css()` を試すよ〜！
 （パスはプロジェクト構成で変わるから、まずはこの形でOK）
@@ -201,6 +213,8 @@ npm run dev
 ---
 
 ## よくある詰まりポイント（ここ見れば助かるやつ）🧯💡
+
+![next study 266 fire extinguisher](./picture/next_study_266_fire_extinguisher.png)
 
 ### 1) スタイルが反映されない😵‍💫
 

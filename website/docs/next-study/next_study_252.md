@@ -12,6 +12,9 @@
 
 ## 1) CI/CDって結局なに？🍙
 
+![next_study_252_ci_cd_concept.png](./picture/next_study_252_ci_cd_concept.png)
+
+
 **CI（継続的インテグレーション）**：コードをGitHubに上げたら、**自動でチェック（lint / テスト / ビルド）**して壊れてないか確認する仕組み✅
 **CD（継続的デリバリー/デプロイ）**：チェックを通ったら、**本番や検証環境に出すところまで**を自動化する考え方🚀
 
@@ -22,6 +25,9 @@ GitHub Actions は、このCI/CDを自動化できる仕組みだよ〜🤖✨ (
 
 ## 2) なんで必要なの？（3つだけ覚えよ）🫶
 
+![next_study_252_why_ci.png](./picture/next_study_252_why_ci.png)
+
+
 1. **壊れたまま main に入るのを防ぐ**🛡️
 2. **“私のPCでは動くのに…”問題を減らす**😇
 3. **チームでも1人開発でも安心して進められる**（未来の自分が助かる）💖
@@ -30,6 +36,9 @@ GitHub Actions は、このCI/CDを自動化できる仕組みだよ〜🤖✨ (
 
 ## 3) GitHub Actionsの基本パーツ🧩
 
+![next_study_252_actions_parts.png](./picture/next_study_252_actions_parts.png)
+
+
 * **Workflow（ワークフロー）**：自動化のレシピ全体🍳（例：CI）
 * **Job（ジョブ）**：並列/順番で動くまとまり🧱（例：build job）
 * **Step（ステップ）**：1個ずつの作業🧹（例：npm ci）
@@ -37,6 +46,9 @@ GitHub Actions は、このCI/CDを自動化できる仕組みだよ〜🤖✨ (
 ---
 
 ## 4) Next.jsで「最低限やるCI」セット✅✨
+
+![next_study_252_minimum_ci.png](./picture/next_study_252_minimum_ci.png)
+
 
 Next.js（2025の最新想定）だと、まずはこれが鉄板💪
 
@@ -51,6 +63,9 @@ Next.jsは最低 Node.js **20.9以上**が必要だよ🧠 ([Next.js][3])
 ---
 
 ## 5) 図でつかむ：PRが出たときの流れ🧠➡️✅
+
+![next_study_252_pr_flow.png](./picture/next_study_252_pr_flow.png)
+
 
 ```mermaid
 flowchart LR
@@ -69,6 +84,9 @@ flowchart LR
 ---
 
 ## 6) ハンズオン：CIを1本入れてみよう（Windows）🛠️💖
+
+![next_study_252_yaml_config.png](./picture/next_study_252_yaml_config.png)
+
 
 ### 手順①：ファイルを作る📁
 
@@ -131,6 +149,9 @@ git push
 ---
 
 ## 7) 超重要：lintコマンド事情（2025）⚠️🧹
+
+![next_study_252_lint_evolution.png](./picture/next_study_252_lint_evolution.png)
+
 
 最近のNext.jsでは、`next lint` が整理されていて、
 

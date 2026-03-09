@@ -15,6 +15,9 @@ Next.jsは便利だけど、**設定ミスすると秘密がブラウザに出�
 
 ## まず覚えるルール3つ📌（ここ超重要！）
 
+![next study 159 public vs private](./picture/next_study_159_public_vs_private.png)
+
+
 1. **`NEXT_PUBLIC_` が付いたenvはブラウザに配信される（＝公開）** 🌍
 2. **秘密（APIキーなど）は `NEXT_PUBLIC_` を付けない** 🔑❌
 3. **サーバーで読んでも、画面に表示したら漏えい（HTMLに乗る）** 🫣💥
@@ -65,6 +68,9 @@ export const publicEnv = {
 
 ### `src/env/server.ts`（秘密だけ：クライアントに絶対持っていかせない）
 
+![next study 159 server only shield](./picture/next_study_159_server_only_shield.png)
+
+
 ```ts
 import "server-only";
 
@@ -103,6 +109,9 @@ export function SiteTitle() {
 ---
 
 ## 3) 秘密envは「サーバーだけ」で使って、結果だけ返す🔐
+
+![next study 159 api safe response](./picture/next_study_159_api_safe_response.png)
+
 
 ### API（Route Handler）を作る：`app/api/secure/route.ts`
 
@@ -193,6 +202,9 @@ export default function Page() {
 
 ### ❌ 1) 秘密envに `NEXT_PUBLIC_` を付ける
 
+![next study 159 ng exposure](./picture/next_study_159_ng_exposure.png)
+
+
 ```dotenv
 NEXT_PUBLIC_PAYMENT_API_KEY="sk_test_..."
 ```
@@ -218,6 +230,9 @@ return NextResponse.json({ key: serverEnv.paymentApiKey }); // ←即アウト�
 
 ## 漏れてないかチェックする🔍✨（Windows向け）
 
+![next study 159 grep check](./picture/next_study_159_grep_check.png)
+
+
 `PAYMENT_API_KEY` の値（例：`sk_test_123456789_secret`）が、ビルド成果物に混ざってないか探すよ！
 
 ### PowerShellで探す🪟
@@ -233,6 +248,9 @@ Get-ChildItem .next\static -Recurse -Filter *.js | Select-String -Pattern "sk_te
 ---
 
 ## 仕上げチェックリスト✅🔒
+
+![next study 159 security checklist](./picture/next_study_159_security_checklist.png)
+
 
 * [ ] 公開していいものだけ `NEXT_PUBLIC_` にした？🌍
 * [ ] 秘密キーを **画面/JSON/ログ** に出してない？🙅‍♀️

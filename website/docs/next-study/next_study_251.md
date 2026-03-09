@@ -8,6 +8,9 @@
 
 ## 1) そもそも「バンドル」ってなに？📦
 
+![next_study_251_bundle_concept.png](./picture/next_study_251_bundle_concept.png)
+
+
 Next.jsは、あなたのアプリを **ブラウザ用（client）** と **サーバー用（server）** にいい感じにまとめて（＝バンドルして）最適化してくれるよ✨
 ただし、依存ライブラリの使い方次第で **急にドカンと重く** なることがあるの😇 ([Next.js][1])
 
@@ -27,6 +30,9 @@ flowchart LR
 ---
 
 ## 2) @next/bundle-analyzer を入れる🧰✨
+
+![next_study_251_analyzer_tool.png](./picture/next_study_251_analyzer_tool.png)
+
 
 ### Step A：インストール（dev依存でOK）📦
 
@@ -62,6 +68,9 @@ module.exports = withBundleAnalyzer(nextConfig)
 ---
 
 ## 3) 計測してレポートを開く🔍🧠
+
+![next_study_251_report_screen.png](./picture/next_study_251_report_screen.png)
+
 
 ### いちばん大事：ANALYZE=true で build する✨
 
@@ -119,6 +128,9 @@ npm run analyze
 
 ## 4) レポートの見方（ここがコツ！）🧩🔍
 
+![next_study_251_finding_culprit.png](./picture/next_study_251_finding_culprit.png)
+
+
 見る順番はこれがオススメ👇
 
 1. **まず「client」っぽいレポートを見る**（体感に直結しやすいから）🧠💨
@@ -137,6 +149,9 @@ npm run analyze
 ---
 
 ## 5) “重い原因”の定番パターンと対処🎯✨
+
+![next_study_251_heavy_causes.png](./picture/next_study_251_heavy_causes.png)
+
 
 ### パターンA：重い処理を Client Component でやってる😵‍💫
 
@@ -157,6 +172,9 @@ Next.jsには **`optimizePackageImports`** で“必要分だけ”に寄せる�
 
 ## 6) ミニ練習：改善の「型」を体に入れる💃✨
 
+![next_study_251_improvement_cycle.png](./picture/next_study_251_improvement_cycle.png)
+
+
 ### ゴール🎯
 
 「改善して軽くなった！」を **数値で確認**する✅
@@ -173,6 +191,9 @@ Next.jsには **`optimizePackageImports`** で“必要分だけ”に寄せる�
 ---
 
 ## おまけ：2025っぽい最新の計測もチラ見👀（超さらっと）
+
+![next_study_251_experimental_analyze.png](./picture/next_study_251_experimental_analyze.png)
+
 
 Next.js v16.1以降は、Turbopackの **実験的Bundle Analyzer** もあるよ！
 コマンドはこれ👇（より「どこからimportされてるか」追いやすい方向） ([Next.js][1])

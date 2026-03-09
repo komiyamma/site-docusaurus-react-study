@@ -10,6 +10,10 @@
 
 ## なんでフォントって“体験”に効くの？😵‍💫🌀
 
+![next_study_192_foit_vs_fout.png](./picture/next_study_192_foit_vs_fout.png)
+
+
+
 Webフォントは、読み込みが遅いと…
 
 * 文字が一瞬 **消える**（FOIT）😶‍🌫️
@@ -21,6 +25,10 @@ Webフォントは、読み込みが遅いと…
 ---
 
 ## Next.js が用意してくれてる解決策：`next/font`🪄
+
+![next_study_192_self_hosting.png](./picture/next_study_192_self_hosting.png)
+
+
 
 Next.js の **`next/font`** はフォントを自動で最適化してくれて、さらに **外部へのフォント取得リクエストを減らして**パフォーマンスとプライバシーも良くしてくれるよ🫶✨ ([Next.js][1])
 
@@ -92,6 +100,10 @@ export default function RootLayout({
 
 ### ✅ポイント（超大事）🌟
 
+![next_study_192_subset_concept.png](./picture/next_study_192_subset_concept.png)
+
+
+
 * `subsets` は指定してね！（プリロード関連のエラー回避にもなるよ） ([Next.js][3])
 * `display: "swap"` は「まず表示を出す」寄りで体験が良くなりやすい💡（考え方としてね） ([MDNウェブドキュメント][2])
 * `variable` を使うと、CSSで扱いやすくて便利🎨 ([Next.js][3])
@@ -99,6 +111,10 @@ export default function RootLayout({
 ---
 
 ## 実装②：CSS側で “ちゃんと適用” する（variable を使った場合）🧵✨
+
+![next_study_192_variable_font_injection.png](./picture/next_study_192_variable_font_injection.png)
+
+
 
 `variable` は「CSS変数を生やす」だけなので、**font-family を当てる**のも忘れずにね😉
 （Next.jsのドキュメントでもこのパターンが紹介されてるよ） ([Next.js][3])

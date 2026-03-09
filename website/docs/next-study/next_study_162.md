@@ -39,10 +39,16 @@ ORMだと、**コード補完**や**型チェック**が効くことが多くて
 
 ### ② 「SQLインジェクション」を防ぎやすい🛡️
 
+![next study 162 sql injection shield](./picture/next_study_162_sql_injection_shield.png)
+
+
 SQLインジェクションっていうのは、ユーザー入力が悪用されて、**意図しないSQLを実行されちゃう**事故のこと😱💥
 ORMは基本的に、値をうまく“安全に渡す”仕組み（パラメータ化）を持ってることが多いから、事故りにくい👍🔐
 
 ### ③ “モデル＝設計の中心”になって整理しやすい📘
+
+![next study 162 model design](./picture/next_study_162_model_design.png)
+
 
 ORMを使うと、DBの形（テーブル/カラム）を「モデル」として管理できて、
 
@@ -68,6 +74,9 @@ flowchart LR
 
 ## 「テーブル」と「オブジェクト」の対応🧠🧩
 
+![next study 162 table to object](./picture/next_study_162_table_to_object.png)
+
+
 たとえばDBに `todos` テーブルがあるとするね👇
 
 * テーブル：`todos`
@@ -92,6 +101,9 @@ flowchart TD
 ---
 
 ## SQL直書き vs ORM（雰囲気だけ比べる）👀✨
+
+![next study 162 code comparison](./picture/next_study_162_code_comparison.png)
+
 
 ### ✅ SQLを直書き（イメージ）
 
@@ -131,6 +143,9 @@ ORMは超便利だけど、こういう場面は注意〜💡
 ---
 
 ## Next.jsでの超重要ルール🔒（ここだけは覚えて🙏）
+
+![next study 162 server rule](./picture/next_study_162_server_rule.png)
+
 
 DB操作（ORM含む）は **サーバー側でやる** のが基本だよ〜！
 

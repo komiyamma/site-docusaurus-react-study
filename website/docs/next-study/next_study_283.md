@@ -7,6 +7,10 @@ Next.js（App Router）で **Server Actions** を使うなら、フォーム周�
 
 ## 1) フォームライブラリって何してくれるの？🤔💡
 
+![283_form_library_role](./picture/next_study_283_form_library_role.png)
+
+
+
 フォームって、放っておくとこうなりがち👇😵‍💫
 
 * 入力値の管理が増える（stateだらけ）🌀
@@ -20,6 +24,10 @@ Next.js（App Router）で **Server Actions** を使うなら、フォーム周�
 ---
 
 ## 2) Valibot と組むと何が嬉しいの？🤖🛡️
+
+![283_schema_reuse](./picture/next_study_283_schema_reuse.png)
+
+
 
 **Valibotのスキーマを1個作る** → それを
 
@@ -105,6 +113,10 @@ Valibot は `pipe()` で「小さい検証を積み上げる」スタイルが�
 
 ## 4-3) Server Action（サーバー側の最終バリデーション）🛡️🔥
 
+![283_submission_reply](./picture/next_study_283_submission_reply.png)
+
+
+
 **`app/contact/actions.ts`**
 
 ```ts
@@ -140,6 +152,10 @@ export async function submitContact(
 ---
 
 ## 4-4) フォームUI（Conform + useActionState）💞🧾
+
+![283_constraint_inference](./picture/next_study_283_constraint_inference.png)
+
+
 
 **`app/contact/ContactForm.tsx`**
 
@@ -260,6 +276,10 @@ export default function ContactPage() {
 ---
 
 # 6) よくあるつまづき 🪤😵‍💫
+
+![283_input_props_helper](./picture/next_study_283_input_props_helper.png)
+
+
 
 * **`name` 属性（＝フィールド名）を崩す** → サーバーが受け取れない😭
   → Conformの `getInputProps(fields.xxx, …)` を使うと安全✨ ([ja.conform.guide][9])

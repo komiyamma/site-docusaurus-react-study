@@ -67,6 +67,10 @@ module.exports = {
 
 ### 4-2) 「レイヤー名の衝突」を回避する（超重要）💥
 
+![next study 273 layer conflict](./picture/next_study_273_layer_conflict.png)
+
+
+
 Panda は `@layer reset, base, tokens, recipes, utilities;` みたいにレイヤー宣言を使うよね🐼 ([Panda CSS][3])
 でも Tailwind も `base / components / utilities` を使うから、**utilities や base がぶつかりやすい**の🥺 ([Medium][1])
 
@@ -108,6 +112,10 @@ export default defineConfig({
 
 ### 4-3) Reset（Preflight）は片方だけにする🧼⚠️
 
+![next study 273 reset choice](./picture/next_study_273_reset_choice.png)
+
+
+
 どっちを残すかは好みだけど、迷ったらこう👇
 
 * **Tailwindをまだ大量に使ってる** → Tailwind preflight を残す（PandaをOFF）
@@ -129,6 +137,10 @@ export default defineConfig({
 ---
 
 ## 5) “共存しながら移行” のやり方（おすすめ順）🪜✨
+
+![next study 273 migration steps](./picture/next_study_273_migration_steps.png)
+
+
 
 ### ステップA：新規コンポーネントだけ Panda にする🐼
 
@@ -163,6 +175,10 @@ export function Button() {
 ```
 
 ### 6-2) 移行中（Pandaが本体、Tailwindは“追加できる”）🐼✨
+
+![next study 273 escape hatch](./picture/next_study_273_escape_hatch.png)
+
+
 
 `cx` は Panda の公式ユーティリティで、className を安全に結合できるよ〜🧩 ([Panda CSS][4])
 

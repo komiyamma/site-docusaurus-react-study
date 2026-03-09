@@ -13,6 +13,8 @@
 ---
 
 ## 🧠 Updateってなに？
+
+![next_study_169_update_concept](./picture/next_study_169_update_concept.png)
 すでにあるデータを「差し替える」操作だよ😊  
 たとえば…
 
@@ -32,6 +34,8 @@ const updated = await prisma.todo.update({
 `````
 
 ### ✅ 超だいじ：`where` は「ユニーク」である必要があるよ
+
+![next_study_169_id_target](./picture/next_study_169_id_target.png)
 
 * `id` とか `email` とか、**1件に決まる条件**を使うのが基本🙆‍♀️
 * もし「条件に合うものを全部更新」したいなら `updateMany` になるよ（今回は1件更新に集中！）🎯
@@ -77,6 +81,8 @@ model Todo {
 ---
 
 ### 1) Server Action（更新本体）を作る 🧑‍🍳🔥
+
+![next_study_169_server_action_flow](./picture/next_study_169_server_action_flow.png)
 
 `app/todos/actions.ts`
 
@@ -140,6 +146,8 @@ export async function updateTodoAction(
 ---
 
 ### 2) 編集フォーム（画面側）を作る ✏️🧸
+
+![next_study_169_edit_form](./picture/next_study_169_edit_form.png)
 
 `app/todos/[id]/EditForm.tsx`（フォームはクライアントでもOKだよ😊）
 
@@ -230,6 +238,8 @@ export default async function TodoEditPage({ params }: Props) {
 ---
 
 ## 🪤 よくあるハマりポイント（先に回避しよ🛟）
+
+![next_study_169_checkbox_logic](./picture/next_study_169_checkbox_logic.png)
 
 * **`where` がユニークじゃない**
   → 1件に絞れないと `update` はできないよ🥲（そのときは `updateMany`）

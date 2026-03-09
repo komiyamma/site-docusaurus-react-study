@@ -26,6 +26,10 @@ Next.js（App Router）では、`layout.tsx` / `page.tsx` で **`metadata` を e
 
 ### ✅ “絶対に最初に入れたい” のが `metadataBase` 🌍
 
+![next_study_193_metadatabase_concept.png](./picture/next_study_193_metadatabase_concept.png)
+
+
+
 OGP画像や canonical URL は「絶対URL」が必要なことが多いんだけど、`metadataBase` を設定すると **`/og.png` みたいな相対パスで書ける**ようになるよ🫶
 （逆に、`metadataBase` なしで相対パスを書くとビルドエラーになることがあるよ⚠️） ([Next.js][2])
 
@@ -119,6 +123,10 @@ export default function RootLayout({
 
 ## 3) ページごとに「タイトルだけ上書き」してみよう✍️🌸
 
+![next_study_193_metadata_inheritance.png](./picture/next_study_193_metadata_inheritance.png)
+
+
+
 例えば `app/about/page.tsx` でタイトルを変えるだけでも、かなり “それっぽい” 😆✨
 
 ```tsx
@@ -142,6 +150,10 @@ export default function AboutPage() {
 ---
 
 ## 4) OGP画像は「設定で書く」より「ファイルで置く」が楽なこと多い🖼️📦
+
+![next_study_193_file_based_ogp.png](./picture/next_study_193_file_based_ogp.png)
+
+
 
 Next.js には **ファイル名ルールでOGP画像を自動設定**できる仕組みがあるよ✨
 たとえば👇みたいに置くだけ！
@@ -184,6 +196,10 @@ sequenceDiagram
 ---
 
 ## 6) 動作チェック方法（めっちゃ大事）🔍✅
+
+![next_study_193_social_card_preview.png](./picture/next_study_193_social_card_preview.png)
+
+
 
 ### ブラウザでまず確認👀
 

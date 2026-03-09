@@ -26,6 +26,8 @@ Vitest自体が「テストの土台」を持ってて、Jestっぽい書き心�
 
 ## 「立ち位置」を地図で見るとこう🗺️✨（図解）
 
+![205 test map](./picture/next_study_205_test_map.png)
+
 「テスト」って、実は役割が分かれてるんだよね🙂
 
 * **Vitest**：テストを実行する（司会者🎤）
@@ -47,6 +49,8 @@ flowchart LR
 
 ## なんでVitestは速いの？⚡🚀
 
+![205 why fast](./picture/next_study_205_why_fast.png)
+
 速さの理由は、ざっくりこれ👇
 
 ### ① Viteの仕組みを使ってる⚡
@@ -65,6 +69,8 @@ Vitestはパフォーマンス重視で、できるだけ並列に走らせる�
 
 ## 「Next.jsでのVitest」ここが大事ポイント📌✨
 
+![205 nextjs async caveat](./picture/next_study_205_nextjs_async_caveat.png)
+
 Next.js公式にも **Vitestのガイド**があって、Next.jsで普通に採用候補になるよ🧪🌸 ([Next.js][4])
 
 ただし⚠️ 重要な注意もあるよ：
@@ -75,6 +81,8 @@ Next.js公式にも **Vitestのガイド**があって、Next.jsで普通に採�
 ---
 
 ## “DOMが必要なテスト”では環境を選ぶ🪟🧩
+
+![205 dom environment](./picture/next_study_205_dom_environment.png)
 
 UIテスト（ボタンとかフォームとか）をやるなら、Nodeだけだと `document` が無いから、DOM環境が必要になるよ〜🙂
 
@@ -88,6 +96,8 @@ Vitestは `jsdom` / `happy-dom` を「テスト環境」として選べるよ、
 ---
 
 ## “使いどころ”の目安🎯🧠
+
+![205 use cases](./picture/next_study_205_use_cases.png)
 
 Vitestが気持ちよくハマるのは、こんな場面👇✨
 
@@ -109,6 +119,8 @@ Vitestが気持ちよくハマるのは、こんな場面👇✨
 ---
 
 ## ちょい触り：よく使うコマンド感覚（雰囲気）⌨️✨
+
+![205 commands](./picture/next_study_205_commands.png)
 
 Vitestは **watchがデフォで動きやすい**のが特徴だよ〜👀⚡
 （CIでは `run` が向いてるよ、って公式にもまとまってる） ([Vitest][2])

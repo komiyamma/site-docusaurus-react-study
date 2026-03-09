@@ -7,6 +7,9 @@ Next.js（App Router）はキャッシュが賢いぶん、**“更新の合図�
 
 ## 今日のゴール 🎯💖
 
+![next_study_248_goal_comparison.png](./picture/next_study_248_goal_comparison.png)
+
+
 * `revalidatePath` と `revalidateTag` の **違い** を言えるようになる🗣️✨
 * それぞれを **どんな時に使うか** 判断できるようになる🧠✅
 * ミニアプリで **実際に動かして体感** する🚀💕
@@ -14,6 +17,9 @@ Next.js（App Router）はキャッシュが賢いぶん、**“更新の合図�
 ---
 
 ## まず結論！どっち使う？🧁
+
+![next_study_248_use_case_decision.png](./picture/next_study_248_use_case_decision.png)
+
 
 * **`revalidatePath('/notes')`**：
   👉 **特定のURL（ページ/レイアウト）を更新したい**ときに使う✨（ページ単位）
@@ -62,6 +68,9 @@ flowchart TD
 
 ## ハンズオン：差が一瞬でわかるミニアプリ作るよ💻✨
 
+![next_study_248_note_app_setup.png](./picture/next_study_248_note_app_setup.png)
+
+
 ### 0) プロジェクト作成（Windows / PowerShell）🪟💡
 
 ```bash
@@ -78,6 +87,9 @@ npm run dev
 ---
 
 ## 1) “メモ一覧”のダミーデータ置き場を作る🗃️📝
+
+![next_study_248_dummy_store.png](./picture/next_study_248_dummy_store.png)
+
 
 `app/lib/notesStore.ts` を作成👇
 
@@ -108,6 +120,9 @@ export function addNote(text: string): Note {
 
 ## 2) Route Handler（API）を作る🚪✨
 
+![next_study_248_api_route.png](./picture/next_study_248_api_route.png)
+
+
 `app/api/notes/route.ts` を作成👇
 
 ```ts
@@ -125,12 +140,18 @@ export async function GET() {
 
 ## 3) データ取得を「キャッシュあり」にする🧊✨
 
+![next_study_248_force_cache.png](./picture/next_study_248_force_cache.png)
+
+
 Next.js は `fetch` が **常にキャッシュされるわけじゃない**ので、
 今回は体感用に `cache: 'force-cache'` を付けてキャッシュさせるよ🧊 ([Next.js][3])
 
 ---
 
 ## 4) Server Action を3種類作る（比較用）🔁🧪
+
+![next_study_248_three_actions.png](./picture/next_study_248_three_actions.png)
+
 
 `app/lib/actions.ts` を作成👇
 

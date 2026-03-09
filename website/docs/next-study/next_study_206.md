@@ -14,9 +14,15 @@ RTLはひとことで言うと…
 なので、テストで大事にするのは👇
 
 * ✅ **見えるテキスト**
+
+![206 role label text](./picture/next_study_206_role_label_text.png)
+
 * ✅ **ボタンや入力欄などの役割（role）**
 * ✅ **ラベル（label）や説明（aria-label）**
 * ✅ **ユーザーの操作（クリック・入力）**
+
+![206 rtl vs implementation](./picture/next_study_206_rtl_vs_implementation.png)
+
 
 逆に、できるだけ避けたいのは👇
 
@@ -57,6 +63,9 @@ RTLの強みは、テストが **リファクタに強くなる**こと💪✨
 * コンポーネントを分割した
 
 こういうのは、ユーザー体験が同じなら **テストは落ちてほしくない**🥺💦
+
+![206 refactor resilience](./picture/next_study_206_refactor_resilience.png)
+
 だからRTLでは、ユーザーが触れる“意味”で要素を探すよ✨
 
 ---
@@ -79,6 +88,9 @@ flowchart TD
 * 📝 **getByText**：文章が主役のUIなら便利
 * 🆔 **data-testid**：どうしても無理な時の保険（頼りすぎ注意⚠️）
 
+![206 priority pyramid](./picture/next_study_206_priority_pyramid.png)
+
+
 ---
 
 ## 5) “良いテスト”の型：AAA（Arrange / Act / Assert）📦🖱️✅
@@ -88,6 +100,9 @@ flowchart TD
 * **Arrange（準備）**：画面を用意する（renderとか）
 * **Act（行動）**：クリック・入力など操作する
 * **Assert（確認）**：期待どおりか確認する
+
+![206 aaa pattern](./picture/next_study_206_aaa_pattern.png)
+
 
 まだ `render` や `screen` の細かい使い方は次の章でやるけど、**考え方は今ここでOK**👌😊
 

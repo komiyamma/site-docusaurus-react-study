@@ -15,6 +15,9 @@
 
 ## まずは認証を3つに分けて考えるよ🧩🧩🧩
 
+![next_study_176_three_concepts.png](./picture/next_study_176_three_concepts.png)
+
+
 Next.jsの公式ガイドでも、認証まわりは大きく **3つの概念** に分けて考えるのがコツって流れになってるよ📘✨。([Next.js][1])
 
 1. **Authentication（本人確認）**：ログイン成功？失敗？👤
@@ -28,6 +31,9 @@ Next.jsの公式ガイドでも、認証まわりは大きく **3つの概念** 
 ## 方式選びで決めることは、だいたいこの2つ🎛️🔐
 
 ### A. 何でログインさせる？（ログイン手段）🧩
+
+![next_study_176_auth_methods.png](./picture/next_study_176_auth_methods.png)
+
 
 * **ソーシャルログイン（OAuth）**：Google / GitHub など✨
 * **メール（マジックリンク）**：パスワードなしでメールからログイン📩
@@ -109,6 +115,9 @@ flowchart TD
 
 ## Cookieセッション vs JWT：超ざっくり比較🍪🪪
 
+![next_study_176_cookie_vs_jwt.png](./picture/next_study_176_cookie_vs_jwt.png)
+
+
 | 方式            | いいところ😊               | 気をつけどころ⚠️                                 | 向いてる      |
 | ------------- | --------------------- | ----------------------------------------- | --------- |
 | Cookieセッション🍪 | ブラウザと相性◎ / サーバーで守りやすい | Cookie設定（Secure/HttpOnly/SameSite）をちゃんとする | 普通のWebアプリ |
@@ -119,6 +128,9 @@ flowchart TD
 ---
 
 ## App Routerだと「サーバーで認証チェック」がやりやすい🛡️✨
+
+![next_study_176_server_check.png](./picture/next_study_176_server_check.png)
+
 
 App Routerはサーバーで動く部分が強いから、
 「ページ表示する前にサーバーで session を見て判断」しやすいのが魅力💎
@@ -164,6 +176,9 @@ sequenceDiagram
 ---
 
 ## 方式選びチェックリスト✅✨（これだけ決めれば迷い激減）
+
+![next_study_176_checklist_visual.png](./picture/next_study_176_checklist_visual.png)
+
 
 * ログインは **何で** やる？（OAuth/メール/IDPW）🔑📩✨
 * ログイン状態は **Cookieセッション or JWT**？🍪🪪

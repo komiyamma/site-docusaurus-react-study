@@ -11,6 +11,9 @@
 
 ## 1) E2Eってなに？🤔✨
 
+![212 e2e scope](./picture/next_study_212_e2e_scope.png)
+
+
 ![e2e](./picture/next_study_212_e2e.png)
 
 E2E（End-to-End）テストは、超ざっくり言うと…
@@ -43,6 +46,9 @@ E2Eはそこをまとめて確認できるので、
 
 ### ✅ “接着剤”が壊れてるのに気づける 🧩💔
 
+![212 broken glue](./picture/next_study_212_broken_glue.png)
+
+
 アプリって、だいたいこんな感じでつながってます👇
 UI ↔ ルーティング ↔ 認証 ↔ API ↔ DB
 
@@ -54,6 +60,9 @@ E2Eはこの「つなぎ目」の事故を見つけるのが得意です🔍✨
 ## 3) テスト全体の中でのE2Eの立ち位置 🏔️🧪
 
 E2Eは万能じゃなくて、**コスト高め**です💰💦
+
+![212 test pyramid](./picture/next_study_212_test_pyramid.png)
+
 だから「量を増やす」より「重要な数本を通す」が正義になりやすいです😌✨
 
 （イメージ図👇）
@@ -90,6 +99,9 @@ E2Eは、**全部やろうとすると死にます**😇（時間も手間も…
 
 ### 🌟 “代表的なユーザー動線”だけ通す
 
+![212 user journey](./picture/next_study_212_user_journey.png)
+
+
 * 例：
 
   * 新規登録→ログイン→マイページを見る👤
@@ -110,6 +122,9 @@ E2Eは、**全部やろうとすると死にます**😇（時間も手間も…
 ---
 
 ## 6) E2Eの弱点も知っておこう（でも怖がらない）🧸⚠️
+
+![212 e2e weakness](./picture/next_study_212_e2e_weakness.png)
+
 
 ### 😵‍💫 弱点1：遅い
 

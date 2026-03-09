@@ -17,6 +17,8 @@
 
 ## 2) まず「MVP（最小で完成）」を決めよう🧁✅
 
+![alt](./picture/next_study_234_mvp_definition.png)
+
 卒業制作は、最初から全部盛りにすると爆死しがち…！💥
 なのでまずは **MVP（Minimum Viable Product）**＝「最低限、動いて嬉しい形」を決めます☺️
 
@@ -29,6 +31,8 @@
 ---
 
 ## 3) 要件づくりの順番（迷子防止ルート）🧭
+
+![alt](./picture/next_study_234_requirements_flow.png)
 
 この順番で書くとまとまるよ〜！✨
 
@@ -48,6 +52,8 @@ flowchart TD
 
 ## 4) 画面（ページ）一覧を作る📄🖊️
 
+![alt](./picture/next_study_234_screen_list.png)
+
 まずは「どんな画面があるか」だけを並べます。中身はまだ薄くてOK🙆‍♀️
 
 ### ✅ 画面一覧テンプレ（コピペして埋めてね）🧩
@@ -65,6 +71,8 @@ flowchart TD
 ---
 
 ## 5) 機能（できること）を画面ごとに書く⚙️✨
+
+![alt](./picture/next_study_234_function_list.png)
 
 次に「その画面で何ができるか」を箇条書きでOK！
 ポイントは **“ボタンを押したら何が起きる？”** を書くこと👆😆
@@ -88,6 +96,8 @@ flowchart TD
 ---
 
 ## 6) データ（保存する情報）を書く🗃️📝
+
+![alt](./picture/next_study_234_data_relations.png)
 
 「画面」と「機能」が決まると、保存するデータが自然に見えてくるよ〜！✨
 ここは**テーブル設計（第236章）**の前準備です💪
@@ -130,6 +140,8 @@ flowchart TD
 ---
 
 ## 8) 1枚にまとめる「要件シート」📄✨（これが最強）
+
+![alt](./picture/next_study_234_requirements_sheet.png)
 
 下をそのままコピペして、あなたのテーマで埋めればOKだよ〜！💕
 

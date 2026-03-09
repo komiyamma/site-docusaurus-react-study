@@ -15,6 +15,8 @@
 
 ## ① まずローカルで「本番モード」を動かして確認しよ🧪💻
 
+![alt](./picture/next_study_232_local_production.png)
+
 Next.jsは、本番は **build → start** の順で動くよ〜！🧁
 （`dev` と挙動が違うことがあるから、ここ超大事！）([Next.js][1])
 
@@ -42,6 +44,8 @@ npm run start
 
 ## ② VercelのProductionにデプロイする🚀🧡
 
+![alt](./picture/next_study_232_vercel_deploy.png)
+
 Next.jsはVercelと相性がよくて、**Git連携でデプロイ**が基本だよ〜！([Vercel][2])
 
 ### ✅ ざっくり流れ
@@ -67,6 +71,8 @@ flowchart LR
 ---
 
 ## ③ 環境変数（.env系）の“最後の罠”を潰す🔐🪤
+
+![alt](./picture/next_study_232_env_var_trap.png)
 
 本番で「あれ？動かない…😢」の原因、だいたい環境変数です（あるある）🥹
 
@@ -95,6 +101,8 @@ Vercelはデプロイすると自動でURLが出るから、まずはそれで�
 
 ### B) （できたら最高✨）独自ドメインを付ける🌸
 
+![alt](./picture/next_study_232_custom_domain.png)
+
 やるなら、Vercelの **Settings → Domains** から追加する流れだよ🧭
 ざっくり手順はこんな感じ👇([Vercel][5])
 
@@ -107,6 +115,8 @@ Vercelはデプロイすると自動でURLが出るから、まずはそれで�
 ---
 
 ## ⑤ 公開前チェック（ミニ版）✅✨
+
+![alt](./picture/next_study_232_preflight_check.png)
 
 「最低限これだけ！」のチェックだよ〜🧁
 （ちゃんとやりたい人は、Vercel/Next.jsのチェックリストも参考になるよ）([Vercel][6])

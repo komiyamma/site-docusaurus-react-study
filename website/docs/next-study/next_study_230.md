@@ -46,6 +46,8 @@
 
 ### レベル3：やることを1つに絞る（1分）✅
 
+![alt](./picture/next_study_230_scan_levels.png)
+
 * 今すぐ上げる？（セキュリティ/重大）
 * 次の開発のタイミングで上げる？（普通の改善）
 * 今日は何もしない？（関係ない）
@@ -75,6 +77,8 @@ flowchart LR
 
 ## 実践①：リリースノート用「1行メモ」テンプレ作ろう📝💕
 
+![alt](./picture/next_study_230_release_note_memo.png)
+
 プロジェクト直下に `release-notes.md` を作って、毎回これだけ書く✨
 （**“読む習慣”**の正体は、実はこのメモ✍️😊）
 
@@ -102,6 +106,8 @@ npx next --version
 
 ### 2) 相談用の環境情報を一発で出す（便利！）🧾
 
+![alt](./picture/next_study_230_next_info_command.png)
+
 ```bash
 npx next info
 ```
@@ -111,6 +117,8 @@ npx next info
 ---
 
 ## 実践③：アップデートする時の「安全な型」🛟✨
+
+![alt](./picture/next_study_230_upgrade_safety.png)
 
 ### A) まずは“アップデート用ブランチ”を作る🌿
 

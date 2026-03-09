@@ -64,6 +64,10 @@ flowchart TD
 
 ## 4) パターンA：`width/height` + `style` でレスポンシブ（おすすめ）📌
 
+![next_study_190_pattern_a_visual.png](./picture/next_study_190_pattern_a_visual.png)
+
+
+
 `app/ch190/page.tsx` を作成👇
 
 ```tsx
@@ -126,9 +130,17 @@ export default function Page() {
 * `style={{ width: "100%", height: "auto" }}` → **表示はカード幅に合わせて伸縮**（でも比率は保持）([Next.js][2])
 * `sizes="..."` → **画面幅に応じて適切なサイズを取りに行く**（地味に超大事）([Next.js][2])
 
+![next_study_190_sizes_prop.png](./picture/next_study_190_sizes_prop.png)
+
+
+
 ---
 
 ## 5) パターンB：`fill` + “枠（aspect-ratio）”で揃える🎴✨
+
+![next_study_190_fill_parent_dependency.png](./picture/next_study_190_fill_parent_dependency.png)
+
+
 
 「サムネを全部同じ高さに揃えたい😍」ならこっちが強い！
 
@@ -240,6 +252,10 @@ export default function Page() {
 ## 7) ちょい上級：体感速度を上げたい時の小ワザ🪄
 
 ### 🫧 ぼかしプレースホルダー（読み込み中の“寂しさ”を消す）
+
+![next_study_190_blur_placeholder.png](./picture/next_study_190_blur_placeholder.png)
+
+
 
 `placeholder="blur"` を使うと、読み込み中にふんわり表示できるよ〜✨
 （静的 import 画像なら `blurDataURL` が自動で付くこともあるよ）([Next.js][2])

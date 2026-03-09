@@ -14,6 +14,8 @@ Next.jsみたいな「サーバー中心（App Router / RSC）」な世界で困
 
 ## 2) 「ゼロランタイム」って何がうれしいの？🏃‍♀️💨（超ざっくり）
 
+![next study 265 zero runtime](./picture/next_study_265_zero_runtime.png)
+
 ふつうのCSS-in-JS（ランタイム型）は、**ブラウザでJavaScriptが動いてから**スタイルが作られたり挿入されたりすることがあります。
 でもPandaは、**ビルド時に静的解析してCSSを作る**ので、実行時の負担が少なくなりやすいです🧁✨ ([panda-css.com][1])
 
@@ -26,6 +28,8 @@ Next.jsみたいな「サーバー中心（App Router / RSC）」な世界で困
 ---
 
 ## 3) 「Type-Safe」って何がうれしいの？🧷💖
+
+![next study 265 type safety net](./picture/next_study_265_type_safety_net.png)
 
 PandaはTypeScriptベースで、**スタイルのプロパティやショートハンドが型で守られやすい**です。
 さらに、テーマ（tokens）に定義した値と結びつけられるので、**「存在しない値」をうっかり書きにくい**方向にできます✅ ([panda-css.com][2])
@@ -59,6 +63,8 @@ flowchart LR
 
 ## 5) Panda CSSが得意なこと（この先でやる内容の予告）🎁
 
+![next study 265 gift boxes](./picture/next_study_265_gift_boxes.png)
+
 Pandaには「よく使う設計パーツ」が用意されています💡
 
 * **Recipes**：ボタンとかの“バリエーション付き”スタイルを作る（型安全なAPI）🧂 ([panda-css.com][3])
@@ -69,6 +75,8 @@ Pandaには「よく使う設計パーツ」が用意されています💡
 
 ## 6) ざっくり比較（迷った時の気分）🤔🧭
 
+![next study 265 compass](./picture/next_study_265_compass.png)
+
 * **CSS Modules**：素直で安心。でも“デザイントークン運用”や“バリアント設計”は自分で頑張ること多め🧵
 * **Tailwind**：速い・強い。でもクラスが長くなりがちで、設計の好みが分かれる⚡
 * **Panda CSS**：TSで書けて、ビルドでCSS吐けて、設計（tokens/recipes）に寄せやすい🐼✨ ([panda-css.com][4])
@@ -76,6 +84,8 @@ Pandaには「よく使う設計パーツ」が用意されています💡
 ---
 
 ## 7) ちょい見せ：どんな書き味？👀✨（※次章のセットアップ後に動くよ）
+
+![next study 265 code editor](./picture/next_study_265_code_editor.png)
 
 「こんな感じでTSの中に書くよ〜」っていう雰囲気だけ🌸
 
@@ -107,6 +117,8 @@ export function MiniCard() {
 ---
 
 ## 8) ミニ理解チェック（3問）📝💗
+
+![next study 265 checklist](./picture/next_study_265_checklist.png)
 
 1. Panda CSSは **いつ** CSSを作る？（実行時？ビルド時？）🤔
 2. ゼロランタイムだと、ブラウザ側の負担はどうなりやすい？⚡

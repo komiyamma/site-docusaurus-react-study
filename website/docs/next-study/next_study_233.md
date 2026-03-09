@@ -18,6 +18,8 @@ MVPっていうのは「これだけできたら完成と言える最小セッ�
 
 ## 2) テーマ決めのコツ（失敗しないやつ）🧭🫶
 
+![alt](./picture/next_study_233_theme_criteria.png)
+
 テーマは「好き」だけで決めると、途中で大変になりがち🥲
 だからこの3つで選ぶのが最強だよ〜！
 
@@ -54,6 +56,8 @@ flowchart TD
 
 ### 案①：学内イベント共有ボード（Campus Event Board）🎪📅
 
+![alt](./picture/next_study_233_event_board.png)
+
 **こんな人向け**：学内イベントに行きたいのに情報が散らばってる人🫠
 **価値**：イベントを見つけやすくして、参加予定も管理できる✨
 
@@ -87,6 +91,8 @@ flowchart TD
 
 ### 案②：就活・応募管理トラッカー（Job Hunt Tracker）💼🧋
 
+![alt](./picture/next_study_233_job_tracker.png)
+
 **こんな人向け**：応募状況がスプレッドシートで崩壊しがちな人📉
 **価値**：応募の「いま」を一目で把握できる👀✨
 
@@ -119,6 +125,8 @@ flowchart TD
 ---
 
 ### 案③：自炊レシピ＆買い物メモ（Recipe & Grocery Planner）🍳🛒
+
+![alt](./picture/next_study_233_recipe_app.png)
 
 **こんな人向け**：何作るか毎回悩む人、買い忘れが多い人🥲
 **価値**：レシピを貯めて、買い物もラクにする✨
@@ -174,6 +182,8 @@ flowchart TD
 ---
 
 ## 6) テーマが決まったら「MVP宣言」しよう📣💖（超重要）
+
+![alt](./picture/next_study_233_mvp_declaration.png)
 
 “完成”の定義を先に決めると、挫折しにくいよ🥹✨
 おすすめはこれ👇

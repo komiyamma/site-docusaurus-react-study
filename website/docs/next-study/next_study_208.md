@@ -9,7 +9,10 @@
 ![user-event](./picture/next_study_208_user_event.png)
 
 React Testing Library には `fireEvent` もあるけど、`user-event` はもっと **ユーザーの操作に近い形** を再現してくれるよ〜✨
-たとえばクリックって、実際は `mousedown` → `focus` → `mouseup` → `click` …みたいに色々起きるんだけど、`user-event` はそういう「一連の流れ」をいい感じにやってくれるイメージ！🖱️🌸 ([Testing Library][1])
+たとえばクリックって、実際は `mousedown` → `focus` → `mouseup` → `click` …みたいに色々起きるんだけど
+
+![208 click sequence](./picture/next_study_208_click_sequence.png)
+、`user-event` はそういう「一連の流れ」をいい感じにやってくれるイメージ！🖱️🌸 ([Testing Library][1])
 
 ---
 
@@ -30,9 +33,12 @@ npm i -D @testing-library/user-event
 import userEvent from '@testing-library/user-event'
 
 const user = userEvent.setup()
+
+
 await user.click(...)
 await user.type(...)
 ```
+![208 setup user](./picture/next_study_208_setup_user.png)
 
 ---
 
@@ -49,6 +55,9 @@ flowchart LR
 
 ポイントはこれ！👇
 **`user-event` の操作は `await` を付けることが多い**（＝待つのが大事）だよ〜⏳💕
+
+![208 await importance](./picture/next_study_208_await_importance.png)
+
 
 ---
 
@@ -88,6 +97,8 @@ import { ToggleMessage } from './ToggleMessage'
 test('ボタンをクリックするとメッセージが表示される', async () => {
   render(<ToggleMessage />)
   const user = userEvent.setup()
+
+
 
   // 最初は表示されてない
   expect(screen.queryByText('やったー！表示されたよ🎉')).toBeNull()
@@ -144,12 +155,17 @@ test('入力するとあいさつが更新される', async () => {
   render(<NameForm />)
   const user = userEvent.setup()
 
+
+
   const input = screen.getByLabelText('名前')
 
   await user.type(input, 'さくら')
+
+
   expect(screen.getByText('こんにちは、さくらさん🌷')).toBeInTheDocument()
 })
 ```
+![208 typing simulation](./picture/next_study_208_typing_simulation.png)
 
 ### 便利：消してから入れ直す🧽✨
 
@@ -169,8 +185,11 @@ await user.type(input, 'りん')
 
 ```ts
 await user.keyboard('{Enter}')
+
+
 await user.keyboard('{Escape}')
 ```
+![208 keyboard keys](./picture/next_study_208_keyboard_keys.png)
 
 ---
 
@@ -197,7 +216,9 @@ expect(screen.getByLabelText('名前')).toHaveFocus()
 
 ### ✅ ハマり2：`userEvent.click(...)` を直で使い続ける
 
-昔の書き方で `userEvent.click(...)` を直接呼ぶ例も見るけど、今は基本 **`const user = userEvent.setup()`** の型が安心だよ〜！ ([Testing Library][2])
+昔の書き方で `userEvent.click(...)` を直接呼ぶ例も見るけど、今は基本 **`const user = userEvent.setup()
+
+`** の型が安心だよ〜！ ([Testing Library][2])
 
 ### ✅ ハマり3：複雑な操作は「連続操作のつながり」を意識
 

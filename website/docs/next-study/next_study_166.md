@@ -11,6 +11,8 @@
 
 ## 1) おすすめの置き場所📁✨
 
+![next_study_166_folder_structure](./picture/next_study_166_folder_structure.png)
+
 よくある安定パターンはこのへん👇
 
 * `src/lib/prisma.ts`（定番！）
@@ -36,6 +38,8 @@ my-app/
 
 ## 2) “サーバー専用”にするのが超大事🧊🚫🌐
 
+![next_study_166_server_only_shield](./picture/next_study_166_server_only_shield.png)
+
 DB接続には **DBのURLやパスワード**が関わるから、
 間違ってもブラウザ側に混ざったらアウトだよ〜😱💥
 
@@ -50,6 +54,8 @@ DB接続には **DBのURLやパスワード**が関わるから、
 
 ![Prisma Studio](./picture/next_study_166_prisma_studio.png)
 ## 3) Prismaの接続ファイルを作ろう🧩✨（定番テンプレ）
+
+![next_study_166_singleton_pattern](./picture/next_study_166_singleton_pattern.png)
 
 `src/lib/prisma.ts` を作って、こう書くよ👇
 （開発中のホットリロードで PrismaClient が増殖して事故るのを防ぐ形🧯）
@@ -84,6 +90,8 @@ if (process.env.NODE_ENV !== "production") {
 
 ## 4) どこから使うの？（正しい呼び出し場所）🧠✅
 
+![next_study_166_usage_flow](./picture/next_study_166_usage_flow.png)
+
 この `prisma` は **サーバー側の処理**から呼ぶよ👇
 
 * Server Components（`app/**/page.tsx`：※`"use client"`無しのやつ）
@@ -110,6 +118,8 @@ export async function GET() {
 ---
 
 ## 5) 逆に “置いちゃダメ/やりがち” 🙅‍♀️💥
+
+![next_study_166_anti_pattern](./picture/next_study_166_anti_pattern.png)
 
 ### ❌ Client Component（`"use client"`）でDB直import
 

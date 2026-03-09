@@ -137,6 +137,9 @@ Cookieは、ざっくり言うと…
 
 ### 1) `app/api/login/route.ts` を作る📁
 
+![next_study_175_api_structure.png](./picture/next_study_175_api_structure.png)
+
+
 ```ts
 // app/api/login/route.ts
 import { NextResponse } from "next/server";
@@ -204,6 +207,9 @@ export async function GET() {
 
 ### 3) 試すページ（超ミニ）を作る📄✨
 
+![next_study_175_demo_page_ui.png](./picture/next_study_175_demo_page_ui.png)
+
+
 `app/auth-demo/page.tsx`
 
 ```tsx
@@ -266,6 +272,8 @@ export default function AuthDemoPage() {
 ---
 
 ### 4) 動かし方🚀
+
+![next_study_175_me_api.png](./picture/next_study_175_me_api.png)
 
 * `/auth-demo` を開く
 * 「ログインする🔑」→ その後「/api/me を叩く📨」

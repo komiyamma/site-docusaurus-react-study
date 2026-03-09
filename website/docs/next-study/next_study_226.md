@@ -60,6 +60,9 @@ flowchart TD
 
 ### A) 「常に最新」＝キャッシュしない🔥（ダッシュボード向け）
 
+![no_store_market](./picture/next_study_226_no_store_market.png)
+
+
 ユーザーごとに変わる画面（例：マイページ、在庫管理）はこれがラク💡
 
 ```tsx
@@ -78,6 +81,9 @@ export const dynamic = "force-dynamic"
 ---
 
 ### B) 「ほどほどに最新」＝◯秒ごとに更新🕒（ニュース/一覧向け）
+
+![revalidate_timer](./picture/next_study_226_revalidate_timer.png)
+
 
 ![ISR Flow](./picture/next_study_198_isr_flow.png)
 
@@ -99,6 +105,9 @@ fetch単位でも「何秒キャッシュするか」を決められるよ（ペ
 記事投稿・商品更新みたいに「更新した瞬間に反映したい！」ときの定番✨
 
 #### ✅ タグでまとめて再検証：`revalidateTag`
+
+![revalidate_tag_bell](./picture/next_study_226_revalidate_tag_bell.png)
+
 
 `revalidateTag` は「タグが付いたデータを“古い扱い”にして、次の訪問で裏更新」って感じ（stale-while-revalidate） ([Next.js][4])
 ※ 2025年時点では **2引数（'max' など）**が推奨で、1引数は非推奨だよ ([Next.js][4])
@@ -122,6 +131,9 @@ export async function publishPost() {
 ```
 
 #### ✅ パスでページごと再検証：`revalidatePath`
+
+![revalidate_path_cleaning](./picture/next_study_226_revalidate_path_cleaning.png)
+
 
 「このページ（/blog）だけ作り直してね」って指示できる✨
 Server Function（Server Action）と Route Handler で挙動の注意があるので、公式の説明どおり使うのが安全だよ🫶 ([Next.js][5])
@@ -205,12 +217,18 @@ npm run start
 
 ### ✅ ヘッダーでCDNキャッシュ状況を見る：`x-vercel-cache`
 
+![vercel_cache_stamp](./picture/next_study_226_vercel_cache_stamp.png)
+
+
 Vercelだと `x-vercel-cache` が `HIT / MISS / STALE` などになって、CDN側の状況が分かるよ📦 ([Vercel][6])
 ただし注意⚠️：**Data Cache（fetchのキャッシュ）を使ってても `MISS` になりがち**なので、Data Cacheの命中はログやカスタムヘッダー等で確認してね、って公式にも書いてあるよ〜🫠 ([Vercel][6])
 
 ---
 
 ## 6) 迷った時の決め方（めちゃ実用）🧠✨
+
+![cache_decision_flow](./picture/next_study_226_cache_decision_flow.png)
+
 
 * **ユーザーごとに違う？** → `no-store` / `force-dynamic` 🔥
 * **更新は少ないけどアクセス多い？** → `revalidate: 60` 〜 `3600` みたいに長め🕒（公式も“短すぎ注意”って言ってる） ([Next.js][2])

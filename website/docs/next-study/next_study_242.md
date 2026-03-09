@@ -33,6 +33,8 @@ flowchart LR
 
 ## 1) 公開直後にまずやる「3点セット」✅✅✅
 
+![next_study_242_three_point_check](./picture/next_study_242_three_point_check.png)
+
 ### ✅① 自分で“本番URL”を最初に通しプレイ🎮
 
 最低ここだけは触ってみてね😊✨
@@ -58,6 +60,8 @@ flowchart LR
 
 ## 2) 改善点は「4種類」に分けるとラク🧺✨
 
+![next_study_242_four_baskets](./picture/next_study_242_four_baskets.png)
+
 改善メモは、最初からキレイに書かなくてOK！
 でも分類だけはすると、あとで迷子にならないよ😊🗺️
 
@@ -69,6 +73,8 @@ flowchart LR
 ---
 
 ## 3) “改善メモ”はこう書くと最強📝🔥（テンプレ）
+
+![next_study_242_memo_template](./picture/next_study_242_memo_template.png)
 
 おすすめは、リポジトリに **`IMPROVEMENTS.md`** を作って残す方法だよ〜😊
 （あとでIssueに切り出してもOK👌）
@@ -97,6 +103,8 @@ flowchart LR
 
 ## 4) 優先度の決め方（迷ったらこれ）📌✨
 
+![next_study_242_priority_matrix](./picture/next_study_242_priority_matrix.png)
+
 ### まずはこの順でOKだよ😊
 
 1. **本番で壊れてる（ユーザーが困る）🐛🔥**
@@ -114,6 +122,8 @@ flowchart LR
 ---
 
 ## 5) フィードバックを集めるコツ（友だち協力編）🤝💬✨
+
+![next_study_242_feedback_friends](./picture/next_study_242_feedback_friends.png)
 
 お願いする時は、これだけ言うと集まりやすいよ😊
 

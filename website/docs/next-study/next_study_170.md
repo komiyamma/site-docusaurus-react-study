@@ -39,6 +39,8 @@ sequenceDiagram
 
 ## 1) DELETE API を作る🚪🗑️
 
+![next_study_170_delete_api](./picture/next_study_170_delete_api.png)
+
 `app/api/todos/[id]/route.ts` を作って（または更新して）、**DELETE** を追加するよ！
 
 ```ts
@@ -85,6 +87,8 @@ export async function DELETE(_req: Request, { params }: Ctx) {
 
 ### 💡ポイント
 
+![next_study_170_id_validation](./picture/next_study_170_id_validation.png)
+
 * `id` を `Number()` にして、変な値なら **400** にする（やさしい）🫶
 * 消したいデータが無い時は **404** にする（丁寧）🧭
 
@@ -92,9 +96,13 @@ export async function DELETE(_req: Request, { params }: Ctx) {
 
 ## 2) 画面に「削除ボタン」を付ける🖱️🗑️
 
+![next_study_170_client_button](./picture/next_study_170_client_button.png)
+
 削除はブラウザ操作なので、ボタン部分は **Client Component** にするよ〜🎮
 
 ### `components/DeleteTodoButton.tsx`
+
+![next_study_170_deleting_state](./picture/next_study_170_deleting_state.png)
 
 ```tsx
 "use client";
@@ -211,6 +219,8 @@ export default async function TodosPage() {
 ---
 
 ## よくあるつまずき🐣🪤
+
+![next_study_170_404_handling](./picture/next_study_170_404_handling.png)
 
 * **404になる**：`app/api/todos/[id]/route.ts` のパスが違うかも👀
 * **消えたのに画面が更新されない**：`router.refresh()` を呼べてるか確認🔄

@@ -24,6 +24,8 @@ UIはまだ“本格的に”つながなくてOK👌 まずは **サーバー�
 
 ## 手順1：Todoを追加する関数を作る➕🧩
 
+![next_study_168_validation_gate](./picture/next_study_168_validation_gate.png)
+
 まずは「追加」専用の関数を作っちゃおう！
 （**ポイント：DB操作はサーバー側だけ**でやるよ🧊）
 
@@ -48,6 +50,8 @@ if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
 ```
 
 ### 2) 追加用関数 `createTodo()` を作る✍️✨
+
+![next_study_168_create_func](./picture/next_study_168_create_func.png)
 
 ```ts
 // lib/todos.ts
@@ -86,6 +90,8 @@ export async function createTodo(title: string) {
 
 ## 手順2：Route Handler（POST /api/todos）を作る🚪📮
 
+![next_study_168_post_mailbox](./picture/next_study_168_post_mailbox.png)
+
 「POSTで追加」を試すために、APIを用意するよ〜！
 `app/api/todos/route.ts` を作ってね🗂️✨
 
@@ -113,6 +119,8 @@ export async function POST(req: Request) {
 
 ## 手順3：動作確認しよう✅（Windows / PowerShell）🪟✨
 
+![next_study_168_curl_terminal](./picture/next_study_168_curl_terminal.png)
+
 ### 1) 開発サーバー起動🚀
 
 ```powershell
@@ -135,6 +143,8 @@ curl -X POST http://localhost:3000/api/todos `
 * `todo: { id, title, createdAt }`
 
 ### 3) Prisma Studioで目視チェック👀✨
+
+![next_study_168_studio_verify](./picture/next_study_168_studio_verify.png)
 
 ```powershell
 npx prisma studio

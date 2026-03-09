@@ -7,6 +7,9 @@ Next.jsアプリは公開してからが本番なので、ここは超だいじ�
 
 ## 1) エラー監視ってなに？なんで必要？🧠🔔
 
+![invisible_errors](./picture/next_study_224_invisible_errors.png)
+
+
 開発中は `console.log()` やターミナルで気づけるけど…
 本番ではユーザーの画面でこっそり壊れてても、あなたは気づけないことがあるの🥲
 
@@ -23,6 +26,9 @@ Sentryは Next.js 向けのガイドやセットアップ手順（Wizard/Manual�
 ---
 
 ## 2) 監視で見るべき「3点セット」📌✨
+
+![three_pillars_monitoring](./picture/next_study_224_three_pillars_monitoring.png)
+
 
 エラー監視って言うけど、だいたいこの3つがセットで考えるとラクだよ〜😊
 
@@ -56,6 +62,9 @@ flowchart LR
 
 ### ✅ いちばん簡単：Wizard（おすすめ）
 
+![sentry_wizard](./picture/next_study_224_sentry_wizard.png)
+
+
 Sentry公式は **Wizardでの導入が最速**って案内してるよ。 ([docs.sentry.io][1])
 
 PowerShell（プロジェクト直下）で👇
@@ -75,6 +84,9 @@ npx @sentry/wizard@latest -i nextjs
 ## 5) App Routerで“つまずきやすい”ポイント🪤😵‍💫→😆
 
 ### ✅ ポイントA：`error.tsx` / `global-error.tsx` で「拾う」🧯
+
+![capture_exception_net](./picture/next_study_224_capture_exception_net.png)
+
 
 App Routerのエラーハンドリングは、Next.jsの公式でも `error.tsx` 等で扱う形が説明されてるよ。 ([Next.js][3])
 
@@ -130,6 +142,9 @@ export default function Page() {
 
 ## 7) 本番で超重要：ソースマップ（Source Maps）🗺️🧵
 
+![source_map_decoder](./picture/next_study_224_source_map_decoder.png)
+
+
 本番で「どの行で落ちたか」が分かると、直す速さが激変するよ⚡
 Sentryには Next.jsの **ソースマップ**に関する説明があるし、**Vercel連携でデプロイ時に自動アップロード**する案内もあるよ。 ([docs.sentry.io][7])
 
@@ -139,6 +154,9 @@ Sentryには Next.jsの **ソースマップ**に関する説明があるし、*
 ---
 
 ## 8) 監視を「通知疲れ」させないコツ🧘‍♀️🔕→🔔
+
+![notification_tuning](./picture/next_study_224_notification_tuning.png)
+
 
 おすすめの考え方はこれ👇
 

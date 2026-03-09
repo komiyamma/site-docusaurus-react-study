@@ -34,12 +34,18 @@ flowchart LR
 
 ### Step A：Vercel 側で Speed Insights を有効化✅
 
+![enable_speed_insights](./picture/next_study_227_enable_speed_insights.png)
+
+
 Vercel のプロジェクトを開いて **Speed Insights を Enable**します。([Vercel][1])
 （UI操作なのでサクッとできるはず☺️）
 
 ---
 
 ### Step B：パッケージを入れる📦
+
+![install_insights_package](./picture/next_study_227_install_insights_package.png)
+
 
 プロジェクトのルート（`package.json` がある場所）で👇
 
@@ -52,6 +58,9 @@ npm 以外でもOKだけど、この章は npm で進めるね🙂 ([Vercel][1])
 ---
 
 ### Step C：App Router に組み込み（SSRを壊しにくい形）🧩
+
+![client_wrapper_sensor](./picture/next_study_227_client_wrapper_sensor.png)
+
 
 Next.js（App Router）では、**layout をまるごと Client にしない**のが大事💡
 Vercel docs のおすすめは「専用の Client コンポーネントを作る」方式だよ〜！ ([Vercel][1])
@@ -98,7 +107,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
 ## 4) 見る場所（まずここだけ）👀📊
 
+![lcp_speedometer](./picture/next_study_227_lcp_speedometer.png)
+
+
 デプロイ後、Vercel のプロジェクト画面で **Speed Insights タブ**を開くと見られます🧭 ([Vercel][1])
+
+![device_score_card](./picture/next_study_227_device_score_card.png)
+
 
 最初は欲張らずに👇だけでOK！
 
@@ -106,6 +121,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 * ✅ 指標は **1つだけ**（おすすめ：LCP）
 
 「今の数字（現状）」が取れれば勝ち〜！🏁✨
+
+![continuous_monitoring](./picture/next_study_227_continuous_monitoring.png)
+
 
 ---
 

@@ -100,6 +100,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 ## 5) 本題：`generateMetadata` で記事ごとにOGPを変える 📰💖
 
+![next_study_194_params_flow.png](./picture/next_study_194_params_flow.png)
+
+
+
 **`app/blog/[slug]/page.tsx`** を作るよ👇
 ポイントはこれ！
 
@@ -153,7 +157,11 @@ export async function generateMetadata(
     },
   }
 }
+```
 
+![next_study_194_parent_metadata.png](./picture/next_study_194_parent_metadata.png)
+
+```ts
 export default async function Page({ params }: Props) {
   const { slug } = await params
   const post = await getPost(slug)
@@ -174,6 +182,10 @@ export default async function Page({ params }: Props) {
 ```
 
 ✅ これで、
+
+![next_study_194_dynamic_ogp_card.png](./picture/next_study_194_dynamic_ogp_card.png)
+
+
 
 * `http://localhost:3000/blog/hello` → タイトル「はじめてのNext.jsブログ🎀」
 * `http://localhost:3000/blog/sushi` → タイトル「お寿司とTypeScript🍣」

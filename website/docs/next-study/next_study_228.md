@@ -46,6 +46,9 @@ npm outdated
 
 ### Step 2：脆弱性チェックする🔍🛡️
 
+![npm_audit_scanner](./picture/next_study_228_npm_audit_scanner.png)
+
+
 ```bash
 npm audit
 ```
@@ -73,6 +76,9 @@ npm run dev
 
 ### Step 6：テスト＆ビルドで“本番に近い確認”🏗️✨
 
+![test_drive](./picture/next_study_228_test_drive.png)
+
+
 ```bash
 npm run test
 npm run build
@@ -88,6 +94,9 @@ git commit -m "chore: security & deps update"
 ---
 
 ## 4) 事故らないための「慎重ルール」🧸🧠
+
+![patch_vs_major](./picture/next_study_228_patch_vs_major.png)
+
 
 更新には種類があるよ〜👇
 
@@ -117,6 +126,9 @@ flowchart LR
 
 ## 5) 自動化すると超ラク：Dependabot（おすすめ）🤖💌
 
+![dependabot_robot](./picture/next_study_228_dependabot_robot.png)
+
+
 GitHub を使ってるなら、Dependabot が **「更新PR」を勝手に作ってくれる**よ〜！最高🫶✨
 プロジェクトにこのファイルを追加するだけ👇
 
@@ -142,6 +154,9 @@ updates:
 
 ## 6) “緊急アラート”が来たときの動き方🚨🧯
 
+![emergency_siren](./picture/next_study_228_emergency_siren.png)
+
+
 緊急（Critical/High）っぽい時は、月イチを待たずにこれ👇
 
 1. 🔔 何が危ないか確認（どのパッケージ？影響範囲？）
@@ -165,6 +180,9 @@ updates:
 ---
 
 ## まとめ：月イチでも「放置しない仕組み」が勝つ🏆🛡️✨
+
+![monthly_calendar](./picture/next_study_228_monthly_calendar.png)
+
 
 * 🔁 月イチで回すだけで、セキュリティは一気に現実的になる
 * 🤖 自動PR（Dependabot）で“やる気”に頼らない

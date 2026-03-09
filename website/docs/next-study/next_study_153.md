@@ -18,6 +18,9 @@ CSRF（Cross-Site Request Forgery）は、**ログイン中のあなた**を利�
 
 ## いつ危ないの？（ここ大事）⚠️🍪
 
+![next study 153 cookie auto send](./picture/next_study_153_cookie_auto_send.png)
+
+
 特に危ないのはこんなとき👇
 
 * **ログイン状態をクッキーで持ってる**（セッションCookieなど）🍪
@@ -50,6 +53,9 @@ sequenceDiagram
 
 ### 1) SameSite Cookie を理解する🍪✨
 
+![next study 153 samesite attribute](./picture/next_study_153_samesite_attribute.png)
+
+
 Cookieには `SameSite` って属性があって、**別サイト由来のリクエストにCookieを付けにくく**できるよ💪
 
 * `Strict`：かなり強い（基本“同一サイト”だけ）🧱
@@ -61,6 +67,9 @@ MDNも「SameSiteがCSRFの軽減に役立つ」って説明してるよ([MDN We
 ---
 
 ### 2) Server Actions は“何もしなくてOK”ではないけど、かなり守られてる🛡️✨
+
+![next study 153 server actions safe](./picture/next_study_153_server_actions_safe.png)
+
 
 Next.jsのガイドでも、Server Actionsは`<form>`から呼べるぶんCSRFの話題が出るけど、**POSTのみ**＆**現代ブラウザのSameSiteデフォルト**などで「多くのケースで防ぎやすい」って整理がされてるよ([Next.js][3])
 さらにNext.js側で **`Origin` と `Host`（や `X-Forwarded-Host`）の照合**なども追加防御として触れられてるよ([Next.js][4])
@@ -80,6 +89,9 @@ Route Handlerは自由度が高いぶん、**自分で“入口チェック”**
 Next.jsでは `headers()` / `cookies()` をRoute Handlerで読めるよ、って公式にも載ってる📌([nextjs.im][5])
 
 #### まず最小：Originチェック（同一オリジン以外は403）🚫
+
+![next study 153 origin check](./picture/next_study_153_origin_check.png)
+
 
 「外部サイトからの“勝手POST”を通しにくくする」第一歩！🛡️
 
@@ -111,6 +123,9 @@ export async function POST(request: Request) {
 ---
 
 ### 4) もっと堅くするなら：CSRFトークン🎟️✨
+
+![next study 153 csrf token flow](./picture/next_study_153_csrf_token_flow.png)
+
 
 「トークンを持ってる人だけOK」にする王道対策もあるよ！
 

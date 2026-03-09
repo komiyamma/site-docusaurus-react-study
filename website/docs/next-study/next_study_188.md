@@ -1,5 +1,7 @@
 # 第188章：ミニ課題：認証付きTODOの土台完成🔐
 
+![next_study_188_todo_user_link.png](./picture/next_study_188_todo_user_link.png)
+
 この章は「**ログインしてる人だけが、自分のTODOを見れて、追加できる**」ところまで仕上げるミニ課題だよ〜！🎀✨
 （“土台完成”なので、見た目はシンプルでOK👍）
 
@@ -36,6 +38,8 @@ flowchart TD
 ---
 
 ## ✅ 手順1：Todoを「ユーザーにひもづけ」しよう🔗🗃️
+
+![next_study_188_schema_relation.png](./picture/next_study_188_schema_relation.png)
 
 `prisma/schema.prisma` の `Todo` に `userId` を追加して、`User` と関連を作るよ💡
 （すでにあるなら確認だけでOK👌）
@@ -126,6 +130,8 @@ declare module "next-auth/jwt" {
 ## ✅ 手順3：/todos を「未ログインなら弾く」🔐🚪
 
 ### 3-1) Middlewareで守る（おすすめ💪）
+
+![next_study_188_middleware_gate.png](./picture/next_study_188_middleware_gate.png)
 
 ![Middleware Gatekeeper](./picture/next_study_188_gatekeeper.png)
 
@@ -221,6 +227,8 @@ export async function toggleTodo(formData: FormData) {
 ```
 
 ### 4-3) /todos ページ（自分のTODOだけ表示👀）
+
+![next_study_188_my_todos_filter.png](./picture/next_study_188_my_todos_filter.png)
 
 ```tsx
 // app/todos/page.tsx
