@@ -12,7 +12,7 @@ def run_command(command, dry_run=False):
     try:
         # 日本語環境(Windows)での文字化けを防ぐため encoding='utf-8' を明示
         result = subprocess.run(command, check=True, capture_output=True, text=True, encoding='utf-8')
-        return result.stdout.strip()
+        return result.stdout
     except subprocess.CalledProcessError as e:
         print(f"Error executing command: {' '.join(command)}")
         print(f"Error output: {e.stderr}")
@@ -20,7 +20,7 @@ def run_command(command, dry_run=False):
     except UnicodeDecodeError:
         # UTF-8で失敗した場合は、システムのデフォルト（CP932等）を試みる
         result = subprocess.run(command, check=True, capture_output=True, text=True)
-        return result.stdout.strip()
+        return result.stdout
 
 def get_modified_files():
     """git status --porcelain を使って変更・未追跡ファイルを取得する。
@@ -36,11 +36,15 @@ def get_modified_files():
         if len(line) > 3:
             # 形式: XY path/to/file
             # XY はステータスコード (M, A, ?? など)。3文字目以降がパス
+            status = line[:2]
             file_path = line[3:]
             
-            # 改名(R)などの場合は "old -> new" 形式になるため対応が必要かもしれないが、
-            # 基本的な add/commit/push フローでは porcelain の出力をそのまま add できる
-            # ただし、パスにスペースが含まれる場合やクォートされている場合の処理を強化
+            # 改名/コピーは "old -> new" 形式なので、git add する対象は新しいパスにする。
+            if "R" in status or "C" in status:
+                parts = file_path.split(" -> ", 1)
+                if len(parts) == 2:
+                    file_path = parts[1]
+
             if file_path.startswith('"') and file_path.endswith('"'):
                 file_path = file_path[1:-1]
             files.append(file_path)
@@ -48,7 +52,7 @@ def get_modified_files():
 
 def main():
     parser = argparse.ArgumentParser(description="Git batch submit script.")
-    parser.add_argument("--batch-size", type=int, default=150, help="Number of files per batch (default: 150)")
+    parser.add_argument("--batch-size", type=int, default=50, help="Number of files per batch (default: 50)")
     parser.add_argument("--wait", type=int, default=30, help="Wait time between batches in seconds (default: 30)")
     parser.add_argument("--dry-run", action="store_true", help="Show commands without executing them")
     

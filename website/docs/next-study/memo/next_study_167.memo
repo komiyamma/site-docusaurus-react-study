@@ -1,1 +1,0 @@
-一覧取得はServer Componentから直接PrismaでDBを読み込む。開発中はPrismaClientのインスタンスを使い回し、多重接続を防ぐ。
