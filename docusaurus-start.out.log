@@ -1,0 +1,12 @@
+
+> website@0.0.0 start
+> docusaurus start --host 127.0.0.1 --port 3000
+
+
+ ------------------------------------------------------------------------------                                                                                                         Update available 3.9.2 → 3.10.1                                                                                                                 To upgrade Docusaurus packages with the latest version, run the                                       following command:                                       `npm i @docusaurus/core@latest @docusaurus/preset-classic@latest             @docusaurus/theme-mermaid@latest @docusaurus/module-type-aliases@latest                  @docusaurus/tsconfig@latest @docusaurus/types@latest`                                                                                               ------------------------------------------------------------------------------ 
+
+[INFO] Starting the development server...
+[SUCCESS] Docusaurus website is running at: http://127.0.0.1:3000/
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 13.55s
+[1mclient[39m[22m (webpack 5.104.1) compiled [1m[32msuccessfully[39m[22m

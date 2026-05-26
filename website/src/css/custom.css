@@ -74,104 +74,25 @@
 }
 
 /* ========================================
-   Navbar Horizontal Scroll (Simple)
+   Navbar - 1st row layout
    ======================================== */
 
-/* Navbar inner is the positioning context */
-.navbar__inner {
-  position: relative;
-}
-
-/* Left navbar items (menu links) scroll horizontally */
-.navbar__items:not(.navbar__items--right) {
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  white-space: nowrap;
-  /* Add left margin to make room for the fixed home icon */
-  margin-left: 48px;
-  
-  /* Subtle vertical lines on left and right edges */
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  
-  /* Visible thin scrollbar to indicate scrollability */
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
-}
-
-.navbar__items:not(.navbar__items--right)::-webkit-scrollbar {
-  height: 6px;
-}
-
-.navbar__items:not(.navbar__items--right)::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.navbar__items:not(.navbar__items--right)::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 4px;
-}
-
-.navbar__items:not(.navbar__items--right)::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-/* Home icon is positioned outside the scroll container */
+/* Navbar brand (HOME icon + text) - normal flow, no absolute positioning */
 .navbar__brand {
-  position: absolute;
-  left: 6px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
+  flex-shrink: 0;
 }
 
-/* Mobile: reset absolute positioning so hamburger menu comes first (default Docusaurus order) */
-@media (max-width: 996px) {
-  .navbar__brand {
-    position: static;
-    transform: none;
-  }
-
-  .navbar__items:not(.navbar__items--right) {
-    margin-left: 0;
-    border-left: none;
-    border-right: none;
-  }
+/* HOME text color */
+.navbar__title {
+  color: rgba(255, 255, 255, 0.9);
 }
 
-/* Hamburger menu icon: white on blue navbar background */
+
+/* 三本線ボタン自体の色（アイコンの色） */
 .navbar__toggle {
-  color: white;
+  color: white; /* ここで好きな色を指定 */
 }
-
 /* ホバーした時の色 */
 .navbar__toggle:hover {
   color: rgba(255, 255, 255, 0.8);
-}
-
-
-/* Keep the right-side external links visually grouped on desktop */
-.navbar__items--right .navbar-link-site-home {
-  position: relative;
-  padding-right: 1rem;
-  margin-right: 0.35rem;
-}
-
-.navbar__items--right .navbar-link-site-home::after {
-  content: "|";
-  position: absolute;
-  right: 0;
-  color: rgba(255, 255, 255, 0.75);
-  pointer-events: none;
-}
-
-/* ========================================
-   Mobile Menu - komiyamma.net の上に区切り線
-   ======================================== */
-@media (max-width: 996px) {
-  .menu .navbar-link-site-home {
-    border-top: 1px solid rgba(0, 0, 0, 0.12);
-    margin-top: 0.5rem;
-    padding-top: 0.75rem;
-  }
 }

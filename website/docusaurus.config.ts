@@ -7,8 +7,8 @@ import * as path from 'path';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'React/Nextの学習',
-  tagline: 'React/Nextの学習教材',
+  title: 'Reactの学習教材',
+  tagline: 'React学習教材（全290章アウトライン）',
   favicon: 'img/react_logo.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -27,7 +27,7 @@ const config: Config = {
   organizationName: 'komiyamma', // Usually your GitHub org/user name.
   projectName: 'site-docusaurus-react-study', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   i18n: {
     defaultLocale: 'ja',
@@ -72,7 +72,9 @@ const config: Config = {
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
       ({
         hashed: true,
-        language: ["ja", "en"],
+        language: ["ja"],
+        indexBlog: false,
+        indexPages: false,
       }),
     ],
   ],
@@ -119,27 +121,13 @@ const config: Config = {
     },
 
     navbar: {
-      title: '',
+      title: 'React',
       logo: {
-        alt: 'Home',
-        src: 'img/home_dark.svg',
-        srcDark: 'img/home_dark.svg',
+        alt: 'React',
+        src: 'img/react_logo.svg',
+        srcDark: 'img/react_logo.svg',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'reactStudySidebar',
-          position: 'left',
-          label: 'React Study',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'nextStudySidebar',
-          position: 'left',
-          label: 'Next Study',
-        },
-
-        // { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://komiyamma.net',
           label: 'komiyamma.net',
@@ -151,7 +139,6 @@ const config: Config = {
           href: 'https://github.com/komiyamma/site-docusaurus-react-study',
           label: 'GitHub',
           position: 'right',
-          className: 'navbar-link-github',
         },
       ],
     },
